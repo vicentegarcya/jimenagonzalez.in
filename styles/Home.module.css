@@ -5,8 +5,57 @@
   align-items: center;
   padding: 3rem;
   padding-bottom: 0;
+  height: 2000px;
 }
 
 .main p {
   font-family: var(--title-text);
+}
+
+.cuadrado {
+  width: 300px;
+  height: 300px;
+  background-color: burlywood;
+}
+
+.keywords {
+  width: 100dvw;
+  height: fit-content;
+  white-space: nowrap;
+  padding: 1rem;
+  background-image: url("../public/PSICODELICO.jpeg");
+  background-position-x: -100px;
+  background-position-y: 100px;
+}
+
+.text_1 {
+  margin-right: 5px;
+  display: inline-block;
+  /* Apply animation to this element */
+  animation: scrolling-left1 20s linear infinite;
+}
+
+.text_2 {
+  display: inline-block;
+  /* Apply animation to this element */
+  animation: scrolling-left2 20s linear infinite;
+  animation-delay: 10s;
+}
+
+/* scrolling-left is continuous/repeatly text */
+@keyframes scrolling-left1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes scrolling-left2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
 }

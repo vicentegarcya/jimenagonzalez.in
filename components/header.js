@@ -1,10 +1,20 @@
-import styles from './header.module.css';
+import styles from "./header.module.css";
+import { inter } from "@/utils/fonts";
+import Image from "next/image";
 
-export default function Header(){
-    return (
-        <header className={styles.header}>
-            <h3>x Jimena Gonzalez</h3>
-            <h3>about me</h3>
-        </header>
-    )
+export default function Header() {
+  return (
+    <header className={styles.header + " " + inter.className}>
+      <div className={styles.bso}>
+        <h3>MI BSO</h3>
+        <Image
+          src={"/play-button.png"}
+          width={18}
+          height={18}
+          alt="play button"
+        />
+      </div>
+      <h3>SOBRE MI</h3>
+    </header>
+  );
 }

@@ -5,7 +5,10 @@ export default function Home() {
   return (
     <Layout>
       <main className={styles.main}>
-        Hola, soy Jimena y molo mucho.
+        <section className={styles.keywords}>
+          <p className={styles.text_1}>INSPIRACIÓN // CREATIVIDAD // ALMA // ESTRATEGIA // EXPANSIÓN // EVOLUCIÓN</p>
+          <p className={styles.text_2}>// INSPIRACIÓN // CREATIVIDAD // ALMA // ESTRATEGIA // EXPANSIÓN // EVOLUCIÓN</p>
+        </section>
       </main>
     </Layout>
   );
