@@ -14,9 +14,8 @@ export default function Layout({ children }) {
       </Head>
       <Header />
       <main className={styles.App_main + ' ' + inter.className}>{children}</main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
 
-styles["projects-pd-subdetail"] + " " + styles["projects-pd-text"];

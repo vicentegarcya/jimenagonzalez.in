@@ -13,11 +13,6 @@
   z-index: 10;
 }
 
-.header h3 {
-  font-weight: 300;
-  font-size: 100%;
-}
-
 .bso {
   display: flex;
   align-items: center;
