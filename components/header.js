@@ -1,16 +1,15 @@
 import styles from "./header.module.css";
-import { inter } from "@/utils/fonts";
 import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className={styles.header + " " + inter.className}>
+    <header className={styles.header}>
       <div className={styles.bso}>
-        <h3>MI BSO</h3>
+        <h3>ESCUCHA MI BSO</h3>
         <Image
-          src={"/play-button.png"}
-          width={18}
-          height={18}
+          src={"/play_btn.png"}
+          width={15}
+          height={15}
           alt="play button"
         />
       </div>

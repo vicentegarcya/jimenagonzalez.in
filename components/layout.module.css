@@ -1,10 +1,9 @@
 .App {
-    margin: 0 auto;
-    color: #282C32;
-    font-family: var(--main-text) !important;
-  }
-  
-  .App_main {
-      margin-top: 24px;
-      margin-bottom: 50px;
-  }
+  margin: 0 auto;
+  color: #282c32;
+}
+
+.App_main {
+  margin-top: 24px;
+  margin-bottom: 50px;
+}

@@ -19,5 +19,13 @@
 }
 
 .bso h3 {
-  margin-right: 8px;
+  -webkit-background-clip: text;
+	background-clip: text;
+	background-image: url('../public/PSICODELICO.jpeg');
+  background-position-y: -62px;
+  background-position-x: -345px;
+	color: transparent;
+  margin-right: 12px;
+  font-weight: 600;
+  margin-top: 0.25px;
 }

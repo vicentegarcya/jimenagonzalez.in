@@ -1,0 +1,25 @@
+.propuesta_form input {
+    all: unset;
+    background-color: #D9D9D9;
+    border-radius: 9px;
+    padding: 3px 10px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-right: 8px;
+    margin-top: 5px;
+    background: url('../public/PSICODELICO.jpeg');
+    background-position-y: 100px;
+}
+
+.propuesta_form input:checked {
+    color: #fff;
+}
+
+.propuesta_form legend {
+    margin-bottom: 0.5rem;
+}
+
+.propuesta_form fieldset {
+    margin-top: 1.5rem;
+}
+

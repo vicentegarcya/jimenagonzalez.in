@@ -1,22 +1,9 @@
 import styles from "@/styles/Home.module.css";
 import Layout from "@/components/layout";
-import { useState } from "react";
-import { inter } from "@/utils/fonts";
-import { useSpring, animated } from "react-spring";
+import Service from "@/components/service";
+import PropuestaForm from "@/components/propuestaForm";
 
 export default function Home() {
-  const [desplegado, setDesplegado] = useState(false);
-
-  const openAnimation = useSpring({
-    from: { opacity: "0", maxHeight: "0px", marginBottom: "0rem" },
-    to: {
-      opacity: "1",
-      maxHeight: desplegado ? "250px" : "0px",
-      marginBottom: desplegado ? "1rem" : "0rem",
-    },
-    config: { duration: "300" },
-  });
-
   return (
     <Layout>
       <main className={styles.main}>
@@ -41,108 +28,87 @@ export default function Home() {
           <div className={styles.servicio}>
             <h3>SOY ARTISTA, CREATIV@ O DISEÑADORA</h3>
             <div className={styles.servicios_grupo}>
-              <div className={styles.servicio_detalle}>
-                <div className={styles.servicio_detalle_titulo}>
-                  <p>→ Descubre tus dones y tu voz creativa</p>
-                  <button
-                    className={inter.className}
-                    onClick={() => setDesplegado(!desplegado)}
-                  >
-                    {!desplegado ? "+" : "-"}
-                  </button>
-                </div>
-                <animated.div
-                  style={openAnimation}
-                  className={styles.servicio_desplegable}
-                >
-                  <p>
-                    Comprende tu huella creativa: misión creativa, energías
-                    principales, talentos, retos evolutivos de tu camino
-                    creativo, expresión creativa principal.
-                  </p>
-                  <p>#astrologia #creatividad #tarot</p>
-                  <div className={styles.servicio_cta_div}>
-                    <p>66,00 €</p>
-                    <button className={inter.className}>AGENDAR</button>
-                  </div>
-                </animated.div>
-              </div>
-              <div className={styles.servicio_detalle}>
-                <div className={styles.servicio_detalle_titulo}>
-                  <p>→ Intenciona tu siguiente proyecto</p>
-                  <button
-                    className={inter.className}
-                    onClick={() => setDesplegado(!desplegado)}
-                  >
-                    {!desplegado ? "+" : "-"}
-                  </button>
-                </div>
-                <animated.div
-                  style={openAnimation}
-                  className={styles.servicio_desplegable}
-                >
-                  <p>
-                    Descubre la identidad de tu próximo proyecto: su naturaleza,
-                    su propósito, los aprendizajes que trae, los retos y los
-                    dones que te pide expresar.
-                  </p>
-                  <p>#creatividad #tarot</p>
-                  <div className={styles.servicio_cta_div}>
-                    <p>55,00 €</p>
-                    <button className={inter.className}>AGENDAR</button>
-                  </div>
-                </animated.div>
-              </div>
-              <div className={styles.servicio_detalle}>
-                <div className={styles.servicio_detalle_titulo}>
-                  <p>→ Supera bloqueos creativos</p>
-                  <button
-                    className={inter.className}
-                    onClick={() => setDesplegado(!desplegado)}
-                  >
-                    {!desplegado ? "+" : "-"}
-                  </button>
-                </div>
-                <animated.div
-                  style={openAnimation}
-                  className={styles.servicio_desplegable}
-                >
-                  <p>
-                    Comprende el origen de tu bloqueo creativo, los aprendizajes
-                    a integrar y las acciones para liberarlo.
-                  </p>
-                  <p>#creatividad #tarot #registrosakasicos</p>
-                  <div className={styles.servicio_cta_div}>
-                    <p>55,00 €</p>
-                    <button className={inter.className}>AGENDAR</button>
-                  </div>
-                </animated.div>
-              </div>
-              <div className={styles.servicio_detalle}>
-                <div className={styles.servicio_detalle_titulo}>
-                  <p>→ Manifiesta (diseña tu estrategia)</p>
-                  <button
-                    className={inter.className}
-                    onClick={() => setDesplegado(!desplegado)}
-                  >
-                    {!desplegado ? "+" : "-"}
-                  </button>
-                </div>
-                <animated.div
-                  style={openAnimation}
-                  className={styles.servicio_desplegable}
-                >
-                  <p>
-                    Conecta con tu auténtica visión, intenciona tu expansión y diseña un plan guiado.
-                  </p>
-                  <p>#estrategia #business #tarot</p>
-                  <div className={styles.servicio_cta_div}>
-                    <p>77,00 €</p>
-                    <button className={inter.className}>AGENDAR</button>
-                  </div>
-                </animated.div>
-              </div>
+              <Service
+                title="Descubre tus dones y tu voz creativa"
+                description="Comprende tu huella creativa: misión creativa, energías principales, talentos, retos evolutivos de tu camino creativo, expresión creativa principal."
+                price="77,00 €"
+                hashtags="#astrologia #creatividad #tarot"
+              />
+              <Service
+                title="Intenciona tu siguiente proyecto"
+                description="Descubre la identidad de tu próximo proyecto: su naturaleza, su propósito, los aprendizajes que trae, los retos y los dones que te pide expresar. "
+                price="55,00 €"
+                hashtags="#creatividad #tarot"
+              />
+              <Service
+                title="Supera bloqueos creativos"
+                description="Comprende el origen de tu bloqueo creativo, los aprendizajes a integrar y las acciones para liberarlo."
+                price="55,00 €"
+                hashtags="#creatividad #tarot #registrosakasicos"
+              />
+              <Service
+                title="Manifiesta (diseña tu estrategia)"
+                description="Conecta con tu auténtica visión, intenciona tu expansión y diseña un plan guiado."
+                price="111,00 €"
+                hashtags="#estrategia #business #tarot"
+              />
             </div>
+          </div>
+          <div className={styles.servicio}>
+            <h3>SOY EMPRENDEDOR/A</h3>
+            <div className={styles.servicios_grupo}>
+              <Service
+                title="Descubre tu misión y dones"
+                description="Comprende tu huella creativa: misión, dones y talentos a expresar, retos evolutivos y naturaleza de los proyectos alineados."
+                price="77,00 €"
+                hashtags="#astrología #emprendimiento #tarot #creatividad"
+              />
+              <Service
+                title="Conecta con el alma de tu negocio"
+                description="Descubre la identidad de tu negocio: alma y naturaleza, misión individual y colectiva, propósito, tu rol en él, los dones y talentos que te pide expresar y los aprendizajes que trae para ti."
+                price="55,00 €"
+                hashtags="#estrategia #tarot #astrología"
+              />
+              <Service
+                title="Supera bloqueos y dificultades"
+                description="Comprende la naturaleza de tus bloqueos, los aprendizajes que traen y las acciones para liberarlos."
+                price="55,00 €"
+                hashtags="#estrategia #tarot "
+              />
+              <Service
+                title="Manifiesta (diseña tu estrategia)"
+                description="Conecta con tu auténtica visión, intenciona tu expansión y diseña un plan guiado."
+                price="111,00 €"
+                hashtags="#estrategia #tarot"
+              />
+            </div>
+          </div>
+          <div className={styles.servicio}>
+            <h3>ESTOY EN MI CAMINO DE EVOLUCIÓN PERSONAL Y/O ESPIRITUAL</h3>
+            <div className={styles.servicios_grupo}>
+              <Service
+                title="Descubre tu misión, dones y retos vitales"
+                description="Comprende tu huella evolutiva: misión, dones y talentos a expresar, retos evolutivos y de sanación de tu alma."
+                price="66,00 €"
+                hashtags="#astrología #tarot"
+              />
+              <Service
+                title="Comprende el sentido de tu reto actual"
+                description="Descubre la perspectiva evolutiva y espiritual de tu dificultad actual (pareja, salud, trabajo, sanación…) y conecta con su propósito, aprendizajes y acciones a tomar."
+                price="55,00 €"
+                hashtags="#tarot #espiritualidad"
+              />
+              <Service
+                title="Desvela el propósito de esta etapa vital"
+                description="Comprende la energía de esta etapa de tu desarrollo, sus retos evolutivos y aprendizajes a integrar, las áreas de tu vida que son protagonistas y cómo hacerle frente de la mejor manera."
+                price="77,00 €"
+                hashtags="#astrologia #tarot"
+              />
+            </div>
+          </div>
+          <div className={styles.servicio}>
+            <h3>HAZME UNA PROPUESTA</h3>
+            <PropuestaForm />
           </div>
         </section>
       </main>
