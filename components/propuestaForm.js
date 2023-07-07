@@ -5,10 +5,15 @@ export default function PropuestaForm() {
   const [temas, setTemas] = useState([]);
   const [formato, setFormato] = useState([]);
   const [idea, setIdea] = useState("");
+  const [email, setEmail] = useState("");
 
   const handleChange = (e) => {
     if (e.target.name === "idea") {
       setIdea(e.target.value);
+    }
+
+    if (e.target.name === "email") {
+      setEmail(e.target.value);
     }
 
     if (!e.target.classList.contains("seleccionado")) {
@@ -24,12 +29,12 @@ export default function PropuestaForm() {
     } else {
       if (e.target.parentNode.className.split("_")[1].split("_") == "temas") {
         e.target.classList.remove("seleccionado");
-        setTemas([...temas].filter(element => element != e.target.value));
+        setTemas([...temas].filter((element) => element != e.target.value));
       } else if (
         e.target.parentNode.className.split("_")[1].split("_") == "formato"
       ) {
         e.target.classList.remove("seleccionado");
-        setFormato([...formato].filter(element => element != e.target.value));
+        setFormato([...formato].filter((element) => element != e.target.value));
       }
     }
   };
@@ -37,7 +42,7 @@ export default function PropuestaForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(temas, formato, idea);
+    console.log(temas, formato, idea, email);
   };
 
   return (
@@ -86,6 +91,17 @@ export default function PropuestaForm() {
             placeholder="Escribe aquí..."
             required
           />
+        </div>
+        <div className={styles.tu_email}>
+          <label>Tu email:</label>
+          <input
+            type="email"
+            name="email"
+            value={email}
+            onChange={handleChange}
+            placeholder="Escribe aquí..."
+            required
+          ></input>
         </div>
         <button type="submit">ENVIAR</button>
       </form>

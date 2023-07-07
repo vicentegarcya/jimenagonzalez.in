@@ -11,6 +11,8 @@
   font-size: 13px;
   padding: 2rem;
   background: url("../public/PSICODELICO.jpeg");
+  background-position-x: 0;
+  background-position-y: -60px;
   margin-top: 3rem;
   font-weight: 400;
 }
@@ -32,4 +34,9 @@
   align-self: center;
   text-align: center;
   font-size: 11px;
+}
+
+.footer a {
+    font-weight: 600;
+    text-decoration: underline 1.5px #282c32;
 }

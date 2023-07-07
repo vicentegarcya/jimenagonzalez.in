@@ -117,7 +117,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 0.5rem;
-  margin-bottom: 35dvh;
+  margin-bottom: 34dvh;
 }
 
 .inspirate_cta_div button {
@@ -138,11 +138,15 @@
 .inspirate_cta_div > button:nth-child(1) {
   width: 42%;
   background: url("../public/PSICODELICO.jpeg");
+  background-position-x: -2rem;
+  background-position-y: 0;
   color: #282c32;
 }
 
 .inspirate_cta_div > button:nth-child(2) {
   width: 52%;
   background: url("../public/PSICODELICO.jpeg");
+  background-position-x: calc(-140px - 2rem);
+  background-position-y: 0;
   color: #282c32;
 }

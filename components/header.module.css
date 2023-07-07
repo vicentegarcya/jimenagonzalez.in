@@ -18,6 +18,10 @@
   align-items: center;
 }
 
+.bso img {
+  margin-top: 0.5px;
+}
+
 .bso h3 {
   -webkit-background-clip: text;
 	background-clip: text;
@@ -26,7 +30,10 @@
   background-position-x: -345px;
 	color: transparent;
   margin-right: 12px;
+  height: 20px;
   font-weight: 600;
-  margin-top: 0.25px;
   mix-blend-mode: difference;
+  overflow: hidden;
+  max-width: 200px;
+  transition: margin-right 0.4s ease-out, max-width 0.4s ease-out;
 }
