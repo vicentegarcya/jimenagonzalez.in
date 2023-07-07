@@ -111,6 +111,19 @@ export default function Home() {
             <PropuestaForm />
           </div>
         </section>
+        <section className={styles.inspirate_cada_mes}>
+          <h3>RECIBE INSPIRACIÓN CADA MES</h3>
+          <p>
+            Despertar Creativo es una Newsletter mensual gratuita con píldoras
+            de inspiración para tu vida y tus creaciones. Diseñada para
+            artistas, creativ@s y personas en su camino de evolución personal.
+            <span> ¡Welcoming you, creative soul!</span>
+          </p>
+          <div className={styles.inspirate_cta_div}>
+            <button>SUSCRIBIRME</button>
+            <button>INSPÍRAME AHORA</button>
+          </div>
+        </section>
       </main>
     </Layout>
   );

@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.bso}>
-        <h3>ESCUCHA MI BSO</h3>
+        <h3>explora con BSO</h3>
         <Image
           src={"/play_btn.png"}
           width={15}

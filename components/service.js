@@ -18,7 +18,7 @@ export default function Service({title, description, hashtags, price}) {
   return (
     <div className={styles.servicio_detalle}>
       <div className={styles.servicio_detalle_titulo}>
-        <p>→ {title}</p>
+        <p onClick={() => setDesplegado(!desplegado)}>→ {title}</p>
         <button onClick={() => setDesplegado(!desplegado)}>
           {!desplegado ? "+" : "-"}
         </button>

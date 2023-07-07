@@ -1,25 +1,138 @@
 .propuesta_form input {
-    all: unset;
-    background-color: #D9D9D9;
-    border-radius: 9px;
-    padding: 3px 10px;
-    font-size: 13px;
-    font-weight: 700;
-    margin-right: 8px;
-    margin-top: 5px;
-    background: url('../public/PSICODELICO.jpeg');
-    background-position-y: 100px;
+  all: unset;
+  background-color: #d9d9d9;
+  border-radius: 9px;
+  padding: 3px 10px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-right: 8px;
+  margin-top: 5px;
+  background: url("../public/PSICODELICO.jpeg");
+  background-position: 0 0;
 }
 
-.propuesta_form input:checked {
-    color: #fff;
+/* CUADRANDO EL FONDO CON LOS BOTONES */
+
+.temas > input:nth-child(3) {
+  background-position-x: -101px;
+}
+
+.temas > input:nth-child(4) {
+  background-position-x: -180px;
+}
+
+.temas > input:nth-child(5) {
+  background-position-x: 0px;
+  background-position-y: -26px;
+}
+
+.temas > input:nth-child(6) {
+  background-position-x: -62px;
+  background-position-y: -26px;
+}
+
+.temas > input:nth-child(7) {
+  background-position-x: -104px;
+  background-position-y: -26px;
+}
+
+.temas > input:nth-child(8) {
+  background-position-x: 0px;
+  background-position-y: -52px;
+}
+
+.temas > input:nth-child(9) {
+  background-position-x: -108px;
+  background-position-y: -52px;
+}
+
+.temas > input:nth-child(10) {
+  background-position-x: -201px;
+  background-position-y: -52px;
+}
+
+.formato > input:nth-child(2) {
+  background-position-x: 0px;
+  background-position-y: -105px;
+}
+
+.formato > input:nth-child(3) {
+  background-position-x: -135px;
+  background-position-y: -105px;
+}
+
+.formato > input:nth-child(4) {
+  background-position-x: 0px;
+  background-position-y: -131px;
+}
+
+.formato > input:nth-child(5) {
+  background-position-x: -135px;
+  background-position-y: -131px;
+}
+
+.formato > input:nth-child(6) {
+  background-position-x: -246px;
+  background-position-y: -131px;
+}
+
+.formato > input:nth-child(7) {
+  background-position-x: 0px;
+  background-position-y: -157px;
+}
+
+.formato > input:nth-child(8) {
+  background-position-x: -130px;
+  background-position-y: -157px;
+}
+
+.propuesta_form textarea {
+  background: url("../public/PSICODELICO.jpeg");
+  background-position-x: 0px;
+  background-position-y: -207px;
+  border: none;
+  resize: none;
+  font-family: "Inter";
+  font-size: 12px;
+  padding: 0.5rem 0.75rem;
+  height: 150px;
+  outline: none;
+}
+
+.propuesta_form textarea::placeholder {
+  color: #282c32;
+  font-weight: 500;
 }
 
 .propuesta_form legend {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .propuesta_form fieldset {
-    margin-top: 1.5rem;
+  margin-top: 1.5rem;
 }
 
+.describe_tu_idea {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+
+.describe_tu_idea label {
+  margin-bottom: 0.5rem;
+}
+
+.propuesta_form button {
+  margin-top: 1.5rem;
+  border: none;
+  padding: 8px 20px;
+  font-size: 15px;
+  width: 45%;
+  text-align: center;
+  background: transparent;
+  font-weight: 400;
+  color: #fff;
+  background-color: #282c32;
+  font-weight: 300;
+  font-size: 14px;
+}

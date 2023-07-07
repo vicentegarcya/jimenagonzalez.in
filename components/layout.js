@@ -7,7 +7,7 @@ export default function Layout({ children }) {
   return (
     <div className={styles.App}>
       <Head>
-        <title>Jimeneat</title>
+        <title>jimenagonzalez.in</title>
         <meta name="description" content="Your go-to app" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
@@ -22,10 +22,8 @@ export default function Layout({ children }) {
         ></link>
       </Head>
       <Header />
-      <main className={styles.App_main}>
-        {children}
-      </main>
-      {/* <Footer /> */}
+      <main className={styles.App_main}>{children}</main>
+      <Footer />
     </div>
   );
 }

@@ -28,4 +28,5 @@
   margin-right: 12px;
   font-weight: 600;
   margin-top: 0.25px;
+  mix-blend-mode: difference;
 }
