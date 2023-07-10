@@ -6,8 +6,6 @@ import { useSpring, animated } from "react-spring";
 export default function Header({ currentPage }) {
   const [scrollPosition, setScrollPosition] = useState(0);
 
-  console.log(currentPage);
-
   useEffect(() => {
     const handleScroll = () => {
       setScrollPosition(window.scrollY);

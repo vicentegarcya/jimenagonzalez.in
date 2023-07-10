@@ -30,7 +30,7 @@ export default function Layout({ children }) {
       </Head>
       <Header currentPage={page} />
       <main className={styles.App_main}>{children}</main>
-      <Footer />
+      <Footer currentPage={page} />
     </div>
   );
 }

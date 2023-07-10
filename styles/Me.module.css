@@ -1,19 +1,21 @@
 .me {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   padding-top: 3rem;
   padding-bottom: 0;
+  margin-bottom: 39dvh;
 }
 
-.explora_con_bso {
+.explora_con_bso,
+.mi_esencia > p {
   display: flex;
   padding: 1rem;
-  background-image: url("../public/GRADIENTE\ AURA\ \(1\).jpeg");
+  background-image: url("../public/GRADIENTE_AURA.jpeg");
   background-position-x: -50px;
   background-position-y: -700px;
+  margin-bottom: 2rem;
 }
 
 .me .ondas {
@@ -36,5 +38,166 @@
 
 .div1 > *,
 .div2 > * {
-    margin-right: 15px;
+  margin-right: 15px;
+}
+
+.me .bullets {
+  padding: 2rem;
+  padding-top: 0;
+  font-weight: 200;
+  font-size: 15px;
+  width: 100dvw;
+}
+
+.me .bullets p {
+  line-height: 1.3;
+}
+
+.me .mi_esencia h3 {
+  padding: 2rem;
+  padding-top: 0;
+  padding-bottom: 0.5rem;
+}
+
+.mi_esencia > p {
+  white-space: nowrap;
+  background-position-x: -50px;
+  background-position-y: -773px;
+
+}
+
+.me .bullets > h3,
+.me .mi_esencia h3 {
+  margin-bottom: 0.75rem;
+  font-size: 18px;
+}
+
+.me .expertise {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+
+.me .expertise > p {
+  width: fit-content;
+  border-radius: 9px;
+  padding: 3px 10px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-right: 8px;
+  margin-top: 5px;
+  background: url("../public/GRADIENTE_AURA.jpeg");
+  background-position: 0 0;
+}
+
+.me .expertise > p:nth-child(1) {
+  background-position-x: -2rem;
+  background-position-y: -770px;
+}
+
+.me .expertise > p:nth-child(2) {
+  background-position-x: -180px;
+  background-position-y: -26px;
+}
+
+.me .expertise > p:nth-child(3) {
+  background-position-x: 0px;
+  background-position-y: -26px;
+}
+
+.me .expertise > p:nth-child(4) {
+  background-position-x: -62px;
+  background-position-y: -26px;
+}
+
+.me .expertise > p:nth-child(5) {
+  background-position-x: -104px;
+  background-position-y: -26px;
+}
+
+.me .expertise > p:nth-child(6) {
+  background-position-x: 0px;
+  background-position-y: -52px;
+}
+
+.me .expertise > p:nth-child(7) {
+  background-position-x: -108px;
+  background-position-y: -52px;
+}
+
+.me .expertise > p:nth-child(8) {
+  background-position-x: -201px;
+  background-position-y: -52px;
+}
+
+.me .expertise > p:nth-child(9) {
+  background-position-x: -201px;
+  background-position-y: -52px;
+}
+
+.me .expertise > p:nth-child(10) {
+  background-position-x: -201px;
+  background-position-y: -52px;
+}
+
+.me .laboral_text {
+  margin-bottom: 1rem;
+}
+
+.inspirate_cada_mes {
+  padding: 2rem;
+  padding-top: 0;
+  font-weight: 200;
+  font-size: 15px;
+}
+
+.inspirate_cada_mes h3 {
+  margin-bottom: 1rem;
+  font-size: 18px;
+}
+
+.inspirate_cada_mes p {
+  width: 80dvw;
+  line-height: 1.3;
+}
+
+.inspirate_cada_mes p span {
+  font-family: "Inter-italic";
+}
+
+.inspirate_cta_div {
+  width: 83dvw;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.inspirate_cta_div button {
+  margin-top: 1rem;
+  border: none;
+  padding: 8px 10px;
+  font-size: 15px;
+  text-align: center;
+  background: transparent;
+  font-weight: 400;
+  color: #fff;
+  background-color: #282c32;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.inspirate_cta_div > button:nth-child(1) {
+  width: 44%;
+  background: url("../public/GRADIENTE_AURA.jpeg");
+  background-position-x: -2rem;
+  background-position-y: 0;
+  color: #282c32;
+}
+
+.inspirate_cta_div > button:nth-child(2) {
+  width: 50%;
+  background: url("../public/GRADIENTE_AURA.jpeg");
+  background-position-x: calc(-140px - 2rem);
+  background-position-y: 0;
+  color: #282c32;
 }

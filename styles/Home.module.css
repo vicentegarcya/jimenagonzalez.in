@@ -5,6 +5,7 @@
   align-items: flex-start;
   padding-top: 3rem;
   padding-bottom: 0;
+  margin-bottom: 39dvh;
 }
 
 /* KEYWORDS SECTION */
@@ -117,7 +118,6 @@
   display: flex;
   justify-content: space-between;
   margin-top: 0.5rem;
-  margin-bottom: 34dvh;
 }
 
 .inspirate_cta_div button {
