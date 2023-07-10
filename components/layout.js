@@ -2,8 +2,15 @@ import Head from "next/head";
 import Header from "./header";
 import Footer from "./footer";
 import styles from "./layout.module.css";
+import { useEffect, useState } from "react";
 
 export default function Layout({ children }) {
+  const [page, setPage] = useState("");
+
+  useEffect(() => {
+    setPage(window.location.pathname);
+  }, [setPage]);
+
   return (
     <div className={styles.App}>
       <Head>
@@ -21,7 +28,7 @@ export default function Layout({ children }) {
           rel="stylesheet"
         ></link>
       </Head>
-      <Header />
+      <Header currentPage={page} />
       <main className={styles.App_main}>{children}</main>
       <Footer />
     </div>

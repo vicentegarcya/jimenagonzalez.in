@@ -1,0 +1,40 @@
+.me {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 3rem;
+  padding-bottom: 0;
+}
+
+.explora_con_bso {
+  display: flex;
+  padding: 1rem;
+  background-image: url("../public/GRADIENTE\ AURA\ \(1\).jpeg");
+  background-position-x: -50px;
+  background-position-y: -700px;
+}
+
+.me .ondas {
+  display: flex;
+}
+
+.me .ondas > div {
+  height: 15px;
+  width: 3px;
+  background-color: #282c32;
+  margin-right: 1.5px;
+}
+
+.div1,
+.div2 {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.div1 > *,
+.div2 > * {
+    margin-right: 15px;
+}

@@ -1,10 +1,12 @@
 import styles from "./header.module.css";
-import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useSpring, animated } from "react-spring";
 
-export default function Header() {
+export default function Header({ currentPage }) {
   const [scrollPosition, setScrollPosition] = useState(0);
+
+  console.log(currentPage);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,18 +29,35 @@ export default function Header() {
     config: { duration: "300" },
   });
 
+  const blackAnimation = useSpring({
+    from: { filter: "brightness(100%)" },
+    to: {
+      filter: scrollPosition < 15 ? "brightness(100%)" : "brightness(0%)",
+    },
+    config: { duration: "300" },
+  });
+
   return (
     <header className={styles.header}>
-      <div className={styles.bso}>
-        <animated.h3 style={openAnimation}>explora con BSO</animated.h3>
-        <Image
-          src={scrollPosition > 15 ? "/play_btn_black.png" : "/play_btn_psicodelico.png"}
-          width={20}
-          height={20}
-          alt="play button"
-        />
-      </div>
-      <h3>SOBRE MI</h3>
+      {currentPage === "/me" ? (
+        <Link href="/">
+          <h3 className={styles.volver}>{"<"} VOLVER</h3>
+        </Link>
+      ) : (
+        <>
+          <div className={styles.bso}>
+            <animated.h3 style={openAnimation}>explora con BSO</animated.h3>
+            <animated.img
+              style={blackAnimation}
+              src={"/play_btn_psicodelico.png"}
+              alt="play button"
+            />
+          </div>
+          <Link href="/me">
+            <h3>SOBRE MI</h3>
+          </Link>
+        </>
+      )}
     </header>
   );
 }
