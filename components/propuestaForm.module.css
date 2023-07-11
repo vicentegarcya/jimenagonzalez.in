@@ -96,6 +96,7 @@
   padding: 0.5rem 0.75rem;
   height: 150px;
   outline: none;
+  border-radius: 0% !important;
 }
 
 .propuesta_form textarea::placeholder, .tu_email input::placeholder {

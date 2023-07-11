@@ -10,11 +10,11 @@ export default function Home() {
         <section className={styles.keywords}>
           <p className={styles.text_1}>
             INSPIRACIÓN // CREATIVIDAD // ALMA // EVOLUCIÓN // ESTRATEGIA //
-            EXPANSIÓN //
+            EXPANSIÓN // <span className={styles.espacio}></span>
           </p>
           <p className={styles.text_2}>
             INSPIRACIÓN // CREATIVIDAD // ALMA // EVOLUCIÓN // ESTRATEGIA //
-            EXPANSIÓN //
+            EXPANSIÓN // <span className={styles.espacio}></span>
           </p>
         </section>
         <section className={styles.inspirate}>

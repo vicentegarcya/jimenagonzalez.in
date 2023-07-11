@@ -1,8 +1,11 @@
 import Layout from "@/components/layout";
 import styles from "@/styles/Me.module.css";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Me() {
+  const [isPlaying, setIsPlaying] = useState(false);
+
   return (
     <Layout>
       <div className={styles.me}>
@@ -10,92 +13,74 @@ export default function Me() {
           <div className={styles.div1}>
             <p>Explora con BSO</p>
             <Image
-              src={"/play_btn_black.png"}
+              src={isPlaying ? "/pause_black.png" : "/play_btn_black.png"}
               width={20}
               height={20}
               alt="play button"
+              onClick={() => setIsPlaying(!isPlaying)}
             />
             <div className={styles.ondas}>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
+              <div className={isPlaying && styles.onda2}></div>
+              <div className={isPlaying && styles.onda3}></div>
+              <div className={isPlaying && styles.onda1}></div>
+              <div className={isPlaying && styles.onda4}></div>
+              <div className={isPlaying && styles.onda5}></div>
+              <div className={isPlaying && styles.onda1}></div>
+              <div className={isPlaying && styles.onda2}></div>
+              <div className={isPlaying && styles.onda3}></div>
+              <div className={isPlaying && styles.onda4}></div>
+              <div className={isPlaying && styles.onda5}></div>
+              <div className={isPlaying && styles.onda5}></div>
+              <div className={isPlaying && styles.onda3}></div>
+              <div className={isPlaying && styles.onda1}></div>
+              <div className={isPlaying && styles.onda3}></div>
+              <div className={isPlaying && styles.onda5}></div>
+              <div className={isPlaying && styles.onda1}></div>
+              <div className={isPlaying && styles.onda4}></div>
+              <div className={isPlaying && styles.onda3}></div>
+              <div className={isPlaying && styles.onda2}></div>
+              <div className={isPlaying && styles.onda1}></div>
             </div>
-            <p>x Cris Víboras //</p>
+            <p>
+              x Cris Víboras <span className={styles.espacio}></span>
+              {"//"}
+            </p>
           </div>
           <div className={styles.div2}>
             <p>Explora con BSO</p>
             <Image
-              src={"/play_btn_black.png"}
+              src={isPlaying ? "/pause_black.png" : "/play_btn_black.png"}
               width={20}
               height={20}
               alt="play button"
+              onClick={() => setIsPlaying(!isPlaying)}
             />
             <div className={styles.ondas}>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
+              <div className={isPlaying && styles.onda2}></div>
+              <div className={isPlaying && styles.onda3}></div>
+              <div className={isPlaying && styles.onda1}></div>
+              <div className={isPlaying && styles.onda4}></div>
+              <div className={isPlaying && styles.onda5}></div>
+              <div className={isPlaying && styles.onda1}></div>
+              <div className={isPlaying && styles.onda2}></div>
+              <div className={isPlaying && styles.onda3}></div>
+              <div className={isPlaying && styles.onda4}></div>
+              <div className={isPlaying && styles.onda5}></div>
+              <div className={isPlaying && styles.onda5}></div>
+              <div className={isPlaying && styles.onda3}></div>
+              <div className={isPlaying && styles.onda1}></div>
+              <div className={isPlaying && styles.onda3}></div>
+              <div className={isPlaying && styles.onda5}></div>
+              <div className={isPlaying && styles.onda1}></div>
+              <div className={isPlaying && styles.onda4}></div>
+              <div className={isPlaying && styles.onda3}></div>
+              <div className={isPlaying && styles.onda2}></div>
+              <div className={isPlaying && styles.onda1}></div>
             </div>
-            <p>x Cris Víboras //</p>
+            <p>
+              x Cris Víboras <span className={styles.espacio}></span>
+              {"//"}
+            </p>
           </div>
         </section>
         <section className={styles.bullets}>
@@ -117,12 +102,16 @@ export default function Me() {
         </section>
         <section className={styles.mi_esencia}>
           <h3>MI ESENCIA</h3>
-          <p>
-            sensibilidad, autenticidad, espontaneidad, intuición, creatividad,
-            sabiduría, sensibilidad, autenticidad, espontaneidad, intuición,
-            creatividad, sabiduría, sensibilidad, autenticidad, espontaneidad,
-            intuición, creatividad, sabiduría
-          </p>
+          <div>
+            <p className={styles.div1}>
+              sensibilidad, autenticidad, espontaneidad, intuición, creatividad,
+              sabiduría,<span className={styles.espacio}></span>
+            </p>
+            <p className={styles.div2}>
+              sensibilidad, autenticidad, espontaneidad, intuición, creatividad,
+              sabiduría,<span className={styles.espacio}></span>
+            </p>
+          </div>
         </section>
         <section className={styles.bullets}>
           <h3>MI EXPERTISE</h3>

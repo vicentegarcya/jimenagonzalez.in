@@ -5,6 +5,7 @@ import { useSpring, animated } from "react-spring";
 
 export default function Header({ currentPage }) {
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,8 +48,9 @@ export default function Header({ currentPage }) {
             <animated.h3 style={openAnimation}>explora con BSO</animated.h3>
             <animated.img
               style={blackAnimation}
-              src={"/play_btn_psicodelico.png"}
+              src={isPlaying ? "/pause_psicodelico.png" : "/play_btn_psicodelico.png"}
               alt="play button"
+              onClick={() => setIsPlaying(!isPlaying)}
             />
           </div>
           <Link href="/me">

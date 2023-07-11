@@ -5,12 +5,13 @@
   align-items: flex-start;
   padding-top: 3rem;
   padding-bottom: 0;
-  margin-bottom: 39dvh;
+  margin-bottom: 39vh;
 }
 
 .explora_con_bso,
-.mi_esencia > p {
+.mi_esencia > div {
   display: flex;
+  align-items: center;
   padding: 1rem;
   background-image: url("../public/GRADIENTE_AURA.jpeg");
   background-position-x: -50px;
@@ -20,14 +21,191 @@
 
 .me .ondas {
   display: flex;
+  justify-content: space-between;
+  margin-top: 2px;
+  height: 20px;
+  --boxSize: 8px;
+  --gutter: 4px;
+  width: calc((var(--boxSize) + var(--gutter)) * 8);
 }
 
 .me .ondas > div {
   height: 15px;
   width: 3px;
   background-color: #282c32;
-  margin-right: 1.5px;
+  margin-right: 2px;
+  transform: scaleY(0.4);
+  height: 100%;
+  width: var(--boxSize);
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  border-radius: 8px;
 }
+
+.me .ondas > div:nth-child(2) {
+  animation-delay: 0.2s;
+  transform: scaleY(0.9);
+}
+.me .ondas > div:nth-child(4) {
+  animation-delay: 0.4s;
+  transform: scaleY(0.3);
+}
+.me .ondas > div:nth-child(6) {
+  animation-delay: 0.2s;
+  transform: scaleY(0.6);
+}
+.me .ondas > div:nth-child(7) {
+  animation-delay: 0.1s;
+}
+.me .ondas > div:nth-child(8) {
+  animation-delay: 0.3s;
+  transform: scaleY(1);
+}
+.me .ondas > div:nth-child(9) {
+  animation-delay: 0.5s;
+  transform: scaleY(0.4);
+}
+.me .ondas > div:nth-child(10) {
+  animation-delay: 0.2s;
+}
+.me .ondas > div:nth-child(11) {
+  animation-delay: 0.2s;
+  transform: scaleY(0.5);
+}
+.me .ondas > div:nth-child(12) {
+  animation-delay: 0.1s;
+  transform: scaleY(0.8);
+}
+.me .ondas > div:nth-child(14) {
+  animation-delay: 0.3s;
+  transform: scaleY(0.1);
+}
+.me .ondas > div:nth-child(10) {
+  animation-delay: 0.2s;
+}
+.me .ondas > div:nth-child(16) {
+  animation-delay: 0.2s;
+  transform: scaleY(1);
+}
+.me .ondas > div:nth-child(17) {
+  animation-delay: 0.1s;
+  transform: scaleY(0.4);
+}
+.me .ondas > div:nth-child(18) {
+  animation-delay: 0.3s;
+  transform: scaleY(0.2);
+}
+.me .ondas > div:nth-child(19) {
+  animation-delay: 0.4s;
+  transform: scaleY(0.8);
+}
+.me .ondas > div:nth-child(20) {
+  animation-delay: 0.2s;
+  transform: scaleY(0.6);
+}
+
+/* ANIMACION ONDAS */
+
+@keyframes quiet {
+  25% {
+    transform: scaleY(0.6);
+  }
+  50% {
+    transform: scaleY(0.4);
+  }
+  75% {
+    transform: scaleY(0.8);
+  }
+}
+
+@keyframes normal {
+  25% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.4);
+  }
+  75% {
+    transform: scaleY(0.6);
+  }
+}
+@keyframes loud {
+  25% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.4);
+  }
+  75% {
+    transform: scaleY(1.2);
+  }
+}
+
+.onda1 {
+  animation-name: quiet;
+}
+
+.onda2 {
+  animation-name: normal;
+}
+
+.onda3 {
+  animation-name: quiet;
+}
+
+.onda4 {
+  animation-name: loud;
+}
+
+.onda5 {
+  animation-name: quiet;
+}
+
+/* ANIMACION ONDAS */
+
+/* ANIMACION MOVIMIENTO LATERAL */
+
+.div1 {
+  display: inline-block;
+  /* Apply animation to this element */
+  animation: scrolling-left1 20s linear infinite;
+}
+
+.div2 {
+  display: inline-block;
+  /* Apply animation to this element */
+  animation: scrolling-left2 20s linear infinite;
+  animation-delay: 10s;
+}
+
+.explora_con_bso .espacio {
+    margin-right: 12px;
+}
+
+.mi_esencia .espacio {
+    margin-right: 4px;
+}
+
+/* scrolling-left is continuous/repeatly text */
+@keyframes scrolling-left1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes scrolling-left2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+/* ANIMACION MOVIMIENTO LATERAL */
 
 .div1,
 .div2 {
@@ -63,7 +241,6 @@
   white-space: nowrap;
   background-position-x: -50px;
   background-position-y: -773px;
-
 }
 
 .me .bullets > h3,
@@ -91,53 +268,53 @@
 }
 
 .me .expertise > p:nth-child(1) {
-  background-position-x: -2rem;
-  background-position-y: -770px;
+  background-position-x: -32px;
+  background-position-y: -839px;
 }
 
 .me .expertise > p:nth-child(2) {
-  background-position-x: -180px;
-  background-position-y: -26px;
+  background-position-x: -132px;
+  background-position-y: -839px;
 }
 
 .me .expertise > p:nth-child(3) {
-  background-position-x: 0px;
-  background-position-y: -26px;
+  background-position-x: -194px;
+  background-position-y: -839px;
 }
 
 .me .expertise > p:nth-child(4) {
-  background-position-x: -62px;
-  background-position-y: -26px;
+  background-position-x: -32px;
+  background-position-y: -867px;
 }
 
 .me .expertise > p:nth-child(5) {
-  background-position-x: -104px;
-  background-position-y: -26px;
+  background-position-x: -132px;
+  background-position-y: -867px;
 }
 
 .me .expertise > p:nth-child(6) {
-  background-position-x: 0px;
-  background-position-y: -52px;
+  background-position-x: -233px;
+  background-position-y: -867px;
 }
 
 .me .expertise > p:nth-child(7) {
-  background-position-x: -108px;
-  background-position-y: -52px;
+  background-position-x: -32px;
+  background-position-y: -895px;
 }
 
 .me .expertise > p:nth-child(8) {
-  background-position-x: -201px;
-  background-position-y: -52px;
+  background-position-x: -163px;
+  background-position-y: -895px;
 }
 
 .me .expertise > p:nth-child(9) {
-  background-position-x: -201px;
-  background-position-y: -52px;
+  background-position-x: -32px;
+  background-position-y: -923px;
 }
 
 .me .expertise > p:nth-child(10) {
-  background-position-x: -201px;
-  background-position-y: -52px;
+  background-position-x: -152px;
+  background-position-y: -923px;
 }
 
 .me .laboral_text {
@@ -189,15 +366,15 @@
 .inspirate_cta_div > button:nth-child(1) {
   width: 44%;
   background: url("../public/GRADIENTE_AURA.jpeg");
-  background-position-x: -2rem;
-  background-position-y: 0;
+  background-position-x: -247px;
+  background-position-y: -757px;
   color: #282c32;
 }
 
 .inspirate_cta_div > button:nth-child(2) {
   width: 50%;
   background: url("../public/GRADIENTE_AURA.jpeg");
-  background-position-x: calc(-140px - 2rem);
-  background-position-y: 0;
+  background-position-x: -409px;
+  background-position-y: -757px;
   color: #282c32;
 }
