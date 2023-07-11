@@ -237,10 +237,16 @@
   padding-bottom: 0.5rem;
 }
 
-.mi_esencia > p {
+.mi_esencia > div {
   white-space: nowrap;
   background-position-x: -50px;
-  background-position-y: -773px;
+  background-position-y: -733px;
+  padding: 1.25rem;
+}
+
+.mi_esencia p {
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .me .bullets > h3,
