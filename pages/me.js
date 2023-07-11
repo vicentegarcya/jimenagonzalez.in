@@ -20,26 +20,26 @@ export default function Me() {
               onClick={() => setIsPlaying(!isPlaying)}
             />
             <div className={styles.ondas}>
-              <div className={isPlaying && styles.onda2}></div>
-              <div className={isPlaying && styles.onda3}></div>
-              <div className={isPlaying && styles.onda1}></div>
-              <div className={isPlaying && styles.onda4}></div>
-              <div className={isPlaying && styles.onda5}></div>
-              <div className={isPlaying && styles.onda1}></div>
-              <div className={isPlaying && styles.onda2}></div>
-              <div className={isPlaying && styles.onda3}></div>
-              <div className={isPlaying && styles.onda4}></div>
-              <div className={isPlaying && styles.onda5}></div>
-              <div className={isPlaying && styles.onda5}></div>
-              <div className={isPlaying && styles.onda3}></div>
-              <div className={isPlaying && styles.onda1}></div>
-              <div className={isPlaying && styles.onda3}></div>
-              <div className={isPlaying && styles.onda5}></div>
-              <div className={isPlaying && styles.onda1}></div>
-              <div className={isPlaying && styles.onda4}></div>
-              <div className={isPlaying && styles.onda3}></div>
-              <div className={isPlaying && styles.onda2}></div>
-              <div className={isPlaying && styles.onda1}></div>
+              <div className={isPlaying ? styles.onda2 : undefined}></div>
+              <div className={isPlaying ? styles.onda3 : undefined}></div>
+              <div className={isPlaying ? styles.onda1 : undefined}></div>
+              <div className={isPlaying ? styles.onda4 : undefined}></div>
+              <div className={isPlaying ? styles.onda5 : undefined}></div>
+              <div className={isPlaying ? styles.onda1 : undefined}></div>
+              <div className={isPlaying ? styles.onda2 : undefined}></div>
+              <div className={isPlaying ? styles.onda3 : undefined}></div>
+              <div className={isPlaying ? styles.onda4 : undefined}></div>
+              <div className={isPlaying ? styles.onda5 : undefined}></div>
+              <div className={isPlaying ? styles.onda5 : undefined}></div>
+              <div className={isPlaying ? styles.onda3 : undefined}></div>
+              <div className={isPlaying ? styles.onda1 : undefined}></div>
+              <div className={isPlaying ? styles.onda3 : undefined}></div>
+              <div className={isPlaying ? styles.onda5 : undefined}></div>
+              <div className={isPlaying ? styles.onda1 : undefined}></div>
+              <div className={isPlaying ? styles.onda4 : undefined}></div>
+              <div className={isPlaying ? styles.onda3 : undefined}></div>
+              <div className={isPlaying ? styles.onda2 : undefined}></div>
+              <div className={isPlaying ? styles.onda1 : undefined}></div>
             </div>
             <p>
               x Cris Víboras <span className={styles.espacio}></span>
@@ -56,26 +56,26 @@ export default function Me() {
               onClick={() => setIsPlaying(!isPlaying)}
             />
             <div className={styles.ondas}>
-              <div className={isPlaying && styles.onda2}></div>
-              <div className={isPlaying && styles.onda3}></div>
-              <div className={isPlaying && styles.onda1}></div>
-              <div className={isPlaying && styles.onda4}></div>
-              <div className={isPlaying && styles.onda5}></div>
-              <div className={isPlaying && styles.onda1}></div>
-              <div className={isPlaying && styles.onda2}></div>
-              <div className={isPlaying && styles.onda3}></div>
-              <div className={isPlaying && styles.onda4}></div>
-              <div className={isPlaying && styles.onda5}></div>
-              <div className={isPlaying && styles.onda5}></div>
-              <div className={isPlaying && styles.onda3}></div>
-              <div className={isPlaying && styles.onda1}></div>
-              <div className={isPlaying && styles.onda3}></div>
-              <div className={isPlaying && styles.onda5}></div>
-              <div className={isPlaying && styles.onda1}></div>
-              <div className={isPlaying && styles.onda4}></div>
-              <div className={isPlaying && styles.onda3}></div>
-              <div className={isPlaying && styles.onda2}></div>
-              <div className={isPlaying && styles.onda1}></div>
+              <div className={isPlaying ? styles.onda2 : undefined}></div>
+              <div className={isPlaying ? styles.onda3 : undefined}></div>
+              <div className={isPlaying ? styles.onda1 : undefined}></div>
+              <div className={isPlaying ? styles.onda4 : undefined}></div>
+              <div className={isPlaying ? styles.onda5 : undefined}></div>
+              <div className={isPlaying ? styles.onda1 : undefined}></div>
+              <div className={isPlaying ? styles.onda2 : undefined}></div>
+              <div className={isPlaying ? styles.onda3 : undefined}></div>
+              <div className={isPlaying ? styles.onda4 : undefined}></div>
+              <div className={isPlaying ? styles.onda5 : undefined}></div>
+              <div className={isPlaying ? styles.onda5 : undefined}></div>
+              <div className={isPlaying ? styles.onda3 : undefined}></div>
+              <div className={isPlaying ? styles.onda1 : undefined}></div>
+              <div className={isPlaying ? styles.onda3 : undefined}></div>
+              <div className={isPlaying ? styles.onda5 : undefined}></div>
+              <div className={isPlaying ? styles.onda1 : undefined}></div>
+              <div className={isPlaying ? styles.onda4 : undefined}></div>
+              <div className={isPlaying ? styles.onda3 : undefined}></div>
+              <div className={isPlaying ? styles.onda2 : undefined}></div>
+              <div className={isPlaying ? styles.onda1 : undefined}></div>
             </div>
             <p>
               x Cris Víboras <span className={styles.espacio}></span>
