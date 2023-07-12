@@ -1,0 +1,13 @@
+.toast {
+  z-index: 99;
+  position: fixed;
+  bottom: 8%;
+  right: 2rem;
+  background-color: #fff;
+  backdrop-filter: blur(12px);
+  padding: 1rem 1rem 1rem 1.25rem;
+  font-size: 14px;
+  width: 60%;
+  border: 0.5px solid #282c32;
+  line-height: 1.3;
+}

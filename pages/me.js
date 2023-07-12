@@ -2,6 +2,7 @@ import Layout from "@/components/layout";
 import styles from "@/styles/Me.module.css";
 import Image from "next/image";
 import { useState } from "react";
+import Subscribe from "@/components/subscribe";
 
 export default function Me() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -172,10 +173,7 @@ export default function Me() {
             inspiración mensual y podrás estar al tanto de todos mis
             lanzamientos y promociones.
           </p>
-          <div className={styles.inspirate_cta_div}>
-            <button>SUSCRIBIRME</button>
-            <button>VER UN EJEMPLO</button>
-          </div>
+          <Subscribe pageWhereLoaded={'me'} />
         </section>
       </div>
     </Layout>

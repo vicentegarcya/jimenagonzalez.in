@@ -1,0 +1,68 @@
+.inspirate_email input {
+  width: 100%;
+  border: 0.5px solid #282c32;
+  border-radius: 0px;
+  padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+  font-size: 13px;
+  font-weight: 300;
+  margin-right: 0;
+  margin-top: 1.25rem;
+  height: 30px;
+}
+
+.inspirate_email input:focus {
+  outline: none;
+}
+
+.inspirate_cta_div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.inspirate_cta_div button {
+  margin-top: 1rem;
+  border: none;
+  padding: 8px 10px;
+  font-size: 15px;
+  width: 49%;
+  text-align: center;
+  background: transparent;
+  font-weight: 400;
+  color: #fff;
+  background-color: #282c32;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.inspirate_cta_div button:nth-child(1) {
+  width: 42%;
+  background: url("../public/PSICODELICO.jpeg");
+  background-position-x: -2rem;
+  background-position-y: 0;
+  color: #282c32;
+}
+
+.inspirate_cta_div button:nth-child(2) {
+  width: 52%;
+  background: url("../public/PSICODELICO.jpeg");
+  background-position-x: calc(-140px - 2rem);
+  background-position-y: 0;
+  color: #282c32;
+}
+
+.sobre_mi .inspirate_cta_div button:nth-child(1) {
+  width: 44%;
+  background: url("../public/GRADIENTE_AURA.jpeg");
+  background-position-x: -247px;
+  background-position-y: -757px;
+  color: #282c32;
+}
+
+.sobre_mi .inspirate_cta_div button:nth-child(2) {
+  width: 50%;
+  background: url("../public/GRADIENTE_AURA.jpeg");
+  background-position-x: -409px;
+  background-position-y: -757px;
+  color: #282c32;
+}

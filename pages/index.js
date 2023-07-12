@@ -2,6 +2,7 @@ import styles from "@/styles/Home.module.css";
 import Layout from "@/components/layout";
 import Service from "@/components/service";
 import PropuestaForm from "@/components/propuestaForm";
+import Subscribe from "@/components/subscribe";
 
 export default function Home() {
   return (
@@ -130,10 +131,7 @@ export default function Home() {
             artistas, creativ@s y personas en su camino de evolución personal.
             <span> ¡Welcoming you, creative soul!</span>
           </p>
-          <div className={styles.inspirate_cta_div}>
-            <button>SUSCRIBIRME</button>
-            <button>INSPÍRAME AHORA</button>
-          </div>
+          <Subscribe pageWhereLoaded={'home'} />
         </section>
       </main>
     </Layout>
