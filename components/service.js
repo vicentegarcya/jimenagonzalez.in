@@ -1,8 +1,9 @@
+import Link from "next/link";
 import styles from "./service.module.css";
 import { useState } from "react";
 import { useSpring, animated } from "react-spring";
 
-export default function Service({title, description, hashtags, price}) {
+export default function Service({title, description, hashtags, price, calendlyUrl}) {
   const [desplegado, setDesplegado] = useState(false);
 
   const openAnimation = useSpring({
@@ -33,7 +34,7 @@ export default function Service({title, description, hashtags, price}) {
         <p>{hashtags}</p>
         <div className={styles.servicio_cta_div}>
           <p>{price}</p>
-          <button>AGENDAR</button>
+          <Link href={calendlyUrl}>AGENDAR</Link>
         </div>
       </animated.div>
     </div>

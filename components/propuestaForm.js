@@ -42,7 +42,28 @@ export default function PropuestaForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(temas, formato, idea, email);
+    let data = {
+      temas,
+      formato,
+      idea,
+      email,
+    };
+    fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then((res) => {
+      if (res.status === 200) {
+        document.querySelectorAll("#__next form > fieldset > input").forEach(e => e.classList.remove('seleccionado'));
+        setTemas([]);
+        setFormato([]);
+        setIdea("");
+        setEmail("");
+      }
+    });
   };
 
   return (

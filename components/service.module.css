@@ -77,7 +77,7 @@
   backdrop-filter: blur(20px);
 }
 
-.servicio_cta_div > button {
+.servicio_cta_div > a {
   color: #fff;
   background-color: #282c32;
   font-weight: 300;
