@@ -9,6 +9,8 @@ export default function Service({
   hashtags,
   price,
   calendlyUrl,
+  cta = "AGENDAR",
+  asterisco,
 }) {
   const [desplegado, setDesplegado] = useState(false);
 
@@ -36,7 +38,11 @@ export default function Service({
       <div className={styles.servicio_detalle_titulo}>
         <p onClick={() => setDesplegado(!desplegado)}>→ {title}</p>
         <animated.button
-          style={desplegado ? { transform: props.x.to(value => `rotate(${value}deg)`) } : undefined}
+          style={
+            desplegado
+              ? { transform: props.x.to((value) => `rotate(${value}deg)`) }
+              : undefined
+          }
           onClick={() => setDesplegado(!desplegado)}
         >
           +
@@ -50,8 +56,9 @@ export default function Service({
         <p>{hashtags}</p>
         <div className={styles.servicio_cta_div}>
           <p>{price}</p>
-          <Link href={calendlyUrl}>AGENDAR</Link>
+          <Link href={calendlyUrl}>{cta}</Link>
         </div>
+        <p>{asterisco}</p>
       </animated.div>
     </div>
   );

@@ -55,6 +55,11 @@
   margin-bottom: 1.5rem;
 }
 
+.servicio_desplegable > p:nth-child(4) {
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
 .servicio_cta_div {
   width: 90%;
   display: flex;
@@ -67,7 +72,6 @@
   border: 1px solid #000;
   padding: 8px 20px;
   font-size: 15px;
-  width: 45%;
   text-align: center;
   background: transparent;
   font-weight: 400;
@@ -83,4 +87,5 @@
   background-color: #282c32;
   font-weight: 300;
   font-size: 14px;
+  width: 53%;
 }

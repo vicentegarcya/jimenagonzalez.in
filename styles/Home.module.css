@@ -71,7 +71,7 @@
 }
 
 .inspirate > p > span {
-  font-family: 'Inter-italic';
+  font-family: "Inter-italic";
 }
 
 .servicios {
@@ -105,16 +105,24 @@
   font-size: 15px;
 }
 
-.inspirate_cada_mes h3 {
+.inspirate_cada_mes {
+  margin-bottom: 1.5rem;
+}
+
+.inspirate_cada_mes h3, .regala_sesion h3 {
   margin-bottom: 1rem;
   font-size: 18px;
 }
 
-.inspirate_cada_mes p {
+.inspirate_cada_mes p, .regala_sesion > p {
   width: 80dvw;
   line-height: 1.3;
 }
 
 .inspirate_cada_mes p span {
-  font-family: 'Inter-italic';
+  font-family: "Inter-italic";
+}
+
+.regala_sesion > p {
+  margin-bottom: 1rem;
 }

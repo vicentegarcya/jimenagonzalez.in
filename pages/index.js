@@ -53,9 +53,10 @@ export default function Home() {
               <Service
                 title="Manifiesta (diseña tu estrategia)"
                 description="Conecta con tu auténtica visión, intenciona tu expansión y diseña un plan guiado."
-                price="111,00 €"
+                price="111,00 € *"
                 hashtags="#estrategia #business #tarot"
                 calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-manifiesta-estrategia-x-jimena-gonzalez"
+                asterisco='* Las sesiones de asesoramiento estratégico posteriores tienen un valor de 95€.'
               />
             </div>
           </div>
@@ -86,9 +87,10 @@ export default function Home() {
               <Service
                 title="Manifiesta (diseña tu estrategia)"
                 description="Conecta con tu auténtica visión, intenciona tu expansión y diseña un plan guiado."
-                price="111,00 €"
+                price="111,00 € *"
                 hashtags="#estrategia #tarot"
                 calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-manifiesta-disena-tu-estrategia-x-jimena-gonzalez"
+                asterisco='* Las sesiones de asesoramiento estratégico posteriores tienen un valor de 95€.'
               />
             </div>
           </div>
@@ -131,7 +133,46 @@ export default function Home() {
             artistas, creativ@s y personas en su camino de evolución personal.
             <span> ¡Welcoming you, creative soul!</span>
           </p>
-          <Subscribe pageWhereLoaded={'home'} />
+          <Subscribe pageWhereLoaded={"home"} />
+        </section>
+        <section className={styles.servicios}>
+          <div className={styles.servicio + ' ' + styles.regala_sesion}>
+            <h3>QUIERO REGALAR UNA SESIÓN</h3>
+            <p>
+              Todas las sesiones incluyen un bono regalo digital personalizado,
+              un ejercicio de Despertar Creativo® previo a la sesión y una
+              sesión online en directo. La fecha de la sesión y su temática
+              podrá ser elegida después por la persona a la que envíes el bono
+              regalo.
+            </p>
+            <p>
+              Elige la técnica principal de la sesión para empezar a
+              personalizar tu regalo:
+            </p>
+            <div className={styles.servicios_grupo}>
+              <Service
+                title="TAROT"
+                description="Sesión a elegir entre “Comprende el sentido de tu reto actual”, “Supera bloqueos y dificultades” (especial emprendedor@s), “Conecta con el alma de tu negocio” (especial emprendedor@s), “Supera bloqueos creativos” (especial creativ@s) e “Intenciona tu siguiente proyecto” (especial creativ@s)."
+                price="55,00 €"
+                calendlyUrl="https://buy.stripe.com/dR69B34GFd2ud7G004"
+                cta='SELECCIONAR'
+              />
+              <Service
+                title="ASTROLOGÍA + TAROT"
+                description="Descubre la perspectiva evolutiva y espiritual de tu dificultad actual (pareja, salud, trabajo, sanación…) y conecta con su propósito, aprendizajes y acciones a tomar."
+                price="55,00 €"
+                calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-comprende-tu-reto-x-jimena-gonzalez"
+                cta='SELECCIONAR'
+              />
+              <Service
+                title="ESTRATEGIA"
+                description="Comprende la energía de esta etapa de tu desarrollo, sus retos evolutivos y aprendizajes a integrar, las áreas de tu vida que son protagonistas y cómo hacerle frente de la mejor manera."
+                price="77,00 €"
+                calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-desvela-esta-etapa-vital-x-jimena-gonzalez"
+                cta='SELECCIONAR'
+              />
+            </div>
+          </div>
         </section>
       </main>
     </Layout>

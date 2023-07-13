@@ -20,8 +20,9 @@ export default function Header({ currentPage }) {
   }, [scrollPosition]);
 
   const openAnimation = useSpring({
-    from: { maxWidth: "0px", marginRight: "12px" },
+    from: { opacity: "1", maxWidth: "0px", marginRight: "12px" },
     to: {
+      opacity: scrollPosition < 15 ? "1" : "0",
       maxWidth: scrollPosition < 15 ? "200px" : "0px",
       marginRight: scrollPosition < 15 ? "12px" : "0px",
     },

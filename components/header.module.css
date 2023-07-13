@@ -23,7 +23,7 @@
   filter: brightness(100%);
   width: 20px;
   height: 20px;
-  transition: filter 0.6s ease-in-out;
+  transition: filter 1s ease-in-out;
 }
 
 .bso h3 {
@@ -39,5 +39,5 @@
   mix-blend-mode: difference;
   overflow: hidden;
   max-width: 200px;
-  transition: margin-right 0.4s ease-out, max-width 0.4s ease-out;
+  transition: margin-right 1s ease-out, max-width 1s ease-out, opacity 1.2s ease-in 0.1s;
 }
