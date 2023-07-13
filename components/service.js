@@ -3,7 +3,13 @@ import styles from "./service.module.css";
 import { useState } from "react";
 import { useSpring, animated } from "react-spring";
 
-export default function Service({title, description, hashtags, price, calendlyUrl}) {
+export default function Service({
+  title,
+  description,
+  hashtags,
+  price,
+  calendlyUrl,
+}) {
   const [desplegado, setDesplegado] = useState(false);
 
   const openAnimation = useSpring({
@@ -16,21 +22,31 @@ export default function Service({title, description, hashtags, price, calendlyUr
     config: { duration: "300" },
   });
 
+  const props = useSpring({
+    from: {
+      x: 0,
+    },
+    to: {
+      x: 45,
+    },
+  });
+
   return (
     <div className={styles.servicio_detalle}>
       <div className={styles.servicio_detalle_titulo}>
         <p onClick={() => setDesplegado(!desplegado)}>→ {title}</p>
-        <button onClick={() => setDesplegado(!desplegado)}>
-          {!desplegado ? "+" : "-"}
-        </button>
+        <animated.button
+          style={desplegado ? { transform: props.x.to(value => `rotate(${value}deg)`) } : undefined}
+          onClick={() => setDesplegado(!desplegado)}
+        >
+          +
+        </animated.button>
       </div>
       <animated.div
         style={openAnimation}
         className={styles.servicio_desplegable}
       >
-        <p>
-          {description}
-        </p>
+        <p>{description}</p>
         <p>{hashtags}</p>
         <div className={styles.servicio_cta_div}>
           <p>{price}</p>
