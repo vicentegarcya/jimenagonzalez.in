@@ -173,15 +173,12 @@
 
 .div1 {
   display: inline-block;
-  /* Apply animation to this element */
-  animation: scrolling-left1 20s linear infinite;
+  animation: scrollText 10s infinite linear;
 }
 
 .div2 {
   display: inline-block;
-  /* Apply animation to this element */
-  animation: scrolling-left2 20s linear infinite;
-  animation-delay: 10s;
+  animation: scrollText 10s infinite linear;
 }
 
 .explora_con_bso .espacio {
@@ -193,21 +190,9 @@
 }
 
 /* scrolling-left is continuous/repeatly text */
-@keyframes scrolling-left1 {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-@keyframes scrolling-left2 {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-200%);
-  }
+@keyframes scrollText {
+  from   { transform: translateX(0%); }
+  to { transform: translateX(-100%); }
 }
 
 /* ANIMACION MOVIMIENTO LATERAL */
