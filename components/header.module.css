@@ -39,5 +39,6 @@
   mix-blend-mode: difference;
   overflow: hidden;
   max-width: 200px;
+  opacity: 1;
   transition: margin-right 1s ease-out, max-width 1s ease-out, opacity 1.2s ease-in 0.1s;
 }
