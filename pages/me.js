@@ -19,7 +19,6 @@ export default function Me() {
               height={20}
               alt="play button"
               onClick={() => setIsPlaying(!isPlaying)}
-              priority={true}
             />
             <div className={styles.ondas}>
               <div className={isPlaying ? styles.onda2 : undefined}></div>
