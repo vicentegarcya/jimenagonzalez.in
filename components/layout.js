@@ -3,6 +3,8 @@ import Header from "./header";
 import Footer from "./footer";
 import styles from "./layout.module.css";
 import { useEffect, useState } from "react";
+import { isPlayingContext } from "../context/context";
+import { useContext } from "react";
 
 export default function Layout({ children }) {
   const [page, setPage] = useState("");

@@ -159,16 +159,16 @@ export default function Home() {
               />
               <Service
                 title="ASTROLOGÍA + TAROT"
-                description="Descubre la perspectiva evolutiva y espiritual de tu dificultad actual (pareja, salud, trabajo, sanación…) y conecta con su propósito, aprendizajes y acciones a tomar."
-                price="55,00 €"
-                calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-comprende-tu-reto-x-jimena-gonzalez"
+                description="Sesión a elegir entre “Descubre tu misión, dones y retos vitales”, “Desvela el propósito de esta etapa vital”, “Descubre tu misión y dones” (especial emprendedor@s) y “Descubre tus dones y tu voz creativa” (especial creativ@s)."
+                price="77,00 €"
+                calendlyUrl="https://buy.stripe.com/eVa6oR5KJ0fIffOcMP"
                 cta='SELECCIONAR'
               />
               <Service
                 title="ESTRATEGIA"
-                description="Comprende la energía de esta etapa de tu desarrollo, sus retos evolutivos y aprendizajes a integrar, las áreas de tu vida que son protagonistas y cómo hacerle frente de la mejor manera."
-                price="77,00 €"
-                calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-desvela-esta-etapa-vital-x-jimena-gonzalez"
+                description="Sesión “Manifiesta (diseña tu estrategia): una sesión para conectar con su auténtica visión, intencionar su expansión y diseñar un plan guiado para manifestarla.”"
+                price="111,00 €"
+                calendlyUrl="https://buy.stripe.com/5kA00tc97faC9VubIK"
                 cta='SELECCIONAR'
               />
             </div>

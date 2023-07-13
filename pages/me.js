@@ -1,11 +1,12 @@
 import Layout from "@/components/layout";
 import styles from "@/styles/Me.module.css";
 import Image from "next/image";
-import { useState } from "react";
 import Subscribe from "@/components/subscribe";
+import { isPlayingContext } from "../context/context";
+import { useContext } from "react";
 
 export default function Me() {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const {isPlaying, soundHandler} = useContext(isPlayingContext);
 
   return (
     <Layout>
@@ -16,7 +17,7 @@ export default function Me() {
             <img
               src={isPlaying ? "/pause_black.png" : "/play_btn_black.png"}
               alt="play button"
-              onClick={() => setIsPlaying(!isPlaying)}
+              onClick={soundHandler}
             />
             {/* <Image
               src={isPlaying ? "/pause_black.png" : "/play_btn_black.png"}
@@ -137,7 +138,17 @@ export default function Me() {
             <p>#emprendimiento</p>
             <p>#businessdesign</p>
             <p>#designthinking</p>
+            <p>#servicedesign</p>
+            <p>#futuresdesign</p>
+            <p>#systemsdesign</p>
+            <p>#experiencedesign</p>
             <p>#tarot</p>
+            <p>#oraculos</p>
+            <p>#registrosakasicos</p>
+            <p>#astrologia</p>
+            <p>#numerologia</p>
+            <p>#diseñohumano</p>
+            <p>+++</p>
           </div>
         </section>
         <section className={styles.bullets}>
