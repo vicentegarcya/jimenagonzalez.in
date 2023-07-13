@@ -28,6 +28,7 @@ body {
   overflow-x: hidden;
   font-family: 'Inter', sans-serif;
   position: relative;
+  -webkit-text-size-adjust: 100%;
 }
 
 button {
