@@ -13,14 +13,19 @@ export default function Me() {
         <section className={styles.explora_con_bso}>
           <div className={styles.div1}>
             <p>Explora con BSO</p>
-            <Image
+            <img
+              src={isPlaying ? "/pause_black.png" : "/play_btn_black.png"}
+              alt="play button"
+              onClick={() => setIsPlaying(!isPlaying)}
+            />
+            {/* <Image
               src={isPlaying ? "/pause_black.png" : "/play_btn_black.png"}
               width={20}
               height={20}
               alt="play button"
               onClick={() => setIsPlaying(!isPlaying)}
               priority
-            />
+            /> */}
             <div className={styles.ondas}>
               <div className={isPlaying ? styles.onda2 : undefined}></div>
               <div className={isPlaying ? styles.onda3 : undefined}></div>
@@ -50,14 +55,18 @@ export default function Me() {
           </div>
           <div className={styles.div2}>
             <p>Explora con BSO</p>
-            <Image
+            <img
+              src={isPlaying ? "/pause_black.png" : "/play_btn_black.png"}
+              alt="play button"
+              onClick={() => setIsPlaying(!isPlaying)}
+            />
+            {/* <Image
               src={isPlaying ? "/pause_black.png" : "/play_btn_black.png"}
               width={20}
               height={20}
-              alt="play button"
               onClick={() => setIsPlaying(!isPlaying)}
               priority
-            />
+            /> */}
             <div className={styles.ondas}>
               <div className={isPlaying ? styles.onda2 : undefined}></div>
               <div className={isPlaying ? styles.onda3 : undefined}></div>
@@ -175,7 +184,7 @@ export default function Me() {
             inspiración mensual y podrás estar al tanto de todos mis
             lanzamientos y promociones.
           </p>
-          <Subscribe pageWhereLoaded={'me'} />
+          <Subscribe pageWhereLoaded={"me"} />
         </section>
       </div>
     </Layout>
