@@ -59,7 +59,7 @@ export default function Me() {
             <img
               src={isPlaying ? "/pause_black.png" : "/play_btn_black.png"}
               alt="play button"
-              onClick={() => setIsPlaying(!isPlaying)}
+              onClick={soundHandler}
             />
             {/* <Image
               src={isPlaying ? "/pause_black.png" : "/play_btn_black.png"}

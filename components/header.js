@@ -7,7 +7,7 @@ import { useContext } from "react";
 
 export default function Header({ currentPage }) {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const {isPlaying, soundHandler, audio} = useContext(isPlayingContext);
+  const {isPlaying, soundHandler} = useContext(isPlayingContext);
 
   useEffect(() => {
     const handleScroll = () => {

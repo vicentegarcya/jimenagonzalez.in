@@ -7,7 +7,19 @@ function Context({ children }) {
   const [audio, setAudio] = useState(null);
 
   useEffect(() => {
-    setAudio(new Audio("./bso_jimenagonzalezin.mp3"));
+    let audioElement = new Audio("./bso_jimenagonzalezin.mp3");
+    audioElement.classList.add('bso_audio');
+
+    setAudio(audioElement);
+
+    const handleAudio = () => {
+      setIsPlaying(false);
+    };
+
+    audioElement.addEventListener("ended", handleAudio);
+    return () => {
+      audioElement.removeEventListener("ended", handleAudio);
+    };
   }, []);
 
   const soundHandler = () => {
