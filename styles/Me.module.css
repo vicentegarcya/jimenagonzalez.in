@@ -148,19 +148,31 @@
   }
 }
 
-.onda1, .onda6, .onda11, .onda16 {
+.onda1,
+.onda6,
+.onda11,
+.onda16 {
   animation-name: quiet;
 }
 
-.onda2, .onda7, .onda12, .onda17 {
+.onda2,
+.onda7,
+.onda12,
+.onda17 {
   animation-name: normal;
 }
 
-.onda3, .onda7, .onda13, .onda18 {
+.onda3,
+.onda7,
+.onda13,
+.onda18 {
   animation-name: quiet;
 }
 
-.onda4, .onda8, .onda14, .onda19 {
+.onda4,
+.onda8,
+.onda14,
+.onda19 {
   animation-name: loud;
 }
 
@@ -361,6 +373,12 @@
 
 .me .laboral_text {
   margin-bottom: 1rem;
+}
+
+.me .laboral_text a {
+  font-weight: 400;
+  text-decoration: underline 0.5px #282c32;
+  text-underline-offset: 2.5px;
 }
 
 .inspirate_cada_mes {

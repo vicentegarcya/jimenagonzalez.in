@@ -6,7 +6,7 @@ import { isPlayingContext } from "../context/context";
 import { useContext } from "react";
 
 export default function Me() {
-  const {isPlaying, soundHandler} = useContext(isPlayingContext);
+  const { isPlaying, soundHandler } = useContext(isPlayingContext);
 
   return (
     <Layout>
@@ -162,7 +162,14 @@ export default function Me() {
           <p className={styles.laboral_text}>
             Estudié industriales y la carrera de piano, y un par de másteres:
             uno en negocio y otro en liderazgo internacional (para saber más, ve
-            a mi perfil de Linkedin).
+            a mi{" "}
+            <a
+              href="https://www.linkedin.com/in/jimena-gonzalez-collados/"
+              target="_blank"
+            >
+              perfil de Linkedin
+            </a>
+            ).
           </p>
           <p className={styles.laboral_text}>
             Trabajé durante años en consultoría estratégica, innovación y diseño
