@@ -3,6 +3,7 @@ import axios from "axios";
 import styles from "./subscribe.module.css";
 import Toast from "./toast";
 import Link from "next/link";
+import Confetti from "./confetti";
 
 function Subscribe({ pageWhereLoaded }) {
   const [email, setEmail] = useState("");
@@ -26,16 +27,21 @@ function Subscribe({ pageWhereLoaded }) {
   };
 
   return (
-    <form className={pageWhereLoaded === 'me' ? styles.sobre_mi : undefined} onSubmit={subscribe}>
-      <div className={styles.inspirate_email}>
+    <form
+      id={styles.subscribe_form}
+      className={pageWhereLoaded === "me" ? styles.sobre_mi : undefined}
+      onSubmit={subscribe}
+    >
+      <div className={state === "Error" ? styles.inspirate_email + ' ' + styles.email_error : styles.inspirate_email}>
         <input
           required
           id="email-input"
           name="email"
           type="email"
-          placeholder="Escribe tu email"
-          value={email}
+          placeholder={state === "Error" ? "Revisa tu email y vuelve a intentarlo" : "Escribe tu email"}
+          value={state === "Error" ? "Revisa tu email y vuelve a intentarlo" : email}
           onChange={(e) => setEmail(e.target.value)}
+          onClick={(e) => setState("idle")}
         />
       </div>
       <div className={styles.inspirate_cta_div}>
@@ -47,10 +53,21 @@ function Subscribe({ pageWhereLoaded }) {
         >
           SUSCRIBIRME
         </button>
-        <button><Link href={'https://mailchi.mp/cd32dfb448ae/aqu-llega-el-pre-estreno-julio-en-despertar-creativo?e=6fb98a57ae'}>INSPÍRAME AHORA</Link></button>
+        <button>
+          <Link
+            href={
+              "https://mailchi.mp/cd32dfb448ae/aqu-llega-el-pre-estreno-julio-en-despertar-creativo?e=6fb98a57ae"
+            }
+          >
+            INSPÍRAME AHORA
+          </Link>
+        </button>
       </div>
-      {state === "Error" && <Toast message={"Ha habido un error :( Revisa tu email y vuelve a intentarlo"}/>}
-      {state === "Success" && <Toast message={"¡Ya estás dentro! Recibirás la Newsletter Despertar Creativo cada mes en tu bandeja de entrada"}/>}
+      {state === "Success" && (
+        <div className={styles.confetti_div}>
+          <Confetti pageWhereLoaded={pageWhereLoaded} />
+        </div>
+      )}
     </form>
   );
 }

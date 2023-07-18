@@ -1,11 +1,13 @@
 import { useState } from "react";
 import styles from "./propuestaForm.module.css";
+import Confetti from "./confetti";
 
-export default function PropuestaForm() {
+export default function PropuestaForm(pageWhereLoaded) {
   const [temas, setTemas] = useState([]);
   const [formato, setFormato] = useState([]);
   const [idea, setIdea] = useState("");
   const [email, setEmail] = useState("");
+  const [state, setState] = useState("idle");
 
   const handleChange = (e) => {
     if (e.target.name === "idea") {
@@ -57,7 +59,13 @@ export default function PropuestaForm() {
       body: JSON.stringify(data),
     }).then((res) => {
       if (res.status === 200) {
-        document.querySelectorAll("#__next form > fieldset > input").forEach(e => e.classList.remove('seleccionado'));
+        document
+          .querySelectorAll("#__next form > fieldset > input")
+          .forEach((e) => e.classList.remove("seleccionado"));
+        setState("Success");
+        setTimeout(() => {
+          setState("idle");
+        }, 100);
         setTemas([]);
         setFormato([]);
         setIdea("");
@@ -124,7 +132,14 @@ export default function PropuestaForm() {
             required
           ></input>
         </div>
-        <button type="submit">ENVIAR</button>
+        <button type="submit">
+          ENVIAR
+        </button>
+        {state === "Success" && (
+          <div className={styles.confetti_div}>
+            <Confetti pageWhereLoaded={pageWhereLoaded} />
+          </div>
+        )}
       </form>
     </div>
   );

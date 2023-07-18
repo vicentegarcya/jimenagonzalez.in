@@ -122,7 +122,7 @@ export default function Home() {
           </div>
           <div className={styles.servicio}>
             <h3>HAZME UNA PROPUESTA</h3>
-            <PropuestaForm />
+            <PropuestaForm pageWhereLoaded={"home"} />
           </div>
         </section>
         <section className={styles.inspirate_cada_mes}>

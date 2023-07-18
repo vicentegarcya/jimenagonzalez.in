@@ -150,3 +150,11 @@
   background-position-y: -387px;
   height: 30px;
 }
+
+.confetti_div {
+  position: absolute;
+  top: -250px;
+  left: -2rem;
+  width: 100vw;
+  height: 300px;
+}
