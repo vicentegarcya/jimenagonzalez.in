@@ -105,3 +105,16 @@
 .regala_sesion > p {
   margin-bottom: 1rem;
 }
+
+.faq_section {
+  margin-top: -20px!important;
+}
+
+.faq > div > div:nth-child(2) {
+  background: white;
+}
+
+.faq > div > div:nth-child(2) > p {
+  margin-top: 10px;
+  font-weight: 300;
+}

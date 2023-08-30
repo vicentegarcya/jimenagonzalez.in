@@ -18,7 +18,7 @@ export default function Service({
     from: { opacity: "0", maxHeight: "0px", marginBottom: "0rem" },
     to: {
       opacity: "1",
-      maxHeight: desplegado ? "250px" : "0px",
+      maxHeight: desplegado ? "500px" : "0px",
       marginBottom: desplegado ? "1rem" : "0rem",
     },
     config: { duration: "300" },
@@ -53,12 +53,12 @@ export default function Service({
         className={styles.servicio_desplegable}
       >
         <p>{description}</p>
-        <p>{hashtags}</p>
+        {calendlyUrl && <><p>{hashtags}</p>
         <div className={styles.servicio_cta_div}>
           <p>{price}</p>
           <Link href={calendlyUrl}>{cta}</Link>
         </div>
-        <p>{asterisco}</p>
+        <p>{asterisco}</p></>}
       </animated.div>
     </div>
   );

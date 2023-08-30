@@ -60,6 +60,12 @@
   margin-bottom: 1.5rem;
 }
 
+.servicio_desplegable > p > a {
+  text-decoration: underline;
+  -webkit-text-decoration: underline;
+  font-weight: 400;
+}
+
 .servicio_cta_div {
   width: 90%;
   display: flex;

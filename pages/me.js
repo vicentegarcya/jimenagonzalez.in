@@ -19,14 +19,6 @@ export default function Me() {
               alt="play button"
               onClick={soundHandler}
             />
-            {/* <Image
-              src={isPlaying ? "/pause_black.png" : "/play_btn_black.png"}
-              width={20}
-              height={20}
-              alt="play button"
-              onClick={() => setIsPlaying(!isPlaying)}
-              priority
-            /> */}
             <div className={styles.ondas}>
               <div className={isPlaying ? styles.onda2 : undefined}></div>
               <div className={isPlaying ? styles.onda3 : undefined}></div>
@@ -100,8 +92,9 @@ export default function Me() {
           <h3>MI PERFIL</h3>
           <p>
             Ingeniera industrial, diseñadora estratégica, profesora de
-            innovación y mentora de emprendedorxs; también escribo y hago
-            sesiones 1:1 para artistas, creativxs y personas en su camino de
+            innovación y mentora de emprendedorxs; también hago sesiones de
+            facilitación creativa para creativxs, asesoramiento estratégico para
+            emprendedorxs y coaching espiritual para personas en su camino de
             evolución espiritual.
           </p>
         </section>
@@ -183,15 +176,17 @@ export default function Me() {
             formaciones en diferentes universidades, escuelas y empresas.
           </p>
           <p className={styles.laboral_text}>
-            Desde siempre me llamó estudiar y experimentar cosas espirituales
-            (filosofía, religiones, astrología, Tarot, Registros Akásicos,
-            numerología…), pero ha sido en los últimos 3 años que he
-            experimentado el despertar espiritual más fuerte de mi vida (¡hasta
-            ahora!)
+            Como persona muy sensible e intuitiva, desde siempre me llamó
+            estudiar y experimentar cosas espirituales (filosofía, religiones,
+            astrología, Tarot, Registros Akásicos, numerología…). Sin embargo,
+            ha sido en los últimos 3 años que he experimentado el despertar
+            espiritual más fuerte de mi vida (¡hasta ahora!), y también ha sido
+            desde entonces que ofrezco sesiones con herramientas como Tarot o
+            astrología.
           </p>
           <p className={styles.laboral_text}>
-            Con este proyecto, estoy ofreciendo experiencias y sesiones que
-            combinan conocimiento de negocio y expertise en metodologías
+            Con este proyecto, estoy ofreciendo experiencias y acompañamientos
+            que combinan mi conocimiento de negocio y expertise en metodologías
             creativas y de diseño con mis herramientas espirituales favoritas.
           </p>
         </section>
