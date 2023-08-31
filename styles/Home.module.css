@@ -139,8 +139,10 @@
   .servicios,
   .inspirate,
   .inspirate_cada_mes {
-    width: 70vw;
+    width: 60vw;
     margin: 0 auto;
+    padding: 0;
+    max-width: 1200px;
   }
 
   .inspirate_cada_mes {
@@ -163,13 +165,25 @@
     margin-bottom: 10px;
   }
 
-  .servicios {
+  .servicios:not(:last-child) {
     display: flex;
-    width: 70vw;
+    flex-direction: row;
+    width: 90vw;
+    height: auto;
+    overflow: hidden;
+    margin: 20px auto 70px auto;
+    padding: 50px 0 !important;
   }
 
-  .servicio {
-    width: 50%;
-    margin: 0 auto;
+  .servicios:hover {
+    cursor: grab;
+  }
+
+  .regala_sesion {
+    width: 100%;
+  }
+
+  .regala_sesion > p {
+    width: 100%;
   }
 }

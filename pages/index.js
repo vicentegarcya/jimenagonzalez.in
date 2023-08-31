@@ -3,14 +3,19 @@ import Layout from "@/components/layout";
 import Service from "@/components/service";
 import PropuestaForm from "@/components/propuestaForm";
 import Subscribe from "@/components/subscribe";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 export default function Home() {
   const [isDesktop, setIsDesktop] = useState(false);
+  const container = useRef();
 
   useEffect(() => {
     setIsDesktop(typeof window !== "undefined" && window.innerWidth > 768);
-  }, []);
+    if (isDesktop) {
+    }
+  }, [isDesktop]);
 
   return (
     <Layout>
@@ -72,152 +77,170 @@ export default function Home() {
             <Subscribe pageWhereLoaded={"home"} />
           </section>
         )}
-        <section className={styles.servicios}>
-          <div className={styles.servicio}>
-            <h3>SOY ARTISTA, CREATIV@ O DISEÑADORA</h3>
-            <div className={styles.servicios_grupo}>
-              <Service
-                title="Descubre tus dones y tu voz creativa"
-                description="Comprende tu huella creativa: misión creativa, energías principales, talentos, retos evolutivos de tu camino creativo, expresión creativa principal."
-                price="99,00 €"
-                hashtags="#astrologia #creatividad #tarot"
-                calendlyUrl="https://calendly.com/jimenagonzalez-in/descubre-mision-dones"
-              />
-              <Service
-                title="Intenciona tu siguiente proyecto"
-                description="Descubre la identidad de tu próximo proyecto: su naturaleza, su propósito, los aprendizajes que trae, los retos y los dones que te pide expresar. "
-                price="77,00 €"
-                hashtags="#creatividad #tarot"
-                calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-intenciona-tu-siguiente-proyecto-x-jimena-gonzalez"
-              />
-              <Service
-                title="Supera bloqueos creativos"
-                description="Comprende el origen de tu bloqueo creativo, los aprendizajes a integrar y las acciones para liberarlo."
-                price="77,00 €"
-                hashtags="#creatividad #tarot #registrosakasicos"
-                calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-supera-tu-bloqueo-creativo-x-jimena-gonzalez"
-              />
-              <Service
-                title="Manifiesta (diseña tu estrategia)"
-                description="Conecta con tu auténtica visión, intenciona tu expansión y diseña un plan guiado."
-                price="111,00 € *"
-                hashtags="#estrategia #business #tarot"
-                calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-manifiesta-estrategia-x-jimena-gonzalez"
-                asterisco="* Las sesiones de asesoramiento estratégico posteriores tienen un valor de 95€."
-              />
-            </div>
-          </div>
-          <div className={styles.servicio}>
-            <h3>SOY EMPRENDEDOR/A</h3>
-            <div className={styles.servicios_grupo}>
-              <Service
-                title="Descubre tu misión y dones"
-                description="Comprende tu huella creativa: misión, dones y talentos a expresar, retos evolutivos y naturaleza de los proyectos alineados."
-                price="99,00 €"
-                hashtags="#astrología #emprendimiento #tarot #creatividad"
-                calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-descubre-tu-mision-y-dones-x-jimena-gonzalez"
-              />
-              <Service
-                title="Conecta con el alma de tu negocio"
-                description="Descubre la identidad de tu negocio: alma y naturaleza, misión individual y colectiva, propósito, tu rol en él, los dones y talentos que te pide expresar y los aprendizajes que trae para ti."
-                price="77,00 €"
-                hashtags="#estrategia #tarot #astrología"
-                calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-conecta-con-el-alma-de-tu-negocio-x-jimena-gonzalez"
-              />
-              <Service
-                title="Supera bloqueos y dificultades"
-                description="Comprende la naturaleza de tus bloqueos, los aprendizajes que traen y las acciones para liberarlos."
-                price="77,00 €"
-                hashtags="#estrategia #tarot"
-                calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-supera-bloqueos-y-dificultades-x-jimena-gonzalez"
-              />
-              <Service
-                title="Manifiesta (diseña tu estrategia)"
-                description="Conecta con tu auténtica visión, intenciona tu expansión y diseña un plan guiado."
-                price="111,00 € *"
-                hashtags="#estrategia #tarot"
-                calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-manifiesta-disena-tu-estrategia-x-jimena-gonzalez"
-                asterisco="* Las sesiones de asesoramiento estratégico posteriores tienen un valor de 95€."
-              />
-            </div>
-          </div>
-          <div className={styles.servicio}>
-            <h3>ESTOY EN MI CAMINO DE EVOLUCIÓN PERSONAL Y/O ESPIRITUAL</h3>
-            <div className={styles.servicios_grupo}>
-              <Service
-                title="Descubre tu misión, dones y retos vitales"
-                description="Comprende tu huella evolutiva: misión, dones y talentos a expresar, retos evolutivos y de sanación de tu alma."
-                price="99,00 €"
-                hashtags="#astrología #tarot"
-                calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-descubre-tu-mision-y-evolucion-x-jimena-gonzalez"
-              />
-              <Service
-                title="Comprende el sentido de tu reto actual"
-                description="Descubre la perspectiva evolutiva y espiritual de tu dificultad actual (pareja, salud, trabajo, sanación…) y conecta con su propósito, aprendizajes y acciones a tomar."
-                price="55,00 €"
-                hashtags="#tarot #espiritualidad"
-                calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-comprende-tu-reto-x-jimena-gonzalez"
-              />
-              <Service
-                title="Desvela el propósito de esta etapa vital"
-                description="Comprende la energía de esta etapa de tu desarrollo, sus retos evolutivos y aprendizajes a integrar, las áreas de tu vida que son protagonistas y cómo hacerle frente de la mejor manera."
-                price="111,00 €"
-                hashtags="#astrologia #tarot"
-                calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-desvela-esta-etapa-vital-x-jimena-gonzalez"
-              />
-            </div>
-          </div>
-          <div className={styles.servicio}>
-            <h3>HAZME UNA PROPUESTA</h3>
-            <PropuestaForm pageWhereLoaded={"home"} />
-          </div>
-          {isDesktop && (
-            <div className={styles.servicio + " " + styles.regala_sesion}>
-              <h3>QUIERO REGALAR UNA SESIÓN</h3>
-              <p>
-                Todas las sesiones incluyen un bono regalo digital
-                personalizado, un ejercicio de Despertar Creativo® previo a la
-                sesión y una sesión online en directo. La fecha de la sesión y
-                su temática podrá ser elegida después por la persona a la que
-                envíes el bono regalo.
-              </p>
-              <p>
-                Elige la técnica principal de la sesión para empezar a
-                personalizar tu regalo:
-              </p>
+        <Swiper
+          className={styles.servicios}
+          initialSlide={1}
+          centeredSlides={true}
+          spaceBetween={30}
+          slidesPerView={3}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          <SwiperSlide>
+            <div className={styles.servicio}>
+              <h3>SOY ARTISTA, CREATIV@ O DISEÑADORA</h3>
               <div className={styles.servicios_grupo}>
                 <Service
-                  title="TAROT"
-                  description="Sesión a elegir entre “Comprende el sentido de tu reto actual”, “Supera bloqueos y dificultades” (especial emprendedor@s), “Conecta con el alma de tu negocio” (especial emprendedor@s), “Supera bloqueos creativos” (especial creativ@s) e “Intenciona tu siguiente proyecto” (especial creativ@s)."
-                  price="55,00 €"
-                  calendlyUrl="https://buy.stripe.com/dR69B34GFd2ud7G004"
-                  cta="SELECCIONAR"
-                />
-                <Service
-                  title="ASTROLOGÍA"
-                  description="Sesión de lectura de su carta astral: energías principales, dones y talentos, retos evolutivos y de sanación y misión personal."
-                  price="88,00 €"
-                  calendlyUrl="https://buy.stripe.com/00gdRj6ONe6y9VueV1"
-                  cta="SELECCIONAR"
-                />
-                <Service
-                  title="ASTROLOGÍA + TAROT"
-                  description="Sesión a elegir entre “Descubre tu misión, dones y retos vitales”, “Desvela el propósito de esta etapa vital”, “Descubre tu misión y dones” (especial emprendedor@s) y “Descubre tus dones y tu voz creativa” (especial creativ@s)."
+                  title="Descubre tus dones y tu voz creativa"
+                  description="Comprende tu huella creativa: misión creativa, energías principales, talentos, retos evolutivos de tu camino creativo, expresión creativa principal."
                   price="99,00 €"
-                  calendlyUrl="https://buy.stripe.com/4gw00t6ON5A2gjS4gm"
-                  cta="SELECCIONAR"
+                  hashtags="#astrologia #creatividad #tarot"
+                  calendlyUrl="https://calendly.com/jimenagonzalez-in/descubre-mision-dones"
                 />
                 <Service
-                  title="MANI(FEST)"
-                  description="Una sesión con asesoramiento espiritual y estratégico para conectar con su auténtica visión, intencionar su expansión y diseñar un plan guiado para manifestarla."
-                  price="111,00 €"
-                  calendlyUrl="https://buy.stripe.com/5kA00tc97faC9VubIK"
-                  cta="SELECCIONAR"
+                  title="Intenciona tu siguiente proyecto"
+                  description="Descubre la identidad de tu próximo proyecto: su naturaleza, su propósito, los aprendizajes que trae, los retos y los dones que te pide expresar. "
+                  price="77,00 €"
+                  hashtags="#creatividad #tarot"
+                  calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-intenciona-tu-siguiente-proyecto-x-jimena-gonzalez"
+                />
+                <Service
+                  title="Supera bloqueos creativos"
+                  description="Comprende el origen de tu bloqueo creativo, los aprendizajes a integrar y las acciones para liberarlo."
+                  price="77,00 €"
+                  hashtags="#creatividad #tarot #registrosakasicos"
+                  calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-supera-tu-bloqueo-creativo-x-jimena-gonzalez"
+                />
+                <Service
+                  title="Manifiesta (diseña tu estrategia)"
+                  description="Conecta con tu auténtica visión, intenciona tu expansión y diseña un plan guiado."
+                  price="111,00 € *"
+                  hashtags="#estrategia #business #tarot"
+                  calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-manifiesta-estrategia-x-jimena-gonzalez"
+                  asterisco="* Las sesiones de asesoramiento estratégico posteriores tienen un valor de 95€."
                 />
               </div>
             </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className={styles.servicio}>
+              <h3>SOY EMPRENDEDOR/A</h3>
+              <div className={styles.servicios_grupo}>
+                <Service
+                  title="Descubre tu misión y dones"
+                  description="Comprende tu huella creativa: misión, dones y talentos a expresar, retos evolutivos y naturaleza de los proyectos alineados."
+                  price="99,00 €"
+                  hashtags="#astrología #emprendimiento #tarot #creatividad"
+                  calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-descubre-tu-mision-y-dones-x-jimena-gonzalez"
+                />
+                <Service
+                  title="Conecta con el alma de tu negocio"
+                  description="Descubre la identidad de tu negocio: alma y naturaleza, misión individual y colectiva, propósito, tu rol en él, los dones y talentos que te pide expresar y los aprendizajes que trae para ti."
+                  price="77,00 €"
+                  hashtags="#estrategia #tarot #astrología"
+                  calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-conecta-con-el-alma-de-tu-negocio-x-jimena-gonzalez"
+                />
+                <Service
+                  title="Supera bloqueos y dificultades"
+                  description="Comprende la naturaleza de tus bloqueos, los aprendizajes que traen y las acciones para liberarlos."
+                  price="77,00 €"
+                  hashtags="#estrategia #tarot"
+                  calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-supera-bloqueos-y-dificultades-x-jimena-gonzalez"
+                />
+                <Service
+                  title="Manifiesta (diseña tu estrategia)"
+                  description="Conecta con tu auténtica visión, intenciona tu expansión y diseña un plan guiado."
+                  price="111,00 € *"
+                  hashtags="#estrategia #tarot"
+                  calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-manifiesta-disena-tu-estrategia-x-jimena-gonzalez"
+                  asterisco="* Las sesiones de asesoramiento estratégico posteriores tienen un valor de 95€."
+                />
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className={styles.servicio}>
+              <h3>ESTOY EN MI CAMINO DE EVOLUCIÓN PERSONAL Y/O ESPIRITUAL</h3>
+              <div className={styles.servicios_grupo}>
+                <Service
+                  title="Descubre tu misión, dones y retos vitales"
+                  description="Comprende tu huella evolutiva: misión, dones y talentos a expresar, retos evolutivos y de sanación de tu alma."
+                  price="99,00 €"
+                  hashtags="#astrología #tarot"
+                  calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-descubre-tu-mision-y-evolucion-x-jimena-gonzalez"
+                />
+                <Service
+                  title="Comprende el sentido de tu reto actual"
+                  description="Descubre la perspectiva evolutiva y espiritual de tu dificultad actual (pareja, salud, trabajo, sanación…) y conecta con su propósito, aprendizajes y acciones a tomar."
+                  price="55,00 €"
+                  hashtags="#tarot #espiritualidad"
+                  calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-comprende-tu-reto-x-jimena-gonzalez"
+                />
+                <Service
+                  title="Desvela el propósito de esta etapa vital"
+                  description="Comprende la energía de esta etapa de tu desarrollo, sus retos evolutivos y aprendizajes a integrar, las áreas de tu vida que son protagonistas y cómo hacerle frente de la mejor manera."
+                  price="111,00 €"
+                  hashtags="#astrologia #tarot"
+                  calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-desvela-esta-etapa-vital-x-jimena-gonzalez"
+                />
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className={styles.servicio}>
+              <h3>HAZME UNA PROPUESTA</h3>
+              <PropuestaForm pageWhereLoaded={"home"} />
+            </div>
+          </SwiperSlide>
+          {isDesktop && (
+            <SwiperSlide>
+              <div className={styles.servicio + " " + styles.regala_sesion}>
+                <h3>QUIERO REGALAR UNA SESIÓN</h3>
+                <p>
+                  Todas las sesiones incluyen un bono regalo digital
+                  personalizado, un ejercicio de Despertar Creativo® previo a la
+                  sesión y una sesión online en directo. La fecha de la sesión y
+                  su temática podrá ser elegida después por la persona a la que
+                  envíes el bono regalo.
+                </p>
+                <p>
+                  Elige la técnica principal de la sesión para empezar a
+                  personalizar tu regalo:
+                </p>
+                <div className={styles.servicios_grupo}>
+                  <Service
+                    title="TAROT"
+                    description="Sesión a elegir entre “Comprende el sentido de tu reto actual”, “Supera bloqueos y dificultades” (especial emprendedor@s), “Conecta con el alma de tu negocio” (especial emprendedor@s), “Supera bloqueos creativos” (especial creativ@s) e “Intenciona tu siguiente proyecto” (especial creativ@s)."
+                    price="55,00 €"
+                    calendlyUrl="https://buy.stripe.com/dR69B34GFd2ud7G004"
+                    cta="SELECCIONAR"
+                  />
+                  <Service
+                    title="ASTROLOGÍA"
+                    description="Sesión de lectura de su carta astral: energías principales, dones y talentos, retos evolutivos y de sanación y misión personal."
+                    price="88,00 €"
+                    calendlyUrl="https://buy.stripe.com/00gdRj6ONe6y9VueV1"
+                    cta="SELECCIONAR"
+                  />
+                  <Service
+                    title="ASTROLOGÍA + TAROT"
+                    description="Sesión a elegir entre “Descubre tu misión, dones y retos vitales”, “Desvela el propósito de esta etapa vital”, “Descubre tu misión y dones” (especial emprendedor@s) y “Descubre tus dones y tu voz creativa” (especial creativ@s)."
+                    price="99,00 €"
+                    calendlyUrl="https://buy.stripe.com/4gw00t6ON5A2gjS4gm"
+                    cta="SELECCIONAR"
+                  />
+                  <Service
+                    title="MANI(FEST)"
+                    description="Una sesión con asesoramiento espiritual y estratégico para conectar con su auténtica visión, intencionar su expansión y diseñar un plan guiado para manifestarla."
+                    price="111,00 €"
+                    calendlyUrl="https://buy.stripe.com/5kA00tc97faC9VubIK"
+                    cta="SELECCIONAR"
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
           )}
-        </section>
+        </Swiper>
         {!isDesktop && (
           <section className={styles.inspirate_cada_mes}>
             <h3>RECIBE INSPIRACIÓN CADA MES</h3>
