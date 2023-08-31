@@ -172,18 +172,18 @@
     height: auto;
     overflow: hidden;
     margin: 20px auto 70px auto;
-    padding: 50px 0 !important;
+    padding: 50px 0;
   }
-
-  .servicios:hover {
-    cursor: grab;
-  }
-
+  
   .regala_sesion {
     width: 100%;
   }
 
   .regala_sesion > p {
     width: 100%;
+  }
+
+  .main {
+    margin-bottom: 300px;
   }
 }

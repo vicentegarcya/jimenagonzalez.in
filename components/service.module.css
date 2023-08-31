@@ -85,7 +85,7 @@
 
 .servicio_cta_div > p {
   border: 0.25px solid;
-  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 .servicio_cta_div > a {

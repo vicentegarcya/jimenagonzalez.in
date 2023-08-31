@@ -37,3 +37,15 @@
     font-weight: 600;
     text-decoration: underline 1.5px #282c32;
 }
+
+@media (min-width: 768px) {
+  .footer {
+    background-size: cover;
+    background-position-y: 0px !important;
+  }
+
+  .footer > p:nth-child(3) {
+    width: 60%;
+    margin: 20px 0 34px 0;
+  }
+}

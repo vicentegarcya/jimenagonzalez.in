@@ -3,13 +3,13 @@ import Layout from "@/components/layout";
 import Service from "@/components/service";
 import PropuestaForm from "@/components/propuestaForm";
 import Subscribe from "@/components/subscribe";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCards } from "swiper/modules";
 import "swiper/css";
 
 export default function Home() {
   const [isDesktop, setIsDesktop] = useState(false);
-  const container = useRef();
 
   useEffect(() => {
     setIsDesktop(typeof window !== "undefined" && window.innerWidth > 768);
@@ -78,13 +78,17 @@ export default function Home() {
           </section>
         )}
         <Swiper
-          className={styles.servicios}
+          loop={true}
+          effect={"cards"}
+          cardsEffect={{
+            perSlideRotate: 0, // Rotation of cards in degrees
+            perSlideOffset: 80, // Space between cards in px
+            slideShadows: false,
+          }}
+          modules={[EffectCards]}
+          grabCursor={true}
           initialSlide={1}
-          centeredSlides={true}
-          spaceBetween={30}
-          slidesPerView={3}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
+          className={styles.servicios}
         >
           <SwiperSlide>
             <div className={styles.servicio}>
