@@ -32,8 +32,12 @@
 }
 
 @keyframes scrollText {
-  from   { transform: translateX(0%); }
-  to { transform: translateX(-100%); }
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 /* SERVICIOS SECTION */
@@ -88,12 +92,14 @@
   margin-bottom: 1.5rem;
 }
 
-.inspirate_cada_mes h3, .regala_sesion h3 {
+.inspirate_cada_mes h3,
+.regala_sesion h3 {
   margin-bottom: 1rem;
   font-size: 18px;
 }
 
-.inspirate_cada_mes p, .regala_sesion > p {
+.inspirate_cada_mes p,
+.regala_sesion > p {
   width: 80dvw;
   line-height: 1.3;
 }
@@ -107,7 +113,7 @@
 }
 
 .faq_section {
-  margin-top: -20px!important;
+  margin-top: -20px !important;
 }
 
 .faq > div > div:nth-child(2) {
@@ -117,4 +123,53 @@
 .faq > div > div:nth-child(2) > p {
   margin-top: 10px;
   font-weight: 300;
+}
+
+@media (min-width: 768px) {
+  .keywords {
+    background-size: cover;
+    background-position-y: top;
+    background-position-x: left;
+  }
+
+  .keywords > p {
+    animation: scrollText 20s infinite linear;
+  }
+
+  .servicios,
+  .inspirate,
+  .inspirate_cada_mes {
+    width: 70vw;
+    margin: 0 auto;
+  }
+
+  .inspirate_cada_mes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .inspirate_cada_mes > div {
+    width: 50%;
+  }
+
+  .inspirate_cada_mes > div > p {
+    width: 110%;
+  }
+
+  .inspirate_cada_mes div > p:nth-child(2) {
+    margin-bottom: 10px;
+  }
+
+  .servicios {
+    display: flex;
+    width: 70vw;
+  }
+
+  .servicio {
+    width: 50%;
+    margin: 0 auto;
+  }
 }

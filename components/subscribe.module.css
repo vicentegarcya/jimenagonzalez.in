@@ -83,3 +83,39 @@
 #subscribe_form {
   position: relative;
 }
+
+@media (min-width: 768px) {
+  #subscribe_form {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #subscribe_form > div {
+    width: 100%;
+  }
+
+  .inspirate_cta_div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .inspirate_cta_div button {
+    width: 100% !important;
+    height: 30px;
+    font-size: 12px !important;
+    background: #282c32 !important;
+    color: #fff !important;
+  }
+
+  .inspirate_cta_div button:nth-child(2) {
+    margin-top: 0.9rem;
+  }
+
+  .inspirate_email input {
+    margin-top: 0;
+  }
+}

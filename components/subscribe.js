@@ -1,7 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "./subscribe.module.css";
-import Toast from "./toast";
 import Link from "next/link";
 import Confetti from "./confetti";
 
@@ -9,6 +8,11 @@ function Subscribe({ pageWhereLoaded }) {
   const [email, setEmail] = useState("");
   const [state, setState] = useState("idle");
   const [errorMsg, setErrorMsg] = useState(null);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    setIsDesktop(typeof window !== "undefined" && window.innerWidth > 768);
+  }, []);
 
   const subscribe = async (e) => {
     e.preventDefault();
