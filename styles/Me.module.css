@@ -438,3 +438,205 @@
   background-position-y: -757px;
   color: #282c32;
 }
+
+@media (min-width: 768px) {
+  .explora_con_bso,
+  .mi_esencia > div {
+    width: 100vw;
+    background-size: cover;
+    background-position-x: 0px;
+    background-position-y: 0px;
+  }
+
+  .div1 {
+    animation: scrollText 20s infinite linear;
+  }
+
+  .div2 {
+    animation: scrollText 20s infinite linear;
+  }
+
+  .explora_con_bso img {
+    cursor: pointer;
+  }
+
+  .mi_esencia > div {
+    background-position-y: -400px;
+  }
+
+  .inspirate_cada_mes {
+    width: 60vw;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 50px;
+  }
+
+  .inspirate_cada_mes > div {
+    width: 50%;
+  }
+
+  .inspirate_cada_mes > div > p {
+    width: 110%;
+  }
+
+  .inspirate_cada_mes div > p:nth-child(2) {
+    margin-bottom: 10px;
+  }
+
+  .bullets_desktop_wrapper {
+    width: 60vw;
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .me .bullets_desktop_wrapper .bullets {
+    width: 55%;
+    padding: 2rem 0;
+    padding-top: 0;
+    font-weight: 200;
+    font-size: 15px;
+  }
+
+  .me .bullets_desktop_wrapper .bullets:nth-child(2) {
+    width: 30%;
+  }
+
+  .me .mi_esencia > h3 {
+    width: 61.5vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 0.75rem;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 1rem;
+  }
+
+  .me .bullets_desktop_wrapper.historia_wrapper {
+    width: 60.5vw;
+    margin-top: 1.25rem;
+  }
+
+  .me .bullets_desktop_wrapper.historia_wrapper > .bullets {
+    width: 55%;
+    padding: 0;
+  }
+
+  .me .bullets_desktop_wrapper.historia_wrapper > div {
+    width: 30%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .me .bullets_desktop_wrapper.historia_wrapper > div > .bullets {
+    width: 120%;
+  }
+
+  .me .bullets_desktop_wrapper.historia_wrapper > div > .bullets:nth-child(2) {
+    margin-top: 1rem;
+  }
+
+  .me .bullets_desktop_wrapper > .bullets:nth-child(2) > p {
+    margin-bottom: 0.5rem;
+  }
+
+  .me .expertise > p:nth-child(1) {
+    background-position-x: -770px;
+    background-position-y: -486px;
+  }
+
+  .me .expertise > p:nth-child(2) {
+    background-position-x: -868px;
+    background-position-y: -486px;
+  }
+
+  .me .expertise > p:nth-child(3) {
+    background-position-x: -770px;
+    background-position-y: -508px;
+  }
+
+  .me .expertise > p:nth-child(4) {
+    background-position-x: -900px;
+    background-position-y: -508px;
+  }
+
+  .me .expertise > p:nth-child(5) {
+    background-position-x: -770px;
+    background-position-y: -530px;
+  }
+
+  .me .expertise > p:nth-child(6) {
+    background-position-x: -861px;
+    background-position-y: -530px;
+  }
+
+  .me .expertise > p:nth-child(7) {
+    background-position-x: -770px;
+    background-position-y: -555px;
+  }
+
+  .me .expertise > p:nth-child(8) {
+    background-position-x: -900px;
+    background-position-y: -555px;
+  }
+
+  .me .expertise > p:nth-child(9) {
+    background-position-x: -770px;
+    background-position-y: -577px;
+  }
+
+  .me .expertise > p:nth-child(10) {
+    background-position-x: -858px;
+    background-position-y: -577px;
+  }
+  .me .expertise > p:nth-child(11) {
+    background-position-x: -770px;
+    background-position-y: -599px;
+  }
+  .me .expertise > p:nth-child(12) {
+    background-position-x: -886px;
+    background-position-y: -599px;
+  }
+  .me .expertise > p:nth-child(13) {
+    background-position-x: -770px;
+    background-position-y: -621px;
+  }
+  .me .expertise > p:nth-child(14) {
+    background-position-x: -911px;
+    background-position-y: -621px;
+  }
+  .me .expertise > p:nth-child(15) {
+    background-position-x: -770px;
+    background-position-y: -643px;
+  }
+  .me .expertise > p:nth-child(16) {
+    background-position-x: -852px;
+    background-position-y: -643px;
+  }
+  .me .expertise > p:nth-child(17) {
+    background-position-x: -770px;
+    background-position-y: -665px;
+  }
+  .me .expertise > p:nth-child(18) {
+    background-position-x: -860px;
+    background-position-y: -665px;
+  }
+  .me .expertise > p:nth-child(19) {
+    background-position-x: -770px;
+    background-position-y: -687px;
+  }
+
+  .me .expertise > p:nth-child(20) {
+    background-position-x: -891px;
+    background-position-y: -687px;
+  }
+}

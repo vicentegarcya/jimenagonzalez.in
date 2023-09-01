@@ -125,6 +125,55 @@
   font-weight: 300;
 }
 
+.loading_div {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 200;
+  position: relative;
+}
+
+.loading_div > h3 {
+  font-size: 25px;
+  font-weight: 200;
+  margin-bottom: 10px;
+  margin-top: -50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+$width: 600px;
+$height: 450px;
+
+.container {
+  width: 600px;
+  height: 200px;
+  position: absolute;
+  margin-top: -100px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  .water {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: calc(#{$width} * 1.5);
+    height: calc(#{$height} * 1.5);
+
+    backdrop-filter: url("http://www.psd-dude.com/tutorials/resources-images/water-backgrounds-and-textures-for-photoshop/water-pool-texture-seamless-and-free-1.jpg");
+    background-repeat: repeat;
+    background-size: $width $height;
+
+    filter: url(#water-filter);
+  }
+}
+
 @media (min-width: 768px) {
   .keywords {
     background-size: cover;
@@ -174,7 +223,7 @@
     margin: 20px auto 70px auto;
     padding: 50px 0;
   }
-  
+
   .regala_sesion {
     width: 100%;
   }
