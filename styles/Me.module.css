@@ -549,6 +549,10 @@
     margin-bottom: 0.5rem;
   }
 
+  .me .expertise > p {
+    transition: scale 2s cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
+
   .me .expertise > p:nth-child(1) {
     background-position-x: -770px;
     background-position-y: -486px;

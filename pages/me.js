@@ -2,14 +2,39 @@ import Layout from "@/components/layout";
 import styles from "@/styles/Me.module.css";
 import Subscribe from "@/components/subscribe";
 import { isPlayingContext } from "../context/context";
-import { useContext, useLayoutEffect, useState } from "react";
+import { useContext, useLayoutEffect, useRef, useState } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function Me() {
+  gsap.registerPlugin(ScrollTrigger);
   const { isPlaying, soundHandler } = useContext(isPlayingContext);
   const [isDesktop, setIsDesktop] = useState(false);
+  const expertiseRef = useRef();
 
   useLayoutEffect(() => {
     setIsDesktop(typeof window !== "undefined" && window.innerWidth > 768);
+
+    if (isDesktop) {
+      const element = expertiseRef.current;
+      //Animation code here
+      //Frames
+      gsap.fromTo(
+        element.querySelectorAll("div > p"),
+        {
+          scale: 0,
+        },
+        {
+          scale: 1,
+          scrollTrigger: {
+            trigger: element.querySelector("div:nth-child(3)"),
+            start: "top 10%",
+            end: "bottom 160%",
+            scrub: 1,
+          },
+        }
+      );
+    }
   }, [isDesktop]);
 
   return (
@@ -310,7 +335,11 @@ export default function Me() {
           </div>
         </section>
         {isDesktop && (
-          <div className={styles.bullets_desktop_wrapper + ' ' + styles.historia_wrapper}>
+          <div
+            className={
+              styles.bullets_desktop_wrapper + " " + styles.historia_wrapper
+            }
+          >
             <section className={styles.bullets}>
               <h3>MI HISTORIA “LABORAL”</h3>
               <p className={styles.laboral_text}>
@@ -354,7 +383,7 @@ export default function Me() {
               </p>
             </section>
             <div>
-              <section className={styles.bullets}>
+              <section ref={expertiseRef} className={styles.bullets}>
                 <h3>MI EXPERTISE</h3>
                 <div className={styles.expertise}>
                   <p>#creatividad</p>
