@@ -113,10 +113,6 @@ export default function Home() {
               <div>
                 <h3>RECIBE INSPIRACIÓN CADA MES</h3>
                 <p>
-                  Inspiración (<span>def.</span>): Recibir guía divina, una
-                  iluminación creativa.
-                </p>
-                <p>
                   Despertar Creativo es una Newsletter mensual gratuita con
                   píldoras de inspiración para tu vida y tus creaciones.
                   Diseñada para artistas, creativ@s y personas en su camino de
@@ -541,8 +537,8 @@ export default function Home() {
                     Con ella, podrá agendar directamente su sesión. Al hacerlo,
                     recibirá un correo electrónico para elegir el tema de su
                     sesión, enviarme los datos necesarios (en caso de que la
-                    sesión tenga astrología) y recibir el ejercicio de Despertar
-                    Creativo®.
+                    sesión tenga astrología) y recibir el ejercicio de <a href="https://mailchi.mp/cad3bc2e7c34/despertar-creativo" target="_blank">Despertar
+                    Creativo</a>®.
                   </>
                 />
                 <Service

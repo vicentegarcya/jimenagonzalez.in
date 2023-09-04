@@ -460,20 +460,30 @@
     cursor: pointer;
   }
 
+  .mi_esencia {
+    position: relative;
+  }
+
+  .mi_esencia img {
+    filter: grayscale();
+    position: absolute;
+    bottom: calc(2rem + 2.5rem + 18px);
+    right: 1vw;
+  }
+
   .mi_esencia > div {
     background-position-y: -400px;
   }
 
   .inspirate_cada_mes {
-    width: 60vw;
+    width: 61vw;
     margin: 0 auto;
     padding: 0;
     max-width: 1200px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 15px;
-    margin-bottom: 50px;
+    margin-top: 4rem;
   }
 
   .inspirate_cada_mes > div {
@@ -490,23 +500,29 @@
 
   .bullets_desktop_wrapper {
     width: 60vw;
-    margin: 0 auto;
-    max-width: 1200px;
+    margin: 0 auto !important;
+    max-width: 800px;
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
   }
 
-  .me .bullets_desktop_wrapper .bullets {
-    width: 55%;
-    padding: 2rem 0;
-    padding-top: 0;
-    font-weight: 200;
-    font-size: 15px;
+  .me .bullets {
+    width: 60vw !important;
+    margin: 0 auto !important;
+    padding: 2rem 0 !important;
   }
 
-  .me .bullets_desktop_wrapper .bullets:nth-child(2) {
-    width: 30%;
+  .bullets_desktop_wrapper > section.bullets {
+    width: 75% !important;
+    margin: 0 !important;
+  }
+
+  .bullets_desktop_wrapper > section.bullets:not(:first-child) {
+    width: 62% !important;
+    margin: 0 !important;
+    padding-top: 0.5rem !important;
   }
 
   .me .mi_esencia > h3 {
@@ -517,6 +533,10 @@
     padding-left: 0;
     padding-right: 0;
     margin-top: 1rem;
+  }
+
+  .mi_perfil_desktop > p {
+    line-height: 1.6 !important;
   }
 
   .me .bullets_desktop_wrapper.historia_wrapper {
@@ -550,7 +570,17 @@
   }
 
   .me .expertise > p {
-    transition: scale 2s cubic-bezier(0.39, 0.575, 0.565, 1);
+    animation: bubbles 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+    line-height: 1.3 !important;
+  }
+
+  @keyframes bubbles {
+    0% {
+      scale: 0;
+    }
+    100% {
+      scale: 1;
+    }
   }
 
   .me .expertise > p:nth-child(1) {

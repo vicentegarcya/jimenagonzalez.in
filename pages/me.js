@@ -5,36 +5,15 @@ import { isPlayingContext } from "../context/context";
 import { useContext, useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Image from "next/image";
 
 export default function Me() {
   gsap.registerPlugin(ScrollTrigger);
   const { isPlaying, soundHandler } = useContext(isPlayingContext);
   const [isDesktop, setIsDesktop] = useState(false);
-  const expertiseRef = useRef();
 
   useLayoutEffect(() => {
     setIsDesktop(typeof window !== "undefined" && window.innerWidth > 768);
-
-    if (isDesktop) {
-      const element = expertiseRef.current;
-      //Animation code here
-      //Frames
-      gsap.fromTo(
-        element.querySelectorAll("div > p"),
-        {
-          scale: 0,
-        },
-        {
-          scale: 1,
-          scrollTrigger: {
-            trigger: element.querySelector("div:nth-child(3)"),
-            start: "top 10%",
-            end: "bottom 160%",
-            scrub: 1,
-          },
-        }
-      );
-    }
   }, [isDesktop]);
 
   return (
@@ -247,43 +226,53 @@ export default function Me() {
           </div>
         </section>
         {isDesktop && (
-          <section className={styles.inspirate_cada_mes}>
-            <div>
-              <h3>RECIBE INSPIRACIÓN CADA MES</h3>
-              <p>
-                Inspiración (<span>def.</span>): Recibir guía divina, una
-                iluminación creativa.
-              </p>
-              <p>
-                Despertar Creativo es una Newsletter mensual gratuita con
-                píldoras de inspiración para tu vida y tus creaciones. Diseñada
-                para artistas, creativ@s y personas en su camino de evolución
-                personal.
-                <span> ¡Welcoming you, creative soul!</span>
-              </p>
+          <>
+            <div className={styles.bullets_desktop_wrapper}>
+              <section
+                className={styles.bullets + " " + styles.mi_perfil_desktop}
+              >
+                <h3>MI PERFIL</h3>
+                <p>
+                  Ingeniera industrial, diseñadora estratégica, profesora de
+                  innovación y mentora de emprendedorxs; también hago sesiones
+                  de facilitación creativa para creativxs, asesoramiento
+                  estratégico para emprendedorxs y coaching espiritual para
+                  personas en su camino de evolución espiritual.
+                </p>
+              </section>
+              <section className={styles.bullets}>
+                <h3>MI EXPERTISE</h3>
+                <div className={styles.expertise}>
+                  <p>#creatividad</p>
+                  <p>#arte</p>
+                  <p>#procesocreativo</p>
+                  <p>#facilitacion</p>
+                  <p>#estrategia</p>
+                  <p>#innovacion</p>
+                  <p>#emprendimiento</p>
+                  <p>#businessdesign</p>
+                  <p>#designthinking</p>
+                  <p>#servicedesign</p>
+                  <p>#futuresdesign</p>
+                  <p>#systemsdesign</p>
+                  <p>#experiencedesign</p>
+                  <p>#tarot</p>
+                  <p>#oraculos</p>
+                  <p>#registrosakasicos</p>
+                  <p>#astrologia</p>
+                  <p>#numerologia</p>
+                  <p>#diseñohumano</p>
+                  <p>+++</p>
+                </div>
+              </section>
+              <section className={styles.bullets}>
+                <h3>MI OTRO PERFIL</h3>
+                <p>↑Leo ☉ Géminis ☽ Escorpio</p>
+                <p>Generadora manifestante 4/6</p>
+                <p>Alma 6, Misión 7</p>
+              </section>
             </div>
-            <Subscribe pageWhereLoaded={"me"} />
-          </section>
-        )}
-        {isDesktop && (
-          <div className={styles.bullets_desktop_wrapper}>
-            <section className={styles.bullets}>
-              <h3>MI PERFIL</h3>
-              <p>
-                Ingeniera industrial, diseñadora estratégica, profesora de
-                innovación y mentora de emprendedorxs; también hago sesiones de
-                facilitación creativa para creativxs, asesoramiento estratégico
-                para emprendedorxs y coaching espiritual para personas en su
-                camino de evolución espiritual.
-              </p>
-            </section>
-            <section className={styles.bullets}>
-              <h3>MI OTRO PERFIL</h3>
-              <p>↑Leo ☉ Géminis ☽ Escorpio</p>
-              <p>Generadora manifestante 4/6</p>
-              <p>Alma 6, Misión 7</p>
-            </section>
-          </div>
+          </>
         )}
         {!isDesktop && (
           <>
@@ -320,6 +309,12 @@ export default function Me() {
             </p>
             {isDesktop && (
               <>
+                <Image
+                  src="/../public/jimena_business.png"
+                  width={650}
+                  height={"650"}
+                  alt="Picture of Jimena"
+                ></Image>
                 <p className={styles.div1}>
                   sensibilidad, autenticidad, espontaneidad, intuición,
                   creatividad, sabiduría,
@@ -334,91 +329,6 @@ export default function Me() {
             )}
           </div>
         </section>
-        {isDesktop && (
-          <div
-            className={
-              styles.bullets_desktop_wrapper + " " + styles.historia_wrapper
-            }
-          >
-            <section className={styles.bullets}>
-              <h3>MI HISTORIA “LABORAL”</h3>
-              <p className={styles.laboral_text}>
-                Estudié industriales y la carrera de piano, y un par de
-                másteres: uno en negocio y otro en liderazgo internacional (para
-                saber más, ve a mi{" "}
-                <a
-                  href="https://www.linkedin.com/in/jimena-gonzalez-collados/"
-                  target="_blank"
-                >
-                  perfil de Linkedin
-                </a>
-                ).
-              </p>
-              <p className={styles.laboral_text}>
-                Trabajé durante años en consultoría estratégica, innovación y
-                diseño en proyectos nacionales (BBVA, Acciona, Mapfre, Fundación
-                Repsol) e internacionales (Verisure, IKEA, Fortum).{" "}
-              </p>
-              <p className={styles.laboral_text}>
-                También he creado e imparto una asignatura de innovación y
-                estrategia para Industriales Escuela de Negocios, y he sido
-                mentora de start-ups en diferentes incubadoras, además de dar
-                charlas y formaciones en diferentes universidades, escuelas y
-                empresas.
-              </p>
-              <p className={styles.laboral_text}>
-                Como persona muy sensible e intuitiva, desde siempre me llamó
-                estudiar y experimentar cosas espirituales (filosofía,
-                religiones, astrología, Tarot, Registros Akásicos,
-                numerología…). Sin embargo, ha sido en los últimos 3 años que he
-                experimentado el despertar espiritual más fuerte de mi vida
-                (¡hasta ahora!), y también ha sido desde entonces que ofrezco
-                sesiones con herramientas como Tarot o astrología.
-              </p>
-              <p className={styles.laboral_text}>
-                Con este proyecto, estoy ofreciendo experiencias y
-                acompañamientos que combinan mi conocimiento de negocio y
-                expertise en metodologías creativas y de diseño con mis
-                herramientas espirituales favoritas.
-              </p>
-            </section>
-            <div>
-              <section ref={expertiseRef} className={styles.bullets}>
-                <h3>MI EXPERTISE</h3>
-                <div className={styles.expertise}>
-                  <p>#creatividad</p>
-                  <p>#arte</p>
-                  <p>#procesocreativo</p>
-                  <p>#facilitacion</p>
-                  <p>#estrategia</p>
-                  <p>#innovacion</p>
-                  <p>#emprendimiento</p>
-                  <p>#businessdesign</p>
-                  <p>#designthinking</p>
-                  <p>#servicedesign</p>
-                  <p>#futuresdesign</p>
-                  <p>#systemsdesign</p>
-                  <p>#experiencedesign</p>
-                  <p>#tarot</p>
-                  <p>#oraculos</p>
-                  <p>#registrosakasicos</p>
-                  <p>#astrologia</p>
-                  <p>#numerologia</p>
-                  <p>#diseñohumano</p>
-                  <p>+++</p>
-                </div>
-              </section>
-              <section className={styles.bullets}>
-                <h3>MI COMPROMISO</h3>
-                <p>
-                  Es mi deseo y mi compromiso ofrecer desde un lugar de devoción
-                  profunda por lo que hago, con una autenticidad y
-                  responsabilidad impecables.
-                </p>
-              </section>
-            </div>
-          </div>
-        )}
         {!isDesktop && (
           <>
             <section className={styles.bullets}>
@@ -495,6 +405,83 @@ export default function Me() {
               </p>
             </section>
           </>
+        )}
+        {isDesktop && (
+          <>
+            <section className={styles.bullets}>
+              {/* <div className={styles.fotos_2}>
+                <div>
+                  <img></img>
+                </div>
+                <div>
+                  <img></img>
+                </div>
+              </div> */}
+              <h3>MI HISTORIA “LABORAL”</h3>
+              <p className={styles.laboral_text}>
+                Estudié industriales y la carrera de piano, y un par de
+                másteres: uno en negocio y otro en liderazgo internacional (para
+                saber más, ve a mi{" "}
+                <a
+                  href="https://www.linkedin.com/in/jimena-gonzalez-collados/"
+                  target="_blank"
+                >
+                  perfil de Linkedin
+                </a>
+                ).
+              </p>
+              <p className={styles.laboral_text}>
+                Trabajé durante años en consultoría estratégica, innovación y
+                diseño en proyectos nacionales (BBVA, Acciona, Mapfre, Fundación
+                Repsol) e internacionales (Verisure, IKEA, Fortum).{" "}
+              </p>
+              <p className={styles.laboral_text}>
+                También he creado e imparto una asignatura de innovación y
+                estrategia para Industriales Escuela de Negocios, y he sido
+                mentora de start-ups en diferentes incubadoras, además de dar
+                charlas y formaciones en diferentes universidades, escuelas y
+                empresas.
+              </p>
+              <p className={styles.laboral_text}>
+                Como persona muy sensible e intuitiva, desde siempre me llamó
+                estudiar y experimentar cosas espirituales (filosofía,
+                religiones, astrología, Tarot, Registros Akásicos,
+                numerología…). Sin embargo, ha sido en los últimos 3 años que he
+                experimentado el despertar espiritual más fuerte de mi vida
+                (¡hasta ahora!), y también ha sido desde entonces que ofrezco
+                sesiones con herramientas como Tarot o astrología.
+              </p>
+              <p className={styles.laboral_text}>
+                Con este proyecto, estoy ofreciendo experiencias y
+                acompañamientos que combinan mi conocimiento de negocio y
+                expertise en metodologías creativas y de diseño con mis
+                herramientas espirituales favoritas.
+              </p>
+            </section>
+            <section className={styles.bullets}>
+              <h3>MI COMPROMISO</h3>
+              <p>
+                Es mi deseo y mi compromiso ofrecer desde un lugar de devoción
+                profunda por lo que hago, con una autenticidad y responsabilidad
+                impecables.
+              </p>
+            </section>
+          </>
+        )}
+        {isDesktop && (
+          <section className={styles.inspirate_cada_mes}>
+            <div>
+              <h3>RECIBE INSPIRACIÓN CADA MES</h3>
+              <p>
+                Despertar Creativo es una Newsletter mensual gratuita con
+                píldoras de inspiración para tu vida y tus creaciones. Diseñada
+                para artistas, creativ@s y personas en su camino de evolución
+                personal.
+                <span> ¡Welcoming you, creative soul!</span>
+              </p>
+            </div>
+            <Subscribe pageWhereLoaded={"me"} />
+          </section>
         )}
         {!isDesktop && (
           <section className={styles.inspirate_cada_mes}>
