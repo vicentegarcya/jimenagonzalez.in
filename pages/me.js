@@ -308,7 +308,7 @@ export default function Me() {
             {isDesktop && (
               <>
                 <Image
-                  src="/../public/jimena_business.png"
+                  src="/jimena_business.png"
                   width={600}
                   height={"600"}
                   alt="Picture of Jimena"
