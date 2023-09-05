@@ -282,93 +282,84 @@
 
 .me .expertise > p:nth-child(1) {
   background-position-x: -32px;
-  background-position-y: -839px;
+  background-position-y: -799px;
 }
 
 .me .expertise > p:nth-child(2) {
-  background-position-x: -132px;
-  background-position-y: -839px;
+  background-position-x: -133px;
+  background-position-y: -799px;
 }
 
 .me .expertise > p:nth-child(3) {
-  background-position-x: -194px;
-  background-position-y: -839px;
+  background-position-x: -32px;
+  background-position-y: -825px;
 }
 
 .me .expertise > p:nth-child(4) {
-  background-position-x: -32px;
-  background-position-y: -867px;
+  background-position-x: -173px;
+  background-position-y: -825px;
 }
 
 .me .expertise > p:nth-child(5) {
-  background-position-x: -132px;
-  background-position-y: -867px;
+  background-position-x: -32px;
+  background-position-y: -850px;
 }
 
 .me .expertise > p:nth-child(6) {
-  background-position-x: -233px;
-  background-position-y: -867px;
+  background-position-x: -164px;
+  background-position-y: -850px;
 }
 
 .me .expertise > p:nth-child(7) {
   background-position-x: -32px;
-  background-position-y: -895px;
+  background-position-y: -875px;
 }
 
 .me .expertise > p:nth-child(8) {
-  background-position-x: -163px;
-  background-position-y: -895px;
+  background-position-x: -160px;
+  background-position-y: -875px;
 }
 
 .me .expertise > p:nth-child(9) {
   background-position-x: -32px;
-  background-position-y: -923px;
+  background-position-y: -901px;
 }
 
 .me .expertise > p:nth-child(10) {
-  background-position-x: -152px;
-  background-position-y: -923px;
+  background-position-x: -183px;
+  background-position-y: -901px;
 }
 .me .expertise > p:nth-child(11) {
-  background-position-x: -32px;
-  background-position-y: -951px;
+  background-position-x: -291px;
+  background-position-y: -901px;
 }
 .me .expertise > p:nth-child(12) {
-  background-position-x: -158px;
-  background-position-y: -951px;
+  background-position-x: -32px;
+  background-position-y: -927px;
 }
 .me .expertise > p:nth-child(13) {
-  background-position-x: -32px;
-  background-position-y: -979px;
+  background-position-x: -172px;
+  background-position-y: -927px;
 }
 .me .expertise > p:nth-child(14) {
-  background-position-x: -183px;
-  background-position-y: -979px;
+  background-position-x: -279px;
+  background-position-y: -927px;
 }
 .me .expertise > p:nth-child(15) {
-  background-position-x: -250px;
-  background-position-y: -979px;
+  background-position-x: -32px;
+  background-position-y: -953px;
 }
 .me .expertise > p:nth-child(16) {
-  background-position-x: -32px;
-  background-position-y: -1007px;
+  background-position-x: -182px;
+  background-position-y: -953px;
 }
 .me .expertise > p:nth-child(17) {
-  background-position-x: -183px;
-  background-position-y: -1007px;
+  background-position-x: -32px;
+  background-position-y: -979px;
 }
 .me .expertise > p:nth-child(18) {
-  background-position-x: -32px;
-  background-position-y: -1035px;
-}
-.me .expertise > p:nth-child(19) {
   background-position-x: -148px;
-  background-position-y: -1035px;
-}
-
-.me .expertise > p:nth-child(20) {
-  background-position-x: -279px;
-  background-position-y: -1035px;
+  background-position-y: -979px;
 }
 
 .me .laboral_text {
@@ -468,7 +459,7 @@
     filter: grayscale();
     position: absolute;
     bottom: calc(2rem + 2.5rem + 18px);
-    right: 1vw;
+    right: 1.75vw;
   }
 
   .mi_esencia > div {
@@ -583,94 +574,89 @@
     }
   }
 
+  .me .expertise {
+    width: 87%;
+  }
+
   .me .expertise > p:nth-child(1) {
-    background-position-x: -770px;
-    background-position-y: -486px;
+    background-position-x: 0px;
+    background-position-y: 0px;
   }
 
   .me .expertise > p:nth-child(2) {
-    background-position-x: -868px;
-    background-position-y: -486px;
+    background-position-x: -111px;
+    background-position-y: 0px;
   }
 
   .me .expertise > p:nth-child(3) {
-    background-position-x: -770px;
-    background-position-y: -508px;
+    background-position-x: -217px;
+    background-position-y: 0px;
   }
 
   .me .expertise > p:nth-child(4) {
-    background-position-x: -900px;
-    background-position-y: -508px;
+    background-position-x: 0px;
+    background-position-y: -26px;
   }
 
   .me .expertise > p:nth-child(5) {
-    background-position-x: -770px;
-    background-position-y: -530px;
+    background-position-x: -137px;
+    background-position-y: -26px;
   }
 
   .me .expertise > p:nth-child(6) {
-    background-position-x: -861px;
-    background-position-y: -530px;
+    background-position-x: -267px;
+    background-position-y: -26px;
   }
 
   .me .expertise > p:nth-child(7) {
-    background-position-x: -770px;
-    background-position-y: -555px;
+    background-position-x: 0px;
+    background-position-y: -52px;
   }
 
   .me .expertise > p:nth-child(8) {
-    background-position-x: -900px;
-    background-position-y: -555px;
+    background-position-x: -126px;
+    background-position-y: -52px;
   }
 
   .me .expertise > p:nth-child(9) {
-    background-position-x: -770px;
-    background-position-y: -577px;
+    background-position-x: -260px;
+    background-position-y: -52px;
   }
 
   .me .expertise > p:nth-child(10) {
-    background-position-x: -858px;
-    background-position-y: -577px;
+    background-position-x: 0px;
+    background-position-y: -78px;
   }
   .me .expertise > p:nth-child(11) {
-    background-position-x: -770px;
-    background-position-y: -599px;
+    background-position-x: -108px;
+    background-position-y: -78px;
   }
   .me .expertise > p:nth-child(12) {
-    background-position-x: -886px;
-    background-position-y: -599px;
+    background-position-x: -170px;
+    background-position-y: -78px;
   }
   .me .expertise > p:nth-child(13) {
-    background-position-x: -770px;
-    background-position-y: -621px;
+    background-position-x: 0px;
+    background-position-y: -104px;
   }
   .me .expertise > p:nth-child(14) {
-    background-position-x: -911px;
-    background-position-y: -621px;
+    background-position-x: -107px;
+    background-position-y: -104px;
   }
   .me .expertise > p:nth-child(15) {
-    background-position-x: -770px;
-    background-position-y: -643px;
+    background-position-x: -174px;
+    background-position-y: -104px;
   }
   .me .expertise > p:nth-child(16) {
-    background-position-x: -852px;
-    background-position-y: -643px;
+    background-position-x: 0px;
+    background-position-y: -130px;
   }
   .me .expertise > p:nth-child(17) {
-    background-position-x: -770px;
-    background-position-y: -665px;
+    background-position-x: -100px;
+    background-position-y: -130px;
   }
   .me .expertise > p:nth-child(18) {
-    background-position-x: -860px;
-    background-position-y: -665px;
-  }
-  .me .expertise > p:nth-child(19) {
-    background-position-x: -770px;
-    background-position-y: -687px;
-  }
-
-  .me .expertise > p:nth-child(20) {
-    background-position-x: -891px;
-    background-position-y: -687px;
+    background-position-x: -216px;
+    background-position-y: -130px;
   }
 }

@@ -237,4 +237,108 @@ $height: 450px;
   .main {
     margin-bottom: 300px;
   }
+
+  .faq_section {
+    width: 73.5vw;
+  }
+
+  .faq_section > .servicio {
+    margin: 0 auto 4rem auto;
+    padding: 0 !important;
+    width: 90%;
+  }
+
+  .faq_section > .servicio:nth-child(1) > div > form > div > textarea,
+  .faq_section > .servicio:nth-child(1) > div > form > div > input {
+    background-size: 100.5%;
+  }
+
+  .faq_section > .servicio:nth-child(1) > div > form > div > textarea {
+    background-position-y: -102px !important;
+  }
+
+  .faq_section > .servicio:nth-child(1) > div > form > div > input {
+    background-position-y: -302px !important;
+  }
+
+  .faq_section > .servicio:nth-child(1) > div > form > fieldset > input:hover {
+    cursor: pointer;
+  }
+  
+  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(1) > input:nth-child(2) {
+    background-position-x: 0px;
+  }
+
+  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(1) > input:nth-child(3) {
+    background-position-x: -51px;
+  }
+  
+  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(1) > input:nth-child(4) {
+    background-position-x: -180px;
+  }
+  
+  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(1) > input:nth-child(5) {
+    background-position-x: -286px;
+  }
+  
+  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(1) > input:nth-child(6) {
+    background-position-x: -348px;
+  }
+  
+  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(1) > input:nth-child(7) {
+    background-position-x: -415px;
+  }
+  
+  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(1) > input:nth-child(8) {
+    background-position-x: 0px;
+  }
+  
+  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(1) > input:nth-child(9) {
+    background-position-x: -108px;
+  }
+  
+  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(1) > input:nth-child(10) {
+    background-position-x: -201px;
+  }
+
+  /* formato */
+  
+  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(2) > input:nth-child(2) {
+    background-position-x: 0px;
+    background-position-y: -50px;
+  }
+  
+  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(2) > input:nth-child(3) {
+    background-position-x: -135px;
+    background-position-y: -50px;
+  }
+  
+  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(2) > input:nth-child(4) {
+    background-position-x: -228px;
+    background-position-y: -50px;
+  }
+  
+  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(2) > input:nth-child(5) {
+    background-position-x: -364px;
+    background-position-y: -50px;
+  }
+  
+  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(2) > input:nth-child(6) {
+    background-position-x: -475px;
+    background-position-y: -50px;
+  }
+  
+  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(2) > input:nth-child(7) {
+    background-position-x: 0px;
+    background-position-y: -50px;
+  }
+  
+  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(2) > input:nth-child(8) {
+    background-position-x: -131px;
+    background-position-y: -50px;
+  }
+
+  .faq > div > div {
+    cursor: pointer;
+  }
 }

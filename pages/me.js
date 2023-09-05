@@ -237,16 +237,12 @@ export default function Me() {
                   innovación y mentora de emprendedorxs; también hago sesiones
                   de facilitación creativa para creativxs, asesoramiento
                   estratégico para emprendedorxs y coaching espiritual para
-                  personas en su camino de evolución espiritual.
+                  personas en su camino de evolución personal.
                 </p>
               </section>
               <section className={styles.bullets}>
                 <h3>MI EXPERTISE</h3>
                 <div className={styles.expertise}>
-                  <p>#creatividad</p>
-                  <p>#arte</p>
-                  <p>#procesocreativo</p>
-                  <p>#facilitacion</p>
                   <p>#estrategia</p>
                   <p>#innovacion</p>
                   <p>#emprendimiento</p>
@@ -256,12 +252,14 @@ export default function Me() {
                   <p>#futuresdesign</p>
                   <p>#systemsdesign</p>
                   <p>#experiencedesign</p>
+                  <p>#creatividad</p>
+                  <p>#arte</p>
+                  <p>#procesocreativo</p>
+                  <p>#facilitacion</p>
                   <p>#tarot</p>
-                  <p>#oraculos</p>
                   <p>#registrosakasicos</p>
                   <p>#astrologia</p>
                   <p>#numerologia</p>
-                  <p>#diseñohumano</p>
                   <p>+++</p>
                 </div>
               </section>
@@ -283,7 +281,7 @@ export default function Me() {
                 innovación y mentora de emprendedorxs; también hago sesiones de
                 facilitación creativa para creativxs, asesoramiento estratégico
                 para emprendedorxs y coaching espiritual para personas en su
-                camino de evolución espiritual.
+                camino de evolución personal.
               </p>
             </section>
             <section className={styles.bullets}>
@@ -311,8 +309,8 @@ export default function Me() {
               <>
                 <Image
                   src="/../public/jimena_business.png"
-                  width={650}
-                  height={"650"}
+                  width={600}
+                  height={"600"}
                   alt="Picture of Jimena"
                 ></Image>
                 <p className={styles.div1}>
@@ -334,10 +332,6 @@ export default function Me() {
             <section className={styles.bullets}>
               <h3>MI EXPERTISE</h3>
               <div className={styles.expertise}>
-                <p>#creatividad</p>
-                <p>#arte</p>
-                <p>#procesocreativo</p>
-                <p>#facilitacion</p>
                 <p>#estrategia</p>
                 <p>#innovacion</p>
                 <p>#emprendimiento</p>
@@ -347,12 +341,14 @@ export default function Me() {
                 <p>#futuresdesign</p>
                 <p>#systemsdesign</p>
                 <p>#experiencedesign</p>
+                <p>#creatividad</p>
+                <p>#arte</p>
+                <p>#procesocreativo</p>
+                <p>#facilitacion</p>
                 <p>#tarot</p>
-                <p>#oraculos</p>
                 <p>#registrosakasicos</p>
                 <p>#astrologia</p>
                 <p>#numerologia</p>
-                <p>#diseñohumano</p>
                 <p>+++</p>
               </div>
             </section>

@@ -15,7 +15,7 @@ export default function Home() {
 
   useLayoutEffect(() => {
     setIsDesktop(typeof window !== "undefined" && window.innerWidth > 768);
-      /* if (isDesktop) {
+    /* if (isDesktop) {
         setIsLoading(true);
       } else {
         setIsLoading(false);
@@ -129,12 +129,12 @@ export default function Home() {
               effect={"cards"}
               cardsEffect={{
                 perSlideRotate: 0, // Rotation of cards in degrees
-                perSlideOffset: 80, // Space between cards in px
+                perSlideOffset: 45, // Space between cards in px
                 slideShadows: false,
               }}
               modules={[EffectCards]}
               grabCursor={true}
-              initialSlide={1}
+              initialSlide={2}
               className={styles.servicios}
             >
               <SwiperSlide>
@@ -237,12 +237,6 @@ export default function Home() {
                       calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-desvela-esta-etapa-vital-x-jimena-gonzalez"
                     />
                   </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={styles.servicio}>
-                  <h3>HAZME UNA PROPUESTA</h3>
-                  <PropuestaForm pageWhereLoaded={"home"} />
                 </div>
               </SwiperSlide>
               {isDesktop && (
@@ -459,9 +453,15 @@ export default function Home() {
             </section>
           )}
           <section className={styles.servicios + " " + styles.faq_section}>
+            {isDesktop && (
+              <div className={styles.servicio}>
+                <h3>HAZME UNA PROPUESTA</h3>
+                <PropuestaForm pageWhereLoaded={"home"} />
+              </div>
+            )}
             <div className={styles.servicio + " " + styles.regala_sesion}>
               <h3>FAQ</h3>
-              <div className={styles.servicios_grupo + " " + styles.faq}>
+              <div className={styles.faq}>
                 <Service
                   title="¿Qué es Despertar Creativo®?"
                   description=<>
@@ -537,8 +537,14 @@ export default function Home() {
                     Con ella, podrá agendar directamente su sesión. Al hacerlo,
                     recibirá un correo electrónico para elegir el tema de su
                     sesión, enviarme los datos necesarios (en caso de que la
-                    sesión tenga astrología) y recibir el ejercicio de <a href="https://mailchi.mp/cad3bc2e7c34/despertar-creativo" target="_blank">Despertar
-                    Creativo</a>®.
+                    sesión tenga astrología) y recibir el ejercicio de{" "}
+                    <a
+                      href="https://mailchi.mp/cad3bc2e7c34/despertar-creativo"
+                      target="_blank"
+                    >
+                      Despertar Creativo
+                    </a>
+                    ®.
                   </>
                 />
                 <Service
