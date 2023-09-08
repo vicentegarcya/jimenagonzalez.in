@@ -4,14 +4,15 @@ import Layout from "@/components/layout";
 import Service from "@/components/service";
 import PropuestaForm from "@/components/propuestaForm";
 import Subscribe from "@/components/subscribe";
-import { useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards } from "swiper/modules";
+import { EffectCards, EffectCreative } from "swiper/modules";
 import "swiper/css";
 
 export default function Home() {
   const [isDesktop, setIsDesktop] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const swiperRef = useRef();
 
   useLayoutEffect(() => {
     setIsDesktop(typeof window !== "undefined" && window.innerWidth > 768);
@@ -23,7 +24,7 @@ export default function Home() {
       setTimeout(() => setIsLoading(false), 4000); */
   }, [isDesktop]);
 
-  if (isLoading && isDesktop)
+  /* if (isLoading && isDesktop)
     return (
       <div className={styles.loading_div}>
         <h3>INSPÍRATE</h3>
@@ -64,7 +65,7 @@ export default function Home() {
           </filter>
         </svg>
       </div>
-    );
+    ); */
 
   if (!isLoading)
     return (
@@ -125,19 +126,23 @@ export default function Home() {
           )}
           {isDesktop && (
             <Swiper
-              loop={true}
+              ref={swiperRef}
               effect={"cards"}
               cardsEffect={{
                 perSlideRotate: 0, // Rotation of cards in degrees
                 perSlideOffset: 45, // Space between cards in px
                 slideShadows: false,
               }}
+              slidesPerView={1}
               modules={[EffectCards]}
               grabCursor={true}
-              initialSlide={2}
+              initialSlide={1}
               className={styles.servicios}
+              onSwiper={(swiper) => {
+                swiperRef.current = swiper;
+              }}
             >
-              <SwiperSlide>
+              <SwiperSlide onClick={() => swiperRef.current.slideTo(0)}>
                 <div className={styles.servicio}>
                   <h3>SOY ARTISTA, CREATIV@ O DISEÑADORA</h3>
                   <div className={styles.servicios_grupo}>
@@ -173,7 +178,7 @@ export default function Home() {
                   </div>
                 </div>
               </SwiperSlide>
-              <SwiperSlide>
+              <SwiperSlide onClick={() => swiperRef.current.slideTo(1)}>
                 <div className={styles.servicio}>
                   <h3>SOY EMPRENDEDOR/A</h3>
                   <div className={styles.servicios_grupo}>
@@ -209,7 +214,7 @@ export default function Home() {
                   </div>
                 </div>
               </SwiperSlide>
-              <SwiperSlide>
+              <SwiperSlide onClick={() => swiperRef.current.slideTo(2)}>
                 <div className={styles.servicio}>
                   <h3>
                     ESTOY EN MI CAMINO DE EVOLUCIÓN PERSONAL Y/O ESPIRITUAL
@@ -240,7 +245,7 @@ export default function Home() {
                 </div>
               </SwiperSlide>
               {isDesktop && (
-                <SwiperSlide>
+                <SwiperSlide onClick={() => swiperRef.current.slideTo(3)}>
                   <div className={styles.servicio + " " + styles.regala_sesion}>
                     <h3>QUIERO REGALAR UNA SESIÓN</h3>
                     <p>

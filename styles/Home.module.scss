@@ -195,13 +195,13 @@ $height: 450px;
   }
 
   .inspirate_cada_mes {
-    width: 66vw;
+    width: 59vw;
     max-width: 1000px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   .inspirate_cada_mes > div {
@@ -245,7 +245,11 @@ $height: 450px;
   .faq_section > .servicio {
     margin: 0 auto 4rem auto;
     padding: 0 !important;
-    width: 90%;
+    width: 80%;
+  }
+
+  .faq_section > .servicio:nth-child(1) > div > form > fieldset {
+    width: 70%;
   }
 
   .faq_section > .servicio:nth-child(1) > div > form > div > textarea,
@@ -264,81 +268,176 @@ $height: 450px;
   .faq_section > .servicio:nth-child(1) > div > form > fieldset > input:hover {
     cursor: pointer;
   }
-  
-  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(1) > input:nth-child(2) {
+
+  .faq_section
+    > .servicio:nth-child(1)
+    > div
+    > form
+    > fieldset:nth-child(1)
+    > input:nth-child(2) {
     background-position-x: 0px;
   }
 
-  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(1) > input:nth-child(3) {
+  .faq_section
+    > .servicio:nth-child(1)
+    > div
+    > form
+    > fieldset:nth-child(1)
+    > input:nth-child(3) {
     background-position-x: -51px;
   }
-  
-  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(1) > input:nth-child(4) {
+
+  .faq_section
+    > .servicio:nth-child(1)
+    > div
+    > form
+    > fieldset:nth-child(1)
+    > input:nth-child(4) {
     background-position-x: -180px;
   }
-  
-  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(1) > input:nth-child(5) {
+
+  .faq_section
+    > .servicio:nth-child(1)
+    > div
+    > form
+    > fieldset:nth-child(1)
+    > input:nth-child(5) {
     background-position-x: -286px;
   }
-  
-  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(1) > input:nth-child(6) {
+
+  .faq_section
+    > .servicio:nth-child(1)
+    > div
+    > form
+    > fieldset:nth-child(1)
+    > input:nth-child(6) {
     background-position-x: -348px;
   }
-  
-  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(1) > input:nth-child(7) {
+
+  .faq_section
+    > .servicio:nth-child(1)
+    > div
+    > form
+    > fieldset:nth-child(1)
+    > input:nth-child(7) {
     background-position-x: -415px;
   }
-  
-  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(1) > input:nth-child(8) {
+
+  .faq_section
+    > .servicio:nth-child(1)
+    > div
+    > form
+    > fieldset:nth-child(1)
+    > input:nth-child(8) {
     background-position-x: 0px;
   }
-  
-  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(1) > input:nth-child(9) {
+
+  .faq_section
+    > .servicio:nth-child(1)
+    > div
+    > form
+    > fieldset:nth-child(1)
+    > input:nth-child(9) {
     background-position-x: -108px;
   }
-  
-  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(1) > input:nth-child(10) {
+
+  .faq_section
+    > .servicio:nth-child(1)
+    > div
+    > form
+    > fieldset:nth-child(1)
+    > input:nth-child(10) {
     background-position-x: -201px;
   }
 
   /* formato */
-  
-  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(2) > input:nth-child(2) {
+
+  .faq_section
+    > .servicio:nth-child(1)
+    > div
+    > form
+    > fieldset:nth-child(2)
+    > input:nth-child(2) {
     background-position-x: 0px;
     background-position-y: -50px;
   }
-  
-  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(2) > input:nth-child(3) {
+
+  .faq_section
+    > .servicio:nth-child(1)
+    > div
+    > form
+    > fieldset:nth-child(2)
+    > input:nth-child(3) {
     background-position-x: -135px;
     background-position-y: -50px;
   }
-  
-  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(2) > input:nth-child(4) {
+
+  .faq_section
+    > .servicio:nth-child(1)
+    > div
+    > form
+    > fieldset:nth-child(2)
+    > input:nth-child(4) {
     background-position-x: -228px;
     background-position-y: -50px;
   }
-  
-  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(2) > input:nth-child(5) {
+
+  .faq_section
+    > .servicio:nth-child(1)
+    > div
+    > form
+    > fieldset:nth-child(2)
+    > input:nth-child(5) {
     background-position-x: -364px;
     background-position-y: -50px;
   }
-  
-  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(2) > input:nth-child(6) {
+
+  .faq_section
+    > .servicio:nth-child(1)
+    > div
+    > form
+    > fieldset:nth-child(2)
+    > input:nth-child(6) {
     background-position-x: -475px;
     background-position-y: -50px;
   }
-  
-  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(2) > input:nth-child(7) {
+
+  .faq_section
+    > .servicio:nth-child(1)
+    > div
+    > form
+    > fieldset:nth-child(2)
+    > input:nth-child(7) {
     background-position-x: 0px;
     background-position-y: -50px;
   }
-  
-  .faq_section > .servicio:nth-child(1) > div > form > fieldset:nth-child(2) > input:nth-child(8) {
+
+  .faq_section
+    > .servicio:nth-child(1)
+    > div
+    > form
+    > fieldset:nth-child(2)
+    > input:nth-child(8) {
     background-position-x: -131px;
     background-position-y: -50px;
   }
 
   .faq > div > div {
     cursor: pointer;
+    font-size: 18px;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .faq > div > div:nth-child(2) > p {
+    font-size: 15px;
+  }
+
+  .faq > div > div:nth-child(1):hover {
+    transform: scaleX(1.02);
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .faq > div > div:nth-child(1):hover > p {
+    font-weight: bold;
   }
 }
