@@ -11,7 +11,7 @@ export default function Footer({ currentPage }) {
           ? {
               backgroundImage: `url(${aura.src})`,
               backgroundPositionX: "-215px",
-              backgroundPositionY: "-819px"
+              backgroundPositionY: "-819px",
             }
           : {
               backgroundImage: `url(${psicodelico.src})`,
@@ -35,7 +35,12 @@ export default function Footer({ currentPage }) {
         >
           Despertar Creativo
         </a>
-        . Para ver mis publicaciones en Instagram, sígueme en{" "}
+        . Escucha aquí{" "}
+        <a href="https://open.spotify.com/playlist/6nDnwvDJOvY1VebJWbVsd7?si=jF_EYQm5Qy6g8xk_RXPaeg&utm_source=copy-link&utm_medium=copy-link&nd=1&_branch_match_id=1182632066913753218&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXLy7IL8lMq9TLyczL1g82Ciz29C0rN3ZOAgDcFrbjIAAAAA%3D%3D" target="_blank">
+          mi playlist de Spotify
+        </a>{" "}
+        para entrar en flow creativo. Para ver mis publicaciones en Instagram,
+        sígueme en{" "}
         <a href="https://www.instagram.com/jimenagonzalez.in/" target="_blank">
           @jimenagonzalez.in
         </a>

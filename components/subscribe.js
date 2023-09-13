@@ -36,14 +36,26 @@ function Subscribe({ pageWhereLoaded }) {
       className={pageWhereLoaded === "me" ? styles.sobre_mi : undefined}
       onSubmit={subscribe}
     >
-      <div className={state === "Error" ? styles.inspirate_email + ' ' + styles.email_error : styles.inspirate_email}>
+      <div
+        className={
+          state === "Error"
+            ? styles.inspirate_email + " " + styles.email_error
+            : styles.inspirate_email
+        }
+      >
         <input
           required
           id="email-input"
           name="email"
           type="email"
-          placeholder={state === "Error" ? "Revisa tu email y vuelve a intentarlo" : "Escribe tu email"}
-          value={state === "Error" ? "Revisa tu email y vuelve a intentarlo" : email}
+          placeholder={
+            state === "Error"
+              ? "Revisa tu email y vuelve a intentarlo"
+              : "Escribe tu email"
+          }
+          value={
+            state === "Error" ? "Revisa tu email y vuelve a intentarlo" : email
+          }
           onChange={(e) => setEmail(e.target.value)}
           onClick={(e) => setState("idle")}
         />
@@ -55,15 +67,16 @@ function Subscribe({ pageWhereLoaded }) {
           className={styles.subscribe_btn}
           onClick={subscribe}
         >
-          SUSCRIBIRME
+          ENTRAR
         </button>
         <button>
           <Link
             href={
-              "https://mailchi.mp/cd32dfb448ae/aqu-llega-el-pre-estreno-julio-en-despertar-creativo?e=6fb98a57ae"
+              "https://us21.campaign-archive.com/?u=7aa58c4d8b01a35056089cbcf&id=13753f8ce2"
             }
+            target="_blank"
           >
-            INSPÍRAME AHORA
+            VER ÚLTIMO NÚMERO
           </Link>
         </button>
       </div>

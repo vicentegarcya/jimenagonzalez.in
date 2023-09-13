@@ -41,7 +41,7 @@
 }
 
 .inspirate_cta_div button:nth-child(1) {
-  width: 42%;
+  width: 35%;
   background: url("../public/PSICODELICO.jpeg");
   background-position-x: -2rem;
   background-position-y: 0;
@@ -49,7 +49,7 @@
 }
 
 .inspirate_cta_div button:nth-child(2) {
-  width: 52%;
+  width: 60%;
   background: url("../public/PSICODELICO.jpeg");
   background-position-x: calc(-140px - 2rem);
   background-position-y: 0;
@@ -57,7 +57,7 @@
 }
 
 .sobre_mi .inspirate_cta_div button:nth-child(1) {
-  width: 44%;
+  width: 34%;
   background: url("../public/GRADIENTE_AURA.jpeg");
   background-position-x: -247px;
   background-position-y: -757px;
@@ -65,7 +65,7 @@
 }
 
 .sobre_mi .inspirate_cta_div button:nth-child(2) {
-  width: 50%;
+  width: 60%;
   background: url("../public/GRADIENTE_AURA.jpeg");
   background-position-x: -409px;
   background-position-y: -757px;

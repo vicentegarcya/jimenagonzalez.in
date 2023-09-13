@@ -13,6 +13,12 @@ export default function Home() {
   const [isDesktop, setIsDesktop] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const swiperRef = useRef();
+  const propuestaDesktopRef = useRef();
+  const propuestaMobileRef = useRef();
+
+  function scrollTo(section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
 
   useLayoutEffect(() => {
     setIsDesktop(typeof window !== "undefined" && window.innerWidth > 768);
@@ -282,28 +288,28 @@ export default function Home() {
                     <div className={styles.servicios_grupo}>
                       <Service
                         title="TAROT"
-                        description="Sesión a elegir entre “Comprende el sentido de tu reto actual”, “Supera bloqueos y dificultades” (especial emprendedor@s), “Conecta con el alma de tu negocio” (especial emprendedor@s), “Supera bloqueos creativos” (especial creativ@s) e “Intenciona tu siguiente proyecto” (especial creativ@s)."
+                        description="Sesión de acompañamiento personalizado con tarot evolutivo."
                         price="55,00 €"
                         calendlyUrl="https://buy.stripe.com/dR69B34GFd2ud7G004"
                         cta="SELECCIONAR"
                       />
                       <Service
                         title="ASTROLOGÍA"
-                        description="Sesión de lectura de su carta astral: energías principales, dones y talentos, retos evolutivos y de sanación y misión personal."
-                        price="88,00 €"
-                        calendlyUrl="https://buy.stripe.com/00gdRj6ONe6y9VueV1"
+                        description="Sesión de lectura de carta astral: energías principales, dones y talentos, retos evolutivos y de sanación y misión personal."
+                        price="99,00 €"
+                        calendlyUrl="https://buy.stripe.com/fZe9B3c97e6y3x628g"
                         cta="SELECCIONAR"
                       />
                       <Service
                         title="ASTROLOGÍA + TAROT"
-                        description="Sesión a elegir entre “Descubre tu misión, dones y retos vitales”, “Desvela el propósito de esta etapa vital”, “Descubre tu misión y dones” (especial emprendedor@s) y “Descubre tus dones y tu voz creativa” (especial creativ@s)."
-                        price="99,00 €"
-                        calendlyUrl="https://buy.stripe.com/4gw00t6ON5A2gjS4gm"
+                        description="Sesión combinada entre una lectura de carta astral y una tirada personalizada de tarot evolutivo."
+                        price="111,00 €"
+                        calendlyUrl="https://buy.stripe.com/fZe3cFc971jM4BafZ7"
                         cta="SELECCIONAR"
                       />
                       <Service
                         title="MANI(FEST)"
-                        description="Una sesión con asesoramiento espiritual y estratégico para conectar con su auténtica visión, intencionar su expansión y diseñar un plan guiado para manifestarla."
+                        description="Sesión de asesoramiento espiritual y estratégico para conectar con la visión del alma, intencionar su expansión y diseñar un plan guiado para manifestarla."
                         price="111,00 €"
                         calendlyUrl="https://buy.stripe.com/5kA00tc97faC9VubIK"
                         cta="SELECCIONAR"
@@ -430,7 +436,19 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className={styles.servicio}>
+              <section className={styles.keywords + " " + styles.for_the}>
+                <p className={styles.text_1}>
+                  FOR THE AUTHENTIC SOULFUL LEADERS / FOR THE EPIC INTUITIVE
+                  CREATORS / FOR THE FEARLESS SENSITIVE SOULS
+                  <span className={styles.espacio}></span>
+                </p>
+                <p className={styles.text_2}>
+                  FOR THE AUTHENTIC SOULFUL LEADERS / FOR THE EPIC INTUITIVE
+                  CREATORS / FOR THE FEARLESS SENSITIVE SOULS
+                  <span className={styles.espacio}></span>
+                </p>
+              </section>
+              <div ref={propuestaMobileRef} className={styles.servicio}>
                 <h3>HAZME UNA PROPUESTA</h3>
                 <PropuestaForm pageWhereLoaded={"home"} />
               </div>
@@ -467,28 +485,28 @@ export default function Home() {
                 <div className={styles.servicios_grupo}>
                   <Service
                     title="TAROT"
-                    description="Sesión a elegir entre “Comprende el sentido de tu reto actual”, “Supera bloqueos y dificultades” (especial emprendedor@s), “Conecta con el alma de tu negocio” (especial emprendedor@s), “Supera bloqueos creativos” (especial creativ@s) e “Intenciona tu siguiente proyecto” (especial creativ@s)."
+                    description="Sesión de acompañamiento personalizado con tarot evolutivo."
                     price="55,00 €"
                     calendlyUrl="https://buy.stripe.com/dR69B34GFd2ud7G004"
                     cta="SELECCIONAR"
                   />
                   <Service
                     title="ASTROLOGÍA"
-                    description="Sesión de lectura de su carta astral: energías principales, dones y talentos, retos evolutivos y de sanación y misión personal."
-                    price="88,00 €"
-                    calendlyUrl="https://buy.stripe.com/00gdRj6ONe6y9VueV1"
+                    description="Sesión de lectura de carta astral: energías principales, dones y talentos, retos evolutivos y de sanación y misión personal."
+                    price="99,00 €"
+                    calendlyUrl="https://buy.stripe.com/fZe9B3c97e6y3x628g"
                     cta="SELECCIONAR"
                   />
                   <Service
                     title="ASTROLOGÍA + TAROT"
-                    description="Sesión a elegir entre “Descubre tu misión, dones y retos vitales”, “Desvela el propósito de esta etapa vital”, “Descubre tu misión y dones” (especial emprendedor@s) y “Descubre tus dones y tu voz creativa” (especial creativ@s)."
-                    price="99,00 €"
-                    calendlyUrl="https://buy.stripe.com/4gw00t6ON5A2gjS4gm"
+                    description="Sesión combinada entre una lectura de carta astral y una tirada personalizada de tarot evolutivo."
+                    price="111,00 €"
+                    calendlyUrl="https://buy.stripe.com/fZe3cFc971jM4BafZ7"
                     cta="SELECCIONAR"
                   />
                   <Service
                     title="MANI(FEST)"
-                    description="Una sesión con asesoramiento espiritual y estratégico para conectar con su auténtica visión, intencionar su expansión y diseñar un plan guiado para manifestarla."
+                    description="Sesión de asesoramiento espiritual y estratégico para conectar con la visión del alma, intencionar su expansión y diseñar un plan guiado para manifestarla."
                     price="111,00 €"
                     calendlyUrl="https://buy.stripe.com/5kA00tc97faC9VubIK"
                     cta="SELECCIONAR"
@@ -499,7 +517,7 @@ export default function Home() {
           )}
           <section className={styles.servicios + " " + styles.faq_section}>
             {isDesktop && (
-              <div className={styles.servicio}>
+              <div ref={propuestaDesktopRef} className={styles.servicio}>
                 <h3>HAZME UNA PROPUESTA</h3>
                 <PropuestaForm pageWhereLoaded={"home"} />
               </div>
@@ -508,100 +526,17 @@ export default function Home() {
               <h3>FAQ</h3>
               <div className={styles.faq}>
                 <Service
-                  title="¿Qué es Despertar Creativo®?"
-                  description=<>
-                    Despertar Creativo® es el nombre de mi metodología, que
-                    combina elementos de estrategia de negocios, procesos
-                    creativos y de diseño y espiritualidad, facilitando la
-                    conexión con la inspiración auténtica y la acción alineada.
-                    {
-                      <>
-                        <br></br>
-                        <br></br>
-                      </>
-                    }
-                    También es el nombre de mi Newsletter mensual, que contiene
-                    ejercicios gratuitos, el clima energético del mes,técnicas
-                    creativas, recomendaciones, pre-lanzamientos y promociones,
-                    meditaciones y mucho más.
-                  </>
-                />
-                <Service
-                  title="¿Cómo funcionan las sesiones?"
-                  description=<>
-                    Al adquirir la sesión, eliges el día y la hora que mejor te
-                    venga para nuestro encuentro. Inmediatamente después
-                    recibirás un evento en tu correo electrónico con los
-                    detalles de la videollamada.
-                    {
-                      <>
-                        <br></br>
-                        <br></br>
-                      </>
-                    }
-                    Previo a la sesión, recibirás un ejercicio de Despertar
-                    Creativo®, diseñado para guiarte en una reflexión intuitiva
-                    sobre la temática de la sesión. Esta propuesta es
-                    completamente opcional, pero suele permitir una mayor
-                    profundización y foco en la sesión.
-                    {
-                      <>
-                        <br></br>
-                        <br></br>
-                      </>
-                    }
-                    En la sesión en directo, después de una pequeña
-                    presentación, enmarcaremos la temática y nos sumergiremos en
-                    el tema para alcanzar mayor perspectiva y claridad.
-                    Mientras, podrás hacer cualquier pregunta.
-                  </>
-                />
-                <Service
-                  title="¿Cómo es una sesión conmigo?"
-                  description=<>
-                    Sea la sesión que sea, mi compromiso es sensibilidad,
-                    honestidad y excelencia. Sensibilidad, como empatía, alta
-                    percepción y escucha; honestidad, como transparencia
-                    absoluta; y excelencia, como máxima calidad y entrega de
-                    valor en toda la experiencia.
-                  </>
-                />
-                <Service
-                  title="¿Cómo funcionan los bonos regalo?"
-                  description=<>
-                    Al comprar un bono regalo, recibirás en tu correo
-                    electrónico (en el día laboral siguiente), una tarjeta
-                    regalo digital personalizada con el nombre de la persona a
-                    la que regales.
-                    {
-                      <>
-                        <br></br>
-                        <br></br>
-                      </>
-                    }
-                    Con ella, podrá agendar directamente su sesión. Al hacerlo,
-                    recibirá un correo electrónico para elegir el tema de su
-                    sesión, enviarme los datos necesarios (en caso de que la
-                    sesión tenga astrología) y recibir el ejercicio de{" "}
-                    <a
-                      href="https://mailchi.mp/cad3bc2e7c34/despertar-creativo"
-                      target="_blank"
-                    >
-                      Despertar Creativo
-                    </a>
-                    ®.
-                  </>
-                />
-                <Service
-                  title="Tengo un negocio, ¿cómo me puedes ayudar?"
+                  title="Tengo un negocio o un proyecto laboral, ¿cómo me puedes ayudar?"
                   description=<>
                     Tras más de 8 años de experiencia en consultoría estratégica
                     para grandes empresas y más de 5 de asesoramiento de
-                    start-ups, mi especialidad es la estrategia: definición e
-                    iteración de modelo de negocio, cartera de productos y
-                    servicios, conceptualización de marca, planes estratégicos y
-                    tácticos y diseño de experiencia de cliente; así como
-                    investigación de mercado y de usuarios.
+                    start-ups, mi especialidad es la <strong>estrategia</strong>
+                    : definición e iteración de modelo de negocio, cartera de
+                    productos y servicios, planes estratégicos y tácticos. Mi
+                    expertise incluye <strong>diseño de servicios</strong>,
+                    conceptualización de identidad y marca, y diseño de la
+                    experiencia física y digital de tus clientes, así como
+                    investigación de mercado y usuarios.
                     {
                       <>
                         <br></br>
@@ -609,8 +544,8 @@ export default function Home() {
                       </>
                     }
                     Además, mi metodología de Despertar Creativo incluye
-                    facilitación espiritual, para que la estrategia de tu
-                    negocio esté alineada con tu misión personal.
+                    facilitación espiritual, para alinear la estrategia de tu
+                    negocio con tu misión personal.
                     {
                       <>
                         <br></br>
@@ -633,12 +568,20 @@ export default function Home() {
                     Tras 8 años de experiencia en proyectos de innovación e
                     intraemprendimiento y 5 de asesoramiento estratégico de
                     start-ups, además del lanzamiento de mi propio negocio, mi
-                    especialidad son las metodologías ágiles para emprender:
-                    lean start-up, diseño de negocios y diseño estratégico. Mi
-                    expertise abarca la definición del modelo de negocio, la
-                    conceptualización de identidad, el plan estratégico y
-                    táctico y el diseño de productos y servicios; así como la
-                    investigación de mercado y usuarios.
+                    especialidad son las <strong>metodologías ágiles</strong>{" "}
+                    para emprender: lean start-up, diseño de negocios y diseño
+                    estratégico.
+                    {
+                      <>
+                        <br></br>
+                        <br></br>
+                      </>
+                    }
+                    Mi expertise abarca la investigación de mercado y usuarios,
+                    la definición del modelo de negocio, la conceptualización de
+                    identidad, el plan estratégico y táctico y el diseño de
+                    cartera de productos y servicios, así como de la{" "}
+                    <strong>experiencia</strong> física y digital del cliente.
                     {
                       <>
                         <br></br>
@@ -670,19 +613,21 @@ export default function Home() {
                     Después de más de 5 años haciendo facilitación creativa en
                     procesos de diseño en equipos de grandes empresas, artistas
                     emergentes y emprendedor@s, me he especializado en
-                    metodologías para impulsar el proceso creativo, facilitando
-                    procesos individuales o de equipo.{" "}
+                    metodologías para impulsar el{" "}
+                    <strong>proceso creativo</strong>, facilitando procesos
+                    individuales o de equipo.
                     {
                       <>
                         <br></br>
                         <br></br>
                       </>
                     }
-                    Mi metodología (Despertar Creativo®) está basada en los
-                    cuatro ejes divergencia-convergencia, interno-externo;
-                    cimentada en conceptos de metodologías de diseño, técnicas
-                    creativas y facilitación espiritual, para alinear tus
-                    creaciones con tu misión personal y tu auténtica esencia.
+                    Mi metodología (<strong>Despertar Creativo®</strong>) está
+                    basada en los cuatro ejes divergencia-convergencia,
+                    interno-externo; cimentada en conceptos de metodologías de
+                    diseño, técnicas creativas y facilitación espiritual, para
+                    alinear tus creaciones con tu misión personal y tu auténtica
+                    esencia.
                     {
                       <>
                         <br></br>
@@ -705,29 +650,30 @@ export default function Home() {
                     Tras mi propio camino de sanación y evolución personal que
                     comenzó hace más de 10 años, hace 3 experimenté el mayor
                     proceso de despertar espiritual hasta la fecha. Entonces
-                    comencé a hacer sesiones de Tarot y astrología a otras
-                    personas; y desde entonces he acompañado a más de 150.
+                    comencé a hacer sesiones de <strong>Tarot</strong> y{" "}
+                    <strong>Astrología</strong> a otras personas; y desde
+                    entonces he acompañado a más de 150.
                     {
                       <>
                         <br></br>
                         <br></br>
                       </>
                     }
-                    Aunque mi camino espiritual y de aprendizaje está en
-                    constante evolución, y voy aprendiendo más de otras
-                    herramientas, como numerología, diseño humano o registros
-                    akásicos, el core de mi oferta es Tarot y astrología, que
-                    uso con un enfoque evolutivo-espiritual.
+                    El core de mi oferta es Tarot y Astrología, que uso{" "}
+                    <strong>con un enfoque evolutivo-espiritual</strong>. Sin
+                    embargo, también puede surgir información de numerología o
+                    diseño humano, así como conexiones a tus Registros
+                    Akáshicos.
                     {
                       <>
                         <br></br>
                         <br></br>
                       </>
                     }
-                    Es decir, mi intención es ampliar tu perspectiva, ayudarte a
-                    comprender el propósito de tus experiencias y la energía
-                    disponible para ti, de modo que puedas tomar acción de
-                    manera más consciente y alineada.
+                    Mi intención con cualquiera de estas herramientas es ampliar
+                    tu perspectiva, ayudarte a comprender el propósito de tus
+                    experiencias y la energía disponible para ti, de modo que
+                    puedas tomar acción de manera más consciente y alineada.
                     {
                       <>
                         <br></br>
@@ -747,7 +693,22 @@ export default function Home() {
                   description=<>
                     Si tienes alguna otra necesidad o idea (sesiones con tu
                     equipo, formaciones, charlas, acompañamiento a medio plazo),
-                    puedes usar la sección “Hazme una propuesta” en la home o{" "}
+                    puedes usar la sección{" "}
+                    <button
+                      className="scroll_to"
+                      onClick={() => {
+                        if (isDesktop) {
+                          scrollTo(propuestaDesktopRef.current);
+                        }
+
+                        if (!isDesktop) {
+                          scrollTo(propuestaMobileRef.current);
+                        }
+                      }}
+                    >
+                      “Hazme una propuesta”
+                    </button>{" "}
+                    en la home o{" "}
                     {
                       <a href="mailto:jimenagonzalez.in@gmail.com">
                         escribirme
@@ -764,6 +725,112 @@ export default function Home() {
                     sobre tu necesidad y pasarte un presupuesto. En caso de no
                     poder ayudarte, quizá pueda recomendarte otr@s profesional@s
                     que sí puedan.
+                  </>
+                />
+                <Service
+                  title="¿Qué es Despertar Creativo®?"
+                  description=<>
+                    Despertar Creativo® es el nombre de mi{" "}
+                    <strong>metodología</strong>, que combina elementos de
+                    estrategia de negocios, procesos creativos y de diseño y
+                    espiritualidad, facilitando la conexión con la inspiración
+                    auténtica y la acción alineada.
+                    {
+                      <>
+                        <br></br>
+                        <br></br>
+                      </>
+                    }
+                    Se basa en cuatro ejes: divergencia-convergencia,
+                    interno-externo; combinando intuición con conocimiento
+                    racional, colaboración e influencia con exploración
+                    individual.
+                    {
+                      <>
+                        <br></br>
+                        <br></br>
+                      </>
+                    }
+                    También es el nombre de mi <strong>Newsletter</strong>{" "}
+                    mensual, que contiene ejercicios gratuitos, la energía
+                    disponible del mes,técnicas creativas, recomendaciones,
+                    pre-lanzamientos y promociones, meditaciones y mucho más.
+                  </>
+                />
+                <Service
+                  title="¿Cómo funcionan las sesiones?"
+                  description=<>
+                    Al adquirir la sesión, eliges el día y la hora que mejor te
+                    venga para nuestro encuentro. Inmediatamente después
+                    recibirás un evento en tu correo electrónico con los
+                    detalles de la videollamada.
+                    {
+                      <>
+                        <br></br>
+                        <br></br>
+                      </>
+                    }
+                    Para conectarte a la sesión, simplemente accede al link de
+                    tu convocatoria a la hora indicada.
+                    {
+                      <>
+                        <br></br>
+                        <br></br>
+                      </>
+                    }
+                    Algunas sesiones son puntuales y otros procesos llevan
+                    varias sesiones (especialmente acompañamientos estratégicos
+                    o de procesos creativos). Para ello, existen los bonos de
+                    varias sesiones a precio reducido. También me puedes pedir
+                    una metodología y presupuesto personalizados para tu
+                    proyecto concreto en la sección de{" "}
+                    <button
+                      className="scroll_to"
+                      onClick={() => {
+                        if (isDesktop) {
+                          scrollTo(propuestaDesktopRef.current);
+                        }
+
+                        if (!isDesktop) {
+                          scrollTo(propuestaMobileRef.current);
+                        }
+                      }}
+                    >
+                      “Hazme una propuesta”
+                    </button>{" "}
+                    .
+                  </>
+                />
+                <Service
+                  title="¿Cómo es una sesión conmigo?"
+                  description=<>
+                    Sea la sesión que sea, mi compromiso es sensibilidad, honestidad y excelencia. <strong>Sensibilidad</strong>, como empatía, alta percepción y escucha; <strong>honestidad</strong>, como integridad y transparencia absoluta; y <strong>excelencia</strong>, como máxima calidad y entrega de valor en toda la experiencia.
+                  </>
+                />
+                <Service
+                  title="¿Cómo funcionan los bonos regalo?"
+                  description=<>
+                    Al comprar un bono regalo, recibirás en tu correo
+                    electrónico (en el día laboral siguiente), una <strong>tarjeta
+                    regalo digital</strong> personalizada con el nombre de la persona a
+                    la que regales.
+                    {
+                      <>
+                        <br></br>
+                        <br></br>
+                      </>
+                    }
+                    Con ella, podrá agendar directamente su sesión. Al hacerlo,
+                    recibirá un correo electrónico para elegir el tema de su
+                    sesión, enviarme los datos necesarios (en caso de que la
+                    sesión tenga astrología) y recibir el ejercicio de{" "}
+                    <a
+                      href="https://mailchi.mp/cad3bc2e7c34/despertar-creativo"
+                      target="_blank"
+                    >
+                      Despertar Creativo
+                    </a>
+                    ®.
                   </>
                 />
               </div>

@@ -174,9 +174,13 @@ $height: 450px;
   }
 }
 
+.for_the {
+  margin: 0 0 2.5rem -1.95rem;
+}
+
 @media (min-width: 768px) {
   .keywords {
-    background-size: cover;
+    background-size: 101%;
     background-position-y: top;
     background-position-x: left;
   }
