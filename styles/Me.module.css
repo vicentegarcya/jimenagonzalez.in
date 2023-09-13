@@ -439,12 +439,21 @@
     background-position-y: 0px;
   }
 
+  @keyframes scrollTextDesktop {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100vw);
+  }
+}
+
   .div1 {
-    animation: scrollText 20s infinite linear;
+    animation: scrollTextDesktop 40s infinite linear;
   }
 
   .div2 {
-    animation: scrollText 20s infinite linear;
+    animation: scrollTextDesktop 40s infinite linear;
   }
 
   .explora_con_bso img {
