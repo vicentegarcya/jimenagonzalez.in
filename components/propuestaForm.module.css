@@ -12,83 +12,99 @@
 
 /* CUADRANDO EL FONDO CON LOS BOTONES */
 
-.temas > input:nth-child(3) {
+.temas > input:nth-child(2) {
   background-position-x: -101px;
 }
 
+.temas > input:nth-child(3) {
+  background-position-x: -101px;
+  background-position-y: -26px;
+}
+
 .temas > input:nth-child(4) {
-  background-position-x: -180px;
+  background-position-x: -101px;
+  background-position-y: -52px;
 }
 
 .temas > input:nth-child(5) {
-  background-position-x: 0px;
-  background-position-y: -26px;
+  background-position-x: -283px;
+  background-position-y: -52px;
 }
 
 .temas > input:nth-child(6) {
-  background-position-x: -62px;
-  background-position-y: -26px;
+  background-position-x: -101px;
+  background-position-y: -78px;
 }
 
 .temas > input:nth-child(7) {
-  background-position-x: -104px;
-  background-position-y: -26px;
+  background-position-x: -242px;
+  background-position-y: -78px;
 }
 
 .temas > input:nth-child(8) {
-  background-position-x: 0px;
-  background-position-y: -52px;
+  background-position-x: -101px;
+  background-position-y: -104px;
 }
 
 .temas > input:nth-child(9) {
-  background-position-x: -108px;
-  background-position-y: -52px;
+  background-position-x: -254px;
+  background-position-y: -104px;
 }
 
 .temas > input:nth-child(10) {
-  background-position-x: -201px;
-  background-position-y: -52px;
+  background-position-x: -321px;
+  background-position-y: -104px;
+}
+
+.temas > input:nth-child(11) {
+  background-position-x: -101px;
+  background-position-y: -130px;
 }
 
 .formato > input:nth-child(2) {
-  background-position-x: 0px;
-  background-position-y: -105px;
+  background-position-x: -101px;
+  background-position-y: -160px;
 }
 
 .formato > input:nth-child(3) {
-  background-position-x: -135px;
-  background-position-y: -105px;
+  background-position-x: -186px;
+  background-position-y: -160px;
 }
 
 .formato > input:nth-child(4) {
-  background-position-x: 0px;
-  background-position-y: -131px;
+  background-position-x: -325px;
+  background-position-y: -160px;
 }
 
 .formato > input:nth-child(5) {
-  background-position-x: -135px;
-  background-position-y: -131px;
+  background-position-x: -101px;
+  background-position-y: -186px;
 }
 
 .formato > input:nth-child(6) {
-  background-position-x: -246px;
-  background-position-y: -131px;
+  background-position-x: -169px;
+  background-position-y: -186px;
 }
 
 .formato > input:nth-child(7) {
-  background-position-x: 0px;
-  background-position-y: -157px;
+  background-position-x: -262px;
+  background-position-y: -186px;
 }
 
 .formato > input:nth-child(8) {
-  background-position-x: -130px;
-  background-position-y: -157px;
+  background-position-x: -101px;
+  background-position-y: -212px;
+}
+
+.formato > input:nth-child(9) {
+  background-position-x: -212px;
+  background-position-y: -212px;
 }
 
 .propuesta_form textarea {
   background: url("../public/PSICODELICO.jpeg");
-  background-position-x: 0px;
-  background-position-y: -207px;
+  background-position-x: -101px;
+  background-position-y: -267px;
   border: none;
   resize: none;
   font-family: "Inter";
@@ -146,8 +162,8 @@
   margin-right: 0;
   margin-top: 0;
   background: url("../public/PSICODELICO.jpeg");
-  background-position-x: 0px;
-  background-position-y: -387px;
+  background-position-x: -101px;
+  background-position-y: -442px;
   height: 30px;
 }
 

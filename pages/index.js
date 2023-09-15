@@ -4,33 +4,34 @@ import Layout from "@/components/layout";
 import Service from "@/components/service";
 import PropuestaForm from "@/components/propuestaForm";
 import Subscribe from "@/components/subscribe";
-import { useLayoutEffect, useRef, useState } from "react";
+import {
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards, EffectCreative } from "swiper/modules";
+import { EffectCards } from "swiper/modules";
 import "swiper/css";
+import { isPlayingContext } from "../context/context";
 
 export default function Home() {
-  const [isDesktop, setIsDesktop] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const swiperRef = useRef();
   const propuestaDesktopRef = useRef();
   const propuestaMobileRef = useRef();
+
+  const { isDesktop } = useContext(isPlayingContext);
 
   function scrollTo(section) {
     section.scrollIntoView({ behavior: "smooth" });
   }
 
-  useLayoutEffect(() => {
-    setIsDesktop(typeof window !== "undefined" && window.innerWidth > 768);
-    /* if (isDesktop) {
-        setIsLoading(true);
-      } else {
-        setIsLoading(false);
-      }
-      setTimeout(() => setIsLoading(false), 4000); */
-  }, [isDesktop]);
+  useEffect(() => {
+    setTimeout(() => setIsLoading(false), 2500);
+  }, [isLoading]);
 
-  /* if (isLoading && isDesktop)
+  if (isLoading && isDesktop)
     return (
       <div className={styles.loading_div}>
         <h3>INSPÍRATE</h3>
@@ -55,7 +56,7 @@ export default function Home() {
             <feTurbulence
               id="feTurb"
               type="fractalNoise"
-              baseFrequency="0.01 0.01"
+              baseFrequency="0.001 0.001"
               seed="2"
               numOctaves="1"
             />
@@ -67,11 +68,11 @@ export default function Home() {
               values="0.0034 0.006;0.0012 0.008;0.001 0.008"
               repeatCount="indefinite"
             />
-            <feDisplacementMap id="feDisp" in="SourceGraphic" scale="150" />
+            <feDisplacementMap id="feDisp" in="SourceGraphic" scale="140" />
           </filter>
         </svg>
       </div>
-    ); */
+    );
 
   if (!isLoading)
     return (
@@ -136,10 +137,9 @@ export default function Home() {
               effect={"cards"}
               cardsEffect={{
                 perSlideRotate: 0, // Rotation of cards in degrees
-                perSlideOffset: 45, // Space between cards in px
+                perSlideOffset: 65, // Space between cards in px
                 slideShadows: false,
               }}
-              slidesPerView={1}
               modules={[EffectCards]}
               grabCursor={true}
               initialSlide={1}
@@ -270,7 +270,7 @@ export default function Home() {
                   </div>
                 </div>
               </SwiperSlide>
-              {isDesktop && (
+              {/* {isDesktop && (
                 <SwiperSlide onClick={() => swiperRef.current.slideTo(3)}>
                   <div className={styles.servicio + " " + styles.regala_sesion}>
                     <h3>QUIERO REGALAR UNA SESIÓN</h3>
@@ -317,7 +317,7 @@ export default function Home() {
                     </div>
                   </div>
                 </SwiperSlide>
-              )}
+              )} */}
             </Swiper>
           )}
           {!isDesktop && (
@@ -517,10 +517,56 @@ export default function Home() {
           )}
           <section className={styles.servicios + " " + styles.faq_section}>
             {isDesktop && (
-              <div ref={propuestaDesktopRef} className={styles.servicio}>
-                <h3>HAZME UNA PROPUESTA</h3>
-                <PropuestaForm pageWhereLoaded={"home"} />
-              </div>
+              <>
+                <div ref={propuestaDesktopRef} className={styles.servicio}>
+                  <h3>HAZME UNA PROPUESTA</h3>
+                  <PropuestaForm pageWhereLoaded={"home"} />
+                </div>
+                <div className={styles.servicio + " " + styles.regala_sesion}>
+                  <h3>QUIERO REGALAR UNA SESIÓN</h3>
+                  <p>
+                    Todas las sesiones incluyen un bono regalo digital
+                    personalizado, un ejercicio de Despertar Creativo® previo a
+                    la sesión y una sesión online en directo. La fecha de la
+                    sesión y su temática podrá ser elegida después por la
+                    persona a la que envíes el bono regalo.
+                  </p>
+                  <p>
+                    Elige la técnica principal de la sesión para empezar a
+                    personalizar tu regalo:
+                  </p>
+                  <div className={styles.servicios_grupo}>
+                    <Service
+                      title="TAROT"
+                      description="Sesión de acompañamiento personalizado con tarot evolutivo."
+                      price="55,00 €"
+                      calendlyUrl="https://buy.stripe.com/dR69B34GFd2ud7G004"
+                      cta="SELECCIONAR"
+                    />
+                    <Service
+                      title="ASTROLOGÍA"
+                      description="Sesión de lectura de carta astral: energías principales, dones y talentos, retos evolutivos y de sanación y misión personal."
+                      price="99,00 €"
+                      calendlyUrl="https://buy.stripe.com/fZe9B3c97e6y3x628g"
+                      cta="SELECCIONAR"
+                    />
+                    <Service
+                      title="ASTROLOGÍA + TAROT"
+                      description="Sesión combinada entre una lectura de carta astral y una tirada personalizada de tarot evolutivo."
+                      price="111,00 €"
+                      calendlyUrl="https://buy.stripe.com/fZe3cFc971jM4BafZ7"
+                      cta="SELECCIONAR"
+                    />
+                    <Service
+                      title="MANI(FEST)"
+                      description="Sesión de asesoramiento espiritual y estratégico para conectar con la visión del alma, intencionar su expansión y diseñar un plan guiado para manifestarla."
+                      price="111,00 €"
+                      calendlyUrl="https://buy.stripe.com/5kA00tc97faC9VubIK"
+                      cta="SELECCIONAR"
+                    />
+                  </div>
+                </div>
+              </>
             )}
             <div className={styles.servicio + " " + styles.regala_sesion}>
               <h3>FAQ</h3>
@@ -804,16 +850,21 @@ export default function Home() {
                 <Service
                   title="¿Cómo es una sesión conmigo?"
                   description=<>
-                    Sea la sesión que sea, mi compromiso es sensibilidad, honestidad y excelencia. <strong>Sensibilidad</strong>, como empatía, alta percepción y escucha; <strong>honestidad</strong>, como integridad y transparencia absoluta; y <strong>excelencia</strong>, como máxima calidad y entrega de valor en toda la experiencia.
+                    Sea la sesión que sea, mi compromiso es sensibilidad,
+                    honestidad y excelencia. <strong>Sensibilidad</strong>, como
+                    empatía, alta percepción y escucha;{" "}
+                    <strong>honestidad</strong>, como integridad y transparencia
+                    absoluta; y <strong>excelencia</strong>, como máxima calidad
+                    y entrega de valor en toda la experiencia.
                   </>
                 />
                 <Service
                   title="¿Cómo funcionan los bonos regalo?"
                   description=<>
                     Al comprar un bono regalo, recibirás en tu correo
-                    electrónico (en el día laboral siguiente), una <strong>tarjeta
-                    regalo digital</strong> personalizada con el nombre de la persona a
-                    la que regales.
+                    electrónico (en el día laboral siguiente), una{" "}
+                    <strong>tarjeta regalo digital</strong> personalizada con el
+                    nombre de la persona a la que regales.
                     {
                       <>
                         <br></br>

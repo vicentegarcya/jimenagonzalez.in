@@ -9,12 +9,7 @@ import Image from "next/image";
 
 export default function Me() {
   gsap.registerPlugin(ScrollTrigger);
-  const { isPlaying, soundHandler } = useContext(isPlayingContext);
-  const [isDesktop, setIsDesktop] = useState(false);
-
-  useLayoutEffect(() => {
-    setIsDesktop(typeof window !== "undefined" && window.innerWidth > 768);
-  }, [isDesktop]);
+  const { isDesktop, isPlaying, soundHandler } = useContext(isPlayingContext);
 
   return (
     <Layout>
@@ -405,14 +400,6 @@ export default function Me() {
         {isDesktop && (
           <>
             <section className={styles.bullets}>
-              {/* <div className={styles.fotos_2}>
-                <div>
-                  <img></img>
-                </div>
-                <div>
-                  <img></img>
-                </div>
-              </div> */}
               <h3>MI HISTORIA “LABORAL”</h3>
               <p className={styles.laboral_text}>
                 Estudié industriales y la carrera de piano, y un par de

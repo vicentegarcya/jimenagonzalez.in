@@ -5,8 +5,11 @@ export const isPlayingContext = createContext(null);
 function Context({ children }) {
   const [isPlaying, setIsPlaying] = useState();
   const [audio, setAudio] = useState(null);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
+    setIsDesktop(typeof window !== "undefined" && window.innerWidth > 768);
+
     let audioElement = new Audio("./bso_jimenagonzalezin.mp3");
     audioElement.classList.add('bso_audio');
 
@@ -29,7 +32,7 @@ function Context({ children }) {
   };
 
   return (
-    <isPlayingContext.Provider value={{ isPlaying, setIsPlaying, audio, setAudio, soundHandler }}>
+    <isPlayingContext.Provider value={{ isPlaying, setIsPlaying, audio, setAudio, soundHandler, isDesktop }}>
       {children}
     </isPlayingContext.Provider>
   );

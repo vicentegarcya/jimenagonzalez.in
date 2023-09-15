@@ -79,14 +79,15 @@ export default function PropuestaForm(pageWhereLoaded) {
       <form onSubmit={handleSubmit}>
         <fieldset className={styles.temas}>
           <legend>Selecciona los temas:</legend>
-          <input onClick={handleChange} type="button" value="#estrategia" />
-          <input onClick={handleChange} type="button" value="#diseño" />
-          <input onClick={handleChange} type="button" value="#innovacion" />
-          <input onClick={handleChange} type="button" value="#arte" />
+          <input onClick={handleChange} type="button" value="#asesoramiento-estrategico" />
+          <input onClick={handleChange} type="button" value="#diseño-de-servicios" />
+          <input onClick={handleChange} type="button" value="#diseño-de-experiencia" />
+          <input onClick={handleChange} type="button" value="#business" />
+          <input onClick={handleChange} type="button" value="#emprendimiento" />
+          <input onClick={handleChange} type="button" value="#facilitacion" />
+          <input onClick={handleChange} type="button" value="#coaching-creativo" />
           <input onClick={handleChange} type="button" value="#tarot" />
           <input onClick={handleChange} type="button" value="#astrologia" />
-          <input onClick={handleChange} type="button" value="#creatividad" />
-          <input onClick={handleChange} type="button" value="#registros" />
           <input onClick={handleChange} type="button" value="otros" />
         </fieldset>
         <fieldset className={styles.formato}>
@@ -94,21 +95,22 @@ export default function PropuestaForm(pageWhereLoaded) {
           <input
             onClick={handleChange}
             type="button"
-            value="sesión individual"
+            value="proyecto"
           />
+          <input onClick={handleChange} type="button" value="acompañamiento" />
+          <input
+            onClick={handleChange}
+            type="button"
+            value="sesión 1:1"
+          />
+          <input onClick={handleChange} type="button" value="charla" />
           <input onClick={handleChange} type="button" value="formación" />
           <input
             onClick={handleChange}
             type="button"
-            value="sesión en equipo"
+            value="sesión con tu equipo"
           />
           <input onClick={handleChange} type="button" value="colaboración" />
-          <input onClick={handleChange} type="button" value="charla" />
-          <input
-            onClick={handleChange}
-            type="button"
-            value="sesión en pareja"
-          />
           <input onClick={handleChange} type="button" value="otro" />
         </fieldset>
         <div className={styles.describe_tu_idea}>

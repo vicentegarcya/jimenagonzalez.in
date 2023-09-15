@@ -166,7 +166,7 @@ $height: 450px;
     width: calc(#{$width} * 1.5);
     height: calc(#{$height} * 1.5);
 
-    backdrop-filter: url("http://www.psd-dude.com/tutorials/resources-images/water-backgrounds-and-textures-for-photoshop/water-pool-texture-seamless-and-free-1.jpg");
+    backdrop-filter: url("../public/transparent.jpg");
     background-repeat: repeat;
     background-size: $width $height;
 
@@ -253,7 +253,7 @@ $height: 450px;
   }
 
   .faq_section > .servicio:nth-child(1) > div > form > fieldset {
-    width: 70%;
+    width: 80%;
   }
 
   .faq_section > .servicio:nth-child(1) > div > form > div > textarea,
@@ -262,11 +262,13 @@ $height: 450px;
   }
 
   .faq_section > .servicio:nth-child(1) > div > form > div > textarea {
-    background-position-y: -102px !important;
+    background-position-y: -157px !important;
+    background-position-x: 0px !important;
   }
 
   .faq_section > .servicio:nth-child(1) > div > form > div > input {
-    background-position-y: -302px !important;
+    background-position-y: -357px !important;
+    background-position-x: 0px !important;
   }
 
   .faq_section > .servicio:nth-child(1) > div > form > fieldset > input:hover {
@@ -280,6 +282,7 @@ $height: 450px;
     > fieldset:nth-child(1)
     > input:nth-child(2) {
     background-position-x: 0px;
+    background-position-y: 0px;
   }
 
   .faq_section
@@ -288,7 +291,8 @@ $height: 450px;
     > form
     > fieldset:nth-child(1)
     > input:nth-child(3) {
-    background-position-x: -51px;
+    background-position-x: -210px;
+    background-position-y: 0px;
   }
 
   .faq_section
@@ -297,7 +301,8 @@ $height: 450px;
     > form
     > fieldset:nth-child(1)
     > input:nth-child(4) {
-    background-position-x: -180px;
+    background-position-x: -374px;
+    background-position-y: 0px;
   }
 
   .faq_section
@@ -306,7 +311,8 @@ $height: 450px;
     > form
     > fieldset:nth-child(1)
     > input:nth-child(5) {
-    background-position-x: -286px;
+    background-position-x: 0px;
+    background-position-y: -26px;
   }
 
   .faq_section
@@ -315,7 +321,8 @@ $height: 450px;
     > form
     > fieldset:nth-child(1)
     > input:nth-child(6) {
-    background-position-x: -348px;
+    background-position-x: -94px;
+    background-position-y: -26px;
   }
 
   .faq_section
@@ -324,7 +331,8 @@ $height: 450px;
     > form
     > fieldset:nth-child(1)
     > input:nth-child(7) {
-    background-position-x: -415px;
+    background-position-x: -235px;
+    background-position-y: -26px;
   }
 
   .faq_section
@@ -333,7 +341,8 @@ $height: 450px;
     > form
     > fieldset:nth-child(1)
     > input:nth-child(8) {
-    background-position-x: 0px;
+    background-position-x: -342px;
+    background-position-y: -26px;
   }
 
   .faq_section
@@ -342,7 +351,8 @@ $height: 450px;
     > form
     > fieldset:nth-child(1)
     > input:nth-child(9) {
-    background-position-x: -108px;
+    background-position-x: -490px;
+    background-position-y: -26px;
   }
 
   .faq_section
@@ -351,8 +361,19 @@ $height: 450px;
     > form
     > fieldset:nth-child(1)
     > input:nth-child(10) {
-    background-position-x: -201px;
+    background-position-x: 0px;
+    background-position-y: -52px;
   }
+
+  .faq_section
+  > .servicio:nth-child(1)
+  > div
+  > form
+  > fieldset:nth-child(1)
+  > input:nth-child(11) {
+  background-position-x: -100px;
+  background-position-y: -52px;
+}
 
   /* formato */
 
@@ -363,7 +384,7 @@ $height: 450px;
     > fieldset:nth-child(2)
     > input:nth-child(2) {
     background-position-x: 0px;
-    background-position-y: -50px;
+    background-position-y: -107px;
   }
 
   .faq_section
@@ -372,8 +393,8 @@ $height: 450px;
     > form
     > fieldset:nth-child(2)
     > input:nth-child(3) {
-    background-position-x: -135px;
-    background-position-y: -50px;
+    background-position-x: -85px;
+    background-position-y: -107px;
   }
 
   .faq_section
@@ -382,8 +403,8 @@ $height: 450px;
     > form
     > fieldset:nth-child(2)
     > input:nth-child(4) {
-    background-position-x: -228px;
-    background-position-y: -50px;
+    background-position-x: -213px;
+    background-position-y: -107px;
   }
 
   .faq_section
@@ -392,8 +413,8 @@ $height: 450px;
     > form
     > fieldset:nth-child(2)
     > input:nth-child(5) {
-    background-position-x: -364px;
-    background-position-y: -50px;
+    background-position-x: -303px;
+    background-position-y: -107px;
   }
 
   .faq_section
@@ -402,8 +423,8 @@ $height: 450px;
     > form
     > fieldset:nth-child(2)
     > input:nth-child(6) {
-    background-position-x: -475px;
-    background-position-y: -50px;
+    background-position-x: -371px;
+    background-position-y: -107px;
   }
 
   .faq_section
@@ -413,7 +434,7 @@ $height: 450px;
     > fieldset:nth-child(2)
     > input:nth-child(7) {
     background-position-x: 0px;
-    background-position-y: -50px;
+    background-position-y: -133px;
   }
 
   .faq_section
@@ -422,13 +443,23 @@ $height: 450px;
     > form
     > fieldset:nth-child(2)
     > input:nth-child(8) {
-    background-position-x: -131px;
-    background-position-y: -50px;
+    background-position-x: -160px;
+    background-position-y: -133px;
+  }
+
+  .faq_section
+    > .servicio:nth-child(1)
+    > div
+    > form
+    > fieldset:nth-child(2)
+    > input:nth-child(9) {
+    background-position-x: -271px;
+    background-position-y: -133px;
   }
 
   .faq > div > div {
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
     transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
   }
 
@@ -442,6 +473,24 @@ $height: 450px;
   }
 
   .faq > div > div:nth-child(1):hover > p {
-    font-weight: bold;
+    font-weight: 800 !important;
+  }
+
+  .faq_section > div:nth-child(2) > div > div:hover {
+    cursor: pointer;
+  }
+
+  .faq_section > div:nth-child(2) > div > div > div:nth-child(2) {
+    background-size: 101%;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .faq_section > div:nth-child(2) > div > div > div:nth-child(2) > div:nth-child(3) {
+    width: 50%;
+  }
+
+  .faq_section > div:nth-child(2) > div > div > div:nth-child(2) > div:nth-child(3)> a {
+    width: 66%;
   }
 }
