@@ -2,7 +2,7 @@ import Layout from "@/components/layout";
 import styles from "@/styles/Me.module.css";
 import Subscribe from "@/components/subscribe";
 import { isPlayingContext } from "../context/context";
-import { useContext, useLayoutEffect, useRef, useState } from "react";
+import { useContext } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
@@ -292,14 +292,20 @@ export default function Me() {
         <section className={styles.mi_esencia}>
           <h3>MI ESENCIA</h3>
           <div>
-            <p className={styles.div1}>
-              sensibilidad, autenticidad, espontaneidad, intuición, creatividad,
-              sabiduría,<span className={styles.espacio}></span>
-            </p>
-            <p className={styles.div2}>
-              sensibilidad, autenticidad, espontaneidad, intuición, creatividad,
-              sabiduría,<span className={styles.espacio}></span>
-            </p>
+            {!isDesktop && (
+              <>
+                <p className={styles.div1}>
+                  sensibilidad, autenticidad, espontaneidad, intuición,
+                  creatividad, sabiduría,
+                  <span className={styles.espacio}></span>
+                </p>
+                <p className={styles.div2}>
+                  sensibilidad, autenticidad, espontaneidad, intuición,
+                  creatividad, sabiduría,
+                  <span className={styles.espacio}></span>
+                </p>
+              </>
+            )}
             {isDesktop && (
               <>
                 <Image
@@ -310,11 +316,15 @@ export default function Me() {
                 ></Image>
                 <p className={styles.div1}>
                   sensibilidad, autenticidad, espontaneidad, intuición,
+                  creatividad, sabiduría, sensibilidad, autenticidad, espontaneidad, intuición,
+                  creatividad, sabiduría, sensibilidad, autenticidad, espontaneidad, intuición,
                   creatividad, sabiduría,
                   <span className={styles.espacio}></span>
                 </p>
                 <p className={styles.div2}>
                   sensibilidad, autenticidad, espontaneidad, intuición,
+                  creatividad, sabiduría, sensibilidad, autenticidad, espontaneidad, intuición,
+                  creatividad, sabiduría, sensibilidad, autenticidad, espontaneidad, intuición,
                   creatividad, sabiduría,
                   <span className={styles.espacio}></span>
                 </p>

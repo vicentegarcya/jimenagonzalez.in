@@ -186,12 +186,12 @@
 
 .div1 {
   display: inline-block;
-  animation: scrollText 10s infinite linear;
+  animation: scrollText 20s infinite linear;
 }
 
 .div2 {
   display: inline-block;
-  animation: scrollText 10s infinite linear;
+  animation: scrollText 20s infinite linear;
 }
 
 .explora_con_bso .espacio {
@@ -444,7 +444,7 @@
     transform: translateX(0%);
   }
   to {
-    transform: translateX(-100vw);
+    transform: translateX(-100%);
   }
 }
 

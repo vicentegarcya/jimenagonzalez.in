@@ -4,12 +4,7 @@ import Layout from "@/components/layout";
 import Service from "@/components/service";
 import PropuestaForm from "@/components/propuestaForm";
 import Subscribe from "@/components/subscribe";
-import {
-  useContext,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards } from "swiper/modules";
 import "swiper/css";
@@ -28,8 +23,12 @@ export default function Home() {
   }
 
   useEffect(() => {
-    setTimeout(() => setIsLoading(false), 2500);
-  }, [isLoading]);
+    if (isDesktop) {
+      setTimeout(() => setIsLoading(false), 2500);
+    } else {
+      setIsLoading(false);
+    }
+  }, [isLoading, isDesktop]);
 
   if (isLoading && isDesktop)
     return (
@@ -84,13 +83,15 @@ export default function Home() {
                 <p className={styles.text_1}>
                   INSPIRACIÓN // CREATIVIDAD // ALMA // EVOLUCIÓN // ESTRATEGIA
                   // EXPANSIÓN // INSPIRACIÓN // CREATIVIDAD // ALMA //
-                  EVOLUCIÓN // ESTRATEGIA // EXPANSIÓN //{" "}
+                  EVOLUCIÓN // ESTRATEGIA // EXPANSIÓN // INSPIRACIÓN // CREATIVIDAD // ALMA // EVOLUCIÓN // ESTRATEGIA
+                  // EXPANSIÓN //{" "}
                   <span className={styles.espacio}></span>
                 </p>
                 <p className={styles.text_2}>
                   INSPIRACIÓN // CREATIVIDAD // ALMA // EVOLUCIÓN // ESTRATEGIA
                   // EXPANSIÓN // INSPIRACIÓN // CREATIVIDAD // ALMA //
-                  EVOLUCIÓN // ESTRATEGIA // EXPANSIÓN //{" "}
+                  EVOLUCIÓN // ESTRATEGIA // EXPANSIÓN // INSPIRACIÓN // CREATIVIDAD // ALMA // EVOLUCIÓN // ESTRATEGIA
+                  // EXPANSIÓN //{" "}
                   <span className={styles.espacio}></span>
                 </p>
               </>
@@ -109,27 +110,45 @@ export default function Home() {
           </section>
           {!isDesktop && (
             <section className={styles.inspirate}>
-              <h3>INSPÍRATE</h3>
+              <div className={styles.manifiesto_mobile}>
+                <p>
+                  Para quienes sienten el impulso de dar a luz un mundo nuevo.
+                </p>
+                <p>
+                  Para los que <i>creen</i> y crean el legado del futuro.
+                </p>
+                <p>
+                  Para quienes dan un salto de fe y se dejan atravesar por la
+                  vida.
+                </p>
+                <p>Para seres extraordinarios en busca de</p>
+              </div>
               <p>
-                Inspiración (<span>def.</span>): Recibir guía divina, una
+                inspiración (<span>def.</span>): Recibir guía divina, una
                 iluminación creativa.
               </p>
             </section>
           )}
           {isDesktop && (
-            <section className={styles.inspirate_cada_mes}>
-              <div>
-                <h3>RECIBE INSPIRACIÓN CADA MES</h3>
-                <p>
-                  Despertar Creativo es una Newsletter mensual gratuita con
-                  píldoras de inspiración para tu vida y tus creaciones.
-                  Diseñada para artistas, creativ@s y personas en su camino de
-                  evolución personal.
-                  <span> ¡Welcoming you, creative soul!</span>
-                </p>
-              </div>
-              <Subscribe pageWhereLoaded={"home"} />
-            </section>
+            <>
+              <section className={styles.inspirate_cada_mes}>
+                <div>
+                  <h3>RECIBE INSPIRACIÓN CADA MES</h3>
+                  <p>
+                    Despertar Creativo es una Newsletter mensual gratuita con
+                    píldoras de inspiración para tu vida y tus creaciones.
+                    Diseñada para artistas, creativ@s y personas en su camino de
+                    evolución personal.
+                    <span>
+                      {" "}
+                      ¡Now welcoming new creative spirits and curious minds and
+                      souls!{" "}
+                    </span>
+                  </p>
+                </div>
+                <Subscribe pageWhereLoaded={"home"} />
+              </section>
+            </>
           )}
           {isDesktop && (
             <Swiper
@@ -197,6 +216,14 @@ export default function Home() {
                       asterisco="* Bono de 5 sesiones de asesoramiento estratégico · 444€"
                     />
                     <Service
+                      title="Navega la transición"
+                      description="Navega una época de cambio en tu proyecto o negocio con esta sesión de acompañamiento estratégico. Re-alinéate con tu misión y responde a la transición interna o externa."
+                      price="144,00 € *"
+                      hashtags="#estrategia #despertarcreativo"
+                      calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-navega-la-transicion-x-jimena-gonzalez"
+                      asterisco="* Bono de 4 sesiones · 555€"
+                    />
+                    <Service
                       title="Eleva la experiencia de tus clientes"
                       description="Crea o rediseña la experiencia física y/o digital de los usuarios de tus servicios con esta sesión de acompañamiento estratégico. Eleva la oferta de tu negocio usando diseño de experiencia y diseño de servicios. "
                       price="111,00 € *"
@@ -250,7 +277,7 @@ export default function Home() {
                     />
                     <Service
                       title="Desvela el propósito de esta etapa vital"
-                      description="Comprende la energía de esta etapa de tu desarrollo, sus retos evolutivos y aprendizajes a integrar, las áreas de tu vida que son protagonistas y la energía disponible para ti; en una sesión de lectura de tu revolución solar, tránsitos del año y el clima astral aplicado combinado con una tirada de tarot evolutivo. Especialmente recomendada para cumpleaños, comienzos de año o cambios vitales."
+                      description="Comprende la energía de esta etapa de tu desarrollo, sus retos evolutivos y aprendizajes a integrar, las áreas de tu vida que son protagonistas y la energía disponible para ti mes a mes; en una sesión de lectura de tu revolución solar, tránsitos del año y el clima astral aplicado combinado con una tirada de tarot evolutivo. Especialmente recomendada para cumpleaños, comienzos de año o cambios vitales."
                       price="222,00 €"
                       hashtags="#astrologia #tarot"
                       calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-desvela-esta-etapa-vital-x-jimena-gonzalez"
@@ -263,61 +290,13 @@ export default function Home() {
                     />
                     <Service
                       title="Resuelve tu duda (express)"
-                      description="Aclara una consulta rápida en esta sesión de 10 minutos con Tarot y/o otras técnicas."
+                      description="Recibe claridad explorando una consulta rápida en esta sesión de 10 minutos con Tarot y/o otras técnicas."
                       price="25,00 €"
                       calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-consulta-express-x-jimena-gonzalez-clone"
                     />
                   </div>
                 </div>
               </SwiperSlide>
-              {/* {isDesktop && (
-                <SwiperSlide onClick={() => swiperRef.current.slideTo(3)}>
-                  <div className={styles.servicio + " " + styles.regala_sesion}>
-                    <h3>QUIERO REGALAR UNA SESIÓN</h3>
-                    <p>
-                      Todas las sesiones incluyen un bono regalo digital
-                      personalizado, un ejercicio de Despertar Creativo® previo
-                      a la sesión y una sesión online en directo. La fecha de la
-                      sesión y su temática podrá ser elegida después por la
-                      persona a la que envíes el bono regalo.
-                    </p>
-                    <p>
-                      Elige la técnica principal de la sesión para empezar a
-                      personalizar tu regalo:
-                    </p>
-                    <div className={styles.servicios_grupo}>
-                      <Service
-                        title="TAROT"
-                        description="Sesión de acompañamiento personalizado con tarot evolutivo."
-                        price="55,00 €"
-                        calendlyUrl="https://buy.stripe.com/dR69B34GFd2ud7G004"
-                        cta="SELECCIONAR"
-                      />
-                      <Service
-                        title="ASTROLOGÍA"
-                        description="Sesión de lectura de carta astral: energías principales, dones y talentos, retos evolutivos y de sanación y misión personal."
-                        price="99,00 €"
-                        calendlyUrl="https://buy.stripe.com/fZe9B3c97e6y3x628g"
-                        cta="SELECCIONAR"
-                      />
-                      <Service
-                        title="ASTROLOGÍA + TAROT"
-                        description="Sesión combinada entre una lectura de carta astral y una tirada personalizada de tarot evolutivo."
-                        price="111,00 €"
-                        calendlyUrl="https://buy.stripe.com/fZe3cFc971jM4BafZ7"
-                        cta="SELECCIONAR"
-                      />
-                      <Service
-                        title="MANI(FEST)"
-                        description="Sesión de asesoramiento espiritual y estratégico para conectar con la visión del alma, intencionar su expansión y diseñar un plan guiado para manifestarla."
-                        price="111,00 €"
-                        calendlyUrl="https://buy.stripe.com/5kA00tc97faC9VubIK"
-                        cta="SELECCIONAR"
-                      />
-                    </div>
-                  </div>
-                </SwiperSlide>
-              )} */}
             </Swiper>
           )}
           {!isDesktop && (
@@ -332,6 +311,14 @@ export default function Home() {
                     hashtags="#estrategia #businessdesign"
                     calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-manifiesta-disena-tu-estrategia-x-jimena-gonzalez"
                     asterisco="* Bono de 5 sesiones de asesoramiento estratégico · 444€"
+                  />
+                  <Service
+                    title="Navega la transición"
+                    description="Navega una época de cambio en tu proyecto o negocio con esta sesión de acompañamiento estratégico. Re-alinéate con tu misión y responde a la transición interna o externa."
+                    price="144,00 € *"
+                    hashtags="#estrategia #despertarcreativo"
+                    calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-navega-la-transicion-x-jimena-gonzalez"
+                    asterisco="* Bono de 4 sesiones · 555€"
                   />
                   <Service
                     title="Eleva la experiencia de tus clientes"
@@ -417,7 +404,7 @@ export default function Home() {
                   />
                   <Service
                     title="Desvela el propósito de esta etapa vital"
-                    description="Comprende la energía de esta etapa de tu desarrollo, sus retos evolutivos y aprendizajes a integrar, las áreas de tu vida que son protagonistas y la energía disponible para ti; en una sesión de lectura de tu revolución solar, tránsitos del año y el clima astral aplicado combinado con una tirada de tarot evolutivo. Especialmente recomendada para cumpleaños, comienzos de año o cambios vitales."
+                    description="Comprende la energía de esta etapa de tu desarrollo, sus retos evolutivos y aprendizajes a integrar, las áreas de tu vida que son protagonistas y la energía disponible para ti mes a mes; en una sesión de lectura de tu revolución solar, tránsitos del año y el clima astral aplicado combinado con una tirada de tarot evolutivo. Especialmente recomendada para cumpleaños, comienzos de año o cambios vitales."
                     price="222,00 €"
                     hashtags="#astrologia #tarot"
                     calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-desvela-esta-etapa-vital-x-jimena-gonzalez"
@@ -430,7 +417,7 @@ export default function Home() {
                   />
                   <Service
                     title="Resuelve tu duda (express)"
-                    description="Aclara una consulta rápida en esta sesión de 10 minutos con Tarot y/o otras técnicas."
+                    description="Recibe claridad explorando una consulta rápida en esta sesión de 10 minutos con Tarot y/o otras técnicas."
                     price="25,00 €"
                     calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-consulta-express-x-jimena-gonzalez-clone"
                   />
@@ -439,15 +426,25 @@ export default function Home() {
               <section className={styles.keywords + " " + styles.for_the}>
                 <p className={styles.text_1}>
                   FOR THE AUTHENTIC SOULFUL LEADERS / FOR THE EPIC INTUITIVE
-                  CREATORS / FOR THE FEARLESS SENSITIVE SOULS
+                  CREATORS / FOR THE FEARLESS SENSITIVE SOULS /
                   <span className={styles.espacio}></span>
                 </p>
                 <p className={styles.text_2}>
                   FOR THE AUTHENTIC SOULFUL LEADERS / FOR THE EPIC INTUITIVE
-                  CREATORS / FOR THE FEARLESS SENSITIVE SOULS
+                  CREATORS / FOR THE FEARLESS SENSITIVE SOULS /
                   <span className={styles.espacio}></span>
                 </p>
               </section>
+              <div className={styles.poesia_home}>
+                <p>Allá donde saber e intuición se encuentran,</p>
+                <p>la experiencia colectiva y la sabiduría interna se unen;</p>
+                <p>ahí donde el potencial infinito se explora,</p>
+                <p>expandiendo los límites de lo posible;</p>
+                <p>allá donde la inspiración ilumina,</p>
+                <p>y se traduce en acción alineada;</p>
+                <p>ahí donde los sueños se materializan,</p>
+                <p>y la realidad supera la ficción.</p>
+              </div>
               <div ref={propuestaMobileRef} className={styles.servicio}>
                 <h3>HAZME UNA PROPUESTA</h3>
                 <PropuestaForm pageWhereLoaded={"home"} />
@@ -462,7 +459,12 @@ export default function Home() {
                 píldoras de inspiración para tu vida y tus creaciones. Diseñada
                 para artistas, creativ@s y personas en su camino de evolución
                 personal.
-                <span> ¡Welcoming you, creative soul!</span>
+                <br></br>
+                <span>
+                  {" "}
+                  ¡Now welcoming new creative spirits and curious minds and
+                  souls!
+                </span>
               </p>
               <Subscribe pageWhereLoaded={"home"} />
             </section>
@@ -507,8 +509,8 @@ export default function Home() {
                   <Service
                     title="MANI(FEST)"
                     description="Sesión de asesoramiento espiritual y estratégico para conectar con la visión del alma, intencionar su expansión y diseñar un plan guiado para manifestarla."
-                    price="111,00 €"
-                    calendlyUrl="https://buy.stripe.com/5kA00tc97faC9VubIK"
+                    price="144,00 €"
+                    calendlyUrl="https://buy.stripe.com/3cs6oRflj5A29Vu8wG"
                     cta="SELECCIONAR"
                   />
                 </div>
@@ -518,6 +520,18 @@ export default function Home() {
           <section className={styles.servicios + " " + styles.faq_section}>
             {isDesktop && (
               <>
+                <div className={styles.poesia_home}>
+                  <p>Allá donde saber e intuición se encuentran,</p>
+                  <p>
+                    la experiencia colectiva y la sabiduría interna se unen;
+                  </p>
+                  <p>ahí donde el potencial infinito se explora,</p>
+                  <p>expandiendo los límites de lo posible;</p>
+                  <p>allá donde la inspiración ilumina,</p>
+                  <p>y se traduce en acción alineada;</p>
+                  <p>ahí donde los sueños se materializan,</p>
+                  <p>y la realidad supera la ficción.</p>
+                </div>
                 <div ref={propuestaDesktopRef} className={styles.servicio}>
                   <h3>HAZME UNA PROPUESTA</h3>
                   <PropuestaForm pageWhereLoaded={"home"} />
@@ -560,8 +574,8 @@ export default function Home() {
                     <Service
                       title="MANI(FEST)"
                       description="Sesión de asesoramiento espiritual y estratégico para conectar con la visión del alma, intencionar su expansión y diseñar un plan guiado para manifestarla."
-                      price="111,00 €"
-                      calendlyUrl="https://buy.stripe.com/5kA00tc97faC9VubIK"
+                      price="144,00 €"
+                      calendlyUrl="https://buy.stripe.com/3cs6oRflj5A29Vu8wG"
                       cta="SELECCIONAR"
                     />
                   </div>
