@@ -47,11 +47,18 @@
 /* SERVICIOS SECTION */
 
 .manifiesto_mobile {
-  font-weight: 400;
+  font-weight: 500;
   width: 95%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Redaction-italic';
 }
 
-.manifiesto_mobile p:not(:last-child) {
+.manifiesto_mobile span {
+  font-family: 'Redaction-regular';
+}
+
+.manifiesto_mobile p {
   margin-bottom: 8px;
 }
 
@@ -66,8 +73,14 @@
   font-size: 18px;
 }
 
+.inspirate > p {
+  text-align: center;
+  font-weight: 500;
+  font-family: 'Redaction-regular';
+}
+
 .inspirate > p > span {
-  font-family: "Inter-italic";
+  font-style: italic;
 }
 
 .servicios {
@@ -210,14 +223,18 @@ $height: 450px;
 }
 
 @media (min-width: 768px) {
+  .for_the {
+    margin: 0 0 3rem -18%;
+  }
+
   .keywords {
     background-size: 101%;
     background-position-y: top;
     background-position-x: left;
   }
 
-  .keywords > p {
-    animation: scrollTextDesktopHome 25s infinite linear;
+  .keywords > p, .for_the > p {
+    animation: scrollTextDesktopHome 65s infinite linear !important;
   }
 
   @keyframes scrollTextDesktopHome {
@@ -302,6 +319,10 @@ $height: 450px;
     padding: 0 !important;
     width: 80%;
   }
+
+   .faq_section .regala_sesion {
+    margin-bottom: 2rem;
+   }
 
   .faq_section > .servicio:nth-child(2) > div > form > fieldset {
     width: 80%;

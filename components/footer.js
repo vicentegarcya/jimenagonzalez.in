@@ -1,8 +1,12 @@
 import styles from "./footer.module.css";
 import psicodelico from "../public/PSICODELICO.jpeg";
 import aura from "../public/GRADIENTE_AURA.jpeg";
+import { isPlayingContext } from "@/context/context";
+import { useContext } from "react";
 
 export default function Footer({ currentPage }) {
+  const { isDesktop } = useContext(isPlayingContext);
+
   return (
     <footer
       className={styles.footer}
@@ -35,12 +39,21 @@ export default function Footer({ currentPage }) {
         >
           Despertar Creativo
         </a>
-        . Escucha aquí{" "}
-        <a href="https://open.spotify.com/playlist/6nDnwvDJOvY1VebJWbVsd7?si=jF_EYQm5Qy6g8xk_RXPaeg&utm_source=copy-link&utm_medium=copy-link&nd=1&_branch_match_id=1182632066913753218&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXLy7IL8lMq9TLyczL1g82Ciz29C0rN3ZOAgDcFrbjIAAAAA%3D%3D" target="_blank">
-          mi playlist de Spotify
-        </a>{" "}
-        para entrar en flow creativo. Para ver mis publicaciones en Instagram,
-        sígueme en{" "}
+        .
+        {isDesktop && (
+          <>
+            {" "}
+            Escucha aquí {" "}
+            <a
+              href="https://open.spotify.com/playlist/6nDnwvDJOvY1VebJWbVsd7?si=jF_EYQm5Qy6g8xk_RXPaeg&utm_source=copy-link&utm_medium=copy-link&nd=1&_branch_match_id=1182632066913753218&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXLy7IL8lMq9TLyczL1g82Ciz29C0rN3ZOAgDcFrbjIAAAAA%3D%3D"
+              target="_blank"
+            >
+              mi playlist de Spotify
+            </a>{" "}
+            para entrar en flow creativo.
+          </>
+        )}{" "}
+        Para ver mis publicaciones en Instagram, sígueme en{" "}
         <a href="https://www.instagram.com/jimenagonzalez.in/" target="_blank">
           @jimenagonzalez.in
         </a>

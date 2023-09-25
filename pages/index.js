@@ -24,9 +24,6 @@ export default function Home() {
   }
 
   useEffect(() => {
-    console.log(
-      swiperRef.current?.slides[1].classList.contains("swiper-slide-active")
-    );
     if (isDesktop) {
       setTimeout(() => setIsLoading(false), 2500);
     } else {
@@ -119,7 +116,7 @@ export default function Home() {
                   Para quienes sienten el impulso de dar a luz un mundo nuevo.
                 </p>
                 <p>
-                  Para los que <i>creen</i> y crean el legado del futuro.
+                  Para los que <span>creen</span> y crean el legado del futuro.
                 </p>
                 <p>
                   Para quienes dan un salto de fe y se dejan atravesar por la
@@ -128,8 +125,8 @@ export default function Home() {
                 <p>Para seres extraordinarios en busca de</p>
               </div>
               <p>
-                inspiración (<span>def.</span>): Recibir guía divina, una
-                iluminación creativa.
+                inspiración (<span>def.</span>): guía divina, una iluminación
+                creativa.
               </p>
             </section>
           )}
@@ -199,10 +196,10 @@ export default function Home() {
                     <Service
                       title="Manifiesta (diseña tu estrategia)"
                       description="Conecta con tu auténtica visión, intenciona tu expansión y diseña un plan guiado, en una sesión de asesoramiento estratégico."
-                      price="111,00 € *"
+                      price="144,00 € *"
                       hashtags="#estrategia #diseño #despertarcreativo"
                       calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-manifiesta-estrategia-x-jimena-gonzalez"
-                      asterisco="* Las sesiones de asesoramiento estratégico posteriores tienen un valor de 95€."
+                      asterisco="* Bono de 4 sesiones de asesoramiento estratégico · 555€"
                     />
                   </div>
                 </div>
@@ -223,10 +220,10 @@ export default function Home() {
                     <Service
                       title="Manifiesta (diseña tu estrategia)"
                       description="Crea o revisa la estrategia de tu proyecto o negocio con esta sesión de asesoramiento estratégico, adaptada a su necesidad y momento actual, con diseño de estrategia y business coaching."
-                      price="111,00 € *"
+                      price="144,00 € *"
                       hashtags="#estrategia #businessdesign"
                       calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-manifiesta-disena-tu-estrategia-x-jimena-gonzalez"
-                      asterisco="* Bono de 5 sesiones de asesoramiento estratégico · 444€"
+                      asterisco="* Bono de 4 sesiones de asesoramiento estratégico · 555€"
                     />
                     <Service
                       title="Navega la transición"
@@ -239,10 +236,10 @@ export default function Home() {
                     <Service
                       title="Eleva la experiencia de tus clientes"
                       description="Crea o rediseña la experiencia física y/o digital de los usuarios de tus servicios con esta sesión de acompañamiento estratégico. Eleva la oferta de tu negocio usando diseño de experiencia y diseño de servicios. "
-                      price="111,00 € *"
+                      price="144,00 € *"
                       hashtags="#estrategia #experiencedesign #servicedesign"
                       calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-eleva-x-jimena-gonzalez"
-                      asterisco="* Bono de 5 sesiones de asesoramiento estratégico · 444€"
+                      asterisco="* Bono de 4 sesiones de diseño de servicios · 555€"
                     />
                     <Service
                       title="Descubre tu misión y dones"
@@ -338,10 +335,10 @@ export default function Home() {
                   <Service
                     title="Manifiesta (diseña tu estrategia)"
                     description="Crea o revisa la estrategia de tu proyecto o negocio con esta sesión de asesoramiento estratégico, adaptada a su necesidad y momento actual, con diseño de estrategia y business coaching."
-                    price="111,00 € *"
+                    price="144,00 € *"
                     hashtags="#estrategia #businessdesign"
                     calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-manifiesta-disena-tu-estrategia-x-jimena-gonzalez"
-                    asterisco="* Bono de 5 sesiones de asesoramiento estratégico · 444€"
+                    asterisco="* Bono de 4 sesiones de asesoramiento estratégico · 555€"
                   />
                   <Service
                     title="Navega la transición"
@@ -354,10 +351,10 @@ export default function Home() {
                   <Service
                     title="Eleva la experiencia de tus clientes"
                     description="Crea o rediseña la experiencia física y/o digital de los usuarios de tus servicios con esta sesión de acompañamiento estratégico. Eleva la oferta de tu negocio usando diseño de experiencia y diseño de servicios. "
-                    price="111,00 € *"
+                    price="144,00 € *"
                     hashtags="#estrategia #experiencedesign #servicedesign"
                     calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-eleva-x-jimena-gonzalez"
-                    asterisco="* Bono de 5 sesiones de asesoramiento estratégico · 444€"
+                    asterisco="* Bono de 4 sesiones de diseño de servicios · 555€"
                   />
                   <Service
                     title="Descubre tu misión y dones"
@@ -409,10 +406,10 @@ export default function Home() {
                   <Service
                     title="Manifiesta (diseña tu estrategia)"
                     description="Conecta con tu auténtica visión, intenciona tu expansión y diseña un plan guiado, en una sesión de asesoramiento estratégico."
-                    price="111,00 € *"
+                    price="144,00 € *"
                     hashtags="#estrategia #diseño #despertarcreativo"
                     calendlyUrl="https://calendly.com/jimenagonzalez-in/sesion-manifiesta-estrategia-x-jimena-gonzalez"
-                    asterisco="* Las sesiones de asesoramiento estratégico posteriores tienen un valor de 95€."
+                    asterisco="* Bono de 4 sesiones de asesoramiento estratégico · 555€"
                   />
                 </div>
               </div>
@@ -611,6 +608,22 @@ export default function Home() {
                     />
                   </div>
                 </div>
+                <section className={styles.keywords + " " + styles.for_the}>
+                  <p className={styles.text_1}>
+                    FOR THE AUTHENTIC SOULFUL LEADERS / FOR THE EPIC INTUITIVE
+                    CREATORS / FOR THE FEARLESS SENSITIVE SOULS / FOR THE
+                    AUTHENTIC SOULFUL LEADERS / FOR THE EPIC INTUITIVE CREATORS
+                    / FOR THE FEARLESS SENSITIVE SOULS /
+                    <span className={styles.espacio}></span>
+                  </p>
+                  <p className={styles.text_2}>
+                    FOR THE AUTHENTIC SOULFUL LEADERS / FOR THE EPIC INTUITIVE
+                    CREATORS / FOR THE FEARLESS SENSITIVE SOULS / FOR THE
+                    AUTHENTIC SOULFUL LEADERS / FOR THE EPIC INTUITIVE CREATORS
+                    / FOR THE FEARLESS SENSITIVE SOULS /
+                    <span className={styles.espacio}></span>
+                  </p>
+                </section>
               </>
             )}
             <div className={styles.servicio + " " + styles.regala_sesion}>
