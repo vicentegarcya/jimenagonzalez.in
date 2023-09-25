@@ -12,6 +12,7 @@ import { isPlayingContext } from "../context/context";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
+  const [sliderActive, setSliderActive] = useState(1);
   const swiperRef = useRef();
   const propuestaDesktopRef = useRef();
   const propuestaMobileRef = useRef();
@@ -23,6 +24,9 @@ export default function Home() {
   }
 
   useEffect(() => {
+    console.log(
+      swiperRef.current?.slides[1].classList.contains("swiper-slide-active")
+    );
     if (isDesktop) {
       setTimeout(() => setIsLoading(false), 2500);
     } else {
@@ -83,15 +87,15 @@ export default function Home() {
                 <p className={styles.text_1}>
                   INSPIRACIÓN // CREATIVIDAD // ALMA // EVOLUCIÓN // ESTRATEGIA
                   // EXPANSIÓN // INSPIRACIÓN // CREATIVIDAD // ALMA //
-                  EVOLUCIÓN // ESTRATEGIA // EXPANSIÓN // INSPIRACIÓN // CREATIVIDAD // ALMA // EVOLUCIÓN // ESTRATEGIA
-                  // EXPANSIÓN //{" "}
+                  EVOLUCIÓN // ESTRATEGIA // EXPANSIÓN // INSPIRACIÓN //
+                  CREATIVIDAD // ALMA // EVOLUCIÓN // ESTRATEGIA // EXPANSIÓN //{" "}
                   <span className={styles.espacio}></span>
                 </p>
                 <p className={styles.text_2}>
                   INSPIRACIÓN // CREATIVIDAD // ALMA // EVOLUCIÓN // ESTRATEGIA
                   // EXPANSIÓN // INSPIRACIÓN // CREATIVIDAD // ALMA //
-                  EVOLUCIÓN // ESTRATEGIA // EXPANSIÓN // INSPIRACIÓN // CREATIVIDAD // ALMA // EVOLUCIÓN // ESTRATEGIA
-                  // EXPANSIÓN //{" "}
+                  EVOLUCIÓN // ESTRATEGIA // EXPANSIÓN // INSPIRACIÓN //
+                  CREATIVIDAD // ALMA // EVOLUCIÓN // ESTRATEGIA // EXPANSIÓN //{" "}
                   <span className={styles.espacio}></span>
                 </p>
               </>
@@ -167,7 +171,7 @@ export default function Home() {
                 swiperRef.current = swiper;
               }}
             >
-              <SwiperSlide onClick={() => swiperRef.current.slideTo(0)}>
+              <SwiperSlide>
                 <div className={styles.servicio}>
                   <h3>SOY ARTISTA, CREATIV@ O DISEÑADORA</h3>
                   <div className={styles.servicios_grupo}>
@@ -202,8 +206,17 @@ export default function Home() {
                     />
                   </div>
                 </div>
+                {sliderActive !== 0 && (
+                  <div
+                    className={styles.sliderCardWrapper}
+                    onClick={() => {
+                      swiperRef.current.slideTo(0);
+                      setSliderActive(0);
+                    }}
+                  ></div>
+                )}
               </SwiperSlide>
-              <SwiperSlide onClick={() => swiperRef.current.slideTo(1)}>
+              <SwiperSlide>
                 <div className={styles.servicio}>
                   <h3>TENGO UN NEGOCIO O PROYECTO</h3>
                   <div className={styles.servicios_grupo}>
@@ -254,8 +267,17 @@ export default function Home() {
                     />
                   </div>
                 </div>
+                {sliderActive !== 1 && (
+                  <div
+                    className={styles.sliderCardWrapper}
+                    onClick={() => {
+                      swiperRef.current.slideTo(1);
+                      setSliderActive(1);
+                    }}
+                  ></div>
+                )}
               </SwiperSlide>
-              <SwiperSlide onClick={() => swiperRef.current.slideTo(2)}>
+              <SwiperSlide>
                 <div className={styles.servicio}>
                   <h3>
                     ESTOY EN MI CAMINO DE EVOLUCIÓN PERSONAL Y/O ESPIRITUAL
@@ -296,6 +318,15 @@ export default function Home() {
                     />
                   </div>
                 </div>
+                {sliderActive !== 2 && (
+                  <div
+                    className={styles.sliderCardWrapper}
+                    onClick={() => {
+                      swiperRef.current.slideTo(2);
+                      setSliderActive(2);
+                    }}
+                  ></div>
+                )}
               </SwiperSlide>
             </Swiper>
           )}
