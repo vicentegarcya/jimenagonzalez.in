@@ -31,49 +31,6 @@ export default function Home() {
     }
   }, [isLoading, isDesktop]);
 
-  if (isLoading && isDesktop)
-    return (
-      <div className={styles.loading_div}>
-        <h3>INSPÍRATE</h3>
-        <p>
-          Inspiración (<span>def.</span>): Recibir guía divina, una iluminación
-          creativa.
-        </p>
-        <div className={styles.container}>
-          <div
-            id="water"
-            className={
-              styles.water +
-              " " +
-              styles.filter_active +
-              " " +
-              styles.flow_active
-            }
-          ></div>
-        </div>
-        <svg width="0" height="0" fillOpacity="20%">
-          <filter id="water-filter">
-            <feTurbulence
-              id="feTurb"
-              type="fractalNoise"
-              baseFrequency="0.001 0.001"
-              seed="2"
-              numOctaves="1"
-            />
-            <animate
-              xlinkHref="#feTurb"
-              attributeName="baseFrequency"
-              dur="40s"
-              keyTimes="0;0.5;1"
-              values="0.0034 0.006;0.0012 0.008;0.001 0.008"
-              repeatCount="indefinite"
-            />
-            <feDisplacementMap id="feDisp" in="SourceGraphic" scale="140" />
-          </filter>
-        </svg>
-      </div>
-    );
-
   if (!isLoading)
     return (
       <Layout>
@@ -549,7 +506,7 @@ export default function Home() {
             {isDesktop && (
               <>
                 <div className={styles.poesia_home}>
-                  <p>Allá donde saber e intuición se encuentran,</p>
+                  {/* <p>Allá donde saber e intuición se encuentran,</p>
                   <p>
                     la experiencia colectiva y la sabiduría interna se unen;
                   </p>
@@ -558,7 +515,7 @@ export default function Home() {
                   <p>allá donde la inspiración ilumina,</p>
                   <p>y se traduce en acción alineada;</p>
                   <p>ahí donde los sueños se materializan,</p>
-                  <p>y la realidad supera la ficción.</p>
+                  <p>y la realidad supera la ficción.</p> */}
                 </div>
                 <div ref={propuestaDesktopRef} className={styles.servicio}>
                   <h3>HAZME UNA PROPUESTA</h3>
@@ -946,6 +903,35 @@ export default function Home() {
             </div>
           </section>
         </main>
+        {isDesktop && (
+          <div className={styles.loading_div}>
+            <div className={styles.manifiesto_desktop}>
+              <p data-text="Para quienes sienten el impulso de dar a luz un mundo nuevo.">
+                Para quienes sienten el impulso de dar a luz un mundo nuevo.
+              </p>
+              <p data-text="Para los que creen y crean el legado del futuro.">
+                Para los que <span>creen</span> y crean el legado del futuro.
+              </p>
+              <p
+                data-text="Para quienes dan un salto de fe y se dejan atravesar por la
+                vida."
+              >
+                Para quienes dan un salto de fe y se dejan atravesar por la
+                vida.
+              </p>
+              <p data-text="Para seres extraordinarios en busca de">
+                Para seres extraordinarios en busca de
+              </p>
+              <p
+                data-text="inspiración (def.): guía divina, una iluminación
+              creativa."
+              >
+                inspiración (<span>def.</span>): guía divina, una iluminación
+                creativa.
+              </p>
+            </div>
+          </div>
+        )}
       </Layout>
     );
 }

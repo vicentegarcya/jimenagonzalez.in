@@ -51,11 +51,11 @@
   width: 95%;
   margin: 0 auto;
   text-align: center;
-  font-family: 'Redaction-italic';
+  font-family: "Redaction-italic";
 }
 
 .manifiesto_mobile span {
-  font-family: 'Redaction-regular';
+  font-family: "Redaction-regular";
 }
 
 .manifiesto_mobile p {
@@ -76,7 +76,7 @@
 .inspirate > p {
   text-align: center;
   font-weight: 500;
-  font-family: 'Redaction-regular';
+  font-family: "Redaction-regular";
 }
 
 .inspirate > p > span {
@@ -223,6 +223,96 @@ $height: 450px;
 }
 
 @media (min-width: 768px) {
+  .loading_div {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 9999;
+    font-size: 19px;
+  }
+
+  .manifiesto_desktop {
+    font-weight: 500;
+    margin: 0 auto;
+    text-align: left;
+    font-family: "Redaction-regular";
+  }
+
+  .manifiesto_desktop span {
+    font-family: "Redaction-regular";
+  }
+
+  .manifiesto_desktop p, .loading_div > p {
+    color: #e0e0e0;
+    margin-bottom: 8px;
+    position: relative;
+    width: fit-content;
+    overflow: hidden;
+    text-align: left;
+  }
+
+  .manifiesto_desktop p::after {
+    /* This will create the layer
+               over original text*/
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    /* Setting different color than
+               that of original text  */
+    color: #282c32;
+    overflow: hidden;
+
+    /* Setting width as 0*/
+    animation: fillText 1.5s linear;
+  }
+
+  .manifiesto_desktop p:nth-child(2)::after {
+    animation: fillText2 3s linear;
+  }
+  .manifiesto_desktop p:nth-child(3)::after {
+    animation: fillText2 5.5s linear;
+  }
+  .manifiesto_desktop p:nth-child(4)::after {
+    animation: fillText2 8.5s linear;
+  }
+  .manifiesto_desktop p:nth-child(5)::after {
+    animation: fillText2 10s linear;
+  }
+
+  @keyframes fillText {
+    0% {
+      max-width: 0;
+    }
+    100% {
+      max-width: 100%;
+    }
+  }
+
+  @keyframes fillText2 {
+    0% {
+      max-width: 0;
+    }
+    66%{
+      max-width: 0;
+    }
+    100% {
+      max-width: 100%;
+    }
+  }
+
+  .loading_div > p {
+    font-family: "Redaction-regular";
+  }
+
+  .loading_div > p > span {
+    font-family: "Redaction-italic";
+  }
+
   .for_the {
     margin: 0 0 3rem -18%;
   }
@@ -233,7 +323,8 @@ $height: 450px;
     background-position-x: left;
   }
 
-  .keywords > p, .for_the > p {
+  .keywords > p,
+  .for_the > p {
     animation: scrollTextDesktopHome 65s infinite linear !important;
   }
 
@@ -320,9 +411,9 @@ $height: 450px;
     width: 80%;
   }
 
-   .faq_section .regala_sesion {
+  .faq_section .regala_sesion {
     margin-bottom: 2rem;
-   }
+  }
 
   .faq_section > .servicio:nth-child(2) > div > form > fieldset {
     width: 80%;
