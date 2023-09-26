@@ -1,18 +1,16 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import styles from "./subscribe.module.css";
 import Link from "next/link";
 import Confetti from "./confetti";
+import { isPlayingContext } from "../context/context";
 
 function Subscribe({ pageWhereLoaded }) {
   const [email, setEmail] = useState("");
   const [state, setState] = useState("idle");
   const [errorMsg, setErrorMsg] = useState(null);
-  const [isDesktop, setIsDesktop] = useState(false);
 
-  useEffect(() => {
-    setIsDesktop(typeof window !== "undefined" && window.innerWidth > 768);
-  }, []);
+  const { isDesktop } = useContext(isPlayingContext);
 
   const subscribe = async (e) => {
     e.preventDefault();

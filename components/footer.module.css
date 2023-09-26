@@ -38,7 +38,7 @@
     text-decoration: underline 1.5px #282c32;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .footer {
     background-size: cover;
     background-position-y: 0px !important;
@@ -48,5 +48,13 @@
   .footer > p:nth-child(3) {
     width: 60%;
     margin: 20px 0 34px 0;
+  }
+}
+
+@media (min-width: 490px) and (max-width: 1024px) {
+  .footer {
+    background-size: 101%;
+    background-position-y: 0px !important;
+    background-position-x: 0px !important;
   }
 }

@@ -429,8 +429,9 @@
   background-position-y: -757px;
   color: #282c32;
 }
+/* RESPONSIVE DESKTOP */
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .explora_con_bso,
   .mi_esencia > div {
     width: 100vw;
@@ -440,13 +441,13 @@
   }
 
   @keyframes scrollTextDesktop {
-  from {
-    transform: translateX(0%);
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
   }
-  to {
-    transform: translateX(-100%);
-  }
-}
 
   .div1 {
     animation: scrollTextDesktop 40s infinite linear;
@@ -667,5 +668,40 @@
   .me .expertise > p:nth-child(18) {
     background-position-x: -216px;
     background-position-y: -130px;
+  }
+}
+
+/* RESPONSIVE TABLET */
+
+@media (min-width: 490px) and (max-width: 1024px) {
+  .me .bullets {
+    width: 65dvw;
+    margin: 0 auto;
+  }
+
+  .inspirate_cada_mes p,
+  .regala_sesion > p {
+    width: 100%;
+  }
+
+  .inspirate_cada_mes {
+    width: 65dvw;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+
+  .explora_con_bso,
+  .mi_esencia > div {
+    background-position-y: -900px;
+    background-position-x: 0px;
+    background-size: 101%;
+  }
+
+  .explora_con_bso {
+    min-width: 100dvw;
+  }
+
+  .mi_esencia h3 {
+    margin-left: 16.5dvw;
   }
 }

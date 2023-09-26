@@ -84,7 +84,7 @@
   position: relative;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   #subscribe_form {
     width: 30%;
     display: flex;

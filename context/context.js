@@ -8,7 +8,17 @@ function Context({ children }) {
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
-    setIsDesktop(typeof window !== "undefined" && window.innerWidth > 768);
+    setIsDesktop(typeof window !== "undefined" && window.innerWidth > 1024);
+
+    function handleResize() {
+      setIsDesktop(window.innerWidth > 1024);
+    }
+
+    if (typeof window !== 'undefined') {
+      handleResize();
+    }
+
+    window.addEventListener('resize', handleResize);
 
     let audioElement = new Audio("./bso_jimenagonzalezin.mp3");
     audioElement.classList.add('bso_audio');
@@ -22,8 +32,9 @@ function Context({ children }) {
     audioElement.addEventListener("ended", handleAudio);
     return () => {
       audioElement.removeEventListener("ended", handleAudio);
+      window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [isDesktop]);
 
   const soundHandler = () => {
     audio.paused ? audio.play() : audio.pause();

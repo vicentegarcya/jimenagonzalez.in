@@ -47,25 +47,32 @@
 /* SERVICIOS SECTION */
 
 .manifiesto_mobile {
-  font-weight: 500;
-  width: 95%;
+  font-weight: 600;
+  width: 75%;
   margin: 0 auto;
   text-align: center;
-  font-family: "Redaction-italic";
+  letter-spacing: 0.2px;
+  font-style: italic;
 }
 
 .manifiesto_mobile span {
-  font-family: "Redaction-regular";
+  font-style: normal;
 }
 
 .manifiesto_mobile p {
+  margin: 0 auto;
   margin-bottom: 8px;
+}
+
+.manifiesto_mobile p:last-child {
+  width: 80%;
 }
 
 .inspirate {
   padding: 2rem;
   font-weight: 200;
   font-size: 15px;
+  width: 100%;
 }
 
 .inspirate h3 {
@@ -75,8 +82,9 @@
 
 .inspirate > p {
   text-align: center;
-  font-weight: 500;
-  font-family: "Redaction-regular";
+  font-weight: 600;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .inspirate > p > span {
@@ -116,13 +124,30 @@
 }
 
 .poesia_home {
-  width: 95%;
+  font-weight: 600;
+  width: 80%;
+  margin: 0 auto;
   margin-bottom: 2.5rem;
-  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.2px;
+  font-style: italic;
 }
 
 .poesia_home > p {
+  margin: 0 auto;
   margin-bottom: 8px;
+}
+
+.poesia_home > p:first-child {
+  width: 75%;
+}
+
+.poesia_home > p:nth-child(3) {
+  width: 80%;
+}
+
+.poesia_home > p:nth-child(4) {
+  width: 65%;
 }
 
 .inspirate_cada_mes {
@@ -149,7 +174,7 @@
 }
 
 .inspirate_cada_mes p span {
-  font-family: "Inter-italic";
+  font-style: italic;
 }
 
 .regala_sesion > p {
@@ -222,97 +247,9 @@ $height: 450px;
   margin: 0 0 2.5rem -1.95rem;
 }
 
-@media (min-width: 768px) {
-  .loading_div {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: white;
-    z-index: 9999;
-    font-size: 19px;
-  }
+/* RESPONSIVE DESKTOP */
 
-  .manifiesto_desktop {
-    font-weight: 500;
-    margin: 0 auto;
-    text-align: left;
-    font-family: "Redaction-regular";
-  }
-
-  .manifiesto_desktop span {
-    font-family: "Redaction-regular";
-  }
-
-  .manifiesto_desktop p, .loading_div > p {
-    color: #e0e0e0;
-    margin-bottom: 8px;
-    position: relative;
-    width: fit-content;
-    overflow: hidden;
-    text-align: left;
-  }
-
-  .manifiesto_desktop p::after {
-    /* This will create the layer
-               over original text*/
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    /* Setting different color than
-               that of original text  */
-    color: #282c32;
-    overflow: hidden;
-
-    /* Setting width as 0*/
-    animation: fillText 1.5s linear;
-  }
-
-  .manifiesto_desktop p:nth-child(2)::after {
-    animation: fillText2 3s linear;
-  }
-  .manifiesto_desktop p:nth-child(3)::after {
-    animation: fillText2 5.5s linear;
-  }
-  .manifiesto_desktop p:nth-child(4)::after {
-    animation: fillText2 8.5s linear;
-  }
-  .manifiesto_desktop p:nth-child(5)::after {
-    animation: fillText2 10s linear;
-  }
-
-  @keyframes fillText {
-    0% {
-      max-width: 0;
-    }
-    100% {
-      max-width: 100%;
-    }
-  }
-
-  @keyframes fillText2 {
-    0% {
-      max-width: 0;
-    }
-    66%{
-      max-width: 0;
-    }
-    100% {
-      max-width: 100%;
-    }
-  }
-
-  .loading_div > p {
-    font-family: "Redaction-regular";
-  }
-
-  .loading_div > p > span {
-    font-family: "Redaction-italic";
-  }
-
+@media (min-width: 1024px) {
   .for_the {
     margin: 0 0 3rem -18%;
   }
@@ -344,13 +281,6 @@ $height: 450px;
     margin: 0 auto;
     padding: 0;
     max-width: 1200px;
-  }
-
-  .poesia_home {
-    font-size: 16px;
-    width: 80%;
-    margin: 0 auto 4rem auto;
-    font-weight: 300;
   }
 
   .inspirate_cada_mes {
@@ -415,32 +345,32 @@ $height: 450px;
     margin-bottom: 2rem;
   }
 
-  .faq_section > .servicio:nth-child(2) > div > form > fieldset {
+  .faq_section > .servicio:nth-child(1) > div > form > fieldset {
     width: 80%;
   }
 
-  .faq_section > .servicio:nth-child(2) > div > form > div > textarea {
+  .faq_section > .servicio:nth-child(1) > div > form > div > textarea {
     width: 75%;
   }
 
-  .faq_section > .servicio:nth-child(2) > div > form > div > textarea,
-  .faq_section > .servicio:nth-child(2) > div > form > div > input {
+  .faq_section > .servicio:nth-child(1) > div > form > div > textarea,
+  .faq_section > .servicio:nth-child(1) > div > form > div > input {
     background-size: 100.5%;
   }
 
-  .faq_section > .servicio:nth-child(2) > div > form > div > textarea {
+  .faq_section > .servicio:nth-child(1) > div > form > div > textarea {
     background-position-y: -157px !important;
     background-position-x: 0px !important;
   }
 
-  .faq_section > .servicio:nth-child(2) > div > form > div > input {
+  .faq_section > .servicio:nth-child(1) > div > form > div > input {
     background-position-y: -357px !important;
     background-position-x: 0px !important;
     background-size: 172%;
     width: 41.75%;
   }
 
-  .faq_section > .servicio:nth-child(2) > div > form > fieldset > input:hover {
+  .faq_section > .servicio:nth-child(1) > div > form > fieldset > input:hover {
     cursor: pointer;
   }
 
@@ -645,18 +575,18 @@ $height: 450px;
     font-weight: 800 !important;
   }
 
-  .faq_section > div:nth-child(3) > div > div:hover {
+  .faq_section > div:nth-child(2) > div > div:hover {
     cursor: pointer;
   }
 
-  .faq_section > div:nth-child(3) > div > div > div:nth-child(2) {
+  .faq_section > div:nth-child(2) > div > div > div:nth-child(2) {
     background-size: 101%;
     width: 100%;
     margin: 0 auto;
   }
 
   .faq_section
-    > div:nth-child(3)
+    > div:nth-child(2)
     > div
     > div
     > div:nth-child(2)
@@ -665,12 +595,52 @@ $height: 450px;
   }
 
   .faq_section
-    > div:nth-child(3)
+    > div:nth-child(2)
     > div
     > div
     > div:nth-child(2)
     > div:nth-child(3)
     > a {
     width: 66%;
+  }
+}
+
+/* RESPONSIVE TABLET */
+
+@media (min-width: 490px) and (max-width: 1024px) {
+  .keywords {
+    width: 100dvw;
+    height: fit-content;
+    white-space: nowrap;
+    padding: 1rem;
+    background-image: url("../public/PSICODELICO.jpeg");
+    background-position-x: 0px;
+    background-position-y: 100px;
+    background-size: 101%;
+  }
+
+  .servicios {
+    margin: 0 auto;
+    padding: 1.5rem 2rem 0 2rem;
+    width: 65dvw;
+  }
+
+  .for_the {
+    margin: 0 0 2.5rem -11rem;
+  }
+
+  .poesia_home {
+    width: 100%;
+  }
+  
+  .inspirate_cada_mes p,
+  .regala_sesion > p {
+    width: 100%;
+  }
+
+  .inspirate_cada_mes {
+    width: 65dvw;
+    margin: 0 auto;
+    margin-top: 2rem;
   }
 }

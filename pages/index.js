@@ -505,18 +505,6 @@ export default function Home() {
           <section className={styles.servicios + " " + styles.faq_section}>
             {isDesktop && (
               <>
-                <div className={styles.poesia_home}>
-                  {/* <p>Allá donde saber e intuición se encuentran,</p>
-                  <p>
-                    la experiencia colectiva y la sabiduría interna se unen;
-                  </p>
-                  <p>ahí donde el potencial infinito se explora,</p>
-                  <p>expandiendo los límites de lo posible;</p>
-                  <p>allá donde la inspiración ilumina,</p>
-                  <p>y se traduce en acción alineada;</p>
-                  <p>ahí donde los sueños se materializan,</p>
-                  <p>y la realidad supera la ficción.</p> */}
-                </div>
                 <div ref={propuestaDesktopRef} className={styles.servicio}>
                   <h3>HAZME UNA PROPUESTA</h3>
                   <PropuestaForm pageWhereLoaded={"home"} />
@@ -903,35 +891,6 @@ export default function Home() {
             </div>
           </section>
         </main>
-        {isDesktop && (
-          <div className={styles.loading_div}>
-            <div className={styles.manifiesto_desktop}>
-              <p data-text="Para quienes sienten el impulso de dar a luz un mundo nuevo.">
-                Para quienes sienten el impulso de dar a luz un mundo nuevo.
-              </p>
-              <p data-text="Para los que creen y crean el legado del futuro.">
-                Para los que <span>creen</span> y crean el legado del futuro.
-              </p>
-              <p
-                data-text="Para quienes dan un salto de fe y se dejan atravesar por la
-                vida."
-              >
-                Para quienes dan un salto de fe y se dejan atravesar por la
-                vida.
-              </p>
-              <p data-text="Para seres extraordinarios en busca de">
-                Para seres extraordinarios en busca de
-              </p>
-              <p
-                data-text="inspiración (def.): guía divina, una iluminación
-              creativa."
-              >
-                inspiración (<span>def.</span>): guía divina, una iluminación
-                creativa.
-              </p>
-            </div>
-          </div>
-        )}
       </Layout>
     );
 }

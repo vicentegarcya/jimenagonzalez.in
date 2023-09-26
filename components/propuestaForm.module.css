@@ -174,3 +174,19 @@
   width: 100vw;
   height: 300px;
 }
+
+@media (min-width: 490px) and (max-width: 1024px) {
+  .propuesta_form textarea {
+    background: url("../public/PSICODELICO.jpeg");
+    background-position-x: 0px;
+    background-position-y: -267px;
+    background-size: 101%;
+  }
+
+  .tu_email input {
+    background: url("../public/PSICODELICO.jpeg");
+    background-size: 101%;
+    background-position-x: 0px;
+    background-position-y: -442px;
+  }
+}
