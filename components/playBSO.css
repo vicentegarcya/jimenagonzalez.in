@@ -1,0 +1,32 @@
+.bso {
+    display: flex;
+    align-items: center;
+  }
+  
+  .bso img {
+    margin-top: 0.5px;
+    filter: brightness(100%);
+    width: 20px;
+    height: 20px;
+    transition: filter 1s ease-in-out;
+  }
+  
+  .bso img:hover {
+    cursor: pointer;
+  }
+  
+  .bso h3 {
+    -webkit-background-clip: text;
+      background-clip: text;
+      background-image: url('../public/PSICODELICO.jpeg');
+    background-position-y: -62px;
+    background-position-x: -345px;
+      color: transparent;
+    margin-right: 12px;
+    height: 20px;
+    font-weight: 600;
+    overflow: hidden;
+    max-width: 200px;
+    opacity: 1;
+    transition: margin-right 1s ease-out, max-width 1s ease-out, opacity 1.2s ease-in 0.1s;
+  }

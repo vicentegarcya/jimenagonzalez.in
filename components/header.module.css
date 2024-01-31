@@ -1,49 +1,58 @@
 .header {
-  width: 100dvw;
-  height: fit-content;
-  padding: 1.5rem;
+  width: 100vw;
+  height: 5dvh;
+  padding: 0 1.5rem;
   display: flex;
   justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: transparent;
-  backdrop-filter: blur(12px);
+  align-items: center;
+  background: url('../public/GRADIENTE_AURA.jpeg');
+  background-size: 100vw;
+  background-position-y: -1350px;
   opacity: 1;
   z-index: 10;
+  border: 1px solid var(--main-black);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 1vw;
 }
 
-.bso {
+.header_links {
   display: flex;
   align-items: center;
+  height: 100%;
+  border-left: 1px solid var(--main-black);
+  border-right: 1px solid var(--main-black);
 }
 
-.bso img {
-  margin-top: 0.5px;
-  filter: brightness(100%);
-  width: 20px;
-  height: 20px;
-  transition: filter 1s ease-in-out;
+.header > h4 {
+  letter-spacing: 1px;
+  font-family: 'Editorial-Light';
 }
 
-.bso img:hover {
+.header > h4 > span {
+  letter-spacing: 0.5px;
+  font-family: 'Editorial-Reg';
+}
+
+.header_links > h5 {
+  height: 100%;
+  padding: 1.3dvh 2rem;
+  font-family: 'Moderat-Reg';
+}
+
+.header_links > h5:hover {
   cursor: pointer;
 }
 
-.bso h3 {
-  -webkit-background-clip: text;
-	background-clip: text;
-	background-image: url('../public/PSICODELICO.jpeg');
-  background-position-y: -62px;
-  background-position-x: -345px;
-	color: transparent;
-  margin-right: 12px;
-  height: 20px;
-  font-weight: 600;
-  overflow: hidden;
-  max-width: 200px;
-  opacity: 1;
-  transition: margin-right 1s ease-out, max-width 1s ease-out, opacity 1.2s ease-in 0.1s;
+.header_links > h5:nth-child(2) {
+  border-left: 1px solid var(--main-black);
+  border-right: 1px solid var(--main-black);
+}
+
+.header > a {
+  font-size: 0.9vw;
+  font-family: 'Moderat-Bold';
 }
 
 @media (min-width: 768px) and (max-width: 1280px) {

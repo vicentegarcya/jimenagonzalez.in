@@ -1,14 +1,30 @@
 @font-face {
-  font-family: 'Inter-italic';
-  src: url('../public/fonts/Inter-ExtraLightItalic.otf');
+  font-family: 'Editorial-Reg';
+  src: url('../public/fonts/PPEditorialOld-Regular.otf');
 }
 
 @font-face {
-  font-family: 'Inter-extralight';
-  src: url('../public/fonts/Inter-ExtraLight.otf');
+  font-family: 'Editorial-Bold';
+  src: url('../public/fonts/PPEditorialOld-Ultrabold.otf');
+}
+
+@font-face {
+  font-family: 'Editorial-Light';
+  src: url('../public/fonts/PPEditorialOld-Ultralight.otf');
+}
+
+@font-face {
+  font-family: 'Moderat-Reg';
+  src: url('../public/fonts/Moderat-Trial-Extended-Book.otf');
+}
+@font-face {
+  font-family: 'Moderat-Bold';
+  src: url('../public/fonts/Moderat-Trial-Extended-Bold.otf');
 }
 
 :root {
+  --main-black: #282C32;
+  --main-white: #F8F8F8;
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
@@ -26,9 +42,15 @@ html,
 body {
   max-width: 100dvw;
   overflow-x: hidden;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Editorial-Reg', sans-serif;
   position: relative;
   -webkit-text-size-adjust: 100%;
+  color: var(--main-black);
+  background-color: var(--main-white);
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 button {
@@ -56,57 +78,6 @@ fieldset {
 input.seleccionado {
   background: #282c32 !important;
   color: #fff !important;
-}
-
-.swiper {
-  width: 100vw !important;
-  padding: 0px 270px 20px 270px !important;
-  max-width: 900px !important;
-  animation: cardsAppearing 1s cubic-bezier(0.175, 0.885, 0.32, 1.095);
-}
-
-.swiper-slide {
-  width: 100% !important;
-  max-width: 380px;
-  height: 330px !important;
-  border: 0.5px solid #282c32;
-  box-shadow: 0px 0px 10px 2px rgba(215, 215, 215, 0.40);
-  padding: 30px;
-  background: #fff;
-  overflow-y: hidden;
-}
-
-@keyframes cardsAppearing {
-  0%{
-    scale: 0;
-    opacity: 0;
-  }
-  100%{
-    scale: 1;
-    opacity: 1;
-  }
-}
-
-.swiper-slide {
-  opacity: 1 !important;
-  margin-top: 25px;
-}
-
-.swiper-slide > div {
-  opacity: 0.3;
-}
-
-.swiper-slide {
-  border: 0.5px solid rgba(215, 215, 215, 0.40);
-}
-
-.swiper-slide-active {
-  height: fit-content !important;
-  border: 0.5px solid #282c32;
-}
-
-.swiper-slide-active > div {
-  opacity: 1;
 }
 
 .scroll_to {
