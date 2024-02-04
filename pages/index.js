@@ -3,6 +3,7 @@ import styles from "@/styles/Home.module.scss";
 import Layout from "@/components/layout";
 import { useContext, useEffect, useState } from "react";
 import { isPlayingContext } from "../context/context";
+import Link from "next/link";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -25,8 +26,14 @@ export default function Home() {
     return (
       <Layout>
         <main className={styles.main}>
+          <h1 className={styles.jimena}>GONZALEZ<br></br>JIMENA</h1>
           <section className={styles.hero}>
-
+            <div className={styles.hero_top}>
+              <div className={styles.links}>
+                <Link href={"https://www.linkedin.com/in/jimena-gonzalez-collados/"}>LINKEDIN →</Link>
+              </div>
+            </div>
+            <div className={styles.hero_bottom}></div>
           </section>
         </main>
       </Layout>

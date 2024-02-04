@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Header() {
   return (
     <div className={styles.header}>
-      <h4>JIMENA <span>GONZÁLEZ</span></h4>
+      <h4>Jimena <span>González</span></h4>
       <div className={styles.header_links}>
         <h5>METODOLOGÍA</h5>
         <h5>PROYECTOS</h5>
