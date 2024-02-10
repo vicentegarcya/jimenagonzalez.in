@@ -117,8 +117,8 @@
 //METODOLOGIA
 
 .metodologia {
-  margin-top: 300px;
-  height: 110dvh;
+  margin-top: 200px;
+  height: 80dvh;
   display: flex;
   justify-content: space-between;
 }
@@ -127,26 +127,150 @@
   font-size: 1.5vw;
   width: 30%;
   font-weight: 100;
-  font-family: 'Moderat-Reg';
+  font-family: "Moderat-Reg";
   text-transform: uppercase;
+  position: relative;
+  z-index: 100;
 }
 
 .metodologia > p {
   width: 33%;
-  font-size: 2.2vw;
-  font-family: 'Editorial-Light';
+  font-size: 1.5vw;
+  font-family: "Moderat-Light";
   font-weight: 100;
 }
 
 .metodologia > p:nth-child(2) {
   text-align: center;
   align-self: center;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 .metodologia > p:nth-child(3) {
   text-align: end;
   align-self: end;
+}
+
+//EXPERIENCIA
+
+.experiencia {
+  margin-top: 150px;
+  height: 330dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.experiencia h5 {
+  font-size: 1.5vw;
+  width: 100%;
+  font-weight: 100;
+  font-family: "Moderat-Reg";
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  z-index: 100;
+}
+
+.experiencia > div {
+  height: 80dvh;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 200px;
+}
+
+.experiencia > div > .left {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.experiencia > div > .left > p:nth-child(1) {
+  font-family: "Moderat-Reg";
+  opacity: 0.5;
+  font-size: 1.3vw;
+  font-weight: 100;
+}
+
+.experiencia > div > .left > p:nth-child(2) {
+  font-family: "Moderat-Light";
+  margin-top: auto;
+  font-size: 1.6vw;
+  z-index: 1;
+}
+
+.experiencia > div > .left > p:nth-child(2) > span {
+  position: relative;
+}
+
+.experiencia > div > .left > p:nth-child(2) > span:after {
+  position: absolute;
+  height: 5px;
+  margin: 0 auto;
+  content: "";
+  left: 0;
+  right: 0;
+  background: url("../public/PSICODELICO.jpeg");
+  background-position: (-160px, 660px);
+  bottom: -0.1vw;
+  z-index: -1;
+  animation: highlight 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.75s;
+}
+
+@keyframes highlight {
+  0% {
+    max-width: 0%;
+  }
+  100% {
+    max-width: 100%;
+  }
+}
+
+.experiencia > div > .right {
+  width: 50%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  align-self: flex-end;
+  margin-bottom: -35px;
+}
+
+.experiencia > div > .right > img {
+  filter: grayscale(100%);
+  opacity: 0.8;
+  justify-self: center;
+  align-self: center;
+}
+
+.experiencia > .universities > .right {
+  grid-template-rows: 1fr 1fr;
+  height: 50dvh;
+}
+
+.experiencia > .universities > .right > img {
+  justify-self: center;
+  align-self: center;
+}
+
+//SERVICIOS
+
+.servicios {
+  margin-top: 200px;
+  height: 200dvh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.servicios h5 {
+  font-size: 1.5vw;
+  width: 60%;
+  font-weight: 100;
+  font-family: "Moderat-Reg";
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  z-index: 100;
 }
 
 /* RESPONSIVE MOBILE */

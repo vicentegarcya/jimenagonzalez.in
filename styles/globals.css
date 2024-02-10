@@ -17,9 +17,15 @@
   font-family: 'Moderat-Reg';
   src: url('../public/fonts/Moderat-Trial-Extended-Book.otf');
 }
+
 @font-face {
   font-family: 'Moderat-Bold';
   src: url('../public/fonts/Moderat-Trial-Extended-Bold.otf');
+}
+
+@font-face {
+  font-family: 'Moderat-Light';
+  src: url('../public/fonts/Moderat-Trial-Extended-Light.otf');
 }
 
 :root {
