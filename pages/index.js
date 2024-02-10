@@ -19,9 +19,16 @@ export default function Home() {
   const jimenaRef = useRef();
 
   const metodologiaTitleRef = useRef();
-  const metodologiaPrimerParrafoRef = useRef();
   const experienciaTitleRef = useRef();
   const serviciosTitleRef = useRef();
+  const serviciosSectionRef = useRef();
+
+  const bigCompaniesTextRef = useRef();
+  const pymesTextRef = useRef();
+  const universitiesTextRef = useRef();
+  const bigCompaniesSubtitleRef = useRef();
+  const pymesSubtitleRef = useRef();
+  const universitiesSubtitleRef = useRef();
 
   function scrollTo(section) {
     section.scrollIntoView({ behavior: "smooth" });
@@ -75,9 +82,9 @@ export default function Home() {
       left: "3rem",
       ease: "none",
       scrollTrigger: {
-        trigger: mainRef.current,
-        start: "21.4%",
-        end: "+0.01%",
+        trigger: metodologiaTitleRef.current,
+        start: "top 14.65%",
+        end: "+=0.01%",
         scrub: 0.01,
       },
     });
@@ -85,23 +92,139 @@ export default function Home() {
     gsap.to(metodologiaTitleRef.current, {
       y: "-140px",
       scrollTrigger: {
-        trigger: mainRef.current,
-        start: "37%",
-        end: "+=1%",
+        trigger: experienciaTitleRef.current,
+        start: "top 25%",
+        end: "+=2%",
         scrub: 1,
       },
     });
 
+    //EXPERIENCIA
+    //MAIN TITLE
     gsap.to(experienciaTitleRef.current, {
       position: "fixed",
       top: "100px",
       left: "3rem",
       ease: "none",
       scrollTrigger: {
-        trigger: mainRef.current,
-        start: "39.25%",
-        end: "+0.01%",
+        trigger: experienciaTitleRef.current,
+        start: "top 14.65%",
+        end: "+=0.01%",
         scrub: 0.01,
+      },
+    });
+
+    gsap.to(experienciaTitleRef.current, {
+      y: "-140px",
+      scrollTrigger: {
+        trigger: serviciosTitleRef.current,
+        start: "top 25%",
+        end: "+=2%",
+        scrub: 1,
+      },
+    });
+
+    //SUBTITLES
+    //BIG COMPANIES
+    gsap.to(bigCompaniesSubtitleRef.current, {
+      position: "fixed",
+      top: "calc(106px + 1.9vw)",
+      left: "3rem",
+      ease: "none",
+      scrollTrigger: {
+        trigger: bigCompaniesSubtitleRef.current,
+        start: "top 19.25%",
+        end: "+=0.01%",
+        scrub: 0.01,
+      },
+    });
+
+    gsap.to(bigCompaniesSubtitleRef.current, {
+      position: "relative",
+      left: 0,
+      top: 5,
+      scrollTrigger: {
+        trigger: bigCompaniesTextRef.current,
+        start: "top 30%",
+        end: "+=1%",
+        scrub: 1,
+      },
+    });
+
+    //PYMES
+    gsap.to(pymesSubtitleRef.current, {
+      position: "fixed",
+      top: "calc(106px + 1.9vw)",
+      left: "3rem",
+      ease: "none",
+      scrollTrigger: {
+        trigger: pymesSubtitleRef.current,
+        start: "top 23%",
+        end: "+=0.01%",
+        scrub: 0.01,
+      },
+    });
+
+    gsap.to(pymesSubtitleRef.current, {
+      position: "relative",
+      left: 0,
+      top: 0,
+      scrollTrigger: {
+        trigger: pymesTextRef.current,
+        start: "top 30%",
+        end: "+=1%",
+        scrub: 0.01,
+      },
+    });
+
+    //UNIVERSITIES
+    gsap.to(universitiesSubtitleRef.current, {
+      position: "fixed",
+      top: "calc(106px + 1.9vw)",
+      left: "3rem",
+      ease: "none",
+      scrollTrigger: {
+        trigger: universitiesSubtitleRef.current,
+        start: "top 22.5%",
+        end: "+=0.01%",
+        scrub: 0.1,
+      },
+    });
+
+    gsap.to(universitiesSubtitleRef.current, {
+      position: "relative",
+      left: 0,
+      top: 0,
+      scrollTrigger: {
+        trigger: universitiesTextRef.current,
+        start: "top 30%",
+        end: "+=1%",
+        scrub: 0.1,
+      },
+    });
+
+    //SERVICIOS
+    gsap.to(serviciosTitleRef.current, {
+      position: "fixed",
+      top: "100px",
+      left: "3rem",
+      ease: "none",
+      width: "35vw",
+      scrollTrigger: {
+        trigger: serviciosTitleRef.current,
+        start: "top 14.65%",
+        end: "+=0.01%",
+        scrub: 0.01,
+      },
+    });
+
+    gsap.to(serviciosTitleRef.current, {
+      y: "-140px",
+      scrollTrigger: {
+        trigger: serviciosSectionRef.current,
+        start: "bottom 99%",
+        end: "+=2%",
+        scrub: 1,
       },
     });
   }, [isLoading, isDesktop]);
@@ -172,7 +295,7 @@ export default function Home() {
             <h5 ref={metodologiaTitleRef}>
               strategy is the key to manifesting purpose
             </h5>
-            <p ref={metodologiaPrimerParrafoRef}>
+            <p>
               Mi metodología combina estrategia de negocio pura con herramientas
               de diseño (service design, business design, futures design…)
             </p>
@@ -185,8 +308,8 @@ export default function Home() {
             <h5 ref={experienciaTitleRef}>i looooooove business</h5>
             <div className={styles.big_companies}>
               <div className={styles.left}>
-                <p>para grandes empresas</p>
-                <p>
+                <p ref={bigCompaniesSubtitleRef}>para grandes empresas</p>
+                <p ref={bigCompaniesTextRef}>
                   Originaria del mundo de la consultoría de <span>negocio</span>
                   , he acompañado a grandes empresas nacionales e
                   internacionales en proyectos de definición{" "}
@@ -271,8 +394,8 @@ export default function Home() {
             </div>
             <div className={styles.medium_companies}>
               <div className={styles.left}>
-                <p>para agencias y pymes</p>
-                <p>
+                <p ref={pymesSubtitleRef}>para agencias y pymes</p>
+                <p ref={pymesTextRef}>
                   También he trabajado en proyectos estratégicos para{" "}
                   <span>pequeñas y medianas</span> empresas, y mentorizado a{" "}
                   <span>startups</span> en fase semilla y de escalado en
@@ -357,8 +480,8 @@ export default function Home() {
             </div>
             <div className={styles.universities}>
               <div className={styles.left}>
-                <p>para universidades</p>
-                <p>
+                <p ref={universitiesSubtitleRef}>para universidades</p>
+                <p ref={universitiesTextRef}>
                   Por último (pero no menos importante, ¡esto me encanta!),
                   desde hace 4 años soy <span>docente</span> de innovación y
                   estrategia en UPM, y colaboradora con otras instituciones
@@ -419,8 +542,11 @@ export default function Home() {
               </div>
             </div>
           </section>
-          <section className={styles.servicios}>
-            <h5 ref={serviciosTitleRef}>creativity is life, life is creativity, sooo let&apos;s create together!</h5>
+          <section ref={serviciosSectionRef} className={styles.servicios}>
+            <h5 ref={serviciosTitleRef}>
+              creativity is life, life is creativity, sooo let&apos;s create
+              together!
+            </h5>
             <div></div>
           </section>
         </main>

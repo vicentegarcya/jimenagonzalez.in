@@ -186,9 +186,9 @@
 
 .experiencia > div > .left > p:nth-child(1) {
   font-family: "Moderat-Reg";
-  opacity: 0.5;
   font-size: 1.3vw;
   font-weight: 100;
+  opacity: 0.5;
 }
 
 .experiencia > div > .left > p:nth-child(2) {
@@ -257,7 +257,7 @@
 //SERVICIOS
 
 .servicios {
-  margin-top: 200px;
+  margin-top: 0px;
   height: 200dvh;
   display: flex;
   justify-content: space-between;
