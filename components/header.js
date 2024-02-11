@@ -5,15 +5,31 @@ import Link from "next/link";
 const Header = forwardRef(function Header(props, headerRef) {
   return (
     <div ref={headerRef} className={styles.header}>
-      <h4>Jimena <span>González</span></h4>
+      <h4>
+        <Link href={"/#main"} scroll={false}>
+          Jimena <span>González</span>
+        </Link>
+      </h4>
       <div className={styles.header_links}>
-        <h5>METODOLOGÍA</h5>
-        <h5>PROYECTOS</h5>
-        <h5>SERVICIOS</h5>
+        <h5>
+          <Link href={"/#metodologia"} scroll={false}>
+            METODOLOGÍA
+          </Link>
+        </h5>
+        <h5>
+          <Link href={"/#experiencia"} scroll={false}>
+            PROYECTOS
+          </Link>
+        </h5>
+        <h5>
+          <Link href={"/#servicios"} scroll={false}>
+            SERVICIOS
+          </Link>
+        </h5>
       </div>
-      <Link href='mailto:jimenagonzalez.in@gmail.com'>CONTACTO</Link>
+      <Link href="mailto:jimenagonzalez.in@gmail.com">CONTACTO</Link>
     </div>
-  )
+  );
 });
 
 export default Header;

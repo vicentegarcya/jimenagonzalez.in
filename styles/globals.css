@@ -53,6 +53,7 @@ body {
   -webkit-text-size-adjust: 100%;
   color: var(--main-black);
   background-color: var(--main-white);
+  scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {

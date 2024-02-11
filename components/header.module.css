@@ -26,12 +26,12 @@
   border-right: 1px solid var(--main-black);
 }
 
-.header > h4 {
+.header h4 {
   letter-spacing: 1px;
   font-family: 'Editorial-Light';
 }
 
-.header > h4 > span {
+.header h4 > span {
   letter-spacing: 0.5px;
   font-family: 'Editorial-Reg';
 }

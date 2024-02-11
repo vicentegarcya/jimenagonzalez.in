@@ -13,6 +13,9 @@ export default function Home() {
   const { isDesktop } = useContext(isPlayingContext);
   gsap.registerPlugin(ScrollTrigger);
 
+  const [servicioSelected, setServicioSelected] = useState(1);
+  const [estrategiaService, setEstrategiaService] = useState(1);
+
   const mainRef = useRef();
   const heroRef = useRef();
   const gonzalezRef = useRef();
@@ -25,10 +28,10 @@ export default function Home() {
 
   const bigCompaniesTextRef = useRef();
   const pymesTextRef = useRef();
-  const universitiesTextRef = useRef();
+  const universityTextRef = useRef();
   const bigCompaniesSubtitleRef = useRef();
   const pymesSubtitleRef = useRef();
-  const universitiesSubtitleRef = useRef();
+  const universitySubtitleRef = useRef();
 
   function scrollTo(section) {
     section.scrollIntoView({ behavior: "smooth" });
@@ -168,38 +171,38 @@ export default function Home() {
     gsap.to(pymesSubtitleRef.current, {
       position: "relative",
       left: 0,
-      top: 0,
+      top: 5,
       scrollTrigger: {
         trigger: pymesTextRef.current,
         start: "top 30%",
         end: "+=1%",
-        scrub: 0.01,
+        scrub: 1,
       },
     });
 
     //UNIVERSITIES
-    gsap.to(universitiesSubtitleRef.current, {
+    gsap.to(universitySubtitleRef.current, {
       position: "fixed",
       top: "calc(106px + 1.9vw)",
       left: "3rem",
       ease: "none",
       scrollTrigger: {
-        trigger: universitiesSubtitleRef.current,
-        start: "top 22.5%",
-        end: "+=0.01%",
-        scrub: 0.1,
+        trigger: universitySubtitleRef.current,
+        start: "top 22.25%",
+        end: "+=0.1%",
+        scrub: 0.001,
       },
     });
 
-    gsap.to(universitiesSubtitleRef.current, {
+    gsap.to(universitySubtitleRef.current, {
       position: "relative",
       left: 0,
-      top: 0,
+      top: 5,
       scrollTrigger: {
-        trigger: universitiesTextRef.current,
+        trigger: universityTextRef.current,
         start: "top 30%",
         end: "+=1%",
-        scrub: 0.1,
+        scrub: 1,
       },
     });
 
@@ -232,7 +235,7 @@ export default function Home() {
   if (!isLoading)
     return (
       <Layout>
-        <main ref={mainRef} className={styles.main}>
+        <main ref={mainRef} className={styles.main} id="main">
           <h1
             ref={gonzalezRef}
             className={`${styles.jimena} ${styles.jimena_surname}`}
@@ -245,7 +248,7 @@ export default function Home() {
           >
             JIMENA
           </h1>
-          <section ref={heroRef} className={styles.hero}>
+          <section ref={heroRef} className={styles.hero} id="hero">
             <div className={styles.hero_top}>
               <div className={styles.links}>
                 <Link
@@ -291,7 +294,7 @@ export default function Home() {
               alt={"Service Designer Jimena picture of herself"}
             ></Image>
           </section>
-          <section className={styles.metodologia}>
+          <section className={styles.metodologia} id="metodologia">
             <h5 ref={metodologiaTitleRef}>
               strategy is the key to manifesting purpose
             </h5>
@@ -304,7 +307,7 @@ export default function Home() {
               creación de valor, propósito y acción alineada.
             </p>
           </section>
-          <section className={styles.experiencia}>
+          <section className={styles.experiencia} id="experiencia">
             <h5 ref={experienciaTitleRef}>i looooooove business</h5>
             <div className={styles.big_companies}>
               <div className={styles.left}>
@@ -480,8 +483,8 @@ export default function Home() {
             </div>
             <div className={styles.universities}>
               <div className={styles.left}>
-                <p ref={universitiesSubtitleRef}>para universidades</p>
-                <p ref={universitiesTextRef}>
+                <p ref={universitySubtitleRef}>para universidades</p>
+                <p ref={universityTextRef}>
                   Por último (pero no menos importante, ¡esto me encanta!),
                   desde hace 4 años soy <span>docente</span> de innovación y
                   estrategia en UPM, y colaboradora con otras instituciones
@@ -542,11 +545,100 @@ export default function Home() {
               </div>
             </div>
           </section>
-          <section ref={serviciosSectionRef} className={styles.servicios}>
+          <section
+            ref={serviciosSectionRef}
+            className={styles.servicios}
+            id="servicios"
+          >
             <h5 ref={serviciosTitleRef}>
               creativity is life, life is creativity, sooo let&apos;s create
               together!
             </h5>
+            <div className={styles.servicios_main}>
+              <div className={styles.servicio_div}>
+                <h5 className={styles.servicio_title}>
+                  Estrategia y Business Design
+                </h5>
+                <div className={styles.servicio_content}>
+                  <div className={styles.servicio_bubles}>
+                    <button
+                      className={
+                        estrategiaService === 1
+                          ? styles.button_selected
+                          : undefined
+                      }
+                      onClick={() => setEstrategiaService(1)}
+                    >
+                      Visión
+                    </button>
+                    <button
+                      className={
+                        estrategiaService === 2
+                          ? styles.button_selected
+                          : undefined
+                      }
+                      onClick={() => setEstrategiaService(2)}
+                    >
+                      Plan estratégico
+                    </button>
+                    <button
+                      className={
+                        estrategiaService === 3
+                          ? styles.button_selected
+                          : undefined
+                      }
+                      onClick={() => setEstrategiaService(3)}
+                    >
+                      Diseño de futuros
+                    </button>
+                    <button
+                      className={
+                        estrategiaService === 4
+                          ? styles.button_selected
+                          : undefined
+                      }
+                      onClick={() => setEstrategiaService(4)}
+                    >
+                      Modelo de negocio
+                    </button>
+                  </div>
+                  <div className={styles.servicio_text}>
+                    <p
+                      style={{
+                        display: estrategiaService === 1 ? "inherit" : "none",
+                      }}
+                    >
+                      afinando la visión del negocio, su misión interna y su
+                      propósito innovador en el sistema
+                    </p>
+                    <p
+                      style={{
+                        display: estrategiaService === 2 ? "inherit" : "none",
+                      }}
+                    >
+                      alineando visión con acción y objetivos gracias a la
+                      creación de un plan estratégico y táctico.
+                    </p>
+                    <p
+                      style={{
+                        display: estrategiaService === 3 ? "inherit" : "none",
+                      }}
+                    >
+                      percibiendo las señales y tendencias para diseñar
+                      diferentes estrategias de presente y futuro.
+                    </p>
+                    <p
+                      style={{
+                        display: estrategiaService === 4 ? "inherit" : "none",
+                      }}
+                    >
+                      creando un modelo de negocio viable y consistente, con una
+                      cartera de productos y servicios relevantes para el mundo.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div></div>
           </section>
         </main>
