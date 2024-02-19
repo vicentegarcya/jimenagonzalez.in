@@ -3,62 +3,66 @@ import styles from "./service.module.css";
 import { useState } from "react";
 import { useSpring, animated } from "react-spring";
 
-export default function Service({
-  title,
-  description,
-  hashtags,
-  price,
-  calendlyUrl,
-  cta = "AGENDAR",
-  asterisco,
-}) {
+export default function Service({ title, bubbles, descriptions }) {
   const [desplegado, setDesplegado] = useState(false);
+  const [selectedService, setSelectedService] = useState(1);
 
   const openAnimation = useSpring({
-    from: { opacity: "0", maxHeight: "0px", marginBottom: "0rem" },
+    from: { opacity: "0", maxHeight: "80px", marginBottom: "0rem" },
     to: {
       opacity: "1",
-      maxHeight: desplegado ? "500px" : "0px",
+      maxHeight: desplegado ? "500px" : "80px",
       marginBottom: desplegado ? "1rem" : "0rem",
     },
     config: { duration: "300" },
   });
 
-  const props = useSpring({
-    from: {
-      x: 0,
-    },
-    to: {
-      x: 45,
-    },
-  });
-
   return (
-    <div className={styles.servicio_detalle}>
-      <div className={styles.servicio_detalle_titulo}>
-        <p onClick={() => setDesplegado(!desplegado)}>→ {title}</p>
-        <animated.button
-          style={
-            desplegado
-              ? { transform: props.x.to((value) => `rotate(${value}deg)`) }
-              : undefined
-          }
-          onClick={() => setDesplegado(!desplegado)}
-        >
-          +
-        </animated.button>
-      </div>
-      <animated.div
-        style={openAnimation}
-        className={styles.servicio_desplegable}
+    <div className={styles.servicio_div}>
+      <h5
+        className={styles.servicio_title}
+        onClick={() => setDesplegado(!desplegado)}
       >
-        <p>{description}</p>
-        {calendlyUrl && <><p>{hashtags}</p>
-        <div className={styles.servicio_cta_div}>
-          <p>{price}</p>
-          <Link href={calendlyUrl}>{cta}</Link>
+        ✺ {title}
+      </h5>
+      <animated.div style={openAnimation} className={styles.servicio_content}>
+        <div className={styles.servicio_bubles}>
+          {bubbles.map((bubble, index) => {
+            return (
+              <button
+                key={index}
+                className={
+                  selectedService === index + 1 && desplegado
+                    ? styles.button_selected
+                    : undefined
+                }
+                onClick={() => setSelectedService(index + 1)}
+              >
+                {bubble}
+              </button>
+            );
+          })}
         </div>
-        <p>{asterisco}</p></>}
+        <div className={styles.servicio_text}>
+          {descriptions.map((description, index) => {
+            return (
+              <p
+                key={index}
+                className={
+                  selectedService === index + 1
+                    ? styles.button_selected
+                    : undefined
+                }
+                style={{
+                  display: selectedService === index + 1 ? "block" : "none",
+                }}
+                onClick={() => setSelectedService(index + 1)}
+              >
+                {description}
+              </p>
+            );
+          })}
+        </div>
       </animated.div>
     </div>
   );

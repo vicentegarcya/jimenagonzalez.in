@@ -7,6 +7,7 @@ import Image from "next/image";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import Service from "@/components/service";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -14,7 +15,6 @@ export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
 
   const [servicioSelected, setServicioSelected] = useState(1);
-  const [estrategiaService, setEstrategiaService] = useState(1);
 
   const mainRef = useRef();
   const heroRef = useRef();
@@ -33,9 +33,7 @@ export default function Home() {
   const pymesSubtitleRef = useRef();
   const universitySubtitleRef = useRef();
 
-  function scrollTo(section) {
-    section.scrollIntoView({ behavior: "smooth" });
-  }
+  const firstServiceRef = useRef();
 
   useEffect(() => {
     if (isDesktop) {
@@ -212,7 +210,6 @@ export default function Home() {
       top: "100px",
       left: "3rem",
       ease: "none",
-      width: "35vw",
       scrollTrigger: {
         trigger: serviciosTitleRef.current,
         start: "top 14.65%",
@@ -231,6 +228,12 @@ export default function Home() {
       },
     });
   }, [isLoading, isDesktop]);
+
+  useEffect(() => {
+    if (serviciosSectionRef.current) {
+      serviciosSectionRef.current.querySelector('div > div').click();
+    }
+  }, [serviciosSectionRef]);
 
   if (!isLoading)
     return (
@@ -555,91 +558,52 @@ export default function Home() {
               together!
             </h5>
             <div className={styles.servicios_main}>
-              <div className={styles.servicio_div}>
-                <h5 className={styles.servicio_title}>
-                  Estrategia y Business Design
-                </h5>
-                <div className={styles.servicio_content}>
-                  <div className={styles.servicio_bubles}>
-                    <button
-                      className={
-                        estrategiaService === 1
-                          ? styles.button_selected
-                          : undefined
-                      }
-                      onClick={() => setEstrategiaService(1)}
-                    >
-                      Visión
-                    </button>
-                    <button
-                      className={
-                        estrategiaService === 2
-                          ? styles.button_selected
-                          : undefined
-                      }
-                      onClick={() => setEstrategiaService(2)}
-                    >
-                      Plan estratégico
-                    </button>
-                    <button
-                      className={
-                        estrategiaService === 3
-                          ? styles.button_selected
-                          : undefined
-                      }
-                      onClick={() => setEstrategiaService(3)}
-                    >
-                      Diseño de futuros
-                    </button>
-                    <button
-                      className={
-                        estrategiaService === 4
-                          ? styles.button_selected
-                          : undefined
-                      }
-                      onClick={() => setEstrategiaService(4)}
-                    >
-                      Modelo de negocio
-                    </button>
-                  </div>
-                  <div className={styles.servicio_text}>
-                    <p
-                      style={{
-                        display: estrategiaService === 1 ? "inherit" : "none",
-                      }}
-                    >
-                      afinando la visión del negocio, su misión interna y su
-                      propósito innovador en el sistema
-                    </p>
-                    <p
-                      style={{
-                        display: estrategiaService === 2 ? "inherit" : "none",
-                      }}
-                    >
-                      alineando visión con acción y objetivos gracias a la
-                      creación de un plan estratégico y táctico.
-                    </p>
-                    <p
-                      style={{
-                        display: estrategiaService === 3 ? "inherit" : "none",
-                      }}
-                    >
-                      percibiendo las señales y tendencias para diseñar
-                      diferentes estrategias de presente y futuro.
-                    </p>
-                    <p
-                      style={{
-                        display: estrategiaService === 4 ? "inherit" : "none",
-                      }}
-                    >
-                      creando un modelo de negocio viable y consistente, con una
-                      cartera de productos y servicios relevantes para el mundo.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <Service
+                title={"Estrategia y Business Design"}
+                bubbles={[
+                  "Visión",
+                  "Plan estratégico",
+                  "Diseño de futuros",
+                  "Modelo de negocio",
+                ]}
+                descriptions={[
+                  "Afinando la visión del negocio, su misión interna y su propósito innovador en el sistema.",
+                  "Alineando visión con acción y objetivos gracias a la creación de un plan estratégico y táctico.",
+                  "Percibiendo las señales y tendencias para diseñar diferentes estrategias de presente y futuro.",
+                  "Creando un modelo de negocio viable y consistente, con una cartera de productos y servicios relevantes para el mundo.",
+                ]}
+              />
+              <Service
+                title={"Diseño de servicios y facilitación creativa"}
+                bubbles={[
+                  "Investigación cuali-cuanti",
+                  "Diseño de experiencia",
+                  "Ideación y conceptualización",
+                  "Facilitación de co-creación",
+                ]}
+                descriptions={[
+                  "Indagando en las necesidades de los usuarios (investigación de usuarios) y comprendiendo el mercado (investigación de mercado) para una creación basada en insights.",
+                  "Creando una experiencia de cliente fluida y con un valor supremo.",
+                  "Generando disrupción y creatividad innovadora para lograr un concepto único.",
+                  "Creando la metodología y facilitando la sinergia creativa entre todos los participantes del proyecto.",
+                ]}
+              />
+              <Service
+                title={"Diseño y desarrollo web"}
+                bubbles={[
+                  "Web corporativa",
+                  "Portfolio creativo",
+                  "Aplicación web",
+                  "Consultoría web",
+                ]}
+                descriptions={[
+                  "Afinando la visión del negocio, su misión interna y su propósito innovador en el sistema.",
+                  "Alineando visión con acción y objetivos gracias a la creación de un plan estratégico y táctico.",
+                  "Percibiendo las señales y tendencias para diseñar diferentes estrategias de presente y futuro.",
+                  "Creando un modelo de negocio viable y consistente, con una cartera de productos y servicios relevantes para el mundo.",
+                ]}
+              />
             </div>
-            <div></div>
           </section>
         </main>
       </Layout>
