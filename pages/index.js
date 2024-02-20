@@ -8,6 +8,7 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Service from "@/components/service";
+import PropuestaForm from "@/components/propuestaForm";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -33,7 +34,8 @@ export default function Home() {
   const pymesSubtitleRef = useRef();
   const universitySubtitleRef = useRef();
 
-  const firstServiceRef = useRef();
+  const contactFormRef = useRef();
+  const contactFormMainRef = useRef();
 
   useEffect(() => {
     if (isDesktop) {
@@ -227,13 +229,32 @@ export default function Home() {
         scrub: 1,
       },
     });
-  }, [isLoading, isDesktop]);
 
-  useEffect(() => {
-    if (serviciosSectionRef.current) {
-      serviciosSectionRef.current.querySelector('div > div').click();
-    }
-  }, [serviciosSectionRef]);
+    //CONTACT FORM
+    gsap.to(contactFormRef.current, {
+      top: 0,
+      left: 0,
+      transform: 'scale(1)',
+      scrollTrigger: {
+        trigger: serviciosSectionRef.current,
+        start: "bottom 99%",
+        end: "+=20%",
+        scrub: 1.5,
+      },
+    });
+
+    gsap.to(contactFormMainRef.current, {
+      top: "4.5rem",
+      transform: 'scale(1)',
+      scrollTrigger: {
+        trigger: serviciosSectionRef.current,
+        start: "bottom 99%",
+        end: "+=25%",
+        scrub: 2.25,
+      },
+    });
+
+  }, [isLoading, isDesktop]);
 
   if (!isLoading)
     return (
@@ -572,6 +593,7 @@ export default function Home() {
                   "Percibiendo las señales y tendencias para diseñar diferentes estrategias de presente y futuro.",
                   "Creando un modelo de negocio viable y consistente, con una cartera de productos y servicios relevantes para el mundo.",
                 ]}
+                isDesplegado={true}
               />
               <Service
                 title={"Diseño de servicios y facilitación creativa"}
@@ -603,6 +625,18 @@ export default function Home() {
                   "Creando un modelo de negocio viable y consistente, con una cartera de productos y servicios relevantes para el mundo.",
                 ]}
               />
+            </div>
+          </section>
+          <section ref={contactFormRef} className={styles.contact_form}>
+            <div className={styles.contact_form_backpaper}></div>
+            <div ref={contactFormMainRef} className={styles.contact_form_main}>
+              <div className={styles.contact_form_data}>
+                <h5>CONTACTO</h5>
+                <p>Loren ipsum</p>
+                <p>Loren ipsum</p>
+                <p>Loren ipsum</p>
+              </div>
+              <PropuestaForm></PropuestaForm>
             </div>
           </section>
         </main>

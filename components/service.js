@@ -3,8 +3,8 @@ import styles from "./service.module.css";
 import { useState } from "react";
 import { useSpring, animated } from "react-spring";
 
-export default function Service({ title, bubbles, descriptions }) {
-  const [desplegado, setDesplegado] = useState(false);
+export default function Service({ title, bubbles, descriptions, isDesplegado }) {
+  const [desplegado, setDesplegado] = useState(isDesplegado ? isDesplegado : false);
   const [selectedService, setSelectedService] = useState(1);
 
   const openAnimation = useSpring({

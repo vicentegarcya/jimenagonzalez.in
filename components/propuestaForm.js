@@ -1,8 +1,7 @@
 import { useState } from "react";
 import styles from "./propuestaForm.module.css";
-import Confetti from "./confetti";
 
-export default function PropuestaForm(pageWhereLoaded) {
+export default function PropuestaForm() {
   const [temas, setTemas] = useState([]);
   const [formato, setFormato] = useState([]);
   const [idea, setIdea] = useState("");
@@ -76,7 +75,15 @@ export default function PropuestaForm(pageWhereLoaded) {
 
   return (
     <div className={styles.propuesta_form}>
-      <form onSubmit={handleSubmit}>
+      Hola Jimena, soy _______<i>(escribe tu nombre)</i>.<br></br>Trabajo en
+      ___________<i>(escribe el nombre de tu empresa)</i> y tengo una idea o
+      necesidad relacionada con #estrategia #diseño-de-servicios #web #branding
+      , que es ______________________
+      ______________ <i>(describe tu
+      idea o necesidad)</i>.<br></br>Puedes
+      contactarme en __________ <i>(escribe tu e-mail)</i> o en
+      ___________ <i>(escribe tu teléfono)</i>.
+      {/* <form onSubmit={handleSubmit}>
         <fieldset className={styles.temas}>
           <legend>Selecciona los temas:</legend>
           <input onClick={handleChange} type="button" value="#asesoramiento-estrategico" />
@@ -139,10 +146,9 @@ export default function PropuestaForm(pageWhereLoaded) {
         </button>
         {state === "Success" && (
           <div className={styles.confetti_div}>
-            <Confetti pageWhereLoaded={pageWhereLoaded} />
           </div>
         )}
-      </form>
+      </form> */}
     </div>
   );
 }
