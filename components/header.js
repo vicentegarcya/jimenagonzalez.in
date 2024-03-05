@@ -5,11 +5,9 @@ import Link from "next/link";
 const Header = forwardRef(function Header(props, headerRef) {
   return (
     <div ref={headerRef} className={styles.header}>
-      <h4>
-        <Link href={"/#main"} scroll={false}>
-          Jimena <span>González</span>
-        </Link>
-      </h4>
+      <Link href={"/#main"} scroll={false}>
+        JIMENA GONZALEZ
+      </Link>
       <div className={styles.header_links}>
         <h5>
           <Link href={"/#metodologia"} scroll={false}>

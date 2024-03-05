@@ -18,22 +18,16 @@
   z-index: 1000;
 }
 
+.header > * {
+  width: 33.33%
+}
+
 .header_links {
   display: flex;
   align-items: center;
   height: 100%;
   border-left: 1px solid var(--main-black);
   border-right: 1px solid var(--main-black);
-}
-
-.header h4 {
-  letter-spacing: 1px;
-  font-family: 'Editorial-Light';
-}
-
-.header h4 > span {
-  letter-spacing: 0.5px;
-  font-family: 'Editorial-Reg';
 }
 
 .header_links > h5 {
@@ -54,6 +48,10 @@
 .header > a {
   font-size: 0.9vw;
   font-family: 'Moderat-Bold';
+}
+
+.header > a:last-child {
+  text-align: end;
 }
 
 @media (min-width: 768px) and (max-width: 1280px) {

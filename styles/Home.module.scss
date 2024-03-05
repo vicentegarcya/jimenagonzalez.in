@@ -51,16 +51,25 @@
 
 //HERO TOP
 
+.hero_top > * {
+  width: 33.33%;
+  min-width: 33.33%;
+}
+
 .hero_top > p {
-  width: auto;
   text-align: center;
-  margin-top: 2.5vw;
+  margin: 2vw auto 0 auto;
 }
 
 .links {
-  width: 15%;
+  width: fit-content;
   display: flex;
   flex-direction: column;
+}
+
+.hero_top > div:last-child {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .hero_top .contacto {
@@ -103,7 +112,7 @@
 .text {
   width: 16%;
   text-align: end;
-  font-size: 1vw;
+  font-size: 1.11vw;
   text-transform: uppercase;
 }
 
@@ -159,6 +168,7 @@
   height: 330dvh;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .experiencia h5 {
@@ -171,50 +181,46 @@
   z-index: 100;
 }
 
-.experiencia > div {
-  height: 80dvh;
+.experiencia > .left {
+  height: auto;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   margin-bottom: 200px;
 }
 
-.experiencia > div > .left {
+.experiencia > .left > div {
   width: 30%;
-  height: 100%;
+  height: 80dvh;
   display: flex;
-  flex-direction: column;
 }
 
-.experiencia > div > .left > p:nth-child(1) {
-  font-family: "Moderat-Reg";
-  font-size: 1.3vw;
-  font-weight: 100;
-  opacity: 0.5;
-}
-
-.experiencia > div > .left > p:nth-child(2) {
+.experiencia > .left > div > p:nth-child(1) {
   font-family: "Moderat-Light";
   margin-top: auto;
   font-size: 1.6vw;
   z-index: 1;
 }
 
-.experiencia > div > .left > p:nth-child(2) > span {
+.experiencia > .left > div > p:nth-child(1) > span {
   position: relative;
 }
 
-.experiencia > div > .left > p:nth-child(2) > span:after {
+.experiencia > .left > div > p:nth-child(1) > span:after {
   position: absolute;
-  height: 5px;
+  height: 25px;
   margin: 0 auto;
   content: "";
   left: 0;
   right: 0;
-  background: url("../public/PSICODELICO.jpeg");
-  background-position: (-160px, 660px);
-  bottom: -0.1vw;
+  background: url("../public/GRADIENTE_AURA.jpeg");
+  background-size: 130%;
+  background-position-y: 560px;
+  bottom: -0.2vw;
   z-index: -1;
   animation: highlight 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.75s;
+  opacity: 0.75;
+  border-radius: 6px;
 }
 
 @keyframes highlight {
@@ -226,9 +232,11 @@
   }
 }
 
-.experiencia > div > .right {
+.experiencia .right {
+  position: relative;
   width: 50%;
-  height: 80%;
+  height: 80vw;
+  overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -238,21 +246,56 @@
   margin-bottom: -35px;
 }
 
-.experiencia > div > .right > img {
+.experiencia > .right > img {
   filter: grayscale(100%);
   opacity: 0.8;
   justify-self: center;
   align-self: center;
 }
 
-.experiencia > .universities > .right {
-  grid-template-rows: 1fr 1fr;
-  height: 50dvh;
+.experiencia > .right > .logo1 {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
 }
 
-.experiencia > .universities > .right > img {
-  justify-self: center;
-  align-self: center;
+.experiencia > .right > .logo2 {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+}
+
+.experiencia > .right > .logo3 {
+  grid-row: 1 / 2;
+  grid-column: 3 / 4;
+}
+
+.experiencia > .right > .logo4 {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+}
+
+.experiencia > .right > .logo5 {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+}
+
+.experiencia > .right > .logo6 {
+  grid-row: 2 / 3;
+  grid-column: 3 / 4;
+}
+
+.experiencia > .right > .logo7 {
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+}
+
+.experiencia > .right > .logo8 {
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+}
+
+.experiencia > .right > .logo9 {
+  grid-row: 3 / 4;
+  grid-column: 3 / 4;
 }
 
 //SERVICIOS
@@ -301,7 +344,7 @@
 }
 
 .contact_form_backpaper {
-  background: url('../public/GRADIENTE_AURA.jpeg');
+  background: url("../public/GRADIENTE_AURA.jpeg");
   background-size: 100vw;
   background-position-y: calc(5dvh - 1350px);
   width: 100vw;
@@ -325,7 +368,7 @@
 
 .contact_form_data {
   width: 60%;
-  font-family: 'Moderat-Reg';
+  font-family: "Moderat-Reg";
   padding-top: 1rem;
 }
 

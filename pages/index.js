@@ -15,8 +15,6 @@ export default function Home() {
   const { isDesktop } = useContext(isPlayingContext);
   gsap.registerPlugin(ScrollTrigger);
 
-  const [servicioSelected, setServicioSelected] = useState(1);
-
   const mainRef = useRef();
   const heroRef = useRef();
   const gonzalezRef = useRef();
@@ -30,9 +28,7 @@ export default function Home() {
   const bigCompaniesTextRef = useRef();
   const pymesTextRef = useRef();
   const universityTextRef = useRef();
-  const bigCompaniesSubtitleRef = useRef();
-  const pymesSubtitleRef = useRef();
-  const universitySubtitleRef = useRef();
+  const companiesLogosRef = useRef();
 
   const contactFormRef = useRef();
   const contactFormMainRef = useRef();
@@ -127,82 +123,27 @@ export default function Home() {
       },
     });
 
-    //SUBTITLES
-    //BIG COMPANIES
-    gsap.to(bigCompaniesSubtitleRef.current, {
+    //LOGOS
+    gsap.to(companiesLogosRef.current, {
       position: "fixed",
-      top: "calc(106px + 1.9vw)",
-      left: "3rem",
+      top: "100px",
+      right: "3rem",
       ease: "none",
       scrollTrigger: {
-        trigger: bigCompaniesSubtitleRef.current,
-        start: "top 19.25%",
+        trigger: experienciaTitleRef.current,
+        start: "top 14.65%",
         end: "+=0.01%",
         scrub: 0.01,
       },
     });
 
-    gsap.to(bigCompaniesSubtitleRef.current, {
-      position: "relative",
-      left: 0,
-      top: 5,
+    gsap.to(companiesLogosRef.current, {
+      position: "absolute",
       scrollTrigger: {
-        trigger: bigCompaniesTextRef.current,
-        start: "top 30%",
-        end: "+=1%",
-        scrub: 1,
-      },
-    });
-
-    //PYMES
-    gsap.to(pymesSubtitleRef.current, {
-      position: "fixed",
-      top: "calc(106px + 1.9vw)",
-      left: "3rem",
-      ease: "none",
-      scrollTrigger: {
-        trigger: pymesSubtitleRef.current,
-        start: "top 23%",
+        trigger: serviciosTitleRef.current,
+        start: "top 98.65%",
         end: "+=0.01%",
         scrub: 0.01,
-      },
-    });
-
-    gsap.to(pymesSubtitleRef.current, {
-      position: "relative",
-      left: 0,
-      top: 5,
-      scrollTrigger: {
-        trigger: pymesTextRef.current,
-        start: "top 30%",
-        end: "+=1%",
-        scrub: 1,
-      },
-    });
-
-    //UNIVERSITIES
-    gsap.to(universitySubtitleRef.current, {
-      position: "fixed",
-      top: "calc(106px + 1.9vw)",
-      left: "3rem",
-      ease: "none",
-      scrollTrigger: {
-        trigger: universitySubtitleRef.current,
-        start: "top 22.25%",
-        end: "+=0.1%",
-        scrub: 0.001,
-      },
-    });
-
-    gsap.to(universitySubtitleRef.current, {
-      position: "relative",
-      left: 0,
-      top: 5,
-      scrollTrigger: {
-        trigger: universityTextRef.current,
-        start: "top 30%",
-        end: "+=1%",
-        scrub: 1,
       },
     });
 
@@ -234,7 +175,7 @@ export default function Home() {
     gsap.to(contactFormRef.current, {
       top: 0,
       left: 0,
-      transform: 'scale(1)',
+      transform: "scale(1)",
       scrollTrigger: {
         trigger: serviciosSectionRef.current,
         start: "bottom 99%",
@@ -245,7 +186,7 @@ export default function Home() {
 
     gsap.to(contactFormMainRef.current, {
       top: "4.5rem",
-      transform: 'scale(1)',
+      transform: "scale(1)",
       scrollTrigger: {
         trigger: serviciosSectionRef.current,
         start: "bottom 99%",
@@ -253,7 +194,6 @@ export default function Home() {
         scrub: 2.25,
       },
     });
-
   }, [isLoading, isDesktop]);
 
   if (!isLoading)
@@ -292,21 +232,21 @@ export default function Home() {
                 </Link>
               </div>
               <p>(STRATEGIC MIND / SENSITIVE HEART)</p>
-              <Link
-                href={"mailto:hi@jimenagonzalez.in"}
-                className={styles.contacto}
-              >
-                CONTÁCTAME
-              </Link>
+              <div>
+                <Link
+                  href={"mailto:hi@jimenagonzalez.in"}
+                  className={styles.contacto}
+                >
+                  CONTÁCTAME
+                </Link>
+              </div>
             </div>
             <div className={styles.hero_bottom}>
               <p className={styles.scroll}>
                 SCROLL<br></br>↓
               </p>
               <p className={styles.text}>
-                Creo en el poder de la estrategia para crear negocios con
-                propósito, y en el del diseño para elevar el potencial de las
-                sinergias creativas.
+                Success is the result of a good strategy
               </p>
             </div>
             <Image
@@ -333,9 +273,8 @@ export default function Home() {
           </section>
           <section className={styles.experiencia} id="experiencia">
             <h5 ref={experienciaTitleRef}>i looooooove business</h5>
-            <div className={styles.big_companies}>
-              <div className={styles.left}>
-                <p ref={bigCompaniesSubtitleRef}>para grandes empresas</p>
+            <div className={styles.left}>
+              <div className={styles.big_companies}>
                 <p ref={bigCompaniesTextRef}>
                   Originaria del mundo de la consultoría de <span>negocio</span>
                   , he acompañado a grandes empresas nacionales e
@@ -344,84 +283,7 @@ export default function Home() {
                   servicios, investigación e intraemprendimiento.
                 </p>
               </div>
-              <div className={styles.right}>
-                <Image
-                  src="/big_companies/BBVA.png"
-                  width={0}
-                  height={0}
-                  sizes="10vw"
-                  style={{ width: "7vw", height: "auto" }}
-                  alt={"BBVA company logo"}
-                ></Image>
-                <Image
-                  src="/big_companies/ikea.png"
-                  width={0}
-                  height={0}
-                  sizes="10vw"
-                  style={{ width: "8vw", height: "auto" }}
-                  alt={"BBVA company logo"}
-                ></Image>
-                <Image
-                  src="/big_companies/acciona.png"
-                  width={0}
-                  height={0}
-                  sizes="10vw"
-                  style={{ width: "9vw", height: "auto" }}
-                  alt={"BBVA company logo"}
-                ></Image>
-                <Image
-                  src="/big_companies/repsol.png"
-                  width={0}
-                  height={0}
-                  sizes="10vw"
-                  style={{ width: "10vw", height: "auto" }}
-                  alt={"BBVA company logo"}
-                ></Image>
-                <Image
-                  src="/big_companies/mapfre.png"
-                  width={0}
-                  height={0}
-                  sizes="10vw"
-                  style={{ width: "10vw", height: "auto" }}
-                  alt={"BBVA company logo"}
-                ></Image>
-                <Image
-                  src="/big_companies/securitas.png"
-                  width={0}
-                  height={0}
-                  sizes="10vw"
-                  style={{ width: "7vw", height: "auto" }}
-                  alt={"BBVA company logo"}
-                ></Image>
-                <Image
-                  src="/big_companies/verisure.png"
-                  width={0}
-                  height={0}
-                  sizes="10vw"
-                  style={{ width: "10vw", height: "auto" }}
-                  alt={"BBVA company logo"}
-                ></Image>
-                <Image
-                  src="/big_companies/notpla.png"
-                  width={0}
-                  height={0}
-                  sizes="10vw"
-                  style={{ width: "10vw", height: "auto" }}
-                  alt={"BBVA company logo"}
-                ></Image>
-                <Image
-                  src="/big_companies/fortum.png"
-                  width={0}
-                  height={0}
-                  sizes="10vw"
-                  style={{ width: "10vw", height: "auto" }}
-                  alt={"BBVA company logo"}
-                ></Image>
-              </div>
-            </div>
-            <div className={styles.medium_companies}>
-              <div className={styles.left}>
-                <p ref={pymesSubtitleRef}>para agencias y pymes</p>
+              <div className={styles.medium_companies}>
                 <p ref={pymesTextRef}>
                   También he trabajado en proyectos estratégicos para{" "}
                   <span>pequeñas y medianas</span> empresas, y mentorizado a{" "}
@@ -430,84 +292,7 @@ export default function Home() {
                   visión estratégica y el valor del diseño.
                 </p>
               </div>
-              <div className={styles.right}>
-                <Image
-                  src="/pymes/capgemini.png"
-                  width={0}
-                  height={0}
-                  sizes="10vw"
-                  style={{ width: "10vw", height: "auto" }}
-                  alt={"BBVA company logo"}
-                ></Image>
-                <Image
-                  src="/pymes/frog.png"
-                  width={0}
-                  height={0}
-                  sizes="10vw"
-                  style={{ width: "7vw", height: "auto" }}
-                  alt={"BBVA company logo"}
-                ></Image>
-                <Image
-                  src="/pymes/norrsken.png"
-                  width={0}
-                  height={0}
-                  sizes="10vw"
-                  style={{ width: "10vw", height: "auto" }}
-                  alt={"BBVA company logo"}
-                ></Image>
-                <Image
-                  src="/pymes/garajedeideas.png"
-                  width={0}
-                  height={0}
-                  sizes="10vw"
-                  style={{ width: "14vw", height: "auto" }}
-                  alt={"BBVA company logo"}
-                ></Image>
-                <Image
-                  src="/pymes/SPRMBNGS.png"
-                  width={0}
-                  height={0}
-                  sizes="10vw"
-                  style={{ width: "7vw", height: "auto" }}
-                  alt={"BBVA company logo"}
-                ></Image>
-                <Image
-                  src="/pymes/escuela21.png"
-                  width={0}
-                  height={0}
-                  sizes="10vw"
-                  style={{ width: "10vw", height: "auto" }}
-                  alt={"BBVA company logo"}
-                ></Image>
-                <Image
-                  src="/pymes/baobab.png"
-                  width={0}
-                  height={0}
-                  sizes="10vw"
-                  style={{ width: "10vw", height: "auto" }}
-                  alt={"BBVA company logo"}
-                ></Image>
-                <Image
-                  src="/pymes/the-candy-toy-factory.png"
-                  width={0}
-                  height={0}
-                  sizes="10vw"
-                  style={{ width: "8vw", height: "auto" }}
-                  alt={"BBVA company logo"}
-                ></Image>
-                <Image
-                  src="/pymes/asm.png"
-                  width={0}
-                  height={0}
-                  sizes="10vw"
-                  style={{ width: "8vw", height: "auto" }}
-                  alt={"BBVA company logo"}
-                ></Image>
-              </div>
-            </div>
-            <div className={styles.universities}>
-              <div className={styles.left}>
-                <p ref={universitySubtitleRef}>para universidades</p>
+              <div className={styles.universities}>
                 <p ref={universityTextRef}>
                   Por último (pero no menos importante, ¡esto me encanta!),
                   desde hace 4 años soy <span>docente</span> de innovación y
@@ -517,56 +302,224 @@ export default function Home() {
                   innovación social y ambiental.
                 </p>
               </div>
-              <div className={styles.right}>
-                <Image
-                  src="/universities/upm.png"
-                  width={0}
-                  height={0}
-                  sizes="10vw"
-                  style={{ width: "12vw", height: "auto" }}
-                  alt={"BBVA company logo"}
-                ></Image>
-                <Image
-                  src="/universities/mondragon.png"
-                  width={0}
-                  height={0}
-                  sizes="10vw"
-                  style={{ width: "12vw", height: "auto" }}
-                  alt={"BBVA company logo"}
-                ></Image>
-                <Image
-                  src="/universities/upv.png"
-                  width={0}
-                  height={0}
-                  sizes="10vw"
-                  style={{ width: "12vw", height: "auto" }}
-                  alt={"BBVA company logo"}
-                ></Image>
-                <Image
-                  src="/universities/uv.png"
-                  width={0}
-                  height={0}
-                  sizes="10vw"
-                  style={{ width: "12vw", height: "auto" }}
-                  alt={"BBVA company logo"}
-                ></Image>
-                <Image
-                  src="/universities/xiji.png"
-                  width={0}
-                  height={0}
-                  sizes="10vw"
-                  style={{ width: "12vw", height: "auto" }}
-                  alt={"BBVA company logo"}
-                ></Image>
-                <Image
-                  src="/universities/IEN.png"
-                  width={0}
-                  height={0}
-                  sizes="10vw"
-                  style={{ width: "12vw", height: "auto" }}
-                  alt={"BBVA company logo"}
-                ></Image>
-              </div>
+            </div>
+            <div className={styles.right} ref={companiesLogosRef}>
+              <Image
+                src="/big_companies/BBVA.png"
+                width={0}
+                height={0}
+                sizes="10vw"
+                style={{ width: "7vw", height: "auto" }}
+                alt={"BBVA company logo"}
+                className={styles.logo1}
+              ></Image>
+              <Image
+                src="/big_companies/ikea.png"
+                width={0}
+                height={0}
+                sizes="10vw"
+                style={{ width: "8vw", height: "auto" }}
+                alt={"BBVA company logo"}
+                className={styles.logo2}
+              ></Image>
+              <Image
+                src="/big_companies/acciona.png"
+                width={0}
+                height={0}
+                sizes="10vw"
+                style={{ width: "9vw", height: "auto" }}
+                alt={"BBVA company logo"}
+                className={styles.logo3}
+              ></Image>
+              <Image
+                src="/big_companies/repsol.png"
+                width={0}
+                height={0}
+                sizes="10vw"
+                style={{ width: "10vw", height: "auto" }}
+                alt={"BBVA company logo"}
+                className={styles.logo4}
+              ></Image>
+              <Image
+                src="/big_companies/mapfre.png"
+                width={0}
+                height={0}
+                sizes="10vw"
+                style={{ width: "10vw", height: "auto" }}
+                alt={"BBVA company logo"}
+                className={styles.logo5}
+              ></Image>
+              <Image
+                src="/big_companies/securitas.png"
+                width={0}
+                height={0}
+                sizes="10vw"
+                style={{ width: "7vw", height: "auto" }}
+                alt={"BBVA company logo"}
+                className={styles.logo6}
+              ></Image>
+              <Image
+                src="/big_companies/verisure.png"
+                width={0}
+                height={0}
+                sizes="10vw"
+                style={{ width: "10vw", height: "auto" }}
+                alt={"BBVA company logo"}
+                className={styles.logo7}
+              ></Image>
+              <Image
+                src="/big_companies/notpla.png"
+                width={0}
+                height={0}
+                sizes="10vw"
+                style={{ width: "10vw", height: "auto" }}
+                alt={"BBVA company logo"}
+                className={styles.logo8}
+              ></Image>
+              <Image
+                src="/big_companies/fortum.png"
+                width={0}
+                height={0}
+                sizes="10vw"
+                style={{ width: "10vw", height: "auto" }}
+                alt={"BBVA company logo"}
+                className={styles.logo9}
+              ></Image>
+              <Image
+                src="/pymes/capgemini.png"
+                width={0}
+                height={0}
+                sizes="10vw"
+                style={{ width: "10vw", height: "auto" }}
+                alt={"BBVA company logo"}
+                className={styles.logo1}
+              ></Image>
+              <Image
+                src="/pymes/frog.png"
+                width={0}
+                height={0}
+                sizes="10vw"
+                style={{ width: "7vw", height: "auto" }}
+                alt={"BBVA company logo"}
+                className={styles.logo2}
+              ></Image>
+              <Image
+                src="/pymes/norrsken.png"
+                width={0}
+                height={0}
+                sizes="10vw"
+                style={{ width: "10vw", height: "auto" }}
+                alt={"BBVA company logo"}
+                className={styles.logo3}
+              ></Image>
+              <Image
+                src="/pymes/garajedeideas.png"
+                width={0}
+                height={0}
+                sizes="10vw"
+                style={{ width: "14vw", height: "auto" }}
+                alt={"BBVA company logo"}
+                className={styles.logo4}
+              ></Image>
+              <Image
+                src="/pymes/SPRMBNGS.png"
+                width={0}
+                height={0}
+                sizes="10vw"
+                style={{ width: "7vw", height: "auto" }}
+                alt={"BBVA company logo"}
+                className={styles.logo5}
+              ></Image>
+              <Image
+                src="/pymes/escuela21.png"
+                width={0}
+                height={0}
+                sizes="10vw"
+                style={{ width: "10vw", height: "auto" }}
+                alt={"BBVA company logo"}
+                className={styles.logo6}
+              ></Image>
+              <Image
+                src="/pymes/baobab.png"
+                width={0}
+                height={0}
+                sizes="10vw"
+                style={{ width: "10vw", height: "auto" }}
+                alt={"BBVA company logo"}
+                className={styles.logo7}
+              ></Image>
+              <Image
+                src="/pymes/the-candy-toy-factory.png"
+                width={0}
+                height={0}
+                sizes="10vw"
+                style={{ width: "8vw", height: "auto" }}
+                alt={"BBVA company logo"}
+                className={styles.logo8}
+              ></Image>
+              <Image
+                src="/pymes/asm.png"
+                width={0}
+                height={0}
+                sizes="10vw"
+                style={{ width: "8vw", height: "auto" }}
+                alt={"BBVA company logo"}
+                className={styles.logo9}
+              ></Image>
+              <Image
+                src="/universities/upm.png"
+                width={0}
+                height={0}
+                sizes="10vw"
+                style={{ width: "12vw", height: "auto" }}
+                alt={"BBVA company logo"}
+                className={styles.logo1}
+              ></Image>
+              <Image
+                src="/universities/mondragon.png"
+                width={0}
+                height={0}
+                sizes="10vw"
+                style={{ width: "12vw", height: "auto" }}
+                alt={"BBVA company logo"}
+                className={styles.logo2}
+              ></Image>
+              <Image
+                src="/universities/upv.png"
+                width={0}
+                height={0}
+                sizes="10vw"
+                style={{ width: "12vw", height: "auto" }}
+                alt={"BBVA company logo"}
+                className={styles.logo3}
+              ></Image>
+              <Image
+                src="/universities/uv.png"
+                width={0}
+                height={0}
+                sizes="10vw"
+                style={{ width: "12vw", height: "auto" }}
+                alt={"BBVA company logo"}
+                className={styles.logo4}
+              ></Image>
+              <Image
+                src="/universities/xiji.png"
+                width={0}
+                height={0}
+                sizes="10vw"
+                style={{ width: "12vw", height: "auto" }}
+                alt={"BBVA company logo"}
+                className={styles.logo5}
+              ></Image>
+              <Image
+                src="/universities/IEN.png"
+                width={0}
+                height={0}
+                sizes="10vw"
+                style={{ width: "12vw", height: "auto" }}
+                alt={"BBVA company logo"}
+                className={styles.logo6}
+              ></Image>
             </div>
           </section>
           <section
