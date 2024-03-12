@@ -21,6 +21,7 @@ export default function Home() {
   const jimenaRef = useRef();
 
   const metodologiaTitleRef = useRef();
+  const metodologiaDivRef = useRef();
   const experienciaTitleRef = useRef();
   const serviciosTitleRef = useRef();
   const serviciosSectionRef = useRef();
@@ -79,6 +80,17 @@ export default function Home() {
       position: "fixed",
       top: "100px",
       left: "3rem",
+      ease: "none",
+      scrollTrigger: {
+        trigger: metodologiaTitleRef.current,
+        start: "top 14.65%",
+        end: "+=0.01%",
+        scrub: 0.01,
+      },
+    });
+
+    gsap.to(metodologiaDivRef.current, {
+      marginTop: "25vh",
       ease: "none",
       scrollTrigger: {
         trigger: metodologiaTitleRef.current,
@@ -260,45 +272,79 @@ export default function Home() {
           </section>
           <section className={styles.metodologia} id="metodologia">
             <h5 ref={metodologiaTitleRef}>
-              strategy is the key to manifesting purpose
+              Strategy is the key to manifesting purpose
             </h5>
-            <p>
-              Mi metodología combina estrategia de negocio pura con herramientas
-              de diseño (service design, business design, futures design…)
-            </p>
-            <p>
-              para acompañar a grandes empresas y proyectos emergentes en la
-              creación de valor, propósito y acción alineada.
-            </p>
+            <div ref={metodologiaDivRef}>
+              <p>
+                Mi metodología combina estrategia de negocio pura con
+                herramientas de diseño para acompañar a grandes empresas y
+                proyectos emergentes en la creación de
+                <span> valor, propósito y acción alineada </span>.
+              </p>
+              <p>
+                Para cada proyecto, creo un marco metodológico ad hoc para dotar
+                de coherencia y claridad a todo el proceso. Facilito la
+                co-creación de una estrategia que permita hacer realidad la
+                visión, apoyándome en mi expertise de negocio y diseño.
+              </p>
+            </div>
+            <div>
+              <div className={styles.cinta_transportadora}>
+                <p>
+                  Service Design · Pensamiento estratégico · Lean Start-up ·
+                  Emprendimiento · Business Design · Finanzas · Investigación
+                  cualitativa · Análisis de datos · Diseño estratégico ·
+                  Análisis de mercado ·
+                </p>
+                <p>
+                  Service Design · Pensamiento estratégico · Lean Start-up ·
+                  Emprendimiento · Business Design · Finanzas · Investigación
+                  cualitativa · Análisis de datos · Diseño estratégico ·
+                  Análisis de mercado ·
+                </p>
+              </div>
+              <div className={styles.cinta_transportadora}>
+                <p>
+                  Diseño de futuros · Marketing · Gestión de proyectos · User
+                  Experience · Producto y servicio digital · Design Thinking ·
+                  Facilitación · Liderazgo de equipos · Pensamiento sistémico ·
+                </p>
+                <p>
+                  Diseño de futuros · Marketing · Gestión de proyectos · User
+                  Experience · Producto y servicio digital · Design Thinking ·
+                  Facilitación · Liderazgo de equipos · Pensamiento sistémico ·
+                </p>
+              </div>
+            </div>
           </section>
           <section className={styles.experiencia} id="experiencia">
             <h5 ref={experienciaTitleRef}>i looooooove business</h5>
             <div className={styles.left}>
               <div className={styles.big_companies}>
                 <p ref={bigCompaniesTextRef}>
-                  Originaria del mundo de la consultoría de <span>negocio</span>
+                  Originaria del mundo de la consultoría de<span>{" "}negocio{" "}</span>
                   , he acompañado a grandes empresas nacionales e
                   internacionales en proyectos de definición{" "}
-                  <span>estratégica</span>, innovación, <span>diseño</span> de
+                  <span>estratégica{" "}</span>, innovación,<span>{" "}diseño{" "}</span> de
                   servicios, investigación e intraemprendimiento.
                 </p>
               </div>
               <div className={styles.medium_companies}>
                 <p ref={pymesTextRef}>
                   También he trabajado en proyectos estratégicos para{" "}
-                  <span>pequeñas y medianas</span> empresas, y mentorizado a{" "}
-                  <span>startups</span> en fase semilla y de escalado en
-                  diversas <span>incubadoras y aceleradoras</span>, aportando la
+                  <span>pequeñas y medianas{" "}</span> empresas, y mentorizado a
+                  <span>{" "}startups{" "}</span> en fase semilla y de escalado en
+                  diversas <span>incubadoras y aceleradoras{" "}</span>, aportando la
                   visión estratégica y el valor del diseño.
                 </p>
               </div>
               <div className={styles.universities}>
                 <p ref={universityTextRef}>
                   Por último (pero no menos importante, ¡esto me encanta!),
-                  desde hace 4 años soy <span>docente</span> de innovación y
+                  desde hace 4 años soy<span>{" "}docente{" "}</span>de innovación y
                   estrategia en UPM, y colaboradora con otras instituciones
-                  universitarias como UV, UPV o Mondragon en actividades de{" "}
-                  <span>emprendimiento</span> y <span>bootcamps</span> de
+                  universitarias como UV, UPV o Mondragon en actividades de
+                  <span>{" "}emprendimiento{" "}</span> y <span>bootcamps{" "}</span> de
                   innovación social y ambiental.
                 </p>
               </div>
@@ -390,7 +436,7 @@ export default function Home() {
                 width={0}
                 height={0}
                 sizes="10vw"
-                style={{ width: "10vw", height: "auto" }}
+                style={{ width: "10vw", height: "auto", display: "none" }}
                 alt={"BBVA company logo"}
                 className={styles.logo1}
               ></Image>
@@ -399,7 +445,7 @@ export default function Home() {
                 width={0}
                 height={0}
                 sizes="10vw"
-                style={{ width: "7vw", height: "auto" }}
+                style={{ width: "7vw", height: "auto", display: "none" }}
                 alt={"BBVA company logo"}
                 className={styles.logo2}
               ></Image>
@@ -408,7 +454,7 @@ export default function Home() {
                 width={0}
                 height={0}
                 sizes="10vw"
-                style={{ width: "10vw", height: "auto" }}
+                style={{ width: "10vw", height: "auto", display: "none" }}
                 alt={"BBVA company logo"}
                 className={styles.logo3}
               ></Image>
@@ -417,7 +463,7 @@ export default function Home() {
                 width={0}
                 height={0}
                 sizes="10vw"
-                style={{ width: "14vw", height: "auto" }}
+                style={{ width: "14vw", height: "auto", display: "none" }}
                 alt={"BBVA company logo"}
                 className={styles.logo4}
               ></Image>
@@ -426,7 +472,7 @@ export default function Home() {
                 width={0}
                 height={0}
                 sizes="10vw"
-                style={{ width: "7vw", height: "auto" }}
+                style={{ width: "7vw", height: "auto", display: "none" }}
                 alt={"BBVA company logo"}
                 className={styles.logo5}
               ></Image>
@@ -435,7 +481,7 @@ export default function Home() {
                 width={0}
                 height={0}
                 sizes="10vw"
-                style={{ width: "10vw", height: "auto" }}
+                style={{ width: "10vw", height: "auto", display: "none" }}
                 alt={"BBVA company logo"}
                 className={styles.logo6}
               ></Image>
@@ -444,7 +490,7 @@ export default function Home() {
                 width={0}
                 height={0}
                 sizes="10vw"
-                style={{ width: "10vw", height: "auto" }}
+                style={{ width: "10vw", height: "auto", display: "none" }}
                 alt={"BBVA company logo"}
                 className={styles.logo7}
               ></Image>
@@ -453,7 +499,7 @@ export default function Home() {
                 width={0}
                 height={0}
                 sizes="10vw"
-                style={{ width: "8vw", height: "auto" }}
+                style={{ width: "8vw", height: "auto", display: "none" }}
                 alt={"BBVA company logo"}
                 className={styles.logo8}
               ></Image>
@@ -462,7 +508,7 @@ export default function Home() {
                 width={0}
                 height={0}
                 sizes="10vw"
-                style={{ width: "8vw", height: "auto" }}
+                style={{ width: "8vw", height: "auto", display: "none" }}
                 alt={"BBVA company logo"}
                 className={styles.logo9}
               ></Image>
@@ -471,7 +517,7 @@ export default function Home() {
                 width={0}
                 height={0}
                 sizes="10vw"
-                style={{ width: "12vw", height: "auto" }}
+                style={{ width: "12vw", height: "auto", display: "none" }}
                 alt={"BBVA company logo"}
                 className={styles.logo1}
               ></Image>
@@ -480,7 +526,7 @@ export default function Home() {
                 width={0}
                 height={0}
                 sizes="10vw"
-                style={{ width: "12vw", height: "auto" }}
+                style={{ width: "12vw", height: "auto", display: "none" }}
                 alt={"BBVA company logo"}
                 className={styles.logo2}
               ></Image>
@@ -489,7 +535,7 @@ export default function Home() {
                 width={0}
                 height={0}
                 sizes="10vw"
-                style={{ width: "12vw", height: "auto" }}
+                style={{ width: "12vw", height: "auto", display: "none" }}
                 alt={"BBVA company logo"}
                 className={styles.logo3}
               ></Image>
@@ -498,7 +544,7 @@ export default function Home() {
                 width={0}
                 height={0}
                 sizes="10vw"
-                style={{ width: "12vw", height: "auto" }}
+                style={{ width: "12vw", height: "auto", display: "none" }}
                 alt={"BBVA company logo"}
                 className={styles.logo4}
               ></Image>
@@ -507,7 +553,7 @@ export default function Home() {
                 width={0}
                 height={0}
                 sizes="10vw"
-                style={{ width: "12vw", height: "auto" }}
+                style={{ width: "12vw", height: "auto", display: "none" }}
                 alt={"BBVA company logo"}
                 className={styles.logo5}
               ></Image>
@@ -516,7 +562,7 @@ export default function Home() {
                 width={0}
                 height={0}
                 sizes="10vw"
-                style={{ width: "12vw", height: "auto" }}
+                style={{ width: "12vw", height: "auto", display: "none" }}
                 alt={"BBVA company logo"}
                 className={styles.logo6}
               ></Image>
