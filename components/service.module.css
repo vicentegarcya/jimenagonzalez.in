@@ -19,16 +19,39 @@
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid grey;
-  padding: 20px 3rem;
-  overflow: hidden;
+  padding: 3rem 3rem;
 }
 
-.servicio_div:hover {
-  cursor: pointer;
+.servicio_intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 35%;
+}
+
+.servicio_intro > div > p {
+  font-size: 1.3vw;
+  width: 85%;
+  margin-top: 32px;
+}
+
+.servicio_intro button {
+  background: url("../public/PSICODELICO.jpeg");
+  background-size: 800%;
+  border: 1px solid var(--main-black);
+  border-radius: 60px;
+  height: fit-content;
+  overflow: hidden;
+  padding: 0.5rem 1.5rem;
+  animation: backgroundMoving 10s infinite;
+  font-size: 1.1vw;
+  opacity: 0.9;
+  width: fit-content;
+  font-family: "Moderat-Reg";
 }
 
 .servicio_title {
-  width: 55% !important;
+  width: 100% !important;
   font-family: "Moderat-Reg";
   font-size: 1.2vw !important;
   font-weight: 100;
@@ -37,43 +60,49 @@
 }
 
 .servicio_content {
-  width: 45%;
+  width: 50%;
   display: flex;
   flex-direction: column;
 }
 
-.servicio_bubles {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 32px;
-}
-
-.servicio_bubles button {
-  background-color: rgb(219, 219, 219);
-  border: none;
-  border-radius: 60px;
-  height: fit-content;
-  overflow: hidden;
-  padding: 0.5rem 1.5rem;
-  animation: backgroundMoving 10s infinite;
-  font-size: 1.1vw;
-  z-index: 200;
-  opacity: 0.7;
-  font-family: "Moderat-Reg";
-}
-
-.servicio_bubles .button_selected {
-  background: url("../public/PSICODELICO.jpeg");
-  opacity: 0.8;
-}
-
-.servicio_bubles button:hover {
-  cursor: pointer;
-}
-
 .servicio_text {
-  font-size: 1.4vw;
+  font-size: 1.3vw;
 }
 
-@media (min-width: 768px) {}
+.servicio_text > p {
+  margin-bottom: 24px;
+}
+
+.servicio_text > p:last-child {
+  margin-bottom: 0;
+}
+
+.servicio_description span {
+ /*  background-image: url("../public/GRADIENTE_AURA.jpeg");
+  background-repeat: no-repeat;
+  background-size: 400%;
+  background-position: -100px, -560px;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text; */
+  font-family: "Moderat-bold";
+  margin-right: 8px;
+}
+
+@keyframes backgroundMoving {
+  0% {
+    background-position-y: 0px;
+    background-position-x: 0px;
+  }
+  50% {
+    background-position-y: -200px;
+    background-position-x: -200px;
+  }
+  100% {
+    background-position-y: 0px;
+    background-position-x: 0px;
+  }
+}
+
+@media (min-width: 768px) {
+}

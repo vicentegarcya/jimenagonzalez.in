@@ -155,7 +155,7 @@ export default function Home() {
       },
       {
         opacity: 0,
-        visibility: 'hidden',
+        visibility: "hidden",
         position: "absolute",
         scrollTrigger: {
           trigger: universityTextRef.current,
@@ -365,54 +365,82 @@ export default function Home() {
             id="servicios"
           >
             <h5 ref={serviciosTitleRef}>
-              creativity is life, life is creativity, sooo let&apos;s create
+              creativity is life, life is creativity, sooo... let&apos;s create
               together!
             </h5>
             <div className={styles.servicios_main}>
               <Service
                 title={"Estrategia y Business Design"}
-                bubbles={[
-                  "Visión",
-                  "Plan estratégico",
-                  "Diseño de futuros",
-                  "Modelo de negocio",
-                ]}
+                explanation="Todo comienza con una visión, que la estrategia traduce en un negocio viable a través de investigación del contexto, el diseño del negocio y la acción alineada."
+                ctaText="¿NECESITAS ESTRATEGIA?"
                 descriptions={[
-                  "Afinando la visión del negocio, su misión interna y su propósito innovador en el sistema.",
-                  "Alineando visión con acción y objetivos gracias a la creación de un plan estratégico y táctico.",
-                  "Percibiendo las señales y tendencias para diseñar diferentes estrategias de presente y futuro.",
-                  "Creando un modelo de negocio viable y consistente, con una cartera de productos y servicios relevantes para el mundo.",
+                  {
+                    title: "Visión ·",
+                    text: "afinando la visión del negocio, su misión interna y su propósito innovador en el sistema como piedra angular del proyecto, en base a la cual se desarrolla la estrategia.",
+                  },
+                  {
+                    title: "Investigación de futuros ·",
+                    text: "percibiendo las señales y tendencias para crear estrategias coherentes de presente y futuro que se adelanten a los acontecimientos (Diseño de futuros).",
+                  },
+                  {
+                    title: "Investigación sistémica ·",
+                    text: "incorporando una visión holística para comprender las influencias de todos los factores y stakeholders relacionados para diseñar estrategias favorecidas por el propio contexto (Diseño sistémico).",
+                  },
+                  {
+                    title: "Investigación de mercados ·",
+                    text: "observando el mercado y su transformación para identificar las áreas de oportunidad clave.",
+                  },
+                  {
+                    title: "Plan estratégico ·",
+                    text: "alineando visión e insights con acción y objetivos gracias a la creación de un plan estratégico y táctico.",
+                  },
+                  {
+                    title: "Modelo de negocio ·",
+                    text: "creando un modelo de negocio viable y consistente, con una cartera de productos y servicios relevantes para el mundo.",
+                  },
                 ]}
-                isDesplegado={true}
+              />
+              <Service
+                title={"Identidad y branding"}
+                link={"con el equipo del studio SUPREME BEINGS."}
+                ctaText="¿NECESITAS BRANDING?"
+                descriptions={[
+                  {
+                    text: "descubriendo la identidad auténtica de tu proyecto para crear una experiencia de marca completa: naming, diseño de marca, dirección de arte y copywriting.",
+                  },
+                ]}
               />
               <Service
                 title={"Diseño de servicios y facilitación creativa"}
-                bubbles={[
-                  "Investigación cuali-cuanti",
-                  "Diseño de experiencia",
-                  "Ideación y conceptualización",
-                  "Facilitación de co-creación",
-                ]}
+                explanation="Conocer profundamente el usuario es la base para diseñar una experiencia de cliente (física, digital o híbrida) fluida y diferencial alineada con la marca."
+                ctaText="¿NECESITAS DISEÑO?"
                 descriptions={[
-                  "Indagando en las necesidades de los usuarios (investigación de usuarios) y comprendiendo el mercado (investigación de mercado) para una creación basada en insights.",
-                  "Creando una experiencia de cliente fluida y con un valor supremo.",
-                  "Generando disrupción y creatividad innovadora para lograr un concepto único.",
-                  "Creando la metodología y facilitando la sinergia creativa entre todos los participantes del proyecto.",
+                  {
+                    title: "Facilitación de la co-creación en equipo ·",
+                    text: "liderando el proceso de trabajo y creando una metodología ad hoc para facilitar la sinergia creativa del equipo del proyecto.",
+                  },
+                  {
+                    title: "Investigación de diseño ·",
+                    text: "comprendiendo la experiencia, necesidades e influencias de los usuarios para obtener insights relevantes para la creación de valor.",
+                  },
+                  {
+                    title: "Ideación y conceptualización ·",
+                    text: "generando disrupción innovadora para crear un concepto único.",
+                  },
+                  {
+                    title: "Diseño de experiencia ·",
+                    text: "creando una experiencia de usuario o cliente coherente y fluida, con una propuesta de valor diferencial.",
+                  },
                 ]}
               />
               <Service
                 title={"Diseño y desarrollo web"}
-                bubbles={[
-                  "Web corporativa",
-                  "Portfolio creativo",
-                  "Aplicación web",
-                  "Consultoría web",
-                ]}
+                link={[{text: "con Vicente Garcya", url: "https://www.vicentegarcya.com/"}]}
+                ctaText={"¿NECESITAS WEB?"}
                 descriptions={[
-                  "Afinando la visión del negocio, su misión interna y su propósito innovador en el sistema.",
-                  "Alineando visión con acción y objetivos gracias a la creación de un plan estratégico y táctico.",
-                  "Percibiendo las señales y tendencias para diseñar diferentes estrategias de presente y futuro.",
-                  "Creando un modelo de negocio viable y consistente, con una cartera de productos y servicios relevantes para el mundo.",
+                  {
+                    text: "creando experiencias digitales con desarrollo front-end o full-stack, como Web Apps, landing pages, portfolios, webs corporativas, páginas e-commerce y más.",
+                  },
                 ]}
               />
             </div>

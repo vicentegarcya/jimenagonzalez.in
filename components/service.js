@@ -1,69 +1,29 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import styles from "./service.module.css";
-import { useState } from "react";
-import { useSpring, animated } from "react-spring";
 
-export default function Service({ title, bubbles, descriptions, isDesplegado }) {
-  const [desplegado, setDesplegado] = useState(isDesplegado ? isDesplegado : false);
-  const [selectedService, setSelectedService] = useState(1);
-
-  const openAnimation = useSpring({
-    from: { opacity: "0", maxHeight: "80px", marginBottom: "0rem" },
-    to: {
-      opacity: "1",
-      maxHeight: desplegado ? "500px" : "80px",
-      marginBottom: desplegado ? "1rem" : "0rem",
-    },
-    config: { duration: "300" },
-  });
-
+export default function Service({ title, link, explanation, ctaText, descriptions }) {
   return (
     <div className={styles.servicio_div}>
-      <h5
-        className={styles.servicio_title}
-        onClick={() => setDesplegado(!desplegado)}
-      >
-        ✺ {title}
-      </h5>
-      <animated.div style={openAnimation} className={styles.servicio_content}>
-        <div className={styles.servicio_bubles}>
-          {bubbles.map((bubble, index) => {
-            return (
-              <button
-                key={index}
-                className={
-                  selectedService === index + 1 && desplegado
-                    ? styles.button_selected
-                    : undefined
-                }
-                onClick={() => setSelectedService(index + 1)}
-              >
-                {bubble}
-              </button>
-            );
-          })}
+      <div className={styles.servicio_intro}>
+        <div>
+          <h5 className={styles.servicio_title}>✺ {title}</h5>
+          {explanation && <p>{explanation}</p>}
+          {link && <a href={link[0].url} target="_blank">{link[0].text}</a>}
         </div>
+        <button>{ctaText}</button>
+      </div>
+      <div className={styles.servicio_content}>
         <div className={styles.servicio_text}>
           {descriptions.map((description, index) => {
             return (
-              <p
-                key={index}
-                className={
-                  selectedService === index + 1
-                    ? styles.button_selected
-                    : undefined
-                }
-                style={{
-                  display: selectedService === index + 1 ? "block" : "none",
-                }}
-                onClick={() => setSelectedService(index + 1)}
-              >
-                {description}
+              <p key={index} className={styles.servicio_description}>
+                {description.title && <span>{description.title}</span>}
+                {description.text}
               </p>
             );
           })}
         </div>
-      </animated.div>
+      </div>
     </div>
   );
 }
