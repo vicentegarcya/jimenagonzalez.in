@@ -18,16 +18,13 @@
   z-index: 1000;
 }
 
-.header > * {
-  width: 33.33%
-}
-
 .header_links {
   display: flex;
   align-items: center;
   height: 100%;
   border-left: 1px solid var(--main-black);
   border-right: 1px solid var(--main-black);
+  margin-left: -4vw;
 }
 
 .header_links > h5 {

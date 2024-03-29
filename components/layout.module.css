@@ -3,3 +3,25 @@
   color: #282c32;
 }
 
+.telonWrapper {
+  width: 100vw;
+  height: 100vh;
+  background: var(--main-white);
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.telon {
+  width: 100vw;
+  height: 100vh;
+  background: url("../public/GRADIENTE_AURA.jpeg");
+  background-size: 400%;
+  background-position-y: -3000px;
+  background-position-x: -3000px;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+}

@@ -1,16 +1,18 @@
 import Head from "next/head";
 import Header from "./header";
-import Footer from "./footer";
 import styles from "./layout.module.css";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export default function Layout({ children }) {
+  const [isTelon, setIsTelon] = useState(true);
   gsap.registerPlugin(ScrollTrigger);
   const headerRef = useRef();
   const mainRef = useRef();
+  const telonRef = useRef();
+  const telonWrapperRef = useRef();
 
   useEffect(() => {
     gsap.to(headerRef.current, {
@@ -21,8 +23,29 @@ export default function Layout({ children }) {
         start: "bottom bottom",
         end: "bottom top",
         scrub: 0.05,
-      }
+      },
     });
+
+    const appearAnimation = gsap.fromTo(
+      telonRef.current,
+      { y: "100%" },
+      { y: "0%", duration: 1, ease: "power2.inOut" }
+    );
+
+    const disappearAnimation = gsap.fromTo(
+      telonRef.current,
+      { y: "0%" },
+      { y: "-100%", duration: 1, ease: "power2.inOut", delay: 1 }
+    );
+
+    appearAnimation.eventCallback("onComplete", () => {
+      telonWrapperRef.current.style.background = 'transparent';
+      disappearAnimation.play();
+    });
+
+    setTimeout(() => {
+      setIsTelon(false);
+    }, 2000);
   }, []);
 
   return (
@@ -38,8 +61,14 @@ export default function Layout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
       </Head>
       <Header ref={headerRef} />
-      <main ref={mainRef} className={styles.App_main}>{children}</main>
-      <Footer />
+      <main ref={mainRef} className={styles.App_main}>
+        {children}
+      </main>
+      {isTelon && (
+        <div ref={telonWrapperRef} className={styles.telonWrapper}>
+          <div ref={telonRef} className={styles.telon}></div>
+        </div>
+      )}
     </div>
   );
 }

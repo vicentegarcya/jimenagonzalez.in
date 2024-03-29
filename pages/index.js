@@ -9,6 +9,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Service from "@/components/service";
 import PropuestaForm from "@/components/propuestaForm";
+import LoadingPage from "@/components/loadingPage";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -24,6 +25,7 @@ export default function Home() {
   const metodologiaDivRef = useRef();
   const experienciaTitleRef = useRef();
   const serviciosTitleRef = useRef();
+  const serviciosDivRef = useRef();
   const serviciosSectionRef = useRef();
 
   const bigCompaniesTextRef = useRef();
@@ -35,11 +37,7 @@ export default function Home() {
   const contactFormMainRef = useRef();
 
   useEffect(() => {
-    if (isDesktop) {
-      setTimeout(() => setIsLoading(false), 2500);
-    } else {
-      setIsLoading(false);
-    }
+    setTimeout(() => setIsLoading(false), 8800);
 
     //ANIMATIONS
     //HERO
@@ -90,7 +88,7 @@ export default function Home() {
     });
 
     gsap.to(metodologiaDivRef.current, {
-      marginTop: "25vh",
+      marginTop: "37vh",
       ease: "none",
       scrollTrigger: {
         trigger: metodologiaTitleRef.current,
@@ -174,7 +172,7 @@ export default function Home() {
       ease: "none",
       scrollTrigger: {
         trigger: serviciosTitleRef.current,
-        start: "top 14.65%",
+        start: "top 18.65%",
         end: "+=0.01%",
         scrub: 0.01,
       },
@@ -187,6 +185,17 @@ export default function Home() {
         start: "bottom 99%",
         end: "+=2%",
         scrub: 1,
+      },
+    });
+
+    gsap.to(serviciosDivRef.current, {
+      marginTop: "37vh",
+      ease: "none",
+      scrollTrigger: {
+        trigger: serviciosTitleRef.current,
+        start: "top 18.65%",
+        end: "+=0.01%",
+        scrub: 0.01,
       },
     });
 
@@ -214,6 +223,8 @@ export default function Home() {
       },
     });
   }, [isLoading, isDesktop]);
+
+  if (isLoading) return <LoadingPage />;
 
   if (!isLoading)
     return (
@@ -288,14 +299,6 @@ export default function Home() {
                 proyectos emergentes en la creación de
                 <span> valor, propósito y acción alineada </span>.
               </p>
-              <p>
-                Para cada proyecto, creo un marco metodológico ad hoc para dotar
-                de coherencia y claridad a todo el proceso. Facilito la
-                co-creación de una estrategia que permita hacer realidad la
-                visión, apoyándome en mi expertise de negocio y diseño.
-              </p>
-            </div>
-            <div>
               <div className={styles.cinta_transportadora}>
                 <p>
                   Service Design · Pensamiento estratégico · Lean Start-up ·
@@ -310,6 +313,12 @@ export default function Home() {
                   Análisis de mercado ·
                 </p>
               </div>
+              <p>
+                Para cada proyecto, creo un marco metodológico ad hoc para dotar
+                de coherencia y claridad a todo el proceso. Facilito la
+                co-creación de una estrategia que permita hacer realidad la
+                visión, apoyándome en mi expertise de negocio y diseño.
+              </p>
               <div className={styles.cinta_transportadora}>
                 <p>
                   Diseño de futuros · Marketing · Gestión de proyectos · User
@@ -368,7 +377,7 @@ export default function Home() {
               creativity is life, life is creativity, sooo... let&apos;s create
               together!
             </h5>
-            <div className={styles.servicios_main}>
+            <div ref={serviciosDivRef} className={styles.servicios_main}>
               <Service
                 title={"Estrategia y Business Design"}
                 explanation="Todo comienza con una visión, que la estrategia traduce en un negocio viable a través de investigación del contexto, el diseño del negocio y la acción alineada."
@@ -402,13 +411,21 @@ export default function Home() {
               />
               <Service
                 title={"Identidad y branding"}
-                link={"con el equipo del studio SUPREME BEINGS."}
+                link={[
+                  {
+                    text: "con el equipo del studio SUPREME BEINGS",
+                    url: "https://www.supremebeings.love/",
+                  },
+                ]}
                 ctaText="¿NECESITAS BRANDING?"
                 descriptions={[
                   {
-                    text: "descubriendo la identidad auténtica de tu proyecto para crear una experiencia de marca completa: naming, diseño de marca, dirección de arte y copywriting.",
+                    text: "Descubriendo la identidad auténtica de tu proyecto para crear una experiencia de marca completa: naming, diseño de marca, dirección de arte y copywriting.",
                   },
                 ]}
+                onClick={() =>
+                  contactFormRef.current.scrollIntoView({ behavior: "smooth" })
+                }
               />
               <Service
                 title={"Diseño de servicios y facilitación creativa"}
@@ -435,11 +452,16 @@ export default function Home() {
               />
               <Service
                 title={"Diseño y desarrollo web"}
-                link={[{text: "con Vicente Garcya", url: "https://www.vicentegarcya.com/"}]}
+                link={[
+                  {
+                    text: "con Vicente Garcya",
+                    url: "https://www.vicentegarcya.com/",
+                  },
+                ]}
                 ctaText={"¿NECESITAS WEB?"}
                 descriptions={[
                   {
-                    text: "creando experiencias digitales con desarrollo front-end o full-stack, como Web Apps, landing pages, portfolios, webs corporativas, páginas e-commerce y más.",
+                    text: "Creando experiencias digitales con desarrollo front-end o full-stack, como Web Apps, landing pages, portfolios, webs corporativas, páginas e-commerce y más.",
                   },
                 ]}
               />
@@ -450,9 +472,48 @@ export default function Home() {
             <div ref={contactFormMainRef} className={styles.contact_form_main}>
               <div className={styles.contact_form_data}>
                 <h5>CONTACTO</h5>
-                <p>Loren ipsum</p>
-                <p>Loren ipsum</p>
-                <p>Loren ipsum</p>
+                <div>
+                  <div className={styles.top}>
+                    <p>
+                      Si quieres saber más sobre mi vida laboral, visita{" "}
+                      <a
+                        href="https://www.linkedin.com/in/jimena-gonzalez-collados/"
+                        target="_blank"
+                      >
+                        mi perfil de Linkedin
+                      </a>
+                    </p>
+                    <p>
+                      {" "}
+                      Escucha aquí{" "}
+                      <a
+                        href="https://open.spotify.com/playlist/6nDnwvDJOvY1VebJWbVsd7?si=jF_EYQm5Qy6g8xk_RXPaeg&utm_source=copy-link&utm_medium=copy-link&nd=1&_branch_match_id=1182632066913753218&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXLy7IL8lMq9TLyczL1g82Ciz29C0rN3ZOAgDcFrbjIAAAAA%3D%3D"
+                        target="_blank"
+                      >
+                        mi playlist de Spotify
+                      </a>{" "}
+                      para entrar en flow creativo.
+                    </p>
+                    <p>
+                      Para cualquier otra cosa,{" "}
+                      <a href="mailto: hi@jimenagonzalez.in">
+                        ¡envíame un correo a hi@jimenagonzalez.in!
+                      </a>
+                    </p>
+                  </div>
+                  <div className={styles.bottom}>
+                    <p style={{ marginBottom: "12px" }}>
+                      web x{" "}
+                      <a href="https://www.vicentegarcya.com/" target="_blank">
+                        Vicente Garcya
+                      </a>
+                    </p>
+                    <p>x Jimena Gonzalez</p>
+                    <p>
+                      © 2023, Jimena Gonzalez, Todos los derechos reservados
+                    </p>
+                  </div>
+                </div>
               </div>
               <PropuestaForm></PropuestaForm>
             </div>

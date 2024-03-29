@@ -130,7 +130,7 @@
 .metodologia {
   width: 100%;
   margin-top: 200px;
-  height: 113dvh;
+  height: 133dvh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -152,11 +152,8 @@
   font-size: 1.7vw;
   font-family: "Moderat-Light";
   font-weight: 100;
-}
-
-.metodologia > div > p:nth-child(1) {
   margin-bottom: 80px;
-    z-index: 1;
+  z-index: 1;
 }
 
 .metodologia > div > p:nth-child(1) > span {
@@ -185,23 +182,24 @@
 .metodologia .cinta_transportadora {
   width: 100vw;
   margin-left: -3rem;
-  height: 4.5vw;
+  height: 5dvh;
   white-space: nowrap;
-  padding: 1rem 3rem;
+  padding: 0.3rem 3rem;
   background: var(--main-black);
   font-size: 15px !important;
+  margin-bottom: 80px;
 }
 
 .metodologia .cinta_transportadora > p {
   font-family: "Moderat-Light";
   color: var(--main-white);
-  font-size: 1.35vw;
+  font-size: 1.1vw;
   display: inline-block;
   animation: scrollText 25s infinite linear;
 }
 
 .metodologia div:nth-child(3) > div:nth-child(2) {
-  margin-top: 30px; 
+  margin-top: 30px;
 }
 
 .metodologia div:nth-child(3) > div:nth-child(2) > p {
@@ -312,7 +310,7 @@
   margin-top: 80px;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s cubic-bezier(0.39, 0.575, 0.565, 1)
+  transition: opacity 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .companies_logos > img {
@@ -402,10 +400,6 @@
   border-bottom: 1px solid grey;
 }
 
-.servicios_main > div:last-child {
-  border-bottom: none;
-}
-
 //CONTACTO
 .contact_form {
   position: fixed;
@@ -441,19 +435,41 @@
   transform: scale(0);
 }
 
+.contact_form_main > div:last-child {
+  width: 50%;
+}
+
 .contact_form_data {
-  width: 60%;
+  width: 40%;
+  height: 100%;
   font-family: "Moderat-Reg";
   padding-top: 1rem;
 }
 
 .contact_form_data > h5 {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   font-size: 1.3vw;
 }
 
-.contact_form_data > p {
+.contact_form_data p {
   font-size: 1vw;
+}
+
+.contact_form_data p > a {
+  font-family: 'Moderat-bold';
+  font-weight: 500;
+}
+
+.contact_form_data > div {
+  width: 70%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact_form_data .top > p {
+  margin-bottom: 12px;
 }
 
 /* RESPONSIVE MOBILE */

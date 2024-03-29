@@ -75,13 +75,12 @@ export default function PropuestaForm() {
 
   return (
     <div className={styles.propuesta_form}>
-      Hola Jimena, soy _______<i>(escribe tu nombre)</i>.<br></br>Trabajo en
+      Hola Jimena, soy _____________<i>(escribe tu nombre)</i>.<br></br>Trabajo en
       ___________<i>(escribe el nombre de tu empresa)</i> y tengo una idea o
       necesidad relacionada con #estrategia #diseño-de-servicios #web #branding
-      , que es ______________________
-      ______________ <i>(describe tu
+      , que es ____________________________________ <i>(describe tu
       idea o necesidad)</i>.<br></br>Puedes
-      contactarme en __________ <i>(escribe tu e-mail)</i> o en
+      contactarme en ____________ <i>(escribe tu e-mail)</i> o en
       ___________ <i>(escribe tu teléfono)</i>.
       {/* <form onSubmit={handleSubmit}>
         <fieldset className={styles.temas}>
