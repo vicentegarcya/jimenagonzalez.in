@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./loadingPage.module.css";
 import { gsap } from "gsap";
-import { sassTrue } from "sass";
 
 export default function LoadingPage() {
   const nameRef = useRef();
@@ -14,29 +13,29 @@ export default function LoadingPage() {
 
   useEffect(() => {
     setTimeout(() => {
-        setHideName(true);
-        setHideKeywords(false);
-        animateKeywords(0);
-    }, 1500)
+      setHideName(true);
+      setHideKeywords(false);
+      animateKeywords(0);
+    }, 1600);
     setTimeout(() => {
-        setHideKeywords(true);
-        setHideYears(false);
-        animateYears(0);
-    }, 5800)
+      setHideKeywords(true);
+      setHideYears(false);
+      animateYears(0);
+    }, 3400);
   }, []);
 
   function animateKeywords(index) {
     const paragraphs = keywordsRef.current?.querySelectorAll("p");
-    console.log(paragraphs)
+    console.log(paragraphs);
     if (index < paragraphs.length) {
       if (index > 0) {
         gsap.to(paragraphs[index - 1], {
-          display: 'none',
-          duration: 0.35,
+          display: "none",
+          duration: 0.3,
           onComplete: function () {
             gsap.to(paragraphs[index], {
-              display: 'block',
-              duration: 0.35,
+              display: "block",
+              duration: 0.3,
               onComplete: function () {
                 animateKeywords(index + 1);
               },
@@ -45,8 +44,8 @@ export default function LoadingPage() {
         });
       } else {
         gsap.to(paragraphs[index], {
-          display: 'block',
-          duration: 0.35,
+          display: "block",
+          duration: 0.3,
           onComplete: function () {
             animateKeywords(index + 1);
           },
@@ -57,16 +56,16 @@ export default function LoadingPage() {
 
   function animateYears(index) {
     const paragraphs = yearsRef.current?.querySelectorAll("p");
-    console.log(paragraphs)
+    console.log(paragraphs);
     if (index < paragraphs.length) {
       if (index > 0) {
         gsap.to(paragraphs[index - 1], {
-          display: 'none',
-          duration: 0.15,
+          display: "none",
+          duration: 0.12,
           onComplete: function () {
             gsap.to(paragraphs[index], {
-              display: 'block',
-              duration: 0.15,
+              display: "block",
+              duration: 0.12,
               onComplete: function () {
                 animateYears(index + 1);
               },
@@ -75,8 +74,8 @@ export default function LoadingPage() {
         });
       } else {
         gsap.to(paragraphs[index], {
-          display: 'block',
-          duration: 0.15,
+          display: "block",
+          duration: 0.12,
           onComplete: function () {
             animateYears(index + 1);
           },
@@ -87,32 +86,27 @@ export default function LoadingPage() {
 
   return (
     <div className={styles.loadingPage}>
-      <div ref={nameRef} className={`${styles.name}`} style={{display: hideName ? 'none' : 'flex'}}>
-        <p>J</p>
-        <p>I</p>
-        <p>M</p>
-        <p>E</p>
-        <p>N</p>
-        <p>A</p>
-        <div></div>
-        <p>G</p>
-        <p>O</p>
-        <p>N</p>
-        <p>Z</p>
-        <p>A</p>
-        <p>L</p>
-        <p>E</p>
-        <p>Z</p>
+      <div
+        ref={nameRef}
+        className={`${styles.name}`}
+        style={{ display: hideName ? "none" : "flex" }}
+      >
+        <p>Strategy</p>
       </div>
-      <div ref={keywordsRef} className={`${styles.keywords}`} style={{display: hideKeywords ? 'none' : 'block'}}>
-        <p>Business Strategy</p>
+      <div
+        ref={keywordsRef}
+        className={`${styles.keywords}`}
+        style={{ display: hideKeywords ? "none" : "block" }}
+      >
+        <p>Business Design</p>
         <p>Service Design</p>
-        <p>Innovation</p>
-        <p>Entrepreneurship</p>
         <p>Facilitation</p>
-        <p>Project Management</p>
       </div>
-      <div ref={yearsRef} className={`${styles.years}`} style={{display: hideYears ? 'none' : 'block'}}>
+      <div
+        ref={yearsRef}
+        className={`${styles.years}`}
+        style={{ display: hideYears ? "none" : "block" }}
+      >
         <p>2015</p>
         <p>2016</p>
         <p>2017</p>

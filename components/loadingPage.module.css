@@ -18,13 +18,14 @@
   text-transform: uppercase;
 }
 
-.loadingPage .name > div {
-  width: 2vw;
+.loadingPage .name {
+  height: 11vh;
+  align-items: center;
+  overflow: hidden;
 }
 
 .loadingPage .name > p {
-  animation: appearing cubic-bezier(0.39, 0.575, 0.565, 1) 2s;
-  transform: translateX(0%);
+  animation: appearing cubic-bezier(0.39, 0.575, 0.565, 1) 1.2s;
 }
 
 .loadingPage .keywords > p {
@@ -37,9 +38,9 @@
 
 @keyframes appearing {
   from {
-    opacity: 0;
+    transform: translateY(100%);
   }
   to {
-    opacity: 1;
+    transform: translateY(0%);
   }
 }

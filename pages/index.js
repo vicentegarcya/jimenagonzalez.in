@@ -37,7 +37,7 @@ export default function Home() {
   const contactFormMainRef = useRef();
 
   useEffect(() => {
-    setTimeout(() => setIsLoading(false), 8800);
+    setTimeout(() => setIsLoading(false), 6000);
 
     //ANIMATIONS
     //HERO
@@ -299,20 +299,6 @@ export default function Home() {
                 proyectos emergentes en la creación de
                 <span> valor, propósito y acción alineada </span>.
               </p>
-              <div className={styles.cinta_transportadora}>
-                <p>
-                  Service Design · Pensamiento estratégico · Lean Start-up ·
-                  Emprendimiento · Business Design · Finanzas · Investigación
-                  cualitativa · Análisis de datos · Diseño estratégico ·
-                  Análisis de mercado ·
-                </p>
-                <p>
-                  Service Design · Pensamiento estratégico · Lean Start-up ·
-                  Emprendimiento · Business Design · Finanzas · Investigación
-                  cualitativa · Análisis de datos · Diseño estratégico ·
-                  Análisis de mercado ·
-                </p>
-              </div>
               <p>
                 Para cada proyecto, creo un marco metodológico ad hoc para dotar
                 de coherencia y claridad a todo el proceso. Facilito la
@@ -321,15 +307,159 @@ export default function Home() {
               </p>
               <div className={styles.cinta_transportadora}>
                 <p>
-                  Diseño de futuros · Marketing · Gestión de proyectos · User
-                  Experience · Producto y servicio digital · Design Thinking ·
-                  Facilitación · Liderazgo de equipos · Pensamiento sistémico ·
+                  Strategy ➔ Diseño estratégico ❉ Pensamiento sistémico ▶▶
+                  Diseño de futuros ◖ Business Design ◗ Análisis de mercado ❋
                 </p>
                 <p>
-                  Diseño de futuros · Marketing · Gestión de proyectos · User
-                  Experience · Producto y servicio digital · Design Thinking ·
-                  Facilitación · Liderazgo de equipos · Pensamiento sistémico ·
+                  Strategy ➔ Diseño estratégico ❉ Pensamiento sistémico ▶▶
+                  Diseño de futuros ◖ Business Design ◗ Análisis de mercado ❋
                 </p>
+              </div>
+              <div className={styles.cinta_transportadora_2}>
+                <div>
+                  <div>
+                    <p>Investigación de usuarios</p>
+                    <svg
+                      viewBox="0 0 200 200"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill="#BAE6FF"
+                        d="M53,-57.8C66.5,-51.8,73.8,-33,70.3,-17.6C66.9,-2.1,52.8,10.2,42.9,22.3C33,34.5,27.2,46.7,17.4,52.2C7.5,57.7,-6.3,56.5,-20.5,52.9C-34.8,49.2,-49.4,43.1,-53.9,32.5C-58.4,21.9,-52.8,6.8,-51.3,-10.3C-49.8,-27.4,-52.5,-46.6,-44.6,-53.6C-36.8,-60.6,-18.4,-55.5,0.7,-56.3C19.7,-57.1,39.5,-63.8,53,-57.8Z"
+                        transform="translate(100 100)"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p>User Experience</p>
+                    <svg
+                      viewBox="0 0 200 200"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill="#A7F0BA"
+                        d="M39.8,-60.6C52.7,-53.6,65.2,-44.5,73.8,-31.9C82.3,-19.3,86.8,-3.1,83.6,11.3C80.4,25.6,69.4,38.1,57.4,46.9C45.4,55.7,32.4,60.9,18.5,66.6C4.7,72.2,-10,78.3,-22,74.8C-34,71.4,-43.3,58.5,-50.2,46C-57.1,33.5,-61.7,21.5,-62.7,9.5C-63.7,-2.5,-61.1,-14.6,-56.1,-25.6C-51.1,-36.6,-43.6,-46.4,-33.9,-54.9C-24.1,-63.4,-12.1,-70.4,0.7,-71.4C13.4,-72.5,26.8,-67.5,39.8,-60.6Z"
+                        transform="translate(100 100)"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p>Service Design</p>
+                    <svg
+                      viewBox="0 0 200 200"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill="#E8DAFF"
+                        d="M50.5,-65.2C64.2,-59.6,73.3,-43.2,70.9,-28.3C68.4,-13.4,54.5,-0.1,50.4,17.6C46.3,35.4,52.2,57.6,45.4,62.8C38.7,67.9,19.3,56,2.2,53C-15,50,-30,56,-43.2,52.9C-56.5,49.9,-68,37.9,-74.6,23C-81.1,8.1,-82.7,-9.6,-73.6,-19.7C-64.5,-29.7,-44.7,-32,-30.7,-37.5C-16.6,-43,-8.3,-51.7,5,-58.6C18.4,-65.6,36.8,-70.8,50.5,-65.2Z"
+                        transform="translate(100 100)"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p>Design Thinking</p>
+                    <svg
+                      viewBox="0 0 200 200"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill="#9EF0F0"
+                        d="M40.9,-72.4C48.5,-66.4,47,-46.4,54.9,-32C62.8,-17.5,80.1,-8.8,85.4,3C90.6,14.9,83.9,29.7,74.1,40.8C64.3,51.9,51.4,59.3,38.5,62.6C25.6,65.9,12.8,65.3,-0.3,65.8C-13.3,66.2,-26.7,67.7,-37.7,63.3C-48.7,58.9,-57.4,48.5,-67.1,37C-76.7,25.5,-87.2,12.7,-87.5,-0.2C-87.8,-13.1,-77.9,-26.2,-68.9,-38.9C-60,-51.6,-52,-63.9,-40.6,-67.7C-29.3,-71.5,-14.7,-66.9,1,-68.6C16.6,-70.3,33.3,-78.4,40.9,-72.4Z"
+                        transform="translate(100 100)"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p>Facilitación</p>
+                    <svg
+                      viewBox="0 0 200 200"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill="#FFD6E8"
+                        d="M27.1,-55.8C30.5,-45,25.4,-28.4,24.9,-18.1C24.4,-7.8,28.4,-3.9,38.8,6C49.2,15.9,66,31.9,66,41.1C65.9,50.3,48.9,52.8,35.1,61.2C21.3,69.5,10.7,83.7,1.8,80.6C-7.1,77.6,-14.3,57.3,-25.7,47.6C-37,37.9,-52.7,38.7,-63.9,32.5C-75,26.3,-81.7,13.2,-76.7,2.9C-71.7,-7.4,-55.1,-14.8,-46.6,-25.6C-38.1,-36.5,-37.8,-50.7,-31.4,-59.8C-25,-68.8,-12.5,-72.5,-0.3,-72C11.9,-71.4,23.7,-66.5,27.1,-55.8Z"
+                        transform="translate(100 100)"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <p>Investigación de usuarios</p>
+                    <svg
+                      viewBox="0 0 200 200"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill="#BAE6FF"
+                        d="M53,-57.8C66.5,-51.8,73.8,-33,70.3,-17.6C66.9,-2.1,52.8,10.2,42.9,22.3C33,34.5,27.2,46.7,17.4,52.2C7.5,57.7,-6.3,56.5,-20.5,52.9C-34.8,49.2,-49.4,43.1,-53.9,32.5C-58.4,21.9,-52.8,6.8,-51.3,-10.3C-49.8,-27.4,-52.5,-46.6,-44.6,-53.6C-36.8,-60.6,-18.4,-55.5,0.7,-56.3C19.7,-57.1,39.5,-63.8,53,-57.8Z"
+                        transform="translate(100 100)"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p>User Experience</p>
+                    <svg
+                      viewBox="0 0 200 200"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill="#A7F0BA"
+                        d="M39.8,-60.6C52.7,-53.6,65.2,-44.5,73.8,-31.9C82.3,-19.3,86.8,-3.1,83.6,11.3C80.4,25.6,69.4,38.1,57.4,46.9C45.4,55.7,32.4,60.9,18.5,66.6C4.7,72.2,-10,78.3,-22,74.8C-34,71.4,-43.3,58.5,-50.2,46C-57.1,33.5,-61.7,21.5,-62.7,9.5C-63.7,-2.5,-61.1,-14.6,-56.1,-25.6C-51.1,-36.6,-43.6,-46.4,-33.9,-54.9C-24.1,-63.4,-12.1,-70.4,0.7,-71.4C13.4,-72.5,26.8,-67.5,39.8,-60.6Z"
+                        transform="translate(100 100)"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p>Service Design</p>
+                    <svg
+                      viewBox="0 0 200 200"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill="#E8DAFF"
+                        d="M50.5,-65.2C64.2,-59.6,73.3,-43.2,70.9,-28.3C68.4,-13.4,54.5,-0.1,50.4,17.6C46.3,35.4,52.2,57.6,45.4,62.8C38.7,67.9,19.3,56,2.2,53C-15,50,-30,56,-43.2,52.9C-56.5,49.9,-68,37.9,-74.6,23C-81.1,8.1,-82.7,-9.6,-73.6,-19.7C-64.5,-29.7,-44.7,-32,-30.7,-37.5C-16.6,-43,-8.3,-51.7,5,-58.6C18.4,-65.6,36.8,-70.8,50.5,-65.2Z"
+                        transform="translate(100 100)"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p>Design Thinking</p>
+                    <svg
+                      viewBox="0 0 200 200"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill="#9EF0F0"
+                        d="M40.9,-72.4C48.5,-66.4,47,-46.4,54.9,-32C62.8,-17.5,80.1,-8.8,85.4,3C90.6,14.9,83.9,29.7,74.1,40.8C64.3,51.9,51.4,59.3,38.5,62.6C25.6,65.9,12.8,65.3,-0.3,65.8C-13.3,66.2,-26.7,67.7,-37.7,63.3C-48.7,58.9,-57.4,48.5,-67.1,37C-76.7,25.5,-87.2,12.7,-87.5,-0.2C-87.8,-13.1,-77.9,-26.2,-68.9,-38.9C-60,-51.6,-52,-63.9,-40.6,-67.7C-29.3,-71.5,-14.7,-66.9,1,-68.6C16.6,-70.3,33.3,-78.4,40.9,-72.4Z"
+                        transform="translate(100 100)"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p>Facilitación</p>
+                    <svg
+                      viewBox="0 0 200 200"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill="#FFD6E8"
+                        d="M27.1,-55.8C30.5,-45,25.4,-28.4,24.9,-18.1C24.4,-7.8,28.4,-3.9,38.8,6C49.2,15.9,66,31.9,66,41.1C65.9,50.3,48.9,52.8,35.1,61.2C21.3,69.5,10.7,83.7,1.8,80.6C-7.1,77.6,-14.3,57.3,-25.7,47.6C-37,37.9,-52.7,38.7,-63.9,32.5C-75,26.3,-81.7,13.2,-76.7,2.9C-71.7,-7.4,-55.1,-14.8,-46.6,-25.6C-38.1,-36.5,-37.8,-50.7,-31.4,-59.8C-25,-68.8,-12.5,-72.5,-0.3,-72C11.9,-71.4,23.7,-66.5,27.1,-55.8Z"
+                        transform="translate(100 100)"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                {/* <p>
+                  Investigación de usuarios <span></span> User Experience{" "}
+                  <span></span> Service Design <span></span>
+                  Design Thinking <span></span> Facilitación <span></span>
+                </p>
+                <p>
+                  Investigación de usuarios <span></span> User Experience{" "}
+                  <span></span> Service Design <span></span>
+                  Design Thinking <span></span> Facilitación <span></span>
+                </p> */}
               </div>
             </div>
           </section>

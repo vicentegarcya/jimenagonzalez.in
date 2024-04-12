@@ -176,29 +176,74 @@
   z-index: -1;
   animation: highlight 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.75s;
   opacity: 0.55;
-  border-radius: 6px;
 }
 
 .metodologia .cinta_transportadora {
   width: 100vw;
   margin-left: -3rem;
-  height: 5dvh;
   white-space: nowrap;
-  padding: 0.3rem 3rem;
-  background: var(--main-black);
+  padding: 1rem 3rem;
+  border-bottom: 1px solid var(--main-black);
+  border-top: 1px solid var(--main-black);
   font-size: 15px !important;
-  margin-bottom: 80px;
+  margin-bottom: 5px;
 }
 
 .metodologia .cinta_transportadora > p {
-  font-family: "Moderat-Light";
-  color: var(--main-white);
-  font-size: 1.1vw;
+  font-family: "Moderat-Reg";
+  color: var(--main-black);
+  font-size: 2.1vw;
   display: inline-block;
+  animation: scrollText 25s infinite linear;
+  text-transform: uppercase;
+}
+
+.metodologia .cinta_transportadora > p > span {
+  background: url("../public/GRADIENTE_AURA.jpeg");
+  background-size: 100%;
+  font-size: 2.5vw;
+  display: block;
+  width: 3vw;
+  height: 3vw;
+  border-radius: 30% 70% 67% 33% / 30% 30% 70% 70%;
+}
+
+.metodologia .cinta_transportadora_2 {
+  width: 100vw;
+  margin-left: -3rem;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0.25rem 3rem;
+  border-bottom: 1px solid var(--main-black);
+  border-top: 1px solid var(--main-black);
+  font-size: 15px !important;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+.metodologia .cinta_transportadora_2 > div {
+  width: fit-content;
+  display: flex;
+  align-items: center;
   animation: scrollText 25s infinite linear;
 }
 
-.metodologia div:nth-child(3) > div:nth-child(2) {
+.metodologia .cinta_transportadora_2 > div > div {
+  font-family: "Editorial-Light";
+  color: var(--main-black);
+  font-size: 2.5vw;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.metodologia .cinta_transportadora_2 > div > div > svg {
+  width: 5vw;
+  height: 5vw;
+  margin-left: 12px;
+}
+
+.metodologia > div:nth-child(3) > div:nth-child(2) {
   margin-top: 30px;
 }
 
@@ -281,7 +326,6 @@
   z-index: -1;
   animation: highlight 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.75s;
   opacity: 0.55;
-  border-radius: 6px;
 }
 
 @keyframes highlight {
@@ -456,7 +500,7 @@
 }
 
 .contact_form_data p > a {
-  font-family: 'Moderat-bold';
+  font-family: "Moderat-bold";
   font-weight: 500;
 }
 
