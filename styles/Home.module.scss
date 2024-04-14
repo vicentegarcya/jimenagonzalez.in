@@ -130,10 +130,8 @@
 .metodologia {
   width: 100%;
   margin-top: 200px;
-  height: 133dvh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   z-index: 2;
 }
 
@@ -145,6 +143,7 @@
   text-transform: uppercase;
   position: relative;
   z-index: 100;
+  margin-bottom: 80px;
 }
 
 .metodologia > div > p {
@@ -187,25 +186,35 @@
   border-top: 1px solid var(--main-black);
   font-size: 15px !important;
   margin-bottom: 5px;
+  display: flex;
+  align-items: center;
 }
 
 .metodologia .cinta_transportadora > p {
-  font-family: "Moderat-Reg";
+  font-family: "Editorial-Light";
   color: var(--main-black);
-  font-size: 2.1vw;
+  font-size: 2.5vw;
   display: inline-block;
-  animation: scrollText 25s infinite linear;
-  text-transform: uppercase;
+  animation: scrollText 30s infinite linear;
 }
 
-.metodologia .cinta_transportadora > p > span {
-  background: url("../public/GRADIENTE_AURA.jpeg");
-  background-size: 100%;
-  font-size: 2.5vw;
-  display: block;
-  width: 3vw;
-  height: 3vw;
-  border-radius: 30% 70% 67% 33% / 30% 30% 70% 70%;
+.metodologia .cinta_transportadora > p > .emoji {
+  font-size: 2vw;
+  margin: 0 12px;
+}
+
+.metodologia .cinta_transportadora > p > .keyword > .emoji {
+  font-size: 2vw;
+  margin-left: 12px;
+}
+
+.metodologia .cinta_transportadora > p > .keyword {
+  font-family: 'Editorial-reg';
+  border: 1px solid var(--main-black);
+  border-radius: 24px;
+  padding: 0 24px;
+  margin-right: 12px;
+  font-size: 2.3vw;
 }
 
 .metodologia .cinta_transportadora_2 {
@@ -216,7 +225,6 @@
   padding: 0.25rem 3rem;
   border-bottom: 1px solid var(--main-black);
   border-top: 1px solid var(--main-black);
-  font-size: 15px !important;
   margin-bottom: 5px;
   display: flex;
   align-items: center;
@@ -225,7 +233,7 @@
   width: fit-content;
   display: flex;
   align-items: center;
-  animation: scrollText 25s infinite linear;
+  animation: scrollText 35s infinite linear;
 }
 
 .metodologia .cinta_transportadora_2 > div > div {
@@ -241,6 +249,14 @@
   width: 5vw;
   height: 5vw;
   margin-left: 12px;
+}
+
+.metodologia .cinta_transportadora_2 .keyword {
+  font-family: 'Editorial-reg';
+  border: 1px solid var(--main-black);
+  border-radius: 24px;
+  padding: 0 24px;
+  font-size: 2.3vw;
 }
 
 .metodologia > div:nth-child(3) > div:nth-child(2) {
@@ -263,8 +279,7 @@
 //EXPERIENCIA
 
 .experiencia {
-  margin-top: 150px;
-  height: auto;
+  margin: 120px 0 80px 0;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -273,32 +288,27 @@
 .experiencia h5 {
   font-size: 1.5vw;
   width: 100%;
-  font-weight: 100;
   font-family: "Moderat-Reg";
   text-transform: uppercase;
-  margin-bottom: 6px;
+  margin-bottom: 80px;
   z-index: 100;
 }
 
 .experiencia > div {
   width: 100%;
   display: flex;
-  justify-content: space-between;
 }
 
 .experiencia > div > .left {
   width: 30%;
-  height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin-bottom: 200px;
 }
 
 .experiencia > div > .left > div {
   width: 100%;
-  height: 80dvh;
   display: flex;
+  margin-bottom: 80px;
 }
 
 .experiencia > div > .left > div > p:nth-child(1) {
@@ -335,6 +345,20 @@
   100% {
     max-width: 100%;
   }
+}
+
+.experiencia .hablemos {
+  background: url("../public/PSICODELICO.jpeg");
+  background-size: 2000%;
+  border: 1px solid var(--main-black);
+  border-radius: 60px;
+  height: fit-content;
+  overflow: hidden;
+  padding: 0.5rem 1.5rem;
+  animation: backgroundMoving 10s infinite;
+  font-size: 1.1vw;
+  opacity: 0.9;
+  font-family: "Moderat-Reg";
 }
 
 // COMPANIES LOGOS
@@ -415,7 +439,6 @@
 .servicios {
   margin-top: 0px;
   padding-bottom: 40dvh;
-  height: auto;
   display: flex;
   flex-direction: column;
   font-family: "Moderat-Light";
@@ -436,7 +459,7 @@
   width: 92.5vw;
   display: flex;
   flex-direction: column;
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 .servicios_main > div:first-child {

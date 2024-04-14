@@ -27,10 +27,18 @@ export default function Service({
         <div className={styles.servicio_text}>
           {descriptions.map((description, index) => {
             return (
-              <p key={index} className={styles.servicio_description}>
-                {description.title && <span>{description.title}</span>}
-                {description.text}
-              </p>
+              <div key={index} className={styles.servicio_description}>
+                {description.title && (
+                  <div className={styles.description_title}>
+                    <p>
+                      {description.title && <span>{description.title}</span>}
+                    </p>
+                  </div>
+                )}
+                <div className={styles.description_text}>
+                  <p>{description.text}</p>
+                </div>
+              </div>
             );
           })}
         </div>

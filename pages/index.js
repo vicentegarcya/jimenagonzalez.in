@@ -74,7 +74,7 @@ export default function Home() {
       .timeScale(5);
 
     //METODOLOGÍA
-    gsap.to(metodologiaTitleRef.current, {
+    /* gsap.to(metodologiaTitleRef.current, {
       position: "fixed",
       top: "100px",
       left: "3rem",
@@ -106,11 +106,11 @@ export default function Home() {
         end: "+=2%",
         scrub: 1,
       },
-    });
+    }); */
 
     //EXPERIENCIA
     //MAIN TITLE
-    gsap.to(experienciaTitleRef.current, {
+    /* gsap.to(experienciaTitleRef.current, {
       position: "fixed",
       top: "100px",
       left: "3rem",
@@ -131,7 +131,7 @@ export default function Home() {
         end: "+=2%",
         scrub: 1,
       },
-    });
+    }); */
 
     //LOGOS
     gsap.to(companiesLogosRef.current, {
@@ -140,7 +140,7 @@ export default function Home() {
       ease: "none",
       scrollTrigger: {
         trigger: experienciaTitleRef.current,
-        start: "top 14.65%",
+        start: "top 33%",
         end: "+=0.01%",
         scrub: 0.01,
       },
@@ -157,7 +157,7 @@ export default function Home() {
         position: "absolute",
         scrollTrigger: {
           trigger: universityTextRef.current,
-          start: "bottom 50.65%",
+          start: "bottom 30%",
           end: "+=0.01%",
           scrub: 0.01,
         },
@@ -165,7 +165,7 @@ export default function Home() {
     );
 
     //SERVICIOS
-    gsap.to(serviciosTitleRef.current, {
+    /* gsap.to(serviciosTitleRef.current, {
       position: "fixed",
       top: "100px",
       left: "3rem",
@@ -197,7 +197,7 @@ export default function Home() {
         end: "+=0.01%",
         scrub: 0.01,
       },
-    });
+    }); */
 
     //CONTACT FORM
     gsap.to(contactFormRef.current, {
@@ -296,8 +296,8 @@ export default function Home() {
               <p>
                 Mi metodología combina estrategia de negocio pura con
                 herramientas de diseño para acompañar a grandes empresas y
-                proyectos emergentes en la creación de
-                <span> valor, propósito y acción alineada </span>.
+                proyectos emergentes en la creación de{" "}
+                <span>valor, propósito y acción alineada </span>.
               </p>
               <p>
                 Para cada proyecto, creo un marco metodológico ad hoc para dotar
@@ -307,12 +307,28 @@ export default function Home() {
               </p>
               <div className={styles.cinta_transportadora}>
                 <p>
-                  Strategy ➔ Diseño estratégico ❉ Pensamiento sistémico ▶▶
-                  Diseño de futuros ◖ Business Design ◗ Análisis de mercado ❋
+                  <span className={styles.keyword}>
+                    Strategy <span className={styles.emoji}>💻</span>
+                  </span>
+                  Diseño estratégico <span className={styles.emoji}>🎛</span>
+                  Pensamiento sistémico <span className={styles.emoji}>💡</span>
+                  Diseño de futuros <span className={styles.emoji}>🔭</span>
+                  <span className={styles.keyword}>
+                    Business Design <span className={styles.emoji}>💼</span>
+                  </span>
+                  Análisis de mercado <span className={styles.emoji}>🔍</span>
                 </p>
                 <p>
-                  Strategy ➔ Diseño estratégico ❉ Pensamiento sistémico ▶▶
-                  Diseño de futuros ◖ Business Design ◗ Análisis de mercado ❋
+                  <span className={styles.keyword}>
+                    Strategy <span className={styles.emoji}>💻</span>
+                  </span>
+                  Diseño estratégico <span className={styles.emoji}>🎛</span>
+                  Pensamiento sistémico <span className={styles.emoji}>💡</span>
+                  Diseño de futuros <span className={styles.emoji}>🔭</span>
+                  <span className={styles.keyword}>
+                    Business Design <span className={styles.emoji}>💼</span>
+                  </span>
+                  Análisis de mercado <span className={styles.emoji}>🔍</span>
                 </p>
               </div>
               <div className={styles.cinta_transportadora_2}>
@@ -344,7 +360,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <div>
-                    <p>Service Design</p>
+                    <p className={styles.keyword}>Service Design</p>
                     <svg
                       viewBox="0 0 200 200"
                       xmlns="http://www.w3.org/2000/svg"
@@ -370,7 +386,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <div>
-                    <p>Facilitación</p>
+                    <p className={styles.keyword}>Facilitación</p>
                     <svg
                       viewBox="0 0 200 200"
                       xmlns="http://www.w3.org/2000/svg"
@@ -411,7 +427,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <div>
-                    <p>Service Design</p>
+                    <p className={styles.keyword}>Service Design</p>
                     <svg
                       viewBox="0 0 200 200"
                       xmlns="http://www.w3.org/2000/svg"
@@ -437,7 +453,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <div>
-                    <p>Facilitación</p>
+                    <p className={styles.keyword}>Facilitación</p>
                     <svg
                       viewBox="0 0 200 200"
                       xmlns="http://www.w3.org/2000/svg"
@@ -450,16 +466,6 @@ export default function Home() {
                     </svg>
                   </div>
                 </div>
-                {/* <p>
-                  Investigación de usuarios <span></span> User Experience{" "}
-                  <span></span> Service Design <span></span>
-                  Design Thinking <span></span> Facilitación <span></span>
-                </p>
-                <p>
-                  Investigación de usuarios <span></span> User Experience{" "}
-                  <span></span> Service Design <span></span>
-                  Design Thinking <span></span> Facilitación <span></span>
-                </p> */}
               </div>
             </div>
           </section>
@@ -495,6 +501,14 @@ export default function Home() {
                     innovación social y ambiental.
                   </p>
                 </div>
+                <div>
+                <Link
+                  href={"mailto:hi@jimenagonzalez.in"}
+                  className={styles.hablemos}
+                >
+                  HABLEMOS
+                </Link>
+              </div>
               </div>
             </div>
           </section>
@@ -514,28 +528,28 @@ export default function Home() {
                 ctaText="¿NECESITAS ESTRATEGIA?"
                 descriptions={[
                   {
-                    title: "Visión ·",
-                    text: "afinando la visión del negocio, su misión interna y su propósito innovador en el sistema como piedra angular del proyecto, en base a la cual se desarrolla la estrategia.",
+                    title: "Visión",
+                    text: "Afinando la visión del negocio, su misión interna y su propósito innovador en el sistema como piedra angular del proyecto, en base a la cual se desarrolla la estrategia.",
                   },
                   {
-                    title: "Investigación de futuros ·",
-                    text: "percibiendo las señales y tendencias para crear estrategias coherentes de presente y futuro que se adelanten a los acontecimientos (Diseño de futuros).",
+                    title: "Investigación de futuros",
+                    text: "Percibiendo las señales y tendencias para crear estrategias coherentes de presente y futuro que se adelanten a los acontecimientos (Diseño de futuros).",
                   },
                   {
-                    title: "Investigación sistémica ·",
-                    text: "incorporando una visión holística para comprender las influencias de todos los factores y stakeholders relacionados para diseñar estrategias favorecidas por el propio contexto (Diseño sistémico).",
+                    title: "Investigación sistémica",
+                    text: "Incorporando una visión holística para comprender las influencias de todos los factores y stakeholders relacionados para diseñar estrategias favorecidas por el propio contexto (Diseño sistémico).",
                   },
                   {
-                    title: "Investigación de mercados ·",
+                    title: "Investigación de mercados",
                     text: "observando el mercado y su transformación para identificar las áreas de oportunidad clave.",
                   },
                   {
-                    title: "Plan estratégico ·",
-                    text: "alineando visión e insights con acción y objetivos gracias a la creación de un plan estratégico y táctico.",
+                    title: "Plan estratégico",
+                    text: "Alineando visión e insights con acción y objetivos gracias a la creación de un plan estratégico y táctico.",
                   },
                   {
-                    title: "Modelo de negocio ·",
-                    text: "creando un modelo de negocio viable y consistente, con una cartera de productos y servicios relevantes para el mundo.",
+                    title: "Modelo de negocio",
+                    text: "Creando un modelo de negocio viable y consistente, con una cartera de productos y servicios relevantes para el mundo.",
                   },
                 ]}
               />
@@ -543,7 +557,7 @@ export default function Home() {
                 title={"Identidad y branding"}
                 link={[
                   {
-                    text: "con el equipo del studio SUPREME BEINGS",
+                    text: "con el studio SUPREME BEINGS",
                     url: "https://www.supremebeings.love/",
                   },
                 ]}
@@ -563,20 +577,20 @@ export default function Home() {
                 ctaText="¿NECESITAS DISEÑO?"
                 descriptions={[
                   {
-                    title: "Facilitación de la co-creación en equipo ·",
-                    text: "liderando el proceso de trabajo y creando una metodología ad hoc para facilitar la sinergia creativa del equipo del proyecto.",
+                    title: "Facilitación de la co-creación en equipo",
+                    text: "Liderando el proceso de trabajo y creando una metodología ad hoc para facilitar la sinergia creativa del equipo del proyecto.",
                   },
                   {
-                    title: "Investigación de diseño ·",
-                    text: "comprendiendo la experiencia, necesidades e influencias de los usuarios para obtener insights relevantes para la creación de valor.",
+                    title: "Investigación de diseño",
+                    text: "Comprendiendo la experiencia, necesidades e influencias de los usuarios para obtener insights relevantes para la creación de valor.",
                   },
                   {
-                    title: "Ideación y conceptualización ·",
-                    text: "generando disrupción innovadora para crear un concepto único.",
+                    title: "Ideación y conceptualización",
+                    text: "Generando disrupción innovadora para crear un concepto único.",
                   },
                   {
-                    title: "Diseño de experiencia ·",
-                    text: "creando una experiencia de usuario o cliente coherente y fluida, con una propuesta de valor diferencial.",
+                    title: "Diseño de experiencia",
+                    text: "Creando una experiencia de usuario o cliente coherente y fluida, con una propuesta de valor diferencial.",
                   },
                 ]}
               />
