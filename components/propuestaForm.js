@@ -1,11 +1,10 @@
 import { useState } from "react";
 import styles from "./propuestaForm.module.css";
+import { useFormik } from "formik";
+import * as yup from "yup";
 
 export default function PropuestaForm() {
-  const [temas, setTemas] = useState([]);
-  const [formato, setFormato] = useState([]);
-  const [idea, setIdea] = useState("");
-  const [email, setEmail] = useState("");
+  const [service, setSrevice] = useState('');
   const [state, setState] = useState("idle");
 
   const handleChange = (e) => {
@@ -39,6 +38,34 @@ export default function PropuestaForm() {
       }
     }
   };
+
+  const validationSchema = yup.object({
+    name: yup.string().required("Escribe tu nombre"),
+    company: yup.string().required("Escribe el nombre de tu empresa"),
+    idea: yup.string().required("Escribe tu idea"),
+    email: yup
+      .string()
+      .email("Escribe un email válido")
+      .required("Escribe tu email"),
+    phone: yup.string().min(9, "Escribe un teléfono válido"),
+  });
+
+  const initialState = {
+    name: "",
+    company: "",
+    service: "",
+    idea: "",
+    email: "",
+    phone: "",
+  };
+
+  const formik = useFormik({
+    initialValues: initialState,
+    validationSchema,
+    onSubmit: (values, { resetForm }) => {
+      console.log(values);
+    },
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -75,79 +102,17 @@ export default function PropuestaForm() {
 
   return (
     <div className={styles.propuesta_form}>
-      Hola Jimena, soy _____________<i>(escribe tu nombre)</i>.<br></br>Trabajo en
-      ___________<i>(escribe el nombre de tu empresa)</i> y tengo una idea o
-      necesidad relacionada con #estrategia #diseño-de-servicios #web #branding
-      , que es ____________________________________ <i>(describe tu
-      idea o necesidad)</i>.<br></br>Puedes
-      contactarme en ____________ <i>(escribe tu e-mail)</i> o en
-      ___________ <i>(escribe tu teléfono)</i>.
-      {/* <form onSubmit={handleSubmit}>
-        <fieldset className={styles.temas}>
-          <legend>Selecciona los temas:</legend>
-          <input onClick={handleChange} type="button" value="#asesoramiento-estrategico" />
-          <input onClick={handleChange} type="button" value="#diseño-de-servicios" />
-          <input onClick={handleChange} type="button" value="#diseño-de-experiencia" />
-          <input onClick={handleChange} type="button" value="#business" />
-          <input onClick={handleChange} type="button" value="#emprendimiento" />
-          <input onClick={handleChange} type="button" value="#facilitacion" />
-          <input onClick={handleChange} type="button" value="#coaching-creativo" />
-          <input onClick={handleChange} type="button" value="#tarot" />
-          <input onClick={handleChange} type="button" value="#astrologia" />
-          <input onClick={handleChange} type="button" value="otros" />
-        </fieldset>
-        <fieldset className={styles.formato}>
-          <legend>Selecciona el formato:</legend>
-          <input
-            onClick={handleChange}
-            type="button"
-            value="proyecto"
-          />
-          <input onClick={handleChange} type="button" value="acompañamiento" />
-          <input
-            onClick={handleChange}
-            type="button"
-            value="sesión 1:1"
-          />
-          <input onClick={handleChange} type="button" value="charla" />
-          <input onClick={handleChange} type="button" value="formación" />
-          <input
-            onClick={handleChange}
-            type="button"
-            value="sesión con tu equipo"
-          />
-          <input onClick={handleChange} type="button" value="colaboración" />
-          <input onClick={handleChange} type="button" value="otro" />
-        </fieldset>
-        <div className={styles.describe_tu_idea}>
-          <label>Describe tu idea:</label>
-          <textarea
-            name="idea"
-            value={idea}
-            onChange={handleChange}
-            placeholder="Escribe aquí..."
-            required
-          />
+      <form onSubmit={formik.handleSubmit}>
+        <div>
+          Hola Jimena, soy <input name="name" value={formik.values.name} placeholder="" onChange={formik.handleChange}></input><i>(escribe tu nombre)</i>.<br></br>
+          Trabajo en <input name="company" value={formik.values.company} placeholder="" onChange={formik.handleChange}></input><i>(escribe el nombre de tu empresa)</i> y tengo
+          una idea o necesidad relacionada con <span>#estrategia</span> #diseño-de-servicios
+          #web #branding , que es <input name="idea" value={formik.values.idea} placeholder="" onChange={formik.handleChange} style={{minWidth: '100%'}}></input>{" "}
+          <i>(describe tu idea o necesidad)</i>.<br></br>Puedes contactarme en <input name="email" value={formik.values.email} placeholder="" onChange={formik.handleChange}></input> <i>(escribe tu e-mail)</i> o en <input name="phone" value={formik.values.phone} placeholder="" onChange={formik.handleChange}></input>{" "}
+          <i>(escribe tu teléfono)</i>.
         </div>
-        <div className={styles.tu_email}>
-          <label>Tu email:</label>
-          <input
-            type="email"
-            name="email"
-            value={email}
-            onChange={handleChange}
-            placeholder="Escribe aquí..."
-            required
-          ></input>
-        </div>
-        <button type="submit">
-          ENVIAR
-        </button>
-        {state === "Success" && (
-          <div className={styles.confetti_div}>
-          </div>
-        )}
-      </form> */}
+        <button type="submit">Enviar</button>
+      </form>
     </div>
   );
 }
