@@ -13,6 +13,7 @@ import LoadingPage from "@/components/loadingPage";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
+  const [service, setService] = useState("");
   const { isDesktop } = useContext(isPlayingContext);
   gsap.registerPlugin(ScrollTrigger);
 
@@ -35,6 +36,11 @@ export default function Home() {
 
   const contactFormRef = useRef();
   const contactFormMainRef = useRef();
+
+  const handleClickService = (service) => {
+    setService(service);
+    window.scrollTo(0, document.body.scrollHeight);
+  };
 
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 6000);
@@ -263,12 +269,12 @@ export default function Home() {
               </div>
               <p>(STRATEGIC MIND / SENSITIVE HEART)</p>
               <div>
-                <Link
-                  href={"mailto:hi@jimenagonzalez.in"}
+                <button
+                  onClick={() => window.scrollTo(0, document.body.scrollHeight)}
                   className={styles.contacto}
                 >
                   CONTÁCTAME
-                </Link>
+                </button>
               </div>
             </div>
             <div className={styles.hero_bottom}>
@@ -502,12 +508,14 @@ export default function Home() {
                   </p>
                 </div>
                 <div>
-                  <Link
-                    href={"mailto:hi@jimenagonzalez.in"}
+                  <button
                     className={styles.hablemos}
+                    onClick={() =>
+                      window.scrollTo(0, document.body.scrollHeight)
+                    }
                   >
                     HABLEMOS
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>
@@ -552,6 +560,9 @@ export default function Home() {
                     text: "Creando un modelo de negocio viable y consistente, con una cartera de productos y servicios relevantes para el mundo.",
                   },
                 ]}
+                onClick={() => {
+                  handleClickService("estrategia");
+                }}
               />
               <Service
                 title={"Identidad y branding"}
@@ -567,9 +578,7 @@ export default function Home() {
                     text: "Descubriendo la identidad auténtica de tu proyecto para crear una experiencia de marca completa: naming, diseño de marca, dirección de arte y copywriting.",
                   },
                 ]}
-                onClick={() =>
-                  contactFormRef.current.scrollIntoView({ behavior: "smooth" })
-                }
+                onClick={() => handleClickService("branding")}
               />
               <Service
                 title={"Diseño de servicios y facilitación creativa"}
@@ -593,6 +602,7 @@ export default function Home() {
                     text: "Creando una experiencia de usuario o cliente coherente y fluida, con una propuesta de valor diferencial.",
                   },
                 ]}
+                onClick={() => handleClickService("diseño-de-servicios")}
               />
               <Service
                 title={"Diseño y desarrollo web"}
@@ -608,10 +618,11 @@ export default function Home() {
                     text: "Creando experiencias digitales con desarrollo front-end o full-stack, como Web Apps, landing pages, portfolios, webs corporativas, páginas e-commerce y más.",
                   },
                 ]}
+                onClick={() => handleClickService("web")}
               />
             </div>
           </section>
-          <section ref={contactFormRef} className={styles.contact_form}>
+          <section ref={contactFormRef} className={styles.contact_form} id="contacto">
             <div className={styles.contact_form_backpaper}></div>
             <div ref={contactFormMainRef} className={styles.contact_form_main}>
               <div className={styles.contact_form_data}>
@@ -622,7 +633,10 @@ export default function Home() {
                   <a href="mailto:hi@jimenagonzalez.in">hi@jimenagonzalez.in</a>
                 </div>
               </div>
-              <PropuestaForm></PropuestaForm>
+              <PropuestaForm
+                service={service}
+                setService={setService}
+              ></PropuestaForm>
             </div>
           </section>
           <div className={styles.companies_logos} ref={companiesLogosRef}>

@@ -4,8 +4,7 @@ import { useFormik } from "formik";
 import * as yup from "yup";
 import { useSpring, animated } from "react-spring";
 
-export default function PropuestaForm() {
-  const [service, setService] = useState("");
+export default function PropuestaForm({service, setService}) {
   const [state, setState] = useState("idle");
 
   const validationSchema = yup.object({

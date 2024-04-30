@@ -27,6 +27,16 @@
   margin-left: -4vw;
 }
 
+.header button {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	outline: inherit;
+  font-size: 0.9vw;
+  font-family: 'Moderat-Bold';
+}
+
 .header_links > h5 {
   height: 100%;
   padding: 1.3dvh 2rem;

@@ -83,6 +83,7 @@
   animation: backgroundMoving 10s infinite;
   font-size: 1.1vw;
   opacity: 0.9;
+  font-family: "Moderat-Reg";
 }
 
 @keyframes backgroundMoving {
@@ -136,10 +137,11 @@
 }
 
 .metodologia h5 {
-  font-size: 1.5vw;
+  font-size: 1.7vw;
+  letter-spacing: 1.4px;
   width: 50%;
   font-weight: 100;
-  font-family: "Moderat-Reg";
+  font-family: "Editorial-light";
   text-transform: uppercase;
   position: relative;
   z-index: 100;
@@ -286,9 +288,11 @@
 }
 
 .experiencia h5 {
-  font-size: 1.5vw;
+  font-size: 1.7vw;
+  letter-spacing: 1.4px;
   width: 100%;
-  font-family: "Moderat-Reg";
+  font-family: "Editorial-light";
+  font-weight: 100;
   text-transform: uppercase;
   margin-bottom: 80px;
   z-index: 100;
@@ -454,6 +458,16 @@
   margin-bottom: 6px;
   z-index: 100;
 }
+.servicios > h5 {
+  font-size: 1.7vw;
+  letter-spacing: 1.4px;
+  width: 40%;
+  font-weight: 100;
+  font-family: "Editorial-light";
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  z-index: 100;
+}
 
 .servicios_main {
   width: 92.5vw;
@@ -476,7 +490,6 @@
   top: 100dvh;
   transform: translateX(-50%);
   transform: scale(0);
-  overflow: hidden;
 }
 
 .contact_form_backpaper {

@@ -25,7 +25,9 @@ const Header = forwardRef(function Header(props, headerRef) {
           </Link>
         </h5>
       </div>
-      <Link href="mailto:jimenagonzalez.in@gmail.com">CONTACTO</Link>
+      <button onClick={() => window.scrollTo(0, document.body.scrollHeight)}>
+        CONTACTO
+      </button>
     </div>
   );
 });
