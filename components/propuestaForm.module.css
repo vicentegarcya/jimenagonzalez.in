@@ -1,16 +1,15 @@
 .propuesta_form {
   width: 100%;
   height: 100%;
-  font-family: 'Moderat-Light';
+  font-family: "Moderat-Light";
   font-size: 1.7vw;
   font-weight: 100;
   line-height: 1.7;
   letter-spacing: 0.9px;
 }
 
-.propuesta_form i {
-  opacity: 0.7;
-  font-family: 'Editorial-Light';
+.propuesta_form > form > div {
+  line-height: 2.1;
 }
 
 .propuesta_form input {
@@ -21,42 +20,12 @@
   border-bottom: 1px solid var(--main-black);
 }
 
-.propuesta_form textarea {
-  background: url("../public/PSICODELICO.jpeg");
-  background-position-x: -101px;
-  background-position-y: -267px;
-  border: none;
-  resize: none;
-  font-family: "Inter";
-  font-size: 12px;
-  padding: 0.5rem 0.75rem;
-  height: 150px;
-  outline: none;
-  border-radius: 0% !important;
-}
-
-.propuesta_form textarea::placeholder, .tu_email input::placeholder {
-  color: #282c32;
-  font-weight: 500;
-  font-size: 12px;
-}
-
-.propuesta_form legend {
-  margin-bottom: 0.5rem;
-}
-
-.propuesta_form fieldset {
-  margin-top: 1.5rem;
-}
-
-.describe_tu_idea, .tu_email {
-  display: flex;
-  flex-direction: column;
-  margin-top: 1.5rem;
-}
-
-.describe_tu_idea label, .tu_email label {
-  margin-bottom: 0.5rem;
+.propuesta_form input::placeholder {
+  font-family: "Editorial-Light";
+  font-style: italic;
+  opacity: 0.5;
+  font-size: 1.7vw;
+  color: var(--main-black);
 }
 
 .propuesta_form button {
@@ -64,7 +33,7 @@
   border: none;
   padding: 8px 20px;
   font-size: 15px;
-  width: 45%;
+  width: 100%;
   text-align: center;
   background: transparent;
   font-weight: 400;
@@ -77,33 +46,45 @@
 .propuesta_form span {
   border: 1px solid var(--main-black);
   border-radius: 25px;
-  padding: 2px 12px;
+  padding: 2px 12px 3px 12px;
   font-size: 1.5vw;
 }
 
 .propuesta_form span:hover {
   cursor: pointer;
+  background: #e7e7e7;
 }
 
-.tu_email input {
-  border-radius: 0px;
-  padding: 0rem 0.75rem 0.5rem 0.75rem;
-  font-size: 13px;
-  font-weight: 300;
-  margin-right: 0;
-  margin-top: 0;
-  background: url("../public/PSICODELICO.jpeg");
-  background-position-x: -101px;
-  background-position-y: -442px;
-  height: 30px;
-}
-
-.confetti_div {
-  position: absolute;
-  top: -250px;
-  left: -2rem;
+.form_success {
   width: 100vw;
-  height: 300px;
+  height: 100dvh;
+  position: fixed;
+  top: -3rem;
+  left: -3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.form_success > div {
+  transform: translate(0, -40%);
+  width: 30vw;
+  padding: 3rem;
+  background: var(--main-white);
+  color: var(--main-black);
+  font-size: 1.2vw;
+}
+
+.form_success > div > div {
+  position: absolute;
+  top: 7%;
+  right: 4%;
+}
+
+.form_success > div > div:hover {
+  cursor: pointer;
 }
 
 @media (min-width: 490px) and (max-width: 1024px) {

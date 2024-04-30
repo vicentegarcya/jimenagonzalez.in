@@ -502,13 +502,13 @@ export default function Home() {
                   </p>
                 </div>
                 <div>
-                <Link
-                  href={"mailto:hi@jimenagonzalez.in"}
-                  className={styles.hablemos}
-                >
-                  HABLEMOS
-                </Link>
-              </div>
+                  <Link
+                    href={"mailto:hi@jimenagonzalez.in"}
+                    className={styles.hablemos}
+                  >
+                    HABLEMOS
+                  </Link>
+                </div>
               </div>
             </div>
           </section>
@@ -617,46 +617,9 @@ export default function Home() {
               <div className={styles.contact_form_data}>
                 <h5>CONTACTO</h5>
                 <div>
-                  <div className={styles.top}>
-                    <p>
-                      Si quieres saber más sobre mi vida laboral, visita{" "}
-                      <a
-                        href="https://www.linkedin.com/in/jimena-gonzalez-collados/"
-                        target="_blank"
-                      >
-                        mi perfil de Linkedin
-                      </a>
-                    </p>
-                    <p>
-                      {" "}
-                      Escucha aquí{" "}
-                      <a
-                        href="https://open.spotify.com/playlist/6nDnwvDJOvY1VebJWbVsd7?si=jF_EYQm5Qy6g8xk_RXPaeg&utm_source=copy-link&utm_medium=copy-link&nd=1&_branch_match_id=1182632066913753218&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXLy7IL8lMq9TLyczL1g82Ciz29C0rN3ZOAgDcFrbjIAAAAA%3D%3D"
-                        target="_blank"
-                      >
-                        mi playlist de Spotify
-                      </a>{" "}
-                      para entrar en flow creativo.
-                    </p>
-                    <p>
-                      Para cualquier otra cosa,{" "}
-                      <a href="mailto: hi@jimenagonzalez.in">
-                        ¡envíame un correo a hi@jimenagonzalez.in!
-                      </a>
-                    </p>
-                  </div>
-                  <div className={styles.bottom}>
-                    <p style={{ marginBottom: "12px" }}>
-                      web x{" "}
-                      <a href="https://www.vicentegarcya.com/" target="_blank">
-                        Vicente Garcya
-                      </a>
-                    </p>
-                    <p>x Jimena Gonzalez</p>
-                    <p>
-                      © 2023, Jimena Gonzalez, Todos los derechos reservados
-                    </p>
-                  </div>
+                  <p>40°30'N 3°40'O / 40.500, -3.667</p>
+                  <a href="tel:+34626457400">(34) 626 457 400</a>
+                  <a href="mailto:hi@jimenagonzalez.in">hi@jimenagonzalez.in</a>
                 </div>
               </div>
               <PropuestaForm></PropuestaForm>

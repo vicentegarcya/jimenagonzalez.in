@@ -2,42 +2,11 @@ import { useState } from "react";
 import styles from "./propuestaForm.module.css";
 import { useFormik } from "formik";
 import * as yup from "yup";
+import { useSpring, animated } from "react-spring";
 
 export default function PropuestaForm() {
-  const [service, setSrevice] = useState('');
+  const [service, setService] = useState("");
   const [state, setState] = useState("idle");
-
-  const handleChange = (e) => {
-    if (e.target.name === "idea") {
-      setIdea(e.target.value);
-    }
-
-    if (e.target.name === "email") {
-      setEmail(e.target.value);
-    }
-
-    if (!e.target.classList.contains("seleccionado")) {
-      if (e.target.parentNode.className.split("_")[1].split("_") == "temas") {
-        e.target.classList.add("seleccionado");
-        setTemas([...temas, e.target.value]);
-      } else if (
-        e.target.parentNode.className.split("_")[1].split("_") == "formato"
-      ) {
-        e.target.classList.add("seleccionado");
-        setFormato([...formato, e.target.value]);
-      }
-    } else {
-      if (e.target.parentNode.className.split("_")[1].split("_") == "temas") {
-        e.target.classList.remove("seleccionado");
-        setTemas([...temas].filter((element) => element != e.target.value));
-      } else if (
-        e.target.parentNode.className.split("_")[1].split("_") == "formato"
-      ) {
-        e.target.classList.remove("seleccionado");
-        setFormato([...formato].filter((element) => element != e.target.value));
-      }
-    }
-  };
 
   const validationSchema = yup.object({
     name: yup.string().required("Escribe tu nombre"),
@@ -63,56 +32,128 @@ export default function PropuestaForm() {
     initialValues: initialState,
     validationSchema,
     onSubmit: (values, { resetForm }) => {
-      console.log(values);
+      fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ...values, service }),
+      }).then((res) => {
+        if (res.status === 200) {
+          setState("success");
+          resetForm();
+        }
+      });
     },
   });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    let data = {
-      temas,
-      formato,
-      idea,
-      email,
-    };
-    fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    }).then((res) => {
-      if (res.status === 200) {
-        document
-          .querySelectorAll("#__next form > fieldset > input")
-          .forEach((e) => e.classList.remove("seleccionado"));
-        setState("Success");
-        setTimeout(() => {
-          setState("idle");
-        }, 100);
-        setTemas([]);
-        setFormato([]);
-        setIdea("");
-        setEmail("");
-      }
-    });
-  };
+  const openAnimation = useSpring({
+    opacity: state === "success" ? 1 : 0,
+    from: { opacity: 0 },
+  });
 
   return (
     <div className={styles.propuesta_form}>
       <form onSubmit={formik.handleSubmit}>
         <div>
-          Hola Jimena, soy <input name="name" value={formik.values.name} placeholder="" onChange={formik.handleChange}></input><i>(escribe tu nombre)</i>.<br></br>
-          Trabajo en <input name="company" value={formik.values.company} placeholder="" onChange={formik.handleChange}></input><i>(escribe el nombre de tu empresa)</i> y tengo
-          una idea o necesidad relacionada con <span>#estrategia</span> #diseño-de-servicios
-          #web #branding , que es <input name="idea" value={formik.values.idea} placeholder="" onChange={formik.handleChange} style={{minWidth: '100%'}}></input>{" "}
-          <i>(describe tu idea o necesidad)</i>.<br></br>Puedes contactarme en <input name="email" value={formik.values.email} placeholder="" onChange={formik.handleChange}></input> <i>(escribe tu e-mail)</i> o en <input name="phone" value={formik.values.phone} placeholder="" onChange={formik.handleChange}></input>{" "}
-          <i>(escribe tu teléfono)</i>.
+          Hola Jimena, soy{" "}
+          <input
+            name="name"
+            value={formik.values.name}
+            placeholder="(escribe tu nombre)"
+            onChange={formik.handleChange}
+            style={{ minWidth: "32.5%", width: "32.5%" }}
+          ></input>
+          . Trabajo en{" "}
+          <input
+            name="company"
+            value={formik.values.company}
+            placeholder="(escribe el nombre de tu empresa)"
+            onChange={formik.handleChange}
+            style={{ minWidth: "56%" }}
+          ></input>{" "}
+          y tengo una idea o necesidad relacionada con{" "}
+          <span
+            style={{
+              background: service === "estrategia" ? "#282C32" : undefined,
+              color: service === "estrategia" ? "#F8F8F8" : undefined,
+            }}
+            onClick={() => setService("estrategia")}
+          >
+            #estrategia
+          </span>{" "}
+          <span
+            style={{
+              background:
+                service === "diseño-de-servicios" ? "#282C32" : undefined,
+              color: service === "diseño-de-servicios" ? "#F8F8F8" : undefined,
+            }}
+            onClick={() => setService("diseño-de-servicios")}
+          >
+            #diseño de servicios
+          </span>{" "}
+          <span
+            style={{
+              background: service === "web" ? "#282C32" : undefined,
+              color: service === "web" ? "#F8F8F8" : undefined,
+            }}
+            onClick={() => setService("web")}
+          >
+            #web
+          </span>{" "}
+          <span
+            style={{
+              background: service === "branding" ? "#282C32" : undefined,
+              color: service === "branding" ? "#F8F8F8" : undefined,
+            }}
+            onClick={() => setService("branding")}
+          >
+            #branding
+          </span>{" "}
+          , que es{" "}
+          <input
+            name="idea"
+            value={formik.values.idea}
+            onChange={formik.handleChange}
+            style={{ minWidth: "90%" }}
+            placeholder="(describe tu idea o necesidad)"
+          ></input>{" "}
+          .<br></br><br></br>Puedes contactarme en{" "}
+          <input
+            name="email"
+            value={formik.values.email}
+            placeholder="(escribe tu e-mail)"
+            onChange={formik.handleChange}
+            style={{ minWidth: "32%", width: "32%" }}
+          ></input>{" "}
+          o en{" "}
+          <input
+            name="phone"
+            value={formik.values.phone}
+            placeholder="(escribe tu teléfono)"
+            onChange={formik.handleChange}
+            style={{ minWidth: "35%", width: "35%" }}
+          ></input>{" "}
+          .
         </div>
         <button type="submit">Enviar</button>
       </form>
+      {state === "success" && (
+        <animated.div
+          style={openAnimation}
+          className={styles.form_success}
+          onClick={() => setState("idle")}
+        >
+          <animated.div style={openAnimation}>
+            <p>
+              Mensaje enviado correctamente.<br></br> Jimena se pondrá en
+              contacto contigo en breve.
+            </p>
+            <div onClick={() => setState("idle")}>X</div>
+          </animated.div>
+        </animated.div>
+      )}
     </div>
   );
 }

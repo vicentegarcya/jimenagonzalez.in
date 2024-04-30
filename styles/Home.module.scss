@@ -508,23 +508,20 @@
 
 .contact_form_data {
   width: 40%;
-  height: 100%;
   font-family: "Moderat-Reg";
-  padding-top: 1rem;
+  padding-top: 0.5rem;
 }
 
 .contact_form_data > h5 {
   margin-bottom: 2rem;
-  font-size: 1.3vw;
+  font-size: 1.7vw;
+  font-family: "Editorial-light";
 }
 
-.contact_form_data p {
+.contact_form_data p, .contact_form_data a {
   font-size: 1vw;
-}
-
-.contact_form_data p > a {
-  font-family: "Moderat-bold";
-  font-weight: 500;
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
 }
 
 .contact_form_data > div {
@@ -532,7 +529,7 @@
   height: 85%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .contact_form_data .top > p {

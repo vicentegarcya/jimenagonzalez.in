@@ -15,10 +15,11 @@ export default function sendEmail(req, res) {
   const mailData = {
     from: "vnodemailer@gmail.com",
     to: "jimenagonzalez.in@gmail.com",
-    subject: `Hazme una propuesta`,
+    subject: `Quiero trabajar contigo`,
     text: req.body.idea + " | Sent from: " + req.body.email,
-    html: `<div><p>Mi idea: ${req.body.idea}</p><p>Temas: ${req.body.temas}</p><p>Formato: ${req.body.formato}</p><p>Email de contacto:
-    ${req.body.email}</p></div>`,
+    html: `<div><p>Hola, soy ${req.body.name} de ${req.body.company}.</p><p>Mi idea es: ${req.body.idea}</p><p>Temas: ${req.body.service}</p><p>Email de contacto:
+    ${req.body.email}</p><p>Teléfono de contacto:
+    ${req.body.phone}</p></div>`,
   };
 
   transporter.sendMail(mailData, function (err, info) {
