@@ -157,26 +157,26 @@
   z-index: 1;
 }
 
-.metodologia > div > p:nth-child(1) > span {
+.highlight {
+  display: inline-block;
   position: relative;
-  font-style: italic;
+  z-index: 2;
 }
 
-.metodologia > div > p:nth-child(1) > span:after {
+.highlighter {
   position: absolute;
-  height: 25px;
+  height: 100%;
+  width: 0%;
   margin: 0 auto;
   content: "";
   left: 0;
-  right: 0;
   background: url("../public/GRADIENTE_AURA.jpeg");
   background-size: 730%;
   background-position-y: 2360px;
   background-position-x: -260px;
-  bottom: -0.2vw;
+  bottom: -0.1vh;
   z-index: -1;
-  animation: highlight 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.75s;
-  opacity: 0.55;
+  opacity: 0.45;
 }
 
 .metodologia .cinta_transportadora {
@@ -190,6 +190,7 @@
   margin-bottom: 5px;
   display: flex;
   align-items: center;
+  margin: 120px 0 5px -3rem;
 }
 
 .metodologia .cinta_transportadora > p {
@@ -338,17 +339,7 @@
   background-position-y: 560px;
   bottom: -0.2vw;
   z-index: -1;
-  animation: highlight 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.75s;
   opacity: 0.55;
-}
-
-@keyframes highlight {
-  0% {
-    max-width: 0%;
-  }
-  100% {
-    max-width: 100%;
-  }
 }
 
 .experiencia .hablemos {
@@ -527,6 +518,7 @@
 
 .contact_form_data > h5 {
   margin-bottom: 2rem;
+  letter-spacing: 1.4px;
   font-size: 1.7vw;
   font-family: "Editorial-light";
 }

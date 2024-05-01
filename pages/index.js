@@ -23,7 +23,7 @@ export default function Home() {
   const jimenaRef = useRef();
 
   const metodologiaTitleRef = useRef();
-  const metodologiaDivRef = useRef();
+  const metodologiaSpan = useRef();
   const experienciaTitleRef = useRef();
   const serviciosTitleRef = useRef();
   const serviciosDivRef = useRef();
@@ -79,65 +79,47 @@ export default function Home() {
       )
       .timeScale(5);
 
-    //METODOLOGÍA
-    /* gsap.to(metodologiaTitleRef.current, {
-      position: "fixed",
-      top: "100px",
-      left: "3rem",
-      ease: "none",
+    //METODOLOGIA
+    gsap.to(metodologiaSpan.current, {
+      width: "100%",
+      duration: 1,
+      ease: "power1.inOut",
       scrollTrigger: {
         trigger: metodologiaTitleRef.current,
-        start: "top 14.65%",
-        end: "+=0.01%",
-        scrub: 0.01,
+        start: "top 33%",
       },
     });
-
-    gsap.to(metodologiaDivRef.current, {
-      marginTop: "37vh",
-      ease: "none",
-      scrollTrigger: {
-        trigger: metodologiaTitleRef.current,
-        start: "top 14.65%",
-        end: "+=0.01%",
-        scrub: 0.01,
-      },
-    });
-
-    gsap.to(metodologiaTitleRef.current, {
-      y: "-140px",
-      scrollTrigger: {
-        trigger: experienciaTitleRef.current,
-        start: "top 25%",
-        end: "+=2%",
-        scrub: 1,
-      },
-    }); */
 
     //EXPERIENCIA
-    //MAIN TITLE
-    /* gsap.to(experienciaTitleRef.current, {
-      position: "fixed",
-      top: "100px",
-      left: "3rem",
-      ease: "none",
+    gsap.to(bigCompaniesTextRef.current?.querySelector("div > div"), {
+      width: "100%",
+      duration: 1,
+      ease: "power1.inOut",
       scrollTrigger: {
-        trigger: experienciaTitleRef.current,
-        start: "top 14.65%",
-        end: "+=0.01%",
-        scrub: 0.01,
+        trigger: bigCompaniesTextRef.current,
+        start: "top 50%",
       },
     });
 
-    gsap.to(experienciaTitleRef.current, {
-      y: "-140px",
+    gsap.to(pymesTextRef.current?.querySelectorAll("div > div"), {
+      width: "100%",
+      duration: 1,
+      ease: "power1.inOut",
       scrollTrigger: {
-        trigger: serviciosTitleRef.current,
-        start: "top 25%",
-        end: "+=2%",
-        scrub: 1,
+        trigger: pymesTextRef.current,
+        start: "top 50%",
       },
-    }); */
+    });
+
+    gsap.to(universityTextRef.current?.querySelectorAll("div > div"), {
+      width: "100%",
+      duration: 1,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: universityTextRef.current,
+        start: "top 50%",
+      },
+    });
 
     //LOGOS
     gsap.to(companiesLogosRef.current, {
@@ -169,41 +151,6 @@ export default function Home() {
         },
       }
     );
-
-    //SERVICIOS
-    /* gsap.to(serviciosTitleRef.current, {
-      position: "fixed",
-      top: "100px",
-      left: "3rem",
-      ease: "none",
-      scrollTrigger: {
-        trigger: serviciosTitleRef.current,
-        start: "top 18.65%",
-        end: "+=0.01%",
-        scrub: 0.01,
-      },
-    });
-
-    gsap.to(serviciosTitleRef.current, {
-      y: "-140px",
-      scrollTrigger: {
-        trigger: serviciosSectionRef.current,
-        start: "bottom 99%",
-        end: "+=2%",
-        scrub: 1,
-      },
-    });
-
-    gsap.to(serviciosDivRef.current, {
-      marginTop: "37vh",
-      ease: "none",
-      scrollTrigger: {
-        trigger: serviciosTitleRef.current,
-        start: "top 18.65%",
-        end: "+=0.01%",
-        scrub: 0.01,
-      },
-    }); */
 
     //CONTACT FORM
     gsap.to(contactFormRef.current, {
@@ -253,16 +200,16 @@ export default function Home() {
               <div className={styles.links}>
                 <Link
                   href={"https://www.linkedin.com/in/jimena-gonzalez-collados/"}
+                  target="_blank"
                 >
                   LINKEDIN →
                 </Link>
-                <Link
-                  href={"https://www.linkedin.com/in/jimena-gonzalez-collados/"}
-                >
+                <Link href={"https://www.supremebeings.love/"} target="_blank">
                   STUDIO →
                 </Link>
                 <Link
-                  href={"https://www.linkedin.com/in/jimena-gonzalez-collados/"}
+                  href={"https://jimena-gonzalez.medium.com/"}
+                  target="_blank"
                 >
                   BLOG →
                 </Link>
@@ -298,12 +245,18 @@ export default function Home() {
             <h5 ref={metodologiaTitleRef}>
               Strategy is the key to manifesting purpose
             </h5>
-            <div ref={metodologiaDivRef}>
+            <div>
               <p>
                 Mi metodología combina estrategia de negocio pura con
                 herramientas de diseño para acompañar a grandes empresas y
                 proyectos emergentes en la creación de{" "}
-                <span>valor, propósito y acción alineada </span>.
+                <div className={styles.highlight}>
+                  <span>valor, propósito y acción alineada.</span>
+                  <div
+                    ref={metodologiaSpan}
+                    className={styles.highlighter}
+                  ></div>
+                </div>
               </p>
               <p>
                 Para cada proyecto, creo un marco metodológico ad hoc para dotar
@@ -481,30 +434,52 @@ export default function Home() {
               <div className={styles.left}>
                 <div className={styles.big_companies}>
                   <p ref={bigCompaniesTextRef}>
-                    Originaria del mundo de la consultoría de
-                    <span> negocio </span>, he acompañado a grandes empresas
-                    nacionales e internacionales en proyectos de definición{" "}
-                    <span>estratégica </span>, innovación,<span> diseño </span>{" "}
-                    de servicios, investigación e intraemprendimiento.
+                    Originaria del mundo de la consultoría de negocio, he
+                    acompañado a{" "}
+                    <div className={styles.highlight}>
+                      <span>grandes empresas</span>
+                      <div className={styles.highlighter}></div>
+                    </div>{" "}
+                    nacionales e internacionales en proyectos de definición
+                    estratégica, innovación, diseño de servicios, investigación
+                    e intraemprendimiento.
                   </p>
                 </div>
                 <div className={styles.medium_companies}>
                   <p ref={pymesTextRef}>
                     También he trabajado en proyectos estratégicos para{" "}
-                    <span>pequeñas y medianas </span> empresas, y mentorizado a
-                    <span> startups </span> en fase semilla y de escalado en
-                    diversas <span>incubadoras y aceleradoras </span>, aportando
-                    la visión estratégica y el valor del diseño.
+                    <div className={styles.highlight}>
+                      <span>pequeñas y mediandas empresas</span>
+                      <div className={styles.highlighter}></div>
+                    </div>
+                    , y mentorizado a{" "}
+                    <div className={styles.highlight}>
+                      <span>startups</span>
+                      <div className={styles.highlighter}></div>
+                    </div>{" "}
+                    en fase semilla y de escalado en diversas incubadoras y
+                    aceleradoras, aportando la visión estratégica y el valor del
+                    diseño.
                   </p>
                 </div>
                 <div className={styles.universities}>
                   <p ref={universityTextRef}>
-                    Por último (pero no menos importante, ¡esto me encanta!),
-                    desde hace 4 años soy<span> docente </span>de innovación y
-                    estrategia en UPM, y colaboradora con otras instituciones
-                    universitarias como UV, UPV o Mondragon en actividades de
-                    <span> emprendimiento </span> y <span>bootcamps </span> de
-                    innovación social y ambiental.
+                    Además, desde hace 4 años soy{" "}
+                    <div className={styles.highlight}>
+                      <span>docente</span>
+                      <div className={styles.highlighter}></div>
+                    </div>{" "}
+                    de innovación y estrategia en UPM, y colaboradora con otras
+                    instituciones universitarias como UV, UPV o Mondragon en{" "}
+                    <div className={styles.highlight}>
+                      <span>actividades de emprendimiento y </span>
+                      <div className={styles.highlighter}></div>
+                    </div>{" "}
+                    <div className={styles.highlight}>
+                      <span>bootcamps</span>
+                      <div className={styles.highlighter}></div>
+                    </div>{" "}
+                    de innovación social y ambiental.
                   </p>
                 </div>
                 <div>
@@ -622,7 +597,11 @@ export default function Home() {
               />
             </div>
           </section>
-          <section ref={contactFormRef} className={styles.contact_form} id="contacto">
+          <section
+            ref={contactFormRef}
+            className={styles.contact_form}
+            id="contacto"
+          >
             <div className={styles.contact_form_backpaper}></div>
             <div ref={contactFormMainRef} className={styles.contact_form_main}>
               <div className={styles.contact_form_data}>

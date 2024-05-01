@@ -80,7 +80,7 @@ export default function PropuestaForm({service, setService}) {
             }}
             onClick={() => setService("estrategia")}
           >
-            #estrategia
+            estrategia
           </span>{" "}
           <span
             style={{
@@ -90,7 +90,7 @@ export default function PropuestaForm({service, setService}) {
             }}
             onClick={() => setService("diseño-de-servicios")}
           >
-            #diseño de servicios
+            diseño de servicios
           </span>{" "}
           <span
             style={{
@@ -99,7 +99,7 @@ export default function PropuestaForm({service, setService}) {
             }}
             onClick={() => setService("web")}
           >
-            #web
+            web
           </span>{" "}
           <span
             style={{
@@ -108,7 +108,7 @@ export default function PropuestaForm({service, setService}) {
             }}
             onClick={() => setService("branding")}
           >
-            #branding
+            branding
           </span>{" "}
           , que es{" "}
           <input
