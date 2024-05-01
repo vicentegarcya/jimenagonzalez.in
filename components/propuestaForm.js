@@ -136,7 +136,7 @@ export default function PropuestaForm({service, setService}) {
           ></input>{" "}
           .
         </div>
-        <button type="submit">Enviar</button>
+        <button type="submit"><p>ENVIAR</p></button>
       </form>
       {state === "success" && (
         <animated.div

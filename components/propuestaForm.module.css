@@ -41,6 +41,21 @@
   background-color: #282c32;
   font-weight: 300;
   font-size: 14px;
+  font-family: "Moderat-reg";
+  overflow: hidden;
+}
+
+.propuesta_form button:hover > p {
+  animation: appearing cubic-bezier(0.39, 0.575, 0.565, 1) 0.5s;
+}
+
+@keyframes appearing {
+  from {
+    transform: translateY(200%);
+  }
+  to {
+    transform: translateY(0%);
+  }
 }
 
 .propuesta_form span {
