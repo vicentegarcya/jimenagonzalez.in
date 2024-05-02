@@ -1,7 +1,6 @@
 .logos {
   width: 100%;
   height: 100%;
-  overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -22,18 +21,69 @@
 
 .logos p {
   position: absolute;
-  top: -15px;
-  left: -1vw;
-  background: var(--main-white);
+  background: #43464b;
   width: 100%;
   font-family: "Moderat-light";
-  min-width: 13vw;
-  font-size: 1.1vw;
+  min-width: 20vw;
+  font-size: 1vw;
   line-height: 1.5;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 8px;
+  top: 120%;
+  left: 50%;
+  margin-left: -10vw;
+  color: var(--main-white);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
-.logos p:hover {
-  cursor: pointer;
+.logo4 p,
+.logo7 p,
+.logo8 p,
+.logo9 p {
+  top: -250%;
+  left: 50%;
+}
+
+.logo5 p {
+  top: -670%;
+  left: 50%;
+}
+
+
+.logo6 p {
+  top: -500%;
+  left: 50%;
+}
+
+.logos p::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #43464b transparent;
+}
+
+.logo4 p::after,
+.logo5 p::after,
+.logo6 p::after,
+.logo7 p::after,
+.logo8 p::after,
+.logo9 p::after {
+  bottom: 0;
+  top: 100%;
+  left: 50%;
+  border-color: #43464b transparent transparent transparent;
+}
+
+.logos > div:hover p {
+  visibility: visible;
+  opacity: 1;
 }
 
 .logos img:hover {

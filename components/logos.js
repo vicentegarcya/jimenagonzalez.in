@@ -1,14 +1,8 @@
 import Image from "next/image";
 import styles from "./logos.module.css";
-import { useEffect, useState } from "react";
-import { gsap } from "gsap";
-
-const descriptions = [];
+import { useEffect } from "react";
 
 const Logos = () => {
-  const [currentImages, setCurrentImages] = useState([]);
-  const [description, setDescription] = useState(0);
-
   useEffect(() => {
     const interval = setInterval(() => {
       /* showImages(); */
@@ -27,12 +21,8 @@ const Logos = () => {
           sizes="10vw"
           style={{ width: "7vw", height: "auto" }}
           alt={"BBVA company logo"}
-          onClick={() => setDescription(1)}
         ></Image>
-        <p
-          style={{ display: description === 1 ? "block" : "none" }}
-          onClick={() => setDescription(0)}
-        >
+        <p>
           desarrollando la estrategia de la disciplina de diseño, liderando
           proyectos transversales y lanzando iniciativas estratégicas para el
           equipo de España
@@ -46,12 +36,8 @@ const Logos = () => {
           sizes="10vw"
           style={{ width: "8vw", height: "auto" }}
           alt={"ikea company logo"}
-          onClick={() => setDescription(2)}
         ></Image>
-        <p
-          style={{ display: description === 2 ? "block" : "none" }}
-          onClick={() => setDescription(0)}
-        >
+        <p>
           diseñando la experiencia híbrida (phygital) de la tienda del futuro
         </p>
       </div>
@@ -63,12 +49,8 @@ const Logos = () => {
           sizes="10vw"
           style={{ width: "9vw", height: "auto" }}
           alt={"acciona company logo"}
-          onClick={() => setDescription(3)}
         ></Image>
-        <p
-          style={{ display: description === 3 ? "block" : "none" }}
-          onClick={() => setDescription(0)}
-        >
+        <p>
           diseñando el hub de aplicaciones para la gestión y experiencia del
           campus Mesena
         </p>
@@ -81,14 +63,8 @@ const Logos = () => {
           sizes="10vw"
           style={{ width: "10vw", height: "auto" }}
           alt={"Repsol company logo"}
-          onClick={() => setDescription(4)}
         ></Image>
-        <p
-          style={{ display: description === 4 ? "block" : "none" }}
-          onClick={() => setDescription(0)}
-        >
-          desarrollando el cambio de organigrama estratégico de la compañía
-        </p>
+        <p>desarrollando el cambio de organigrama estratégico de la compañía</p>
       </div>
       <div className={styles.logo5}>
         <Image
@@ -98,12 +74,8 @@ const Logos = () => {
           sizes="10vw"
           style={{ width: "10vw", height: "auto" }}
           alt={"mapfre company logo"}
-          onClick={() => setDescription(5)}
         ></Image>
-        <p
-          style={{ display: description === 5 ? "block" : "none" }}
-          onClick={() => setDescription(0)}
-        >
+        <p>
           formando a los equipos de la compañía en investigación de usuarios y
           llevando a cabo investigación cualitativa de usuarios de seguros de
           hogar y coche
@@ -117,12 +89,8 @@ const Logos = () => {
           sizes="10vw"
           style={{ width: "10vw", height: "auto" }}
           alt={"fortum company logo"}
-          onClick={() => setDescription(6)}
         ></Image>
-        <p
-          style={{ display: description === 6 ? "block" : "none" }}
-          onClick={() => setDescription(0)}
-        >
+        <p>
           creando un intraemprendimiento en el sector eléctrico, desde la
           investigación de mercado y usuarios, la conceptualización del
           servicio, la creación del modelo de negocio, el plan de lanzamiento y
@@ -137,12 +105,8 @@ const Logos = () => {
           sizes="10vw"
           style={{ width: "10vw", height: "auto" }}
           alt={"verisure company logo"}
-          onClick={() => setDescription(7)}
         ></Image>
-        <p
-          style={{ display: description === 7 ? "block" : "none" }}
-          onClick={() => setDescription(0)}
-        >
+        <p>
           investigando nuevas alternativas de innovación en usuarios del mercado
           español
         </p>
@@ -155,30 +119,22 @@ const Logos = () => {
           sizes="10vw"
           style={{ width: "10vw", height: "auto" }}
           alt={"notpla company logo"}
-          onClick={() => setDescription(8)}
         ></Image>
-        <p
-          style={{ display: description === 8 ? "block" : "none" }}
-          onClick={() => setDescription(0)}
-        >
+        <p>
           innovando en las aplicaciones del producto para crear nuevas líneas de
           negocio
         </p>
       </div>
       <div className={styles.logo9}>
-      <Image
+        <Image
           src="/big_companies/securitas.png"
           width={0}
           height={0}
           sizes="10vw"
           style={{ width: "7vw", height: "auto" }}
           alt={"securitas company logo"}
-          onClick={() => setDescription(9)}
         ></Image>
-        <p
-          style={{ display: description === 9 ? "block" : "none" }}
-          onClick={() => setDescription(0)}
-        >
+        <p>
           creando un plan de comunicación para clientes para acompañar la
           renovación de la experiencia digital
         </p>
