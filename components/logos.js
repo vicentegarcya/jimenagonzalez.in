@@ -1,18 +1,30 @@
 import Image from "next/image";
 import styles from "./logos.module.css";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const Logos = () => {
+  const logosRef = useRef();
+
   useEffect(() => {
     const interval = setInterval(() => {
-      /* showImages(); */
+      handleImages();
     }, 5000);
 
     return () => clearInterval(interval);
   }, []);
 
+  const handleImages = () => {
+    logosRef.current
+      ?.querySelector("div:nth-child(2)")
+      .classList.toggle(`${styles.hide}`);
+
+    logosRef.current
+      ?.querySelector("div:nth-child(10)")
+      .classList.toggle(`${styles.hide}`);
+  };
+
   return (
-    <div className={styles.logos}>
+    <div ref={logosRef} className={styles.logos}>
       <div className={styles.logo1}>
         <Image
           src="/big_companies/BBVA.png"
@@ -139,165 +151,85 @@ const Logos = () => {
           renovación de la experiencia digital
         </p>
       </div>
-      <Image
-        src="/pymes/capgemini.png"
-        width={0}
-        height={0}
-        sizes="10vw"
-        style={{
-          width: "10vw",
-          height: "auto",
-          visibility: "hidden",
-        }}
-        alt={"BBVA company logo"}
-        className={styles.logo1}
-      ></Image>
-      <Image
-        src="/pymes/frog.png"
-        width={0}
-        height={0}
-        sizes="10vw"
-        style={{ width: "7vw", height: "auto", visibility: "hidden" }}
-        alt={"BBVA company logo"}
-        className={styles.logo2}
-      ></Image>
-      <Image
-        src="/pymes/norrsken.png"
-        width={0}
-        height={0}
-        sizes="10vw"
-        style={{
-          width: "10vw",
-          height: "auto",
-          visibility: "hidden",
-        }}
-        alt={"BBVA company logo"}
-        className={styles.logo3}
-      ></Image>
-      <Image
-        src="/pymes/garajedeideas.png"
-        width={0}
-        height={0}
-        sizes="10vw"
-        style={{
-          width: "14vw",
-          height: "auto",
-          visibility: "hidden",
-        }}
-        alt={"BBVA company logo"}
-        className={styles.logo4}
-      ></Image>
-      <Image
-        src="/pymes/SPRMBNGS.png"
-        width={0}
-        height={0}
-        sizes="10vw"
-        style={{ width: "7vw", height: "auto", visibility: "hidden" }}
-        alt={"BBVA company logo"}
-        className={styles.logo5}
-      ></Image>
-      <Image
-        src="/pymes/escuela21.png"
-        width={0}
-        height={0}
-        sizes="10vw"
-        style={{
-          width: "10vw",
-          height: "auto",
-          visibility: "hidden",
-        }}
-        alt={"BBVA company logo"}
-        className={styles.logo6}
-      ></Image>
-      <Image
-        src="/pymes/baobab.png"
-        width={0}
-        height={0}
-        sizes="10vw"
-        style={{
-          width: "10vw",
-          height: "auto",
-          visibility: "hidden",
-        }}
-        alt={"BBVA company logo"}
-        className={styles.logo7}
-      ></Image>
-      <Image
-        src="/pymes/the-candy-toy-factory.png"
-        width={0}
-        height={0}
-        sizes="10vw"
-        style={{ width: "8vw", height: "auto", visibility: "hidden" }}
-        alt={"BBVA company logo"}
-        className={styles.logo8}
-      ></Image>
-      <Image
-        src="/pymes/asm.png"
-        width={0}
-        height={0}
-        sizes="10vw"
-        style={{ width: "8vw", height: "auto", visibility: "hidden" }}
-        alt={"BBVA company logo"}
-        className={styles.logo9}
-      ></Image>
-      <Image
-        src="/universities/upm.png"
-        width={0}
-        height={0}
-        sizes="10vw"
-        style={{
-          width: "12vw",
-          height: "auto",
-          visibility: "hidden",
-        }}
-        alt={"BBVA company logo"}
-        className={styles.logo1}
-      ></Image>
-      <Image
-        src="/universities/mondragon.png"
-        width={0}
-        height={0}
-        sizes="10vw"
-        style={{ width: "12vw", height: "auto", display: "none" }}
-        alt={"BBVA company logo"}
-        className={styles.logo2}
-      ></Image>
-      <Image
-        src="/universities/upv.png"
-        width={0}
-        height={0}
-        sizes="10vw"
-        style={{ width: "12vw", height: "auto", display: "none" }}
-        alt={"BBVA company logo"}
-        className={styles.logo3}
-      ></Image>
-      <Image
-        src="/universities/uv.png"
-        width={0}
-        height={0}
-        sizes="10vw"
-        style={{ width: "12vw", height: "auto", display: "none" }}
-        alt={"BBVA company logo"}
-        className={styles.logo4}
-      ></Image>
-      <Image
-        src="/universities/xiji.png"
-        width={0}
-        height={0}
-        sizes="10vw"
-        style={{ width: "12vw", height: "auto", display: "none" }}
-        alt={"BBVA company logo"}
-        className={styles.logo5}
-      ></Image>
-      <Image
-        src="/universities/IEN.png"
-        width={0}
-        height={0}
-        sizes="10vw"
-        style={{ width: "12vw", height: "auto", display: "none" }}
-        alt={"BBVA company logo"}
-        className={styles.logo6}
-      ></Image>
+      <div className={`${styles.logo2} ${styles.hide}`}>
+        <Image
+          src="/pymes/capgemini.png"
+          width={0}
+          height={0}
+          sizes="10vw"
+          style={{
+            width: "10vw",
+            height: "auto"
+          }}
+          alt={"capgemini company logo"}
+        ></Image>
+        <p>
+          consultora estratégica y de innovación en proyectos nacionales e
+          internacionales
+        </p>
+      </div>
+      <div className={`${styles.logo4} ${styles.hide}`}>
+        <Image
+          src="/pymes/frog.png"
+          width={0}
+          height={0}
+          sizes="10vw"
+          style={{ width: "7vw", height: "auto"}}
+          alt={"frog company logo"}
+        ></Image>
+        <p>
+          diseñadora estratégica, investigadora y diseñadora de servicios en
+          proyectos nacionales e internacionales
+        </p>
+      </div>
+      <div className={`${styles.logo6} ${styles.hide}`}>
+        <Image
+          src="/pymes/garajedeideas.png"
+          width={0}
+          height={0}
+          sizes="10vw"
+          style={{
+            width: "14vw",
+            height: "auto"
+          }}
+          alt={"garajde de ideas company logo"}
+        ></Image>
+        <p>
+          como strategist y service designer en proyectos con grandes empresas y
+          liderazgo de iniciativas de marketing y proyectos internos
+        </p>
+      </div>
+      <div className={`${styles.logo7} ${styles.hide}`}>
+        <Image
+          src="/universities/upm.png"
+          width={0}
+          height={0}
+          sizes="10vw"
+          style={{
+            width: "12vw",
+            height: "auto"
+          }}
+          alt={"upm university logo"}
+        ></Image>
+        <p>
+          ofreciendo mentorías de asesoría estratégica a start-ups emergentes
+          del ecosistema de esta incubadora
+        </p>
+      </div>
+      <div className={`${styles.logo3} ${styles.hide}`}>
+        <Image
+          src="/universities/xiji.png"
+          width={0}
+          height={0}
+          sizes="10vw"
+          style={{ width: "12vw", height: "auto" }}
+          alt={"xiji university logo"}
+        ></Image>
+        <p>
+          impartiendo clases magistrales de estrategia, investigación de diseño
+          y modelo de negocio para integrantes de la incubadora china
+        </p>
+      </div>
     </div>
   );
 };
