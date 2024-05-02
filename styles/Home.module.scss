@@ -111,6 +111,24 @@
   text-align: center;
 }
 
+.scroll div {
+  overflow: hidden;
+}
+
+.scroll div > p {
+  height: auto;
+  animation: arrowDown 1s infinite;
+}
+
+@keyframes arrowDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 .text {
   width: 16%;
   text-align: end;
@@ -389,6 +407,7 @@
   margin-bottom: 6px;
   z-index: 100;
 }
+
 .servicios > h5 {
   font-size: 1.7vw;
   letter-spacing: 1.4px;
@@ -479,6 +498,17 @@
 
 .contact_form_data .top > p {
   margin-bottom: 12px;
+}
+
+.footer_home {
+  width: 100vw;
+  height: 0;
+  max-height: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 300;
+  overflow: hidden;
 }
 
 /* RESPONSIVE MOBILE */

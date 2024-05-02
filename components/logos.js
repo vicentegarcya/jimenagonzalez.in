@@ -8,7 +8,7 @@ const Logos = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       handleImages();
-    }, 5000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, []);
@@ -21,6 +21,44 @@ const Logos = () => {
     logosRef.current
       ?.querySelector("div:nth-child(10)")
       .classList.toggle(`${styles.hide}`);
+
+    setTimeout(() => {
+      logosRef.current
+        ?.querySelector("div:nth-child(4)")
+        .classList.toggle(`${styles.hide}`);
+
+      logosRef.current
+        ?.querySelector("div:nth-child(11)")
+        .classList.toggle(`${styles.hide}`);
+    }, 1500);
+
+    setTimeout(() => {
+      logosRef.current
+        ?.querySelector("div:nth-child(9)")
+        .classList.toggle(`${styles.hide}`);
+
+      logosRef.current
+        ?.querySelector("div:nth-child(12)")
+        .classList.toggle(`${styles.hide}`);
+    }, 4500);
+    setTimeout(() => {
+      logosRef.current
+        ?.querySelector("div:nth-child(7)")
+        .classList.toggle(`${styles.hide}`);
+
+      logosRef.current
+        ?.querySelector("div:nth-child(13)")
+        .classList.toggle(`${styles.hide}`);
+    }, 3000);
+    setTimeout(() => {
+      logosRef.current
+        ?.querySelector("div:nth-child(3)")
+        .classList.toggle(`${styles.hide}`);
+
+      logosRef.current
+        ?.querySelector("div:nth-child(14)")
+        .classList.toggle(`${styles.hide}`);
+    }, 3000);
   };
 
   return (
@@ -151,7 +189,7 @@ const Logos = () => {
           renovación de la experiencia digital
         </p>
       </div>
-      <div className={`${styles.logo2} ${styles.hide}`}>
+      <div className={`${styles.logo10} ${styles.hide}`}>
         <Image
           src="/pymes/capgemini.png"
           width={0}
@@ -159,7 +197,7 @@ const Logos = () => {
           sizes="10vw"
           style={{
             width: "10vw",
-            height: "auto"
+            height: "auto",
           }}
           alt={"capgemini company logo"}
         ></Image>
@@ -168,13 +206,13 @@ const Logos = () => {
           internacionales
         </p>
       </div>
-      <div className={`${styles.logo4} ${styles.hide}`}>
+      <div className={`${styles.logo11} ${styles.hide}`}>
         <Image
           src="/pymes/frog.png"
           width={0}
           height={0}
           sizes="10vw"
-          style={{ width: "7vw", height: "auto"}}
+          style={{ width: "7vw", height: "auto" }}
           alt={"frog company logo"}
         ></Image>
         <p>
@@ -182,7 +220,7 @@ const Logos = () => {
           proyectos nacionales e internacionales
         </p>
       </div>
-      <div className={`${styles.logo6} ${styles.hide}`}>
+      <div className={`${styles.logo12} ${styles.hide}`}>
         <Image
           src="/pymes/garajedeideas.png"
           width={0}
@@ -190,7 +228,7 @@ const Logos = () => {
           sizes="10vw"
           style={{
             width: "14vw",
-            height: "auto"
+            height: "auto",
           }}
           alt={"garajde de ideas company logo"}
         ></Image>
@@ -199,7 +237,7 @@ const Logos = () => {
           liderazgo de iniciativas de marketing y proyectos internos
         </p>
       </div>
-      <div className={`${styles.logo7} ${styles.hide}`}>
+      <div className={`${styles.logo13} ${styles.hide}`}>
         <Image
           src="/universities/upm.png"
           width={0}
@@ -207,7 +245,7 @@ const Logos = () => {
           sizes="10vw"
           style={{
             width: "12vw",
-            height: "auto"
+            height: "auto",
           }}
           alt={"upm university logo"}
         ></Image>
@@ -216,7 +254,7 @@ const Logos = () => {
           del ecosistema de esta incubadora
         </p>
       </div>
-      <div className={`${styles.logo3} ${styles.hide}`}>
+      <div className={`${styles.logo14} ${styles.hide}`}>
         <Image
           src="/universities/xiji.png"
           width={0}

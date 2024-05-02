@@ -11,6 +11,7 @@ import Service from "@/components/service";
 import PropuestaForm from "@/components/propuestaForm";
 import LoadingPage from "@/components/loadingPage";
 import Logos from "@/components/logos";
+import Footer from "@/components/footer";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -37,6 +38,7 @@ export default function Home() {
 
   const contactFormRef = useRef();
   const contactFormMainRef = useRef();
+  const footerRef = useRef();
 
   const handleClickService = (service) => {
     setService(service);
@@ -166,7 +168,7 @@ export default function Home() {
       transform: "scale(1)",
       scrollTrigger: {
         trigger: serviciosSectionRef.current,
-        start: "bottom 99%",
+        start: "bottom 90%",
         end: "+=20%",
         scrub: 1.5,
       },
@@ -177,11 +179,29 @@ export default function Home() {
       transform: "scale(1)",
       scrollTrigger: {
         trigger: serviciosSectionRef.current,
-        start: "bottom 99%",
+        start: "bottom 80%",
         end: "+=25%",
         scrub: 2.25,
       },
     });
+
+    gsap.fromTo(
+      footerRef.current,
+      {
+        maxHeight: "0",
+        display: "none",
+      },
+      {
+        display: "block",
+        maxHeight: "100dvh",
+        scrollTrigger: {
+          trigger: document.body,
+          start: "bottom bottom",
+          end: "+40%",
+          scrub: 2,
+        },
+      }
+    );
   }, [isLoading, isDesktop]);
 
   if (isLoading) return <LoadingPage />;
@@ -233,7 +253,10 @@ export default function Home() {
             </div>
             <div className={styles.hero_bottom}>
               <p className={styles.scroll}>
-                SCROLL<br></br>↓
+                SCROLL<br></br>
+                <div>
+                  <p>↓</p>
+                </div>
               </p>
               <p className={styles.text}>
                 Success is the result of a good strategy
@@ -627,6 +650,9 @@ export default function Home() {
           </section>
           <div className={styles.companies_logos} ref={companiesLogosRef}>
             <Logos />
+          </div>
+          <div className={styles.footer_home} ref={footerRef}>
+            <Footer />
           </div>
         </main>
       </Layout>
