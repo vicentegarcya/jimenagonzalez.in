@@ -16,12 +16,12 @@ export default function LoadingPage() {
       setHideName(true);
       setHideKeywords(false);
       animateKeywords(0);
-    }, 1600);
+    }, 700);
     setTimeout(() => {
       setHideKeywords(true);
       setHideYears(false);
       animateYears(0);
-    }, 3400);
+    }, 2500);
   }, []);
 
   function animateKeywords(index) {
@@ -53,19 +53,19 @@ export default function LoadingPage() {
     }
   }
 
-  function animateYears(index) {
+  function animateYears(index, duration = 0.6) {
     const paragraphs = yearsRef.current?.querySelectorAll("p");
     if (index < paragraphs.length) {
       if (index > 0) {
         gsap.to(paragraphs[index - 1], {
           display: "none",
-          duration: 0.12,
+          duration: duration,
           onComplete: function () {
             gsap.to(paragraphs[index], {
               display: "block",
               duration: 0.12,
               onComplete: function () {
-                animateYears(index + 1);
+                animateYears(index + 1, duration * 0.5);
               },
             });
           },
@@ -75,7 +75,7 @@ export default function LoadingPage() {
           display: "block",
           duration: 0.12,
           onComplete: function () {
-            animateYears(index + 1);
+            animateYears(index + 1, duration * 0.5);
           },
         });
       }

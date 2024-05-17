@@ -24,10 +24,6 @@
   overflow: hidden;
 }
 
-.loadingPage .name > p {
-  animation: appearing cubic-bezier(0.39, 0.575, 0.565, 1) 1.2s;
-}
-
 .loadingPage .keywords > p {
     display: none;
 }

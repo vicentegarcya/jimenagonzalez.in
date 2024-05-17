@@ -58,7 +58,7 @@
 
 .hero_top > p {
   text-align: center;
-  margin: 2vw auto 0 auto;
+  margin: 0.25vh auto 0 auto;
 }
 
 .links {
@@ -108,24 +108,27 @@
 }
 
 .scroll {
+  margin-bottom: -20px;
   text-align: center;
 }
 
 .scroll div {
+  height: 40px;
   overflow: hidden;
 }
 
 .scroll div > p {
+  display: inline-block;
   height: auto;
-  animation: arrowDown 1s infinite;
+  animation: arrowDown 2s infinite;
 }
 
 @keyframes arrowDown {
   0% {
-    transform: translateY(-100%);
+    transform: translateY(-150%) rotate(90deg);
   }
   100% {
-    transform: translateY(0%);
+    transform: translateY(0%) rotate(90deg);
   }
 }
 
@@ -202,8 +205,7 @@
   margin-left: -3rem;
   white-space: nowrap;
   padding: 1rem 3rem;
-  border-bottom: 1px solid var(--main-black);
-  border-top: 1px solid var(--main-black);
+  background: var(--main-black);
   font-size: 15px !important;
   margin-bottom: 5px;
   display: flex;
@@ -213,7 +215,7 @@
 
 .metodologia .cinta_transportadora > p {
   font-family: "Editorial-Light";
-  color: var(--main-black);
+  color: var(--main-white);
   font-size: 2.5vw;
   display: inline-block;
   animation: scrollText 30s infinite linear;
@@ -230,12 +232,14 @@
 }
 
 .metodologia .cinta_transportadora > p > .keyword {
-  font-family: 'Editorial-reg';
-  border: 1px solid var(--main-black);
+  font-family: "Editorial-reg";
+  border: 1px solid var(--main-white);
   border-radius: 24px;
   padding: 0 24px;
-  margin-right: 12px;
+  margin-right: 8px;
   font-size: 2.3vw;
+  display: inline-flex;
+  align-items: center;
 }
 
 .metodologia .cinta_transportadora_2 {
@@ -243,41 +247,42 @@
   margin-left: -3rem;
   overflow: hidden;
   white-space: nowrap;
-  padding: 0.25rem 3rem;
-  border-bottom: 1px solid var(--main-black);
-  border-top: 1px solid var(--main-black);
+  padding: 1rem 3rem;
+  background: var(--main-black);
   margin-bottom: 5px;
   display: flex;
   align-items: center;
+  color: var(--main-white);
+  font-size: 15px !important;
 }
-.metodologia .cinta_transportadora_2 > div {
-  width: fit-content;
-  display: flex;
-  align-items: center;
+
+.metodologia .cinta_transportadora_2 > p {
+  font-family: "Editorial-Light";
+  color: var(--main-white);
+  font-size: 2.5vw;
+  display: inline-block;
   animation: scrollText 35s infinite linear;
 }
 
-.metodologia .cinta_transportadora_2 > div > div {
-  font-family: "Editorial-Light";
-  color: var(--main-black);
-  font-size: 2.5vw;
-  margin-right: 12px;
-  display: flex;
-  align-items: center;
+.metodologia .cinta_transportadora_2 > p > .emoji {
+  font-size: 2vw;
+  margin: 0 12px;
 }
 
-.metodologia .cinta_transportadora_2 > div > div > svg {
-  width: 5vw;
-  height: 5vw;
+.metodologia .cinta_transportadora_2 > p > .keyword > .emoji {
+  font-size: 2vw;
   margin-left: 12px;
 }
 
-.metodologia .cinta_transportadora_2 .keyword {
-  font-family: 'Editorial-reg';
-  border: 1px solid var(--main-black);
+.metodologia .cinta_transportadora_2 > p > .keyword {
+  font-family: "Editorial-reg";
+  border: 1px solid var(--main-white);
   border-radius: 24px;
   padding: 0 24px;
+  margin-right: 8px;
   font-size: 2.3vw;
+  display: inline-flex;
+  align-items: center;
 }
 
 .metodologia > div:nth-child(3) > div:nth-child(2) {
@@ -482,7 +487,8 @@
   font-family: "Editorial-light";
 }
 
-.contact_form_data p, .contact_form_data a {
+.contact_form_data p,
+.contact_form_data a {
   font-size: 1vw;
   opacity: 0.7;
   margin-bottom: 0.5rem;
