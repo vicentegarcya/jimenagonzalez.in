@@ -53,7 +53,7 @@ export default function Home() {
     gsap
       .fromTo(
         gonzalezRef.current,
-        { opacity: 1 },
+        { opacity: 0.9 },
         {
           opacity: 0,
           scrollTrigger: {
@@ -69,7 +69,7 @@ export default function Home() {
     gsap
       .fromTo(
         jimenaRef.current,
-        { opacity: 1 },
+        { opacity: 0.9 },
         {
           opacity: 0,
           scrollTrigger: {
@@ -241,7 +241,7 @@ export default function Home() {
                   BLOG →
                 </Link>
               </div>
-              <p>(STRATEGIC MIND / SENSITIVE HEART)</p>
+              <p>(divergent mind / sensitive heart)</p>
               <div>
                 <button
                   onClick={() => window.scrollTo(0, document.body.scrollHeight)}
@@ -253,13 +253,13 @@ export default function Home() {
             </div>
             <div className={styles.hero_bottom}>
               <p className={styles.scroll}>
-                SCROLL<br></br>
+                scroll<br></br>
                 <div>
                   <p>🡒</p>
                 </div>
               </p>
               <p className={styles.text}>
-                Success is the result of a good strategy
+                Strategy is alignment.
               </p>
             </div>
             <Image

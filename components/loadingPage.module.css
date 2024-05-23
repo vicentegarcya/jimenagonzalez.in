@@ -8,20 +8,15 @@
 }
 
 .loadingPage div {
-  font-family: "Editorial-Light";
+  font-family: "Anton";
   display: flex;
   flex-direction: row;
   text-align: center;
-  font-size: 7vw;
+  font-size: 11vw;
   font-weight: 100;
-  line-height: 28dvh;
+  line-height: 21dvh;
   text-transform: uppercase;
-}
-
-.loadingPage .name {
-  height: 11vh;
-  align-items: center;
-  overflow: hidden;
+  letter-spacing: -1px;
 }
 
 .loadingPage .keywords > p {

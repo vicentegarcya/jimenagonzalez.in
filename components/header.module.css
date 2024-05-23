@@ -16,6 +16,7 @@
   left: 0;
   font-size: 1vw;
   z-index: 1000;
+  letter-spacing: -1px;
 }
 
 .header_links {
@@ -35,6 +36,7 @@
 	outline: inherit;
   font-size: 0.9vw;
   font-family: 'Moderat-Bold';
+  letter-spacing: -1px;
 }
 
 .header_links > h5 {

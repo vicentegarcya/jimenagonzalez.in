@@ -9,25 +9,24 @@
 
 .jimena {
   position: fixed;
-  font-family: "Editorial-Light";
+  font-family: "Anton";
   text-align: center;
-  font-size: 16vw;
+  font-size: 19.5vw;
   font-weight: 100;
-  line-height: 28dvh;
+  letter-spacing: -5px;
 }
 
 .jimena_surname {
-  top: 36%;
+  top: 39%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 0;
 }
 
 .jimena_name {
-  top: 65%;
+  top: 72%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 1;
 }
 
 //HERO
@@ -59,12 +58,18 @@
 .hero_top > p {
   text-align: center;
   margin: 0.25vh auto 0 auto;
+  font-family: 'Baskerville-Light';
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -1.5px;
+  font-size: 2.1vw;
 }
 
 .links {
   width: fit-content;
   display: flex;
   flex-direction: column;
+  letter-spacing: -1px;
 }
 
 .hero_top > div:last-child {
@@ -108,12 +113,17 @@
 }
 
 .scroll {
-  margin-bottom: -20px;
+  margin-bottom: -10px;
   text-align: center;
+  font-family: 'Baskerville-Light';
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -1.5px;
+  font-size: 1.85vw;
 }
 
 .scroll div {
-  height: 40px;
+  height: 60px;
   overflow: hidden;
 }
 
@@ -121,6 +131,9 @@
   display: inline-block;
   height: auto;
   animation: arrowDown 2s infinite;
+  font-family: 'Moderat-Reg';
+  font-style: normal;
+  font-size: 1vw;
 }
 
 @keyframes arrowDown {
@@ -133,10 +146,13 @@
 }
 
 .text {
-  width: 16%;
-  text-align: end;
-  font-size: 1.11vw;
-  text-transform: uppercase;
+  width: 12%;
+  font-family: 'Baskerville-Light';
+  font-style: italic;
+  letter-spacing: -3px;
+  font-size: 2.75vw;
+  line-height: 6dvh;
+  margin-bottom: 12px;
 }
 
 .hero > img {

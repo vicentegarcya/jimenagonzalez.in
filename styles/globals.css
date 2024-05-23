@@ -1,16 +1,7 @@
 @font-face {
-  font-family: 'Editorial-Reg';
-  src: url('../public/fonts/PPEditorialOld-Regular.otf');
-}
-
-@font-face {
-  font-family: 'Editorial-Bold';
-  src: url('../public/fonts/PPEditorialOld-Ultrabold.otf');
-}
-
-@font-face {
-  font-family: 'Editorial-Light';
-  src: url('../public/fonts/PPEditorialOld-Ultralight.otf');
+  font-family: 'Baskerville-Light';
+  src: url('../public/fonts/BaskervilleItalicBT.woff');
+  
 }
 
 @font-face {

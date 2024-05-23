@@ -96,8 +96,8 @@ export default function LoadingPage() {
         className={`${styles.keywords}`}
         style={{ display: hideKeywords ? "none" : "block" }}
       >
-        <p>Business Design</p>
-        <p>Service Design</p>
+        <p>Business<br></br>Design</p>
+        <p>Service<br></br>Design</p>
         <p>Facilitation</p>
       </div>
       <div
