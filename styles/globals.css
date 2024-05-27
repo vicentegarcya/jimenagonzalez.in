@@ -51,7 +51,7 @@ html,
 body {
   max-width: 100dvw;
   overflow-x: hidden;
-  font-family: 'Editorial-Reg', sans-serif;
+  font-family: 'Moderat-Reg', sans-serif;
   position: relative;
   -webkit-text-size-adjust: 100%;
   color: var(--main-black);

@@ -314,91 +314,90 @@ export default function Home() {
             </div>
             <div className={styles.metodologia_text}>
               <p>
-                Reivindicando el poder de la<br></br> estrategia y el diseño para crear
-                el<br></br> futuro del valor y la belleza, en forma de negocios
-                disruptivos y servicios diferenciales.
+                Reivindicando el poder de la<br></br> estrategia y el diseño
+                para crear el<br></br> futuro del valor y la belleza, en forma
+                de negocios disruptivos y servicios diferenciales.
               </p>
               <p>
-                Combino pensamiento<br></br> estratégico, herramientas de<br></br> diseño y
-                expertise de negocio para crear y elevar proyectos emergentes y
-                en evolución.
+                Combino pensamiento<br></br> estratégico, herramientas de
+                <br></br> diseño y expertise de negocio para crear y elevar
+                proyectos emergentes y en evolución.
               </p>
               <p>
-                Para cada proyecto, creo un<br></br> marco metodológico ad hoc para
-                acompañar a visionarios, equipos creativos y grandes empresas.
+                Para cada proyecto, creo un<br></br> marco metodológico ad hoc
+                para acompañar a visionarios, equipos creativos y grandes
+                empresas.
               </p>
             </div>
           </section>
           <section className={styles.claim}>
             <h3>
-            SUCCESS IS THE RESULT OF A<br></br> GOOD STRATEGY.
+              SUCCESS IS THE RESULT OF A<br></br> GOOD STRATEGY.
             </h3>
           </section>
           <section className={styles.experiencia} id="experiencia">
-            <h5 ref={experienciaTitleRef}>i looooooove business</h5>
-            <div>
-              <div className={styles.left}>
-                <div className={styles.big_companies}>
-                  <p ref={bigCompaniesTextRef}>
-                    Originaria del mundo de la consultoría de negocio, he
-                    acompañado a{" "}
-                    <div className={styles.highlight}>
-                      <span>grandes empresas</span>
-                      <div className={styles.highlighter}></div>
-                    </div>{" "}
-                    nacionales e internacionales en proyectos de definición
-                    estratégica, innovación, diseño de servicios, investigación
-                    e intraemprendimiento.
-                  </p>
-                </div>
-                <div className={styles.medium_companies}>
-                  <p ref={pymesTextRef}>
-                    También he trabajado en proyectos estratégicos para{" "}
-                    <div className={styles.highlight}>
-                      <span>pequeñas y mediandas empresas</span>
-                      <div className={styles.highlighter}></div>
-                    </div>
-                    , y mentorizado a{" "}
-                    <div className={styles.highlight}>
-                      <span>startups</span>
-                      <div className={styles.highlighter}></div>
-                    </div>{" "}
-                    en fase semilla y de escalado en diversas incubadoras y
-                    aceleradoras, aportando la visión estratégica y el valor del
-                    diseño.
-                  </p>
-                </div>
-                <div className={styles.universities}>
-                  <p ref={universityTextRef}>
-                    Además, desde hace 4 años soy{" "}
-                    <div className={styles.highlight}>
-                      <span>docente</span>
-                      <div className={styles.highlighter}></div>
-                    </div>{" "}
-                    de innovación y estrategia en UPM, y colaboradora con otras
-                    instituciones universitarias como UV, UPV o Mondragon en{" "}
-                    <div className={styles.highlight}>
-                      <span>actividades de emprendimiento y </span>
-                      <div className={styles.highlighter}></div>
-                    </div>{" "}
-                    <div className={styles.highlight}>
-                      <span>bootcamps</span>
-                      <div className={styles.highlighter}></div>
-                    </div>{" "}
-                    de innovación social y ambiental.
-                  </p>
-                </div>
-                <div>
-                  <button
-                    className={styles.hablemos}
-                    onClick={() =>
-                      window.scrollTo(0, document.body.scrollHeight)
-                    }
-                  >
-                    HABLEMOS
-                  </button>
-                </div>
-              </div>
+            <h5 ref={experienciaTitleRef} className={styles.section_title}>
+              <p>Strategy is the</p>
+              <p>MARRIAGE</p>
+              <p>of vision and action.</p>
+            </h5>
+            <div className={styles.cinta_transportadora}>
+              <p>
+                <span className={styles.keyword}>Strategy</span>
+                <span className={styles.emoji}>➔</span>
+                Diseño estratégico <span className={styles.emoji}>❉</span>
+                Pensamiento sistémico <span className={styles.emoji}>▶▶</span>
+                Diseño de futuros <span className={styles.emoji}>◖</span>
+                <span className={styles.keyword}>Business Design</span>
+                <span className={styles.emoji}>◗</span>
+                Análisis de mercado <span className={styles.emoji}>❋</span>
+                Investigación de usuarios
+                <span className={styles.emoji}>✖</span>
+                User Experience <span className={styles.emoji}>♠</span>
+                <span className={styles.keyword}>Service Design</span>
+                <span className={styles.emoji}>☛</span>
+                Design Thinking <span className={styles.emoji}>✚</span>
+                <span className={styles.keyword}>Facilitación</span>
+                <span className={styles.emoji}>☻</span>
+              </p>
+              <p>
+                <span className={styles.keyword}>Strategy</span>
+                <span className={styles.emoji}>➔</span>
+                Diseño estratégico <span className={styles.emoji}>❉</span>
+                Pensamiento sistémico <span className={styles.emoji}>▶▶</span>
+                Diseño de futuros <span className={styles.emoji}>◖</span>
+                <span className={styles.keyword}>Business Design</span>
+                <span className={styles.emoji}>◗</span>
+                Análisis de mercado <span className={styles.emoji}>❋</span>
+                Investigación de usuarios
+                <span className={styles.emoji}>✖</span>
+                User Experience <span className={styles.emoji}>♠</span>
+                <span className={styles.keyword}>Service Design</span>
+                <span className={styles.emoji}>☛</span>
+                Design Thinking <span className={styles.emoji}>✚</span>
+                <span className={styles.keyword}>Facilitación</span>
+              </p>
+            </div>
+            <div className={styles.experiencia_text}>
+              <p>
+                Originaria del mundo de la consultoría de negocio, he acompañado
+                a grandes <span className={styles.highlighter}>empresas</span>{" "}
+                nacionales e internacionales en proyectos de definición
+                estratégica, innovación, diseño de servicios, investigación e
+                intraemprendimiento.
+              </p>
+              <p>
+                También he trabajado en proyectos estratégicos para pequeñas y
+                medianas empresas, y mentorizado a startups en fase semilla y de
+                escalado en diversas incubadoras y aceleradoras, aportando la
+                visión estratégica y el valor del diseño.
+              </p>
+              <p>
+                Además, desde hace 4 años doy clases y talleres de innovación y
+                estrategia en UPM, y colaboro con otras instituciones
+                universitarias como UV, UPV o Mondragon en actividades de
+                emprendimiento, bootcamps y hackathones de innovación.
+              </p>
             </div>
           </section>
           <section
@@ -524,9 +523,6 @@ export default function Home() {
               ></PropuestaForm>
             </div>
           </section>
-          <div className={styles.companies_logos} ref={companiesLogosRef}>
-            <Logos />
-          </div>
           <div className={styles.footer_home} ref={footerRef}>
             <Footer />
           </div>
