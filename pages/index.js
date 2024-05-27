@@ -46,7 +46,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    setTimeout(() => setIsLoading(false), 4600);
+    setTimeout(() => setIsLoading(false), 4700);
 
     //ANIMATIONS
     //HERO
@@ -258,9 +258,7 @@ export default function Home() {
                   <p>🡒</p>
                 </div>
               </p>
-              <p className={styles.text}>
-                Strategy is alignment.
-              </p>
+              <p className={styles.text}>Strategy is alignment.</p>
             </div>
             <Image
               src="/jimena_hero.png"
@@ -272,73 +270,69 @@ export default function Home() {
             ></Image>
           </section>
           <section className={styles.metodologia} id="metodologia">
-            <h5 ref={metodologiaTitleRef}>
-              Strategy is the key to manifesting purpose
+            <h5 ref={metodologiaTitleRef} className={styles.section_title}>
+              <p>Strategy is</p>
+              <p>THE KEY</p>
+              <p>to manifesting purpose.</p>
             </h5>
-            <div>
+            <div className={styles.cinta_transportadora}>
               <p>
-                Mi metodología combina estrategia de negocio pura con
-                herramientas de diseño para acompañar a grandes empresas y
-                proyectos emergentes en la creación de{" "}
-                <div className={styles.highlight}>
-                  <span>valor, propósito y acción alineada.</span>
-                  <div
-                    ref={metodologiaSpan}
-                    className={styles.highlighter}
-                  ></div>
-                </div>
+                <span className={styles.keyword}>Strategy</span>
+                <span className={styles.emoji}>➔</span>
+                Diseño estratégico <span className={styles.emoji}>❉</span>
+                Pensamiento sistémico <span className={styles.emoji}>▶▶</span>
+                Diseño de futuros <span className={styles.emoji}>◖</span>
+                <span className={styles.keyword}>Business Design</span>
+                <span className={styles.emoji}>◗</span>
+                Análisis de mercado <span className={styles.emoji}>❋</span>
+                Investigación de usuarios
+                <span className={styles.emoji}>✖</span>
+                User Experience <span className={styles.emoji}>♠</span>
+                <span className={styles.keyword}>Service Design</span>
+                <span className={styles.emoji}>☛</span>
+                Design Thinking <span className={styles.emoji}>✚</span>
+                <span className={styles.keyword}>Facilitación</span>
+                <span className={styles.emoji}>☻</span>
               </p>
               <p>
-                Para cada proyecto, creo un marco metodológico ad hoc para dotar
-                de coherencia y claridad a todo el proceso. Facilito la
-                co-creación de una estrategia que permita hacer realidad la
-                visión, apoyándome en mi expertise de negocio y diseño.
+                <span className={styles.keyword}>Strategy</span>
+                <span className={styles.emoji}>➔</span>
+                Diseño estratégico <span className={styles.emoji}>❉</span>
+                Pensamiento sistémico <span className={styles.emoji}>▶▶</span>
+                Diseño de futuros <span className={styles.emoji}>◖</span>
+                <span className={styles.keyword}>Business Design</span>
+                <span className={styles.emoji}>◗</span>
+                Análisis de mercado <span className={styles.emoji}>❋</span>
+                Investigación de usuarios
+                <span className={styles.emoji}>✖</span>
+                User Experience <span className={styles.emoji}>♠</span>
+                <span className={styles.keyword}>Service Design</span>
+                <span className={styles.emoji}>☛</span>
+                Design Thinking <span className={styles.emoji}>✚</span>
+                <span className={styles.keyword}>Facilitación</span>
               </p>
-              <div className={styles.cinta_transportadora}>
-                <p>
-                  <span className={styles.keyword}>Strategy</span>
-                  <span className={styles.emoji}>➔</span>
-                  Diseño estratégico <span className={styles.emoji}>❉</span>
-                  Pensamiento sistémico <span className={styles.emoji}>▶▶</span>
-                  Diseño de futuros <span className={styles.emoji}>◖</span>
-                  <span className={styles.keyword}>Business Design</span>
-                  <span className={styles.emoji}>◗</span>
-                  Análisis de mercado <span className={styles.emoji}>❋</span>
-                </p>
-                <p>
-                  <span className={styles.keyword}>Strategy</span>
-                  <span className={styles.emoji}>➔</span>
-                  Diseño estratégico <span className={styles.emoji}>❉</span>
-                  Pensamiento sistémico <span className={styles.emoji}>▶▶</span>
-                  Diseño de futuros <span className={styles.emoji}>◖</span>
-                  <span className={styles.keyword}>Business Design</span>
-                  <span className={styles.emoji}>◗</span>
-                  Análisis de mercado <span className={styles.emoji}>❋</span>
-                </p>
-              </div>
-              <div className={styles.cinta_transportadora_2}>
-                <p>
-                  Investigación de usuarios
-                  <span className={styles.emoji}>✖</span>
-                  User Experience <span className={styles.emoji}>♠</span>
-                  <span className={styles.keyword}>Service Design</span>
-                  <span className={styles.emoji}>☛</span>
-                  Design Thinking <span className={styles.emoji}>✚</span>
-                  <span className={styles.keyword}>Facilitación</span>
-                  <span className={styles.emoji}>☻</span>
-                </p>
-                <p>
-                  Investigación de usuarios
-                  <span className={styles.emoji}>✖</span>
-                  User Experience <span className={styles.emoji}>♠</span>
-                  <span className={styles.keyword}>Service Design</span>
-                  <span className={styles.emoji}>☛</span>
-                  Design Thinking <span className={styles.emoji}>✚</span>
-                  <span className={styles.keyword}>Facilitación</span>
-                  <span className={styles.emoji}>☻</span>
-                </p>
-              </div>
             </div>
+            <div className={styles.metodologia_text}>
+              <p>
+                Reivindicando el poder de la<br></br> estrategia y el diseño para crear
+                el<br></br> futuro del valor y la belleza, en forma de negocios
+                disruptivos y servicios diferenciales.
+              </p>
+              <p>
+                Combino pensamiento<br></br> estratégico, herramientas de<br></br> diseño y
+                expertise de negocio para crear y elevar proyectos emergentes y
+                en evolución.
+              </p>
+              <p>
+                Para cada proyecto, creo un<br></br> marco metodológico ad hoc para
+                acompañar a visionarios, equipos creativos y grandes empresas.
+              </p>
+            </div>
+          </section>
+          <section className={styles.claim}>
+            <h3>
+            SUCCESS IS THE RESULT OF A<br></br> GOOD STRATEGY.
+            </h3>
           </section>
           <section className={styles.experiencia} id="experiencia">
             <h5 ref={experienciaTitleRef}>i looooooove business</h5>

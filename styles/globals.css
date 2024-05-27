@@ -6,22 +6,34 @@
 
 @font-face {
   font-family: 'Moderat-Reg';
-  src: url('../public/fonts/Moderat-Trial-Extended-Book.otf');
-}
-
-@font-face {
-  font-family: 'Moderat-Bold';
-  src: url('../public/fonts/Moderat-Trial-Extended-Bold.otf');
+  src: url('../public/fonts/Moderat-Trial-Regular.otf');
 }
 
 @font-face {
   font-family: 'Moderat-Light';
+  src: url('../public/fonts/Moderat-Trial-Light.otf');
+}
+
+@font-face {
+  font-family: 'Moderat-Thin';
+  src: url('../public/fonts/Moderat-Trial-Thin.otf');
+}
+
+@font-face {
+  font-family: 'Moderat-Ext-Bold';
+  src: url('../public/fonts/Moderat-Trial-Extended-Bold.otf');
+}
+
+@font-face {
+  font-family: 'Moderat-Ext-Light';
   src: url('../public/fonts/Moderat-Trial-Extended-Light.otf');
 }
 
 :root {
   --main-black: #282C32;
   --main-white: #F8F8F8;
+  --main-purple: #7A80FF;
+  --main-yellow: #D4FC78;
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
