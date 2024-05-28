@@ -4,7 +4,7 @@
   left: 0;
   width: 100vw;
   height: 100dvh;
-  background: var(--main-black);
+  background: #212121;
   color: var(--main-white);
   height: 100dvh;
   display: flex;
@@ -17,7 +17,7 @@
   overflow: hidden;
 }
 
-.footer .top {
+.footer .middle {
   display: flex;
   justify-content: space-between;
   padding: 4vw 6vw;
@@ -25,22 +25,12 @@
   font-size: 1.3vw;
   line-height: 1.5;
   width: 100%;
-  color: #bdbdbd;
   height: 55%;
+  line-height: 1.3rem;
 }
 
-.footer .top .left {
-  width: 35%;
-}
-
-.footer .top .right {
-  font-family: "Moderat-light";
-  width: 40%;
-  padding-right: 8vw;
-}
-
-.footer .top a, .footer .top span {
-  color: var(--main-white);
+.footer .middle a, .footer .middle span {
+  text-decoration: underline;
 }
 
 .footer .bottom {

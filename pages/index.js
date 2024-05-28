@@ -675,7 +675,10 @@ export default function Home() {
             <div className={styles.contact_form_backpaper}></div>
             <div ref={contactFormMainRef} className={styles.contact_form_main}>
               <div className={styles.contact_form_data}>
-                <h5>CONTACTO</h5>
+                <h5 className={styles.section_title}>
+                  <p>Let&rsquo;s</p>
+                  <p>CONNECT</p>
+                </h5>
                 <div>
                   <p>40°30`N 3°40`O / 40.500, -3.667</p>
                   <a href="tel:+34626457400">(34) 626 457 400</a>

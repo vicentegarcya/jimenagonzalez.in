@@ -81,7 +81,7 @@ export default function PropuestaForm({service, setService}) {
             onClick={() => setService("estrategia")}
           >
             estrategia
-          </span>{" "}
+          </span>{" "}<br></br>
           <span
             style={{
               background:
