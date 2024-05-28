@@ -18,27 +18,17 @@
   min-height: 220px;
   margin-left: -3rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   border-bottom: 1px solid grey;
   z-index: 1;
+  padding: 1.5rem 3rem 2rem 3rem;
 }
 
 .servicio_intro {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 35%;
-  padding: 3rem 3rem;
-}
-
-.servicio_intro > div > p {
-  font-size: 1.3vw;
-  width: 90%;
-  margin-top: 32px;
-}
-
-.servicio_intro > div > a {
-  width: 100%;
+  width: 50%;
 }
 
 .servicio_intro button {
@@ -53,16 +43,32 @@
   font-size: 1.1vw;
   opacity: 0.9;
   width: fit-content;
-  font-family: "Moderat-Reg";
+  font-family: "Moderat-Ext-Reg";
 }
 
 .servicio_title {
   width: 100% !important;
-  font-family: "Moderat-Reg";
-  font-size: 1.2vw !important;
+  font-family: "Moderat-Light";
+  font-size: 1.65vw !important;
   font-weight: 100;
   text-transform: uppercase !important;
-  opacity: 0.6;
+}
+
+.servicio_explanation {
+  width: 70% !important;
+  font-family: "Baskerville-Light";
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -1px;
+  line-height: 1.35rem;
+  font-size: 1.8vw !important;
+  margin-top: 20px;
+  margin-bottom: 36px;
+}
+
+.servicio_explanation a {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
 }
 
 .servicio_content {
@@ -71,40 +77,23 @@
   flex-direction: column;
 }
 
-.servicio_text {
-  font-size: 1.3vw;
-}
-
-.servicio_text > p {
-  margin-bottom: 24px;
-}
-
-.servicio_text > p:last-child {
-  margin-bottom: 0;
-}
-
 .servicio_description {
-  display: flex;
+  width: 80%;
+  font-family: 'Moderat-Light';
+  font-size: 1.65vw;
+  margin-bottom: 36px;
+  line-height: 1.45rem;
 }
 
-.servicio_description:not(:last-child) {
-  border-bottom: 1px solid var(--main-black);
+.servicio_bullet_point {
+  width: 80%;
+  font-family: 'Moderat-Reg';
+  font-size: 1.65vw;
+  line-height: 1.45rem;
 }
 
-.servicio_description > .description_title {
-  min-width: 16vw;
-  max-width: 16vw;
-  padding: 3rem 3rem;
-  border-left: 1px solid var(--main-black);
-  border-right: 1px solid var(--main-black);
-  font-family: "Editorial-light";
-  letter-spacing: 0.6px;
-  font-size: 1.3vw;
-}
-
-.servicio_description > .description_text {
-  padding: 3rem 3rem;
-  font-size: 1.1vw;
+.servicio_bullet_point:not(:last-child) {
+  margin-bottom: 24px;
 }
 
 @keyframes backgroundMoving {

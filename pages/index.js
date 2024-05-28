@@ -10,7 +10,6 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Service from "@/components/service";
 import PropuestaForm from "@/components/propuestaForm";
 import LoadingPage from "@/components/loadingPage";
-import Logos from "@/components/logos";
 import Footer from "@/components/footer";
 
 export default function Home() {
@@ -27,12 +26,11 @@ export default function Home() {
   const metodologiaTitleRef = useRef();
   const metodologiaSpan = useRef();
   const experienciaTitleRef = useRef();
+  const experienciaTextRef = useRef();
   const serviciosTitleRef = useRef();
   const serviciosDivRef = useRef();
   const serviciosSectionRef = useRef();
 
-  const bigCompaniesTextRef = useRef();
-  const pymesTextRef = useRef();
   const universityTextRef = useRef();
   const companiesLogosRef = useRef();
 
@@ -83,6 +81,7 @@ export default function Home() {
       .timeScale(5);
 
     //METODOLOGIA
+    //Meter aquí animación de claim
     gsap.to(metodologiaSpan.current, {
       width: "100%",
       duration: 1,
@@ -94,33 +93,13 @@ export default function Home() {
     });
 
     //EXPERIENCIA
-    gsap.to(bigCompaniesTextRef.current?.querySelector("div > div"), {
+    gsap.to(`.${styles.highlighter}`, {
       width: "100%",
       duration: 1,
       ease: "power1.inOut",
       scrollTrigger: {
-        trigger: bigCompaniesTextRef.current,
-        start: "top 50%",
-      },
-    });
-
-    gsap.to(pymesTextRef.current?.querySelectorAll("div > div"), {
-      width: "100%",
-      duration: 1,
-      ease: "power1.inOut",
-      scrollTrigger: {
-        trigger: pymesTextRef.current,
-        start: "top 50%",
-      },
-    });
-
-    gsap.to(universityTextRef.current?.querySelectorAll("div > div"), {
-      width: "100%",
-      duration: 1,
-      ease: "power1.inOut",
-      scrollTrigger: {
-        trigger: universityTextRef.current,
-        start: "top 50%",
+        trigger: experienciaTitleRef.current,
+        start: "top 25%",
       },
     });
 
@@ -341,62 +320,298 @@ export default function Home() {
               <p>MARRIAGE</p>
               <p>of vision and action.</p>
             </h5>
-            <div className={styles.cinta_transportadora}>
+            <div className={styles.cinta_transportadora_logos}>
               <p>
-                <span className={styles.keyword}>Strategy</span>
-                <span className={styles.emoji}>➔</span>
-                Diseño estratégico <span className={styles.emoji}>❉</span>
-                Pensamiento sistémico <span className={styles.emoji}>▶▶</span>
-                Diseño de futuros <span className={styles.emoji}>◖</span>
-                <span className={styles.keyword}>Business Design</span>
-                <span className={styles.emoji}>◗</span>
-                Análisis de mercado <span className={styles.emoji}>❋</span>
-                Investigación de usuarios
-                <span className={styles.emoji}>✖</span>
-                User Experience <span className={styles.emoji}>♠</span>
-                <span className={styles.keyword}>Service Design</span>
-                <span className={styles.emoji}>☛</span>
-                Design Thinking <span className={styles.emoji}>✚</span>
-                <span className={styles.keyword}>Facilitación</span>
-                <span className={styles.emoji}>☻</span>
+                <div style={{ width: "80px" }}>
+                  <Image
+                    src="/big_companies/BBVA.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="BBVA logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/big_companies/ikea.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Ikea logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/big_companies/repsol.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Repsol logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/big_companies/mapfre.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Mapfre logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/big_companies/acciona.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Acciona logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/big_companies/fortum.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Fortum logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/pymes/capgemini.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Capgemini logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/pymes/frog.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Frog logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/pymes/norrsken.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Norrsken logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/pymes/garajedeideas.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Garaje de Ideas logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/pymes/escuela21.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Escuela 21 logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/universities/xiji.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Xiji logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/universities/upm.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="UPM logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/universities/upv.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="UPV logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/universities/IEN.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="IEN logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/universities/mondragon.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Mondragon logo"
+                  />
+                </div>
               </p>
               <p>
-                <span className={styles.keyword}>Strategy</span>
-                <span className={styles.emoji}>➔</span>
-                Diseño estratégico <span className={styles.emoji}>❉</span>
-                Pensamiento sistémico <span className={styles.emoji}>▶▶</span>
-                Diseño de futuros <span className={styles.emoji}>◖</span>
-                <span className={styles.keyword}>Business Design</span>
-                <span className={styles.emoji}>◗</span>
-                Análisis de mercado <span className={styles.emoji}>❋</span>
-                Investigación de usuarios
-                <span className={styles.emoji}>✖</span>
-                User Experience <span className={styles.emoji}>♠</span>
-                <span className={styles.keyword}>Service Design</span>
-                <span className={styles.emoji}>☛</span>
-                Design Thinking <span className={styles.emoji}>✚</span>
-                <span className={styles.keyword}>Facilitación</span>
+                <div style={{ width: "80px" }}>
+                  <Image
+                    src="/big_companies/BBVA.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="BBVA logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/big_companies/ikea.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Ikea logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/big_companies/repsol.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Repsol logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/big_companies/mapfre.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Mapfre logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/big_companies/acciona.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Acciona logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/big_companies/fortum.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Fortum logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/pymes/capgemini.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Capgemini logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/pymes/frog.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Frog logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/pymes/norrsken.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Norrsken logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/pymes/garajedeideas.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Garaje de Ideas logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/pymes/escuela21.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Escuela 21 logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/universities/xiji.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Xiji logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/universities/upm.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="UPM logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/universities/upv.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="UPV logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/universities/IEN.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="IEN logo"
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/universities/mondragon.png"
+                    layout="fill"
+                    objectFit="contain"
+                    alt="Mondragon logo"
+                  />
+                </div>
               </p>
             </div>
-            <div className={styles.experiencia_text}>
+            <div ref={experienciaTextRef} className={styles.experiencia_text}>
               <p>
                 Originaria del mundo de la consultoría de negocio, he acompañado
-                a grandes <span className={styles.highlighter}>empresas</span>{" "}
+                a grandes{" "}
+                <div className={styles.highlight}>
+                  <div className={styles.highlighter}></div>empresas
+                </div>{" "}
                 nacionales e internacionales en proyectos de definición
                 estratégica, innovación, diseño de servicios, investigación e
                 intraemprendimiento.
               </p>
               <p>
                 También he trabajado en proyectos estratégicos para pequeñas y
-                medianas empresas, y mentorizado a startups en fase semilla y de
-                escalado en diversas incubadoras y aceleradoras, aportando la
-                visión estratégica y el valor del diseño.
+                medianas empresas, y mentorizado a{" "}
+                <div className={styles.highlight}>
+                  <div className={styles.highlighter}></div>startups
+                </div>{" "}
+                en fase semilla y de escalado en diversas incubadoras y
+                aceleradoras, aportando la visión estratégica y el valor del
+                diseño.
               </p>
               <p>
-                Además, desde hace 4 años doy clases y talleres de innovación y
-                estrategia en UPM, y colaboro con otras instituciones
-                universitarias como UV, UPV o Mondragon en actividades de
-                emprendimiento, bootcamps y hackathones de innovación.
+                Además, desde hace 4 años doy{" "}
+                <div className={styles.highlight}>
+                  <div className={styles.highlighter}></div>clases y talleres
+                </div>{" "}
+                de innovación y estrategia en UPM, y colaboro con otras
+                instituciones universitarias como UV, UPV o Mondragon en
+                actividades de emprendimiento, bootcamps y hackathones de
+                innovación.
               </p>
             </div>
           </section>
@@ -405,100 +620,50 @@ export default function Home() {
             className={styles.servicios}
             id="servicios"
           >
-            <h5 ref={serviciosTitleRef}>
-              creativity is life, life is creativity, sooo... let&apos;s create
-              together!
+            <h5 ref={serviciosTitleRef} className={styles.section_title}>
+              <p style={{ marginLeft: "24px" }}>Let&rsquo;s</p>
+              <p>CREATE</p>
+              <p style={{ marginRight: 0 }}>together!</p>
             </h5>
             <div ref={serviciosDivRef} className={styles.servicios_main}>
               <Service
                 title={"Estrategia y Business Design"}
-                explanation="Todo comienza con una visión, que la estrategia traduce en un negocio viable a través de investigación del contexto, el diseño del negocio y la acción alineada."
+                explanation="Crear, desarrollar y expandir un negocio es un proceso iterativo en espiral."
                 ctaText="¿NECESITAS ESTRATEGIA?"
-                descriptions={[
-                  {
-                    title: "Visión",
-                    text: "Afinando la visión del negocio, su misión interna y su propósito innovador en el sistema como piedra angular del proyecto, en base a la cual se desarrolla la estrategia.",
-                  },
-                  {
-                    title: "Investigación de futuros",
-                    text: "Percibiendo las señales y tendencias para crear estrategias coherentes de presente y futuro que se adelanten a los acontecimientos (Diseño de futuros).",
-                  },
-                  {
-                    title: "Investigación sistémica",
-                    text: "Incorporando una visión holística para comprender las influencias de todos los factores y stakeholders relacionados para diseñar estrategias favorecidas por el propio contexto (Diseño sistémico).",
-                  },
-                  {
-                    title: "Investigación de mercados",
-                    text: "observando el mercado y su transformación para identificar las áreas de oportunidad clave.",
-                  },
-                  {
-                    title: "Plan estratégico",
-                    text: "Alineando visión e insights con acción y objetivos gracias a la creación de un plan estratégico y táctico.",
-                  },
-                  {
-                    title: "Modelo de negocio",
-                    text: "Creando un modelo de negocio viable y consistente, con una cartera de productos y servicios relevantes para el mundo.",
-                  },
+                description="Visión, propósito e identidad de marca, objetivos y roadmap estratégico, investigación de mercado y usuarios, client persona y propuesta de valor, diseño de experiencia, productos y servicios, modelo de negocio."
+                bulletPoints={[
+                  "01. BETA BUSINESS, de idea a MVP.",
+                  "02. BUSINESS, de MVP a negocio.",
+                  "03. BUSINESS LEAP, expandiendo el negocio.",
                 ]}
                 onClick={() => {
                   handleClickService("estrategia");
                 }}
               />
               <Service
-                title={"Identidad y branding"}
-                link={[
-                  {
-                    text: "con el studio SUPREME BEINGS",
-                    url: "https://www.supremebeings.love/",
-                  },
-                ]}
-                ctaText="¿NECESITAS BRANDING?"
-                descriptions={[
-                  {
-                    text: "Descubriendo la identidad auténtica de tu proyecto para crear una experiencia de marca completa: naming, diseño de marca, dirección de arte y copywriting.",
-                  },
-                ]}
-                onClick={() => handleClickService("branding")}
-              />
-              <Service
-                title={"Diseño de servicios y facilitación creativa"}
-                explanation="Conocer profundamente el usuario es la base para diseñar una experiencia de cliente (física, digital o híbrida) fluida y diferencial alineada con la marca."
+                title={"Facilitación y service design"}
+                explanation="La filosofía de diseño es la clave de la creación de valor y belleza."
                 ctaText="¿NECESITAS DISEÑO?"
-                descriptions={[
-                  {
-                    title: "Facilitación de la co-creación en equipo",
-                    text: "Liderando el proceso de trabajo y creando una metodología ad hoc para facilitar la sinergia creativa del equipo del proyecto.",
-                  },
-                  {
-                    title: "Investigación de diseño",
-                    text: "Comprendiendo la experiencia, necesidades e influencias de los usuarios para obtener insights relevantes para la creación de valor.",
-                  },
-                  {
-                    title: "Ideación y conceptualización",
-                    text: "Generando disrupción innovadora para crear un concepto único.",
-                  },
-                  {
-                    title: "Diseño de experiencia",
-                    text: "Creando una experiencia de usuario o cliente coherente y fluida, con una propuesta de valor diferencial.",
-                  },
+                bulletPoints={[
+                  "01. FACILITACIÓN, diseñando una metodología ad-hoc para facilitar la sinergia creativa del equipo del proyecto en sesiones online o presenciales.",
+                  "02. INVESTIGACIÓN DE DISEÑO, comprendiendo la experiencia, necesidades e influencias de los usuarios para obtener insights relevantes para la creación de valor.",
+                  "03. DISEÑO DE SERVICIOS, creando una experiencia de usuario o cliente coherente y fluida, con una propuesta de valor diferencial.",
                 ]}
                 onClick={() => handleClickService("diseño-de-servicios")}
               />
               <Service
+                title={"Identidad y branding"}
+                ctaText="¿NECESITAS BRANDING?"
+                explanation="descubriendo la identidad auténtica de tu proyecto para crear la experiencia de marca."
+                onClick={() => handleClickService("branding")}
+                sprm={true}
+              />
+              <Service
                 title={"Diseño y desarrollo web"}
-                link={[
-                  {
-                    text: "con Vicente Garcya",
-                    url: "https://www.vicentegarcya.com/",
-                  },
-                ]}
                 ctaText={"¿NECESITAS WEB?"}
-                descriptions={[
-                  {
-                    text: "Creando experiencias digitales con desarrollo front-end o full-stack, como Web Apps, landing pages, portfolios, webs corporativas, páginas e-commerce y más.",
-                  },
-                ]}
+                explanation="creando experiencias digitales con desarrollo front-end o full-stack, como Web Apps, landing pages, portfolios, webs corporativas, páginas e-commerce y más."
                 onClick={() => handleClickService("web")}
+                vicente={true}
               />
             </div>
           </section>

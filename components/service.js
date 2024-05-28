@@ -3,45 +3,64 @@ import styles from "./service.module.css";
 
 export default function Service({
   title,
-  link,
   explanation,
   ctaText,
-  descriptions,
+  description,
+  bulletPoints,
   onClick,
+  sprm,
+  vicente,
 }) {
   return (
     <div className={styles.servicio_div}>
       <div className={styles.servicio_intro}>
         <div>
-          <h5 className={styles.servicio_title}>✺ {title}</h5>
-          {explanation && <p>{explanation}</p>}
-          {link && (
-            <a href={link[0].url} target="_blank">
-              {link[0].text}
-            </a>
+          <h5 className={styles.servicio_title}>{title}</h5>
+          {explanation && (
+            <p className={styles.servicio_explanation}>
+              {sprm && (
+                <p>
+                  junto al esquipo de{" "}
+                  <a
+                    href="https://www.supremebeings.love/"
+                    target="_blank"
+                  >
+                    supreme studio
+                  </a>{" "}
+                </p>
+              )}
+              {vicente && (
+                <p>
+                  con{" "}
+                  <a
+                    href="https://www.vicentegarcya.com/"
+                    target="_blank"
+                  >
+                    Vicente Garcya,
+                  </a>{" "}
+                </p>
+              )}
+              {explanation}
+            </p>
           )}
         </div>
         <button onClick={() => onClick()}>{ctaText}</button>
       </div>
       <div className={styles.servicio_content}>
-        <div className={styles.servicio_text}>
-          {descriptions.map((description, index) => {
-            return (
-              <div key={index} className={styles.servicio_description}>
-                {description.title && (
-                  <div className={styles.description_title}>
-                    <p>
-                      {description.title && <span>{description.title}</span>}
-                    </p>
-                  </div>
-                )}
-                <div className={styles.description_text}>
-                  <p>{description.text}</p>
+        {description && (
+          <div className={styles.servicio_description}>{description}</div>
+        )}
+        {bulletPoints && (
+          <div className={styles.servicio_text}>
+            {bulletPoints.map((description, index) => {
+              return (
+                <div key={index} className={styles.servicio_bullet_point}>
+                  {description}
                 </div>
-              </div>
-            );
-          })}
-        </div>
+              );
+            })}
+          </div>
+        )}
       </div>
     </div>
   );
