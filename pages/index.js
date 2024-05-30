@@ -22,6 +22,7 @@ export default function Home() {
   const heroRef = useRef();
   const gonzalezRef = useRef();
   const jimenaRef = useRef();
+  const claimRef = useRef();
 
   const metodologiaTitleRef = useRef();
   const metodologiaSpan = useRef();
@@ -31,11 +32,9 @@ export default function Home() {
   const serviciosDivRef = useRef();
   const serviciosSectionRef = useRef();
 
-  const universityTextRef = useRef();
-  const companiesLogosRef = useRef();
-
   const contactFormRef = useRef();
   const contactFormMainRef = useRef();
+  const contactFormBackRef = useRef();
   const footerRef = useRef();
 
   const handleClickService = (service) => {
@@ -92,6 +91,17 @@ export default function Home() {
       },
     });
 
+    //CLAIM
+    gsap.to(claimRef.current?.querySelector('h3'), {
+      transform: 'scale(1)',
+      scrollTrigger: {
+        trigger: claimRef.current,
+        start: "top 25%",
+        end: "+=20%",
+        scrub: 1.5,
+      },
+    });
+
     //EXPERIENCIA
     gsap.to(`.${styles.highlighter}`, {
       width: "100%",
@@ -102,43 +112,6 @@ export default function Home() {
         start: "top 25%",
       },
     });
-
-    //LOGOS
-    gsap.fromTo(
-      companiesLogosRef.current,
-      {
-        opacity: 0,
-      },
-      {
-        opacity: 1,
-        visibility: "visible",
-        ease: "none",
-        scrollTrigger: {
-          trigger: experienciaTitleRef.current,
-          start: "top 33%",
-          end: "+=0.01%",
-          scrub: 0.01,
-        },
-      }
-    );
-
-    gsap.fromTo(
-      companiesLogosRef.current,
-      {
-        opacity: 1,
-      },
-      {
-        opacity: 0,
-        visibility: "hidden",
-        position: "absolute",
-        scrollTrigger: {
-          trigger: universityTextRef.current,
-          start: "bottom 30%",
-          end: "+=0.01%",
-          scrub: 0.01,
-        },
-      }
-    );
 
     //CONTACT FORM
     gsap.to(contactFormRef.current, {
@@ -176,8 +149,8 @@ export default function Home() {
         scrollTrigger: {
           trigger: document.body,
           start: "bottom bottom",
-          end: "+40%",
-          scrub: 2,
+          end: "+50%",
+          scrub: 2.25,
         },
       }
     );
@@ -188,7 +161,7 @@ export default function Home() {
   if (!isLoading)
     return (
       <Layout>
-        <main ref={mainRef} className={styles.main} id="main">
+        <div ref={mainRef} className={styles.main} id="main">
           <h1
             ref={gonzalezRef}
             className={`${styles.jimena} ${styles.jimena_surname}`}
@@ -309,7 +282,7 @@ export default function Home() {
               </p>
             </div>
           </section>
-          <section className={styles.claim}>
+          <section ref={claimRef} className={styles.claim}>
             <h3>
               SUCCESS IS THE RESULT OF A<br></br> GOOD STRATEGY.
             </h3>
@@ -672,7 +645,10 @@ export default function Home() {
             className={styles.contact_form}
             id="contacto"
           >
-            <div className={styles.contact_form_backpaper}></div>
+            <div
+              className={styles.contact_form_backpaper}
+              ref={contactFormBackRef}
+            ></div>
             <div ref={contactFormMainRef} className={styles.contact_form_main}>
               <div className={styles.contact_form_data}>
                 <h5 className={styles.section_title}>
@@ -694,7 +670,7 @@ export default function Home() {
           <div className={styles.footer_home} ref={footerRef}>
             <Footer />
           </div>
-        </main>
+        </div>
       </Layout>
     );
 }

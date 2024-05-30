@@ -6,7 +6,6 @@
   height: 100dvh;
   background: #212121;
   color: var(--main-white);
-  height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -17,15 +16,39 @@
   overflow: hidden;
 }
 
+.footer .top {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5vw 6vw;
+}
+
+.footer .top > div {
+  width: 28%;
+}
+
+.footer .top > div > p:first-child {
+  color: var(--main-yellow);
+  font-family: 'Baskerville';
+  font-style: italic;
+  font-size: 1.7vw;
+  margin-bottom: 8px;
+}
+
+.footer .top > div > p:not(:first-child) {
+  font-family: 'Moderat-Light';
+  font-size: 1.7vw;
+  margin-bottom: 16px;
+  line-height: 1.35rem;
+}
+
 .footer .middle {
   display: flex;
   justify-content: space-between;
-  padding: 4vw 6vw;
+  padding: 2vw 6vw 0 6vw;
   font-family: "Moderat-light";
   font-size: 1.3vw;
   line-height: 1.5;
   width: 100%;
-  height: 55%;
   line-height: 1.3rem;
 }
 
@@ -35,18 +58,24 @@
 
 .footer .bottom {
   width: 100vw;
-  font-family: "Editorial-Light";
+  font-family: "Anton";
   font-weight: 100;
   overflow: hidden;
   white-space: nowrap;
-  color: #929292;
+  color: #7A7A7A;
 }
 
 .footer .bottom p {
-  font-size: 17vw;
+  font-size: 11.5vw;
   display: inline-block;
   animation: scrollText 35s infinite linear;
   transform: scale(5);
+}
+
+.footer .copyright {
+  padding: 0 6vw;
+  margin-top: -24px;
+  color: #7A7A7A;
 }
 
 @media (min-width: 1024px) {

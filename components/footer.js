@@ -4,7 +4,37 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div>
-        <div className={styles.top}></div>
+        <div className={styles.top}>
+          <div>
+            <p>Divergence</p>
+            <p>
+              01. Divergencia como exploración auténtica y disruptiva de la
+              diferencia con respecto a la norma.
+            </p>
+            <p>04. Sensibilidad como capacidad creativa suprema.</p>
+          </div>
+          <div>
+            <p>Alignment</p>
+            <p>
+              02. Estrategia como acción inspirada. Alineando visión y esencia
+              con acción real.
+            </p>
+            <p style={{ marginTop: "36px" }}>
+              05. Creación como manifestación física de una visión de propósito.
+            </p>
+          </div>
+          <div>
+            <p>Trascendence</p>
+            <p>
+              03. Sinergia creativa como forma de trabajo. 1+1=oo viviendo la
+              emergencia en la colaboración.
+            </p>
+            <p>
+              06. Escucha interna y externa como camino de trascendencia
+              creativa.
+            </p>
+          </div>
+        </div>
         <div className={styles.middle}>
           <p>
             Si quieres saber más sobre mi vida laboral, visita{" "}
@@ -34,8 +64,12 @@ export default function Footer() {
           </p>
         </div>
         <div className={styles.bottom}>
-          <p>-© 2024, JIMENA GONZALEZ</p>
-          <p>-© 2024, JIMENA GONZALEZ</p>
+          <p><span style={{marginLeft: '32px'}}>{" "}</span>2024, JIMENA GONZALEZ</p>
+          <p><span style={{marginLeft: '32px'}}>{" "}</span>2024, JIMENA GONZALEZ</p>
+        </div>
+        <div className={styles.copyright}>
+          © 2024 Jimena Gonzalez, Todos los derechos
+          reservados<br></br>Madrid, Spain
         </div>
       </div>
     </footer>

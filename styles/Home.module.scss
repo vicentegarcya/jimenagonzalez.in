@@ -301,6 +301,7 @@
 
 .claim > h3 {
   line-height: 5.25rem;
+  transform: scale(0);
 }
 
 //EXPERIENCIA
@@ -411,7 +412,7 @@
   position: fixed;
   height: 100dvh;
   width: 100vw;
-  z-index: 300;
+  z-index: 299;
   top: 100dvh;
   transform: translateX(-50%);
   transform: scale(0);
@@ -429,14 +430,13 @@
 .contact_form_main {
   background: var(--main-white);
   width: 92.5%;
-  height: 82.5%;
+  height: 82.5dvh;
   position: absolute;
   top: 50dvh;
   left: 3rem;
   display: flex;
   justify-content: space-between;
-  padding: 2rem 3rem 2rem 2rem;
-  padding-right: 4rem;
+  padding: 2rem 4rem 2rem 2rem;
   transform: scale(0);
 }
 
@@ -494,7 +494,7 @@
   height: 100dvh;
   max-height: 0;
   position: fixed;
-  bottom: 0;
+  bottom: 100dvh;
   left: 0;
   z-index: 300;
   overflow: hidden;
