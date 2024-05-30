@@ -384,7 +384,7 @@
   display: flex;
   flex-direction: column;
   font-family: "Moderat-Light";
-  height: 280dvh;
+  height: 240dvh;
 }
 
 .experiencia .section_title > p:last-child {
@@ -416,6 +416,10 @@
   top: 100dvh;
   transform: translateX(-50%);
   transform: scale(0);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact_form_backpaper {
@@ -423,21 +427,35 @@
   background-size: 100vw;
   background-position-y: calc(5dvh - 1350px);
   width: 100vw;
-  height: 100dvh;
+  height: 100%;
   position: absolute;
+  overflow: auto;
+}
+
+.contact_form_backpaper::-webkit-scrollbar {
+  display: none;
 }
 
 .contact_form_main {
   background: var(--main-white);
   width: 92.5%;
   height: 82.5dvh;
-  position: absolute;
-  top: 50dvh;
+  margin-top: 0;
   left: 3rem;
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding: 2rem 4rem 2rem 2rem;
   transform: scale(0);
+}
+
+.contact_form .fake_div {
+  position: relative;
+  margin-top: 5rem;
+  width: 92.5%;
+  height: 3rem;
+  background: transparent;
+  left: 3rem;
 }
 
 .contact_form_main > div:last-child {
@@ -482,7 +500,7 @@
   flex-direction: column;
   justify-content: space-between;
   opacity: 0.7;
-  font-family: 'Moderat-ext-reg';
+  font-family: "Moderat-ext-reg";
 }
 
 .contact_form_data .top > p {
@@ -490,14 +508,11 @@
 }
 
 .footer_home {
+  position: relative;
   width: 100vw;
   height: 100dvh;
   max-height: 0;
-  position: fixed;
-  bottom: 100dvh;
-  left: 0;
-  z-index: 300;
-  overflow: hidden;
+  z-index: 1001;
 }
 
 /* RESPONSIVE MOBILE */

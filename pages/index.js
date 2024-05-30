@@ -36,6 +36,7 @@ export default function Home() {
   const contactFormMainRef = useRef();
   const contactFormBackRef = useRef();
   const footerRef = useRef();
+  const fakeDivRef = useRef();
 
   const handleClickService = (service) => {
     setService(service);
@@ -92,8 +93,8 @@ export default function Home() {
     });
 
     //CLAIM
-    gsap.to(claimRef.current?.querySelector('h3'), {
-      transform: 'scale(1)',
+    gsap.to(claimRef.current?.querySelector("h3"), {
+      transform: "scale(1)",
       scrollTrigger: {
         trigger: claimRef.current,
         start: "top 25%",
@@ -132,28 +133,22 @@ export default function Home() {
       scrollTrigger: {
         trigger: serviciosSectionRef.current,
         start: "bottom 80%",
-        end: "+=25%",
+        end: "+25%",
         scrub: 2.25,
       },
     });
 
-    gsap.fromTo(
-      footerRef.current,
-      {
-        maxHeight: "0",
-        display: "none",
+    /* gsap.to(footerRef.current, {
+      display: 'block',
+      maxHeight: "100dvh",
+      scrollTrigger: {
+        trigger: document.body,
+        start: "bottom bottom",
+        end: "+40%",
+        scrub: 2.25,
+        markers: true,
       },
-      {
-        display: "block",
-        maxHeight: "100dvh",
-        scrollTrigger: {
-          trigger: document.body,
-          start: "bottom bottom",
-          end: "+50%",
-          scrub: 2.25,
-        },
-      }
-    );
+    }); */
   }, [isLoading, isDesktop]);
 
   if (isLoading) return <LoadingPage />;
@@ -648,28 +643,35 @@ export default function Home() {
             <div
               className={styles.contact_form_backpaper}
               ref={contactFormBackRef}
-            ></div>
-            <div ref={contactFormMainRef} className={styles.contact_form_main}>
-              <div className={styles.contact_form_data}>
-                <h5 className={styles.section_title}>
-                  <p>Let&rsquo;s</p>
-                  <p>CONNECT</p>
-                </h5>
-                <div>
-                  <p>40°30`N 3°40`O / 40.500, -3.667</p>
-                  <a href="tel:+34626457400">(34) 626 457 400</a>
-                  <a href="mailto:hi@jimenagonzalez.in">hi@jimenagonzalez.in</a>
+            >
+              <div
+                ref={contactFormMainRef}
+                className={styles.contact_form_main}
+              >
+                <div className={styles.contact_form_data}>
+                  <h5 className={styles.section_title}>
+                    <p>Let&rsquo;s</p>
+                    <p>CONNECT</p>
+                  </h5>
+                  <div>
+                    <p>40°30`N 3°40`O / 40.500, -3.667</p>
+                    <a href="tel:+34626457400">(34) 626 457 400</a>
+                    <a href="mailto:hi@jimenagonzalez.in">
+                      hi@jimenagonzalez.in
+                    </a>
+                  </div>
                 </div>
+                <PropuestaForm
+                  service={service}
+                  setService={setService}
+                ></PropuestaForm>
               </div>
-              <PropuestaForm
-                service={service}
-                setService={setService}
-              ></PropuestaForm>
+              <div ref={fakeDivRef} className={styles.fake_div}></div>
+              <div className={styles.footer_home} ref={footerRef}>
+                <Footer />
+              </div>
             </div>
           </section>
-          <div className={styles.footer_home} ref={footerRef}>
-            <Footer />
-          </div>
         </div>
       </Layout>
     );
