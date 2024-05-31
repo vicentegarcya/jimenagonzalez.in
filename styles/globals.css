@@ -5,6 +5,11 @@
 }
 
 @font-face {
+  font-family: 'Moderat-Med';
+  src: url('../public/fonts/Moderat-Trial-Medium.otf');
+}
+
+@font-face {
   font-family: 'Moderat-Reg';
   src: url('../public/fonts/Moderat-Trial-Regular.otf');
 }
@@ -61,7 +66,7 @@ html,
 body {
   max-width: 100dvw;
   overflow-x: hidden;
-  font-family: 'Anton', sans-serif;
+  font-family: 'Moderat-Reg', sans-serif;
   position: relative;
   -webkit-text-size-adjust: 100%;
   color: var(--main-black);

@@ -18,28 +18,24 @@ export default function Service({
           <h5 className={styles.servicio_title}>{title}</h5>
           {explanation && (
             <p className={styles.servicio_explanation}>
-              {sprm && (
-                <p>
-                  junto al esquipo de{" "}
-                  <a
-                    href="https://www.supremebeings.love/"
-                    target="_blank"
-                  >
-                    supreme studio
-                  </a>{" "}
-                </p>
-              )}
-              {vicente && (
-                <p>
-                  con{" "}
-                  <a
-                    href="https://www.vicentegarcya.com/"
-                    target="_blank"
-                  >
-                    Vicente Garcya,
-                  </a>{" "}
-                </p>
-              )}
+              <div>
+                {sprm && (
+                  <p>
+                    junto al equipo de{" "}
+                    <a href="https://www.supremebeings.love/" target="_blank">
+                      supreme studio
+                    </a>{" "}
+                  </p>
+                )}
+                {vicente && (
+                  <p>
+                    con{" "}
+                    <a href="https://www.vicentegarcya.com/" target="_blank">
+                      Vicente Garcya,
+                    </a>{" "}
+                  </p>
+                )}
+              </div>
               {explanation}
             </p>
           )}
@@ -52,10 +48,11 @@ export default function Service({
         )}
         {bulletPoints && (
           <div className={styles.servicio_text}>
-            {bulletPoints.map((description, index) => {
+            {bulletPoints.map((el, index) => {
               return (
                 <div key={index} className={styles.servicio_bullet_point}>
-                  {description}
+                  {el.title}
+                  <span>{el.description}</span>
                 </div>
               );
             })}

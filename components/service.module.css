@@ -21,7 +21,7 @@
   justify-content: flex-start;
   border-bottom: 1px solid grey;
   z-index: 1;
-  padding: 1.5rem 3rem 2rem 3rem;
+  padding: 2.5rem 3rem 2.25rem 3rem;
 }
 
 .servicio_intro {
@@ -62,13 +62,19 @@
   letter-spacing: -1px;
   line-height: 1.35rem;
   font-size: 1.8vw !important;
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 36px;
 }
 
 .servicio_explanation a {
   text-decoration: underline;
   text-decoration-thickness: 1.5px;
+}
+
+.servicio_explanation > div {
+  margin-bottom: 32px;
+  font-size: 1.5vw !important;
+  letter-spacing: -0.9px;
 }
 
 .servicio_content {
@@ -87,9 +93,13 @@
 
 .servicio_bullet_point {
   width: 80%;
-  font-family: 'Moderat-Reg';
+  font-family: 'Moderat-Med';
   font-size: 1.65vw;
   line-height: 1.45rem;
+}
+
+.servicio_bullet_point span {
+  font-family: 'Moderat-Light';
 }
 
 .servicio_bullet_point:not(:last-child) {

@@ -600,9 +600,18 @@ export default function Home() {
                 ctaText="¿NECESITAS ESTRATEGIA?"
                 description="Visión, propósito e identidad de marca, objetivos y roadmap estratégico, investigación de mercado y usuarios, client persona y propuesta de valor, diseño de experiencia, productos y servicios, modelo de negocio."
                 bulletPoints={[
-                  "01. BETA BUSINESS, de idea a MVP.",
-                  "02. BUSINESS, de MVP a negocio.",
-                  "03. BUSINESS LEAP, expandiendo el negocio.",
+                  {
+                    title: "01. BETA BUSINESS, de idea a MVP.",
+                    description: ""
+                  },
+                  {
+                    title: "02. BUSINESS, de MVP a negocio.",
+                    description: ""
+                  },
+                  {
+                    title: "03. BUSINESS LEAP, expandiendo el negocio.",
+                    description: ""
+                  }
                 ]}
                 onClick={() => {
                   handleClickService("estrategia");
@@ -613,9 +622,18 @@ export default function Home() {
                 explanation="La filosofía de diseño es la clave de la creación de valor y belleza."
                 ctaText="¿NECESITAS DISEÑO?"
                 bulletPoints={[
-                  "01. FACILITACIÓN, diseñando una metodología ad-hoc para facilitar la sinergia creativa del equipo del proyecto en sesiones online o presenciales.",
-                  "02. INVESTIGACIÓN DE DISEÑO, comprendiendo la experiencia, necesidades e influencias de los usuarios para obtener insights relevantes para la creación de valor.",
-                  "03. DISEÑO DE SERVICIOS, creando una experiencia de usuario o cliente coherente y fluida, con una propuesta de valor diferencial.",
+                  {
+                    title: "01. FACILITACIÓN,",
+                    description: " diseñando una metodología ad-hoc para facilitar la sinergia creativa del equipo del proyecto en sesiones online o presenciales."
+                  },
+                  {
+                    title: "02. INVESTIGACIÓN DE DISEÑO,",
+                    description: " comprendiendo la experiencia, necesidades e influencias de los usuarios para obtener insights relevantes para la creación de valor."
+                  },
+                  {
+                    title: "03. DISEÑO DE SERVICIOS,",
+                    description: " creando una experiencia de usuario o cliente coherente y fluida, con una propuesta de valor diferencial."
+                  }
                 ]}
                 onClick={() => handleClickService("diseño-de-servicios")}
               />

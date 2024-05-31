@@ -11,20 +11,20 @@
   position: fixed;
   font-family: "Anton";
   text-align: center;
-  font-size: 19.5vw;
+  font-size: 20.5vw;
   font-weight: 100;
   letter-spacing: -5px;
 }
 
 .jimena_surname {
-  top: 39%;
+  top: 37.5%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 0;
 }
 
 .jimena_name {
-  top: 72%;
+  top: 71.5%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -61,8 +61,8 @@
   font-family: "Baskerville-Light";
   font-style: italic;
   font-weight: 400;
-  letter-spacing: -1.5px;
-  font-size: 2.1vw;
+  letter-spacing: -1px;
+  font-size: 1.65vw;
 }
 
 .links {
@@ -145,14 +145,14 @@
   }
 }
 
-.text {
+.hero_bottom .text {
   width: 12%;
   font-family: "Baskerville-Light";
   font-style: italic;
   letter-spacing: -3px;
   font-size: 2.75vw;
   line-height: 6dvh;
-  margin-bottom: 12px;
+  margin-bottom: -6px;
 }
 
 .hero > img {

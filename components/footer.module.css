@@ -18,7 +18,7 @@
 .footer .top {
   display: flex;
   justify-content: space-between;
-  padding: 3vw 6vw;
+  padding: 6vw 7vw;
 }
 
 .footer .top > div {
@@ -29,26 +29,31 @@
   color: var(--main-yellow);
   font-family: 'Baskerville';
   font-style: italic;
-  font-size: 1.7vw;
+  font-size: 1.5vw;
   margin-bottom: 8px;
 }
 
 .footer .top > div > p:not(:first-child) {
   font-family: 'Moderat-Light';
-  font-size: 1.7vw;
+  font-size: 1.4vw;
   margin-bottom: 16px;
   line-height: 1.35rem;
+}
+
+.footer .top > div > p:not(:first-child) > span {
+  font-family: 'Moderat-Med';
 }
 
 .footer .middle {
   display: flex;
   justify-content: space-between;
-  padding: 2vw 6vw 0 6vw;
+  padding: 0vw 7vw;
   font-family: "Moderat-light";
-  font-size: 1.3vw;
+  font-size: 1.07vw;
   line-height: 1.5;
   width: 100%;
   line-height: 1.3rem;
+  margin-top: -36px;
 }
 
 .footer .middle a, .footer .middle span {
@@ -62,6 +67,7 @@
   overflow: hidden;
   white-space: nowrap;
   color: #7A7A7A;
+  margin-top: 48px;
 }
 
 .footer .bottom p {
@@ -72,8 +78,8 @@
 }
 
 .footer .copyright {
-  padding: 0 6vw;
-  margin-top: -24px;
+  padding: 0 7vw;
+  margin-top: -16px;
   color: #7A7A7A;
 }
 

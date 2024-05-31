@@ -4,7 +4,7 @@ import { useFormik } from "formik";
 import * as yup from "yup";
 import { useSpring, animated } from "react-spring";
 
-export default function PropuestaForm({service, setService}) {
+export default function PropuestaForm({ service, setService }) {
   const [state, setState] = useState("idle");
 
   const validationSchema = yup.object({
@@ -52,6 +52,15 @@ export default function PropuestaForm({service, setService}) {
     from: { opacity: 0 },
   });
 
+  const handleSetService = (_service) => {
+    console.log("_service:", _service, "service:", service);
+    if (service === _service) {
+      setService("");
+    } else {
+      setService(_service);
+    }
+  };
+
   return (
     <div className={styles.propuesta_form}>
       <form onSubmit={formik.handleSubmit}>
@@ -78,17 +87,18 @@ export default function PropuestaForm({service, setService}) {
               background: service === "estrategia" ? "#282C32" : undefined,
               color: service === "estrategia" ? "#F8F8F8" : undefined,
             }}
-            onClick={() => setService("estrategia")}
+            onClick={() => handleSetService("estrategia")}
           >
             estrategia
-          </span>{" "}<br></br>
+          </span>{" "}
+          <br></br>
           <span
             style={{
               background:
                 service === "diseño-de-servicios" ? "#282C32" : undefined,
               color: service === "diseño-de-servicios" ? "#F8F8F8" : undefined,
             }}
-            onClick={() => setService("diseño-de-servicios")}
+            onClick={() => handleSetService("diseño-de-servicios")}
           >
             diseño de servicios
           </span>{" "}
@@ -97,7 +107,7 @@ export default function PropuestaForm({service, setService}) {
               background: service === "web" ? "#282C32" : undefined,
               color: service === "web" ? "#F8F8F8" : undefined,
             }}
-            onClick={() => setService("web")}
+            onClick={() => handleSetService("web")}
           >
             web
           </span>{" "}
@@ -106,7 +116,7 @@ export default function PropuestaForm({service, setService}) {
               background: service === "branding" ? "#282C32" : undefined,
               color: service === "branding" ? "#F8F8F8" : undefined,
             }}
-            onClick={() => setService("branding")}
+            onClick={() => handleSetService("branding")}
           >
             branding
           </span>{" "}
@@ -118,7 +128,8 @@ export default function PropuestaForm({service, setService}) {
             style={{ minWidth: "90%" }}
             placeholder="(describe tu idea o necesidad)"
           ></input>{" "}
-          .<br></br><br></br>Puedes contactarme en{" "}
+          .<br></br>
+          <br></br>Puedes contactarme en{" "}
           <input
             name="email"
             value={formik.values.email}
@@ -136,7 +147,9 @@ export default function PropuestaForm({service, setService}) {
           ></input>{" "}
           .
         </div>
-        <button type="submit"><p>ENVIAR</p></button>
+        <button type="submit">
+          <p>ENVIAR</p>
+        </button>
       </form>
       {state === "success" && (
         <animated.div

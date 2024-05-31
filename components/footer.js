@@ -8,30 +8,33 @@ export default function Footer() {
           <div>
             <p>Divergence</p>
             <p>
-              01. Divergencia como exploración auténtica y disruptiva de la
-              diferencia con respecto a la norma.
+              <span>01.</span> Divergencia como exploración auténtica y
+              disruptiva de la diferencia con respecto a la norma.
             </p>
-            <p>04. Sensibilidad como capacidad creativa suprema.</p>
+            <p>
+              <span>04.</span> Sensibilidad como capacidad creativa suprema.
+            </p>
           </div>
           <div>
             <p>Alignment</p>
             <p>
-              02. Estrategia como acción inspirada. Alineando visión y esencia
-              con acción real.
+              <span>02.</span> Estrategia como acción inspirada. Alineando
+              visión y esencia con acción real.
             </p>
-            <p style={{ marginTop: "36px" }}>
-              05. Creación como manifestación física de una visión de propósito.
+            <p>
+              <span>05.</span> Creación como manifestación física de una visión
+              de propósito.
             </p>
           </div>
           <div>
             <p>Trascendence</p>
             <p>
-              03. Sinergia creativa como forma de trabajo. 1+1=oo viviendo la
-              emergencia en la colaboración.
+              <span>03.</span> Sinergia creativa como forma de trabajo. 1+1=oo
+              viviendo la emergencia en la colaboración.
             </p>
             <p>
-              06. Escucha interna y externa como camino de trascendencia
-              creativa.
+              <span>06.</span> Escucha interna y externa como camino de
+              trascendencia creativa.
             </p>
           </div>
         </div>
@@ -52,10 +55,8 @@ export default function Footer() {
               mi playlist de Spotify
             </a>{" "}
             para entrar en flow creativo. Para cualquier otra cosa,{" "}
-            <a href="mailto: hi@jimenagonzalez.in">
-              ¡envíame un correo a hi@jimenagonzalez.in!
-            </a>
-            <p style={{ marginTop: "25px" }}>
+            <a href="mailto: hi@jimenagonzalez.in">¡envíame un correo!</a>
+            <p style={{ marginTop: "6px" }}>
               web x{" "}
               <a href="https://www.vicentegarcya.com/" target="_blank">
                 Vicente Garcya
@@ -64,12 +65,16 @@ export default function Footer() {
           </p>
         </div>
         <div className={styles.bottom}>
-          <p><span style={{marginLeft: '32px'}}>{" "}</span>2024, JIMENA GONZALEZ</p>
-          <p><span style={{marginLeft: '32px'}}>{" "}</span>2024, JIMENA GONZALEZ</p>
+          <p>
+            <span style={{ marginLeft: "32px" }}> </span>2024, JIMENA GONZALEZ
+          </p>
+          <p>
+            <span style={{ marginLeft: "32px" }}> </span>2024, JIMENA GONZALEZ
+          </p>
         </div>
         <div className={styles.copyright}>
-          © 2024 Jimena Gonzalez, Todos los derechos
-          reservados<br></br>Madrid, Spain
+          © 2024 Jimena Gonzalez, Todos los derechos reservados<br></br>Madrid,
+          Spain
         </div>
       </div>
     </footer>
