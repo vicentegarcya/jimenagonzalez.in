@@ -3,9 +3,11 @@ import styles from "./propuestaForm.module.css";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import { useSpring, animated } from "react-spring";
+import { useIntl } from "react-intl";
 
 export default function PropuestaForm({ service, setService }) {
   const [state, setState] = useState("idle");
+  const intl = useIntl();
 
   const validationSchema = yup.object({
     name: yup.string().required("Escribe tu nombre"),
@@ -65,23 +67,23 @@ export default function PropuestaForm({ service, setService }) {
     <div className={styles.propuesta_form}>
       <form onSubmit={formik.handleSubmit}>
         <div>
-          Hola Jimena, soy{" "}
+          {intl.formatMessage({id: "HI_JIMENA_IM"})}{" "}
           <input
             name="name"
             value={formik.values.name}
-            placeholder="(escribe tu nombre)"
+            placeholder={intl.formatMessage({id: "TYPE_YOUR_NAME"})}
             onChange={formik.handleChange}
             style={{ minWidth: "32.5%", width: "32.5%" }}
           ></input>
-          . Trabajo en{" "}
+          {intl.formatMessage({id: "I_WORK_AT"})}{" "}
           <input
             name="company"
             value={formik.values.company}
-            placeholder="(escribe el nombre de tu empresa)"
+            placeholder={intl.formatMessage({id: "TYPE_YOUR_COMPANYS_NAME"})}
             onChange={formik.handleChange}
             style={{ minWidth: "56%" }}
           ></input>{" "}
-          y tengo una idea o necesidad relacionada con{" "}
+          {intl.formatMessage({id: "AND_I_HAVE_AN_IDEA_OR_NEED_RELATED_TO"})}{" "}
           <span
             style={{
               background: service === "estrategia" ? "#282C32" : undefined,
@@ -89,7 +91,7 @@ export default function PropuestaForm({ service, setService }) {
             }}
             onClick={() => handleSetService("estrategia")}
           >
-            estrategia
+            {intl.formatMessage({id: "STRATEGY"})}
           </span>{" "}
           <br></br>
           <span
@@ -100,7 +102,7 @@ export default function PropuestaForm({ service, setService }) {
             }}
             onClick={() => handleSetService("diseño-de-servicios")}
           >
-            diseño de servicios
+            {intl.formatMessage({id: "SERVICE_DESIGN"})}
           </span>{" "}
           <span
             style={{
@@ -120,35 +122,35 @@ export default function PropuestaForm({ service, setService }) {
           >
             branding
           </span>{" "}
-          , que es{" "}
+          {intl.formatMessage({id: "WHICH_IS"})}{" "}
           <input
             name="idea"
             value={formik.values.idea}
             onChange={formik.handleChange}
             style={{ minWidth: "90%" }}
-            placeholder="(describe tu idea o necesidad)"
+            placeholder={intl.formatMessage({id: "DESCRIBE_YOUR_IDEA_OR_NEED"})}
           ></input>{" "}
           .<br></br>
-          <br></br>Puedes contactarme en{" "}
+          <br></br>{intl.formatMessage({id: "CONTACT_ME_AT"})}{" "}
           <input
             name="email"
             value={formik.values.email}
-            placeholder="(escribe tu e-mail)"
+            placeholder={intl.formatMessage({id: "TYPE_YOUR_EMAIL"})}
             onChange={formik.handleChange}
             style={{ minWidth: "32%", width: "32%" }}
           ></input>{" "}
-          o en{" "}
+          {intl.formatMessage({id: "OR_AT"})}{" "}
           <input
             name="phone"
             value={formik.values.phone}
-            placeholder="(escribe tu teléfono)"
+            placeholder={intl.formatMessage({id: "TYPE_YOUR_PHONE"})}
             onChange={formik.handleChange}
             style={{ minWidth: "35%", width: "35%" }}
           ></input>{" "}
           .
         </div>
         <button type="submit">
-          <p>ENVIAR</p>
+          <p>{intl.formatMessage({id: "SEND"})}</p>
         </button>
       </form>
       {state === "success" && (

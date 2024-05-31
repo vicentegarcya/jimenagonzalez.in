@@ -11,12 +11,14 @@ import Service from "@/components/service";
 import PropuestaForm from "@/components/propuestaForm";
 import LoadingPage from "@/components/loadingPage";
 import Footer from "@/components/footer";
+import { useIntl } from "react-intl";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [service, setService] = useState("");
   const { isDesktop } = useContext(isPlayingContext);
   gsap.registerPlugin(ScrollTrigger);
+  const intl = useIntl();
 
   const mainRef = useRef();
   const heroRef = useRef();
@@ -194,7 +196,7 @@ export default function Home() {
                   onClick={() => window.scrollTo(0, document.body.scrollHeight)}
                   className={styles.contacto}
                 >
-                  CONTÁCTAME
+                  {intl.formatMessage({ id: "CONTACT_ME" })}
                 </button>
               </div>
             </div>
@@ -226,55 +228,48 @@ export default function Home() {
               <p>
                 <span className={styles.keyword}>Strategy</span>
                 <span className={styles.emoji}>➔</span>
-                Diseño estratégico <span className={styles.emoji}>❉</span>
-                Pensamiento sistémico <span className={styles.emoji}>▶▶</span>
-                Diseño de futuros <span className={styles.emoji}>◖</span>
+                Concept <span className={styles.emoji}>❉</span>
+                {intl.formatMessage({ id: "RESEARCH" })}{" "}
+                <span className={styles.emoji}>▶▶</span>
+                {intl.formatMessage({ id: "FUTURES_DESIGN" })}{" "}
+                <span className={styles.emoji}>◖</span>
                 <span className={styles.keyword}>Business Design</span>
                 <span className={styles.emoji}>◗</span>
-                Análisis de mercado <span className={styles.emoji}>❋</span>
-                Investigación de usuarios
-                <span className={styles.emoji}>✖</span>
                 User Experience <span className={styles.emoji}>♠</span>
                 <span className={styles.keyword}>Service Design</span>
                 <span className={styles.emoji}>☛</span>
                 Design Thinking <span className={styles.emoji}>✚</span>
-                <span className={styles.keyword}>Facilitación</span>
+                <span className={styles.keyword}>
+                  {intl.formatMessage({ id: "FACILITATION" })}
+                </span>
                 <span className={styles.emoji}>☻</span>
               </p>
               <p>
                 <span className={styles.keyword}>Strategy</span>
                 <span className={styles.emoji}>➔</span>
-                Diseño estratégico <span className={styles.emoji}>❉</span>
-                Pensamiento sistémico <span className={styles.emoji}>▶▶</span>
-                Diseño de futuros <span className={styles.emoji}>◖</span>
+                Concept <span className={styles.emoji}>❉</span>
+                {intl.formatMessage({ id: "RESEARCH" })}{" "}
+                <span className={styles.emoji}>▶▶</span>
+                {intl.formatMessage({ id: "FUTURES_DESIGN" })}{" "}
+                <span className={styles.emoji}>◖</span>
                 <span className={styles.keyword}>Business Design</span>
                 <span className={styles.emoji}>◗</span>
-                Análisis de mercado <span className={styles.emoji}>❋</span>
-                Investigación de usuarios
-                <span className={styles.emoji}>✖</span>
                 User Experience <span className={styles.emoji}>♠</span>
                 <span className={styles.keyword}>Service Design</span>
                 <span className={styles.emoji}>☛</span>
                 Design Thinking <span className={styles.emoji}>✚</span>
-                <span className={styles.keyword}>Facilitación</span>
+                <span className={styles.keyword}>
+                  {intl.formatMessage({ id: "FACILITATION" })}
+                </span>
+                <span className={styles.emoji}>☻</span>
               </p>
             </div>
             <div className={styles.metodologia_text}>
               <p>
-                Reivindicando el poder de la<br></br> estrategia y el diseño
-                para crear el<br></br> futuro del valor y la belleza, en forma
-                de negocios disruptivos y servicios diferenciales.
+                {intl.formatMessage({ id: "CLAIMING_THE_POWER_OF_STRATEGY" })}
               </p>
-              <p>
-                Combino pensamiento<br></br> estratégico, herramientas de
-                <br></br> diseño y expertise de negocio para crear y elevar
-                proyectos emergentes y en evolución.
-              </p>
-              <p>
-                Para cada proyecto, creo un<br></br> marco metodológico ad hoc
-                para acompañar a visionarios, equipos creativos y grandes
-                empresas.
-              </p>
+              <p>{intl.formatMessage({ id: "I_COMBINE_STRATEGY_THINKING" })}</p>
+              <p>{intl.formatMessage({ id: "FOR_EACH_PROJECT_I_CREATE" })}</p>
             </div>
           </section>
           <section ref={claimRef} className={styles.claim}>
@@ -552,34 +547,39 @@ export default function Home() {
             </div>
             <div ref={experienciaTextRef} className={styles.experiencia_text}>
               <p>
-                Originaria del mundo de la consultoría de negocio, he acompañado
-                a grandes{" "}
+                {intl.formatMessage({
+                  id: "COMING_FROM_CORPORATE_AND_BUSINESS",
+                })}{" "}
                 <div className={styles.highlight}>
-                  <div className={styles.highlighter}></div>empresas
+                  <div className={styles.highlighter}></div>
+                  {intl.formatMessage({ id: "ENTERPRISES" })}
                 </div>{" "}
-                nacionales e internacionales en proyectos de definición
-                estratégica, innovación, diseño de servicios, investigación e
-                intraemprendimiento.
+                {intl.formatMessage({
+                  id: "IN_DESIGN_RESEARCH_SERVICE_DESIGN",
+                })}
               </p>
               <p>
-                También he trabajado en proyectos estratégicos para pequeñas y
-                medianas empresas, y mentorizado a{" "}
+                {intl.formatMessage({
+                  id: "I_HAVE_ALSO_WORKED_FOR_SMES",
+                })}{" "}
                 <div className={styles.highlight}>
                   <div className={styles.highlighter}></div>startups
                 </div>{" "}
-                en fase semilla y de escalado en diversas incubadoras y
-                aceleradoras, aportando la visión estratégica y el valor del
-                diseño.
+                {intl.formatMessage({
+                  id: "IN_SEED_AND_SCALING_PHASES",
+                })}
               </p>
               <p>
-                Además, desde hace 4 años doy{" "}
+                {intl.formatMessage({
+                  id: "IN_ADDITION_I_HAVE_BEEN_TEACHING_AND_FACILITATING",
+                })}{" "}
                 <div className={styles.highlight}>
-                  <div className={styles.highlighter}></div>clases y talleres
+                  <div className={styles.highlighter}></div>
+                  {intl.formatMessage({ id: "CLASSES_AND_BOOTCAMPS" })}
                 </div>{" "}
-                de innovación y estrategia en UPM, y colaboro con otras
-                instituciones universitarias como UV, UPV o Mondragon en
-                actividades de emprendimiento, bootcamps y hackathones de
-                innovación.
+                {intl.formatMessage({
+                  id: "WORKSHOPS_AND_HACKATONS_ON_INNOVATION_AND_STRATEGY",
+                })}
               </p>
             </div>
           </section>
@@ -595,58 +595,72 @@ export default function Home() {
             </h5>
             <div ref={serviciosDivRef} className={styles.servicios_main}>
               <Service
-                title={"Estrategia y Business Design"}
-                explanation="Crear, desarrollar y expandir un negocio es un proceso iterativo en espiral."
-                ctaText="¿NECESITAS ESTRATEGIA?"
-                description="Visión, propósito e identidad de marca, objetivos y roadmap estratégico, investigación de mercado y usuarios, client persona y propuesta de valor, diseño de experiencia, productos y servicios, modelo de negocio."
+                title={intl.formatMessage({
+                  id: "STRATEGY_AND_BUSINESS_DESIGN",
+                })}
+                explanation={intl.formatMessage({
+                  id: "CREATING_DEVELOPING_AND_EXPANDING",
+                })}
+                ctaText={intl.formatMessage({ id: "NEED_STRATEGY" })}
+                description={intl.formatMessage({
+                  id: "STRATEGIC_VISIONING_PURPOSE",
+                })}
                 bulletPoints={[
                   {
-                    title: "01. BETA BUSINESS, de idea a MVP.",
-                    description: ""
+                    title: "01. BETA BUSINESS,",
+                    description: intl.formatMessage({ id: "FROM_IDEA_TO_MVP" }),
                   },
                   {
-                    title: "02. BUSINESS, de MVP a negocio.",
-                    description: ""
+                    title: "02. BUSINESS,",
+                    description: intl.formatMessage({
+                      id: "FROM_MVP_TO_BUSINESS",
+                    }),
                   },
                   {
-                    title: "03. BUSINESS LEAP, expandiendo el negocio.",
-                    description: ""
-                  }
+                    title: "03. BUSINESS LEAP,",
+                    description: intl.formatMessage({
+                      id: "EXPANDING_THE_BUSINESS",
+                    }),
+                  },
                 ]}
                 onClick={() => {
                   handleClickService("estrategia");
                 }}
               />
               <Service
-                title={"Facilitación y service design"}
-                explanation="La filosofía de diseño es la clave de la creación de valor y belleza."
-                ctaText="¿NECESITAS DISEÑO?"
+                title={intl.formatMessage({
+                  id: "FACILITATION_AND_SERVICE_DESIGN",
+                })}
+                explanation={intl.formatMessage({
+                  id: "DESIGN_PHILOSOPHY_IS_THE_KEY_TO_CREATING",
+                })}
+                ctaText={intl.formatMessage({ id: "NEED_DESIGN" })}
                 bulletPoints={[
                   {
-                    title: "01. FACILITACIÓN,",
-                    description: " diseñando una metodología ad-hoc para facilitar la sinergia creativa del equipo del proyecto en sesiones online o presenciales."
+                    title: intl.formatMessage({ id: "1_FACILITATION" }),
+                    description: intl.formatMessage({ id: "DESIGNING_AN_ADHOC_METHODOLOGY_TO_FACILITATE" }),
                   },
                   {
-                    title: "02. INVESTIGACIÓN DE DISEÑO,",
-                    description: " comprendiendo la experiencia, necesidades e influencias de los usuarios para obtener insights relevantes para la creación de valor."
+                    title: intl.formatMessage({ id: "DESIGN_RESEARCH" }),
+                    description: intl.formatMessage({ id: "UNDERSTANDING_USER_EXPERIENCE_NEEDS_AND_INFLUENCES" }),
                   },
                   {
-                    title: "03. DISEÑO DE SERVICIOS,",
-                    description: " creando una experiencia de usuario o cliente coherente y fluida, con una propuesta de valor diferencial."
-                  }
+                    title: intl.formatMessage({ id: "3_SERVICE_DESIGN" }),
+                    description: intl.formatMessage({ id: "CREATING_A_COHERENT_AND_FLUID_USER_EXPERIENCE" }),
+                  },
                 ]}
                 onClick={() => handleClickService("diseño-de-servicios")}
               />
               <Service
-                title={"Identidad y branding"}
-                ctaText="¿NECESITAS BRANDING?"
-                explanation="descubriendo la identidad auténtica de tu proyecto para crear la experiencia de marca."
+                title={intl.formatMessage({ id: "BRAND_IDENTITY" })}
+                ctaText={intl.formatMessage({ id: "NEED_BRANDING" })}
+                explanation={intl.formatMessage({ id: "DISCOVERING_YOUR_PROJECTS_AUTHENTIC_IDENTITY_AMD_CRAFTING" })}
                 onClick={() => handleClickService("branding")}
                 sprm={true}
               />
               <Service
-                title={"Diseño y desarrollo web"}
-                ctaText={"¿NECESITAS WEB?"}
+                title={intl.formatMessage({ id: "DESIGN_AND_WEB_DEVELOPMENT" })}
+                ctaText={intl.formatMessage({ id: "NEED_WEB" })}
                 explanation="creando experiencias digitales con desarrollo front-end o full-stack, como Web Apps, landing pages, portfolios, webs corporativas, páginas e-commerce y más."
                 onClick={() => handleClickService("web")}
                 vicente={true}

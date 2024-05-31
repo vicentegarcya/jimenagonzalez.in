@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useIntl } from "react-intl";
 import styles from "./service.module.css";
 
 export default function Service({
@@ -11,6 +11,8 @@ export default function Service({
   sprm,
   vicente,
 }) {
+  const intl = useIntl();
+
   return (
     <div className={styles.servicio_div}>
       <div className={styles.servicio_intro}>
@@ -21,7 +23,7 @@ export default function Service({
               <div>
                 {sprm && (
                   <p>
-                    junto al equipo de{" "}
+                    {intl.formatMessage({ id: "AS_PART_OF" })}{" "}
                     <a href="https://www.supremebeings.love/" target="_blank">
                       supreme studio
                     </a>{" "}
@@ -29,7 +31,7 @@ export default function Service({
                 )}
                 {vicente && (
                   <p>
-                    con{" "}
+                    {intl.formatMessage({ id: "WITH" })}{" "}
                     <a href="https://www.vicentegarcya.com/" target="_blank">
                       Vicente Garcya,
                     </a>{" "}
