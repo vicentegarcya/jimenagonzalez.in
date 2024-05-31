@@ -29,7 +29,6 @@ export default function LoadingPage() {
     if (index < paragraphs.length) {
       if (index > 0) {
         gsap.to(paragraphs[index - 1], {
-          display: "none",
           duration: 0.3,
           onComplete: function () {
             gsap.to(paragraphs[index], {
@@ -58,7 +57,6 @@ export default function LoadingPage() {
     if (index < paragraphs.length) {
       if (index > 0) {
         gsap.to(paragraphs[index - 1], {
-          display: "none",
           duration: duration,
           onComplete: function () {
             gsap.to(paragraphs[index], {

@@ -20,11 +20,30 @@
 }
 
 .loadingPage .keywords > p {
-    display: none;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70vw;
+  height: 70dvh;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-white);
+  vertical-align: middle;
+  padding-top: 14dvh;
+}
+
+.loadingPage .keywords > p:last-child {
+  padding-top: 24.5dvh;
 }
 
 .loadingPage .years > p {
-    display: none;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70vw;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-white);
 }
 
 @keyframes appearing {
