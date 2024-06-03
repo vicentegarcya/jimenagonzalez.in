@@ -46,7 +46,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    setTimeout(() => setIsLoading(false), 4500);
+    setTimeout(() => setIsLoading(false), isDesktop ? 4500 : 4300);
 
     //ANIMATIONS
     //HERO
