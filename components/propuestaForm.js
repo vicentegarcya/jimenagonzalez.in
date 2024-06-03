@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import styles from "./propuestaForm.module.css";
 import { useFormik } from "formik";
 import * as yup from "yup";
 import { useSpring, animated } from "react-spring";
 import { useIntl } from "react-intl";
+import { isPlayingContext } from "@/context/context";
 
 export default function PropuestaForm({ service, setService }) {
   const [state, setState] = useState("idle");
+  const { isDesktop } = useContext(isPlayingContext);
   const intl = useIntl();
 
   const validationSchema = yup.object({
@@ -67,23 +69,23 @@ export default function PropuestaForm({ service, setService }) {
     <div className={styles.propuesta_form}>
       <form onSubmit={formik.handleSubmit}>
         <div>
-          {intl.formatMessage({id: "HI_JIMENA_IM"})}{" "}
+          {intl.formatMessage({ id: "HI_JIMENA_IM" })}{" "}
           <input
             name="name"
             value={formik.values.name}
-            placeholder={intl.formatMessage({id: "TYPE_YOUR_NAME"})}
+            placeholder={intl.formatMessage({ id: "TYPE_YOUR_NAME" })}
             onChange={formik.handleChange}
             style={{ minWidth: "32.5%", width: "32.5%" }}
           ></input>
-          {intl.formatMessage({id: "I_WORK_AT"})}{" "}
+          {intl.formatMessage({ id: "I_WORK_AT" })}{" "}
           <input
             name="company"
             value={formik.values.company}
-            placeholder={intl.formatMessage({id: "TYPE_YOUR_COMPANYS_NAME"})}
+            placeholder={intl.formatMessage({ id: "TYPE_YOUR_COMPANYS_NAME" })}
             onChange={formik.handleChange}
             style={{ minWidth: "56%" }}
           ></input>{" "}
-          {intl.formatMessage({id: "AND_I_HAVE_AN_IDEA_OR_NEED_RELATED_TO"})}{" "}
+          {intl.formatMessage({ id: "AND_I_HAVE_AN_IDEA_OR_NEED_RELATED_TO" })}{" "}
           <span
             style={{
               background: service === "estrategia" ? "#282C32" : undefined,
@@ -91,7 +93,7 @@ export default function PropuestaForm({ service, setService }) {
             }}
             onClick={() => handleSetService("estrategia")}
           >
-            {intl.formatMessage({id: "STRATEGY"})}
+            {intl.formatMessage({ id: "STRATEGY" })}
           </span>{" "}
           <br></br>
           <span
@@ -102,7 +104,7 @@ export default function PropuestaForm({ service, setService }) {
             }}
             onClick={() => handleSetService("diseño-de-servicios")}
           >
-            {intl.formatMessage({id: "SERVICE_DESIGN"})}
+            {intl.formatMessage({ id: "SERVICE_DESIGN" })}
           </span>{" "}
           <span
             style={{
@@ -122,35 +124,38 @@ export default function PropuestaForm({ service, setService }) {
           >
             branding
           </span>{" "}
-          {intl.formatMessage({id: "WHICH_IS"})}{" "}
+          {intl.formatMessage({ id: "WHICH_IS" })}{" "}
           <input
             name="idea"
             value={formik.values.idea}
             onChange={formik.handleChange}
-            style={{ minWidth: "90%" }}
-            placeholder={intl.formatMessage({id: "DESCRIBE_YOUR_IDEA_OR_NEED"})}
+            style={{ minWidth: isDesktop ? "90%" : "85%" }}
+            placeholder={intl.formatMessage({
+              id: "DESCRIBE_YOUR_IDEA_OR_NEED",
+            })}
           ></input>{" "}
           .<br></br>
-          <br></br>{intl.formatMessage({id: "CONTACT_ME_AT"})}{" "}
+          <br></br>
+          {intl.formatMessage({ id: "CONTACT_ME_AT" })}{" "}
           <input
             name="email"
             value={formik.values.email}
-            placeholder={intl.formatMessage({id: "TYPE_YOUR_EMAIL"})}
+            placeholder={intl.formatMessage({ id: "TYPE_YOUR_EMAIL" })}
             onChange={formik.handleChange}
-            style={{ minWidth: "32%", width: "32%" }}
+            style={{ minWidth: "32%", width: isDesktop ? "32%" : "50%" }}
           ></input>{" "}
-          {intl.formatMessage({id: "OR_AT"})}{" "}
+          {intl.formatMessage({ id: "OR_AT" })}{" "}
           <input
             name="phone"
             value={formik.values.phone}
-            placeholder={intl.formatMessage({id: "TYPE_YOUR_PHONE"})}
+            placeholder={intl.formatMessage({ id: "TYPE_YOUR_PHONE" })}
             onChange={formik.handleChange}
             style={{ minWidth: "35%", width: "35%" }}
           ></input>{" "}
           .
         </div>
         <button type="submit">
-          <p>{intl.formatMessage({id: "SEND"})}</p>
+          <p>{intl.formatMessage({ id: "SEND" })}</p>
         </button>
       </form>
       {state === "success" && (
@@ -161,8 +166,11 @@ export default function PropuestaForm({ service, setService }) {
         >
           <animated.div style={openAnimation}>
             <p>
-              Mensaje enviado correctamente.<br></br> Jimena se pondrá en
-              contacto contigo en breve.
+              {intl.formatMessage({ id: "MENSAJE_ENVIADO_CORRECTAMENTE" })}
+              <br></br>
+              {intl.formatMessage({
+                id: "JIMENA_SE_PONDRA_EN_CONTACTO_CONTIGO",
+              })}
             </p>
             <div onClick={() => setState("idle")}>X</div>
           </animated.div>

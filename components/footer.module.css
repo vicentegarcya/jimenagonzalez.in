@@ -27,21 +27,21 @@
 
 .footer .top > div > p:first-child {
   color: var(--main-yellow);
-  font-family: 'Baskerville';
+  font-family: "Baskerville";
   font-style: italic;
   font-size: 1.5vw;
   margin-bottom: 8px;
 }
 
 .footer .top > div > p:not(:first-child) {
-  font-family: 'Moderat-Light';
+  font-family: "Moderat-Light";
   font-size: 1.4vw;
   margin-bottom: 16px;
   line-height: 1.35rem;
 }
 
 .footer .top > div > p:not(:first-child) > span {
-  font-family: 'Moderat-Med';
+  font-family: "Moderat-Med";
 }
 
 .footer .middle {
@@ -56,7 +56,8 @@
   margin-top: -36px;
 }
 
-.footer .middle a, .footer .middle span {
+.footer .middle a,
+.footer .middle span {
   text-decoration: underline;
 }
 
@@ -66,7 +67,7 @@
   font-weight: 100;
   overflow: hidden;
   white-space: nowrap;
-  color: #7A7A7A;
+  color: #7a7a7a;
   margin-top: 48px;
 }
 
@@ -80,28 +81,7 @@
 .footer .copyright {
   padding: 0 7vw;
   margin-top: -16px;
-  color: #7A7A7A;
-}
-
-@media (min-width: 1024px) {
-  .footer {
-    background-size: cover;
-    background-position-y: 0px !important;
-    background-position-x: 0px !important;
-  }
-
-  .footer > p:nth-child(3) {
-    width: 60%;
-    margin: 20px 0 34px 0;
-  }
-}
-
-@media (min-width: 490px) and (max-width: 1024px) {
-  .footer {
-    background-size: 101%;
-    background-position-y: 0px !important;
-    background-position-x: 0px !important;
-  }
+  color: #7a7a7a;
 }
 
 @keyframes scrollText {
@@ -110,5 +90,51 @@
   }
   to {
     transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 489px) {
+  .footer .top {
+    flex-wrap: wrap;
+    padding: 9vw 8vw;
+  }
+
+  .footer .top > div {
+    width: 45%;
+  }
+
+  .footer .top > div > p:first-child {
+    font-size: 3.5vw;
+  }
+
+  .footer .top > div > p:not(:first-child) {
+    font-size: 3vw;
+    line-height: 1.05rem;
+  }
+
+  .footer .top > div:last-child {
+    margin-top: 48px;
+  }
+
+  .footer .middle {
+    padding: 0vw 8vw;
+    font-size: 2.5vw;
+    line-height: 1rem;
+    margin-top: 24px;
+  }
+
+  .footer .bottom {
+    margin-top: 72px;
+  }
+
+  .footer .bottom p {
+    font-size: 32vw;
+  }
+
+  .footer .copyright {
+    padding: 0 7vw;
+    margin-top: -16px;
+    color: #7a7a7a;
+    font-size: 3vw;
   }
 }

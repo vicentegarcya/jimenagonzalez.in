@@ -105,5 +105,34 @@
   cursor: pointer;
 }
 
-@media (min-width: 490px) and (max-width: 1024px) {
+@media (max-width: 489px) {
+  .propuesta_form {
+    font-size: 4vw;
+    line-height: 1;
+  }
+
+  .propuesta_form > form > div {
+    line-height: 2.1;
+  }
+
+  .propuesta_form input {
+    font-size: 3vw;
+  }
+
+  .propuesta_form input::placeholder {
+    font-size: 3.5vw;
+  }
+
+  .propuesta_form span {
+    font-size: 3vw;
+  }
+
+  .form_success {
+    left: -1.85rem;
+  }
+
+  .form_success > div {
+    width: 60vw;
+    font-size: 3vw;
+  }
 }

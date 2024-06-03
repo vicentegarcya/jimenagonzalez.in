@@ -68,5 +68,7 @@
     "SPOTIFY_PLAYLIST": "Spotify playlist",
     "ARE_YOU_INSPIRED": "Are you inspired?",
     "SEND_ME_AN_EMAIL": "Let me know!",
-    "ALL_RIGHTS_RESERVED": "All rights reserved"
+    "ALL_RIGHTS_RESERVED": "All rights reserved",
+    "MENSAJE_ENVIADO_CORRECTAMENTE": "Message succesfully sent.",
+    "JIMENA_SE_PONDRA_EN_CONTACTO_CONTIGO": "Jimena will contact you shortly."
 }

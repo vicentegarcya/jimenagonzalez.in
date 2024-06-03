@@ -801,6 +801,10 @@
     padding: 2rem;
   }
 
+  .contact_form_main > div:last-child {
+    width: 100%;
+  }
+
   .contact_form .section_title {
     margin-top: -10px;
     padding-left: 0;
@@ -816,24 +820,16 @@
   }
 
   .contact_form_data {
-    width: 40%;
-    height: 27%;
+    width: 100%;
+    height: 37%;
     font-family: "Moderat-Reg";
-    padding-top: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    margin-bottom: 84px;
   }
 
   .contact_form_data > div {
-    width: 70%;
-    height: 15%;
-    font-size: 1vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    opacity: 0.7;
-    font-family: "Moderat-ext-reg";
+    width: 100%;
+    height: 25%;
+    font-size: 1.75vw;
   }
 
   .contact_form_data .top > p {
