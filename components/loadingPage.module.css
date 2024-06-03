@@ -54,3 +54,34 @@
     transform: translateY(0%);
   }
 }
+
+@media (max-width: 489px) {
+  .loadingPage div {
+    font-family: "Anton";
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 15.5vw;
+    line-height: 21dvh;
+    letter-spacing: -0.5px;
+  }
+
+  .loadingPage .keywords > p:not(:last-child) {
+   line-height: 8dvh;
+   padding-top: 27dvh;
+  }
+
+  .loadingPage .keywords > p:last-child {
+    padding-top: 24.5dvh;
+  }
+
+  .loadingPage .years > p {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70vw;
+    transform: translate(-50%, -50%);
+    background-color: var(--main-white);
+  }
+}

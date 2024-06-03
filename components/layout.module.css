@@ -5,7 +5,7 @@
 
 .telonWrapper {
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   background: var(--main-white);
   z-index: 1000;
   position: fixed;
@@ -24,4 +24,10 @@
   position: fixed;
   top: 0;
   left: 0;
+}
+
+@media (max-width: 489px) {
+  .telon {
+    width: 300vw;
+  }
 }

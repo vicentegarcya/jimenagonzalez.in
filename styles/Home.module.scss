@@ -527,87 +527,325 @@
     padding: 1.5rem 1.5rem 0 1.5rem;
     margin-bottom: 350px;
   }
-  
+
   .jimena {
     position: fixed;
     font-family: "Anton";
     text-align: center;
-    font-size: 22.5vw;
+    font-size: 26vw;
     font-weight: 100;
     letter-spacing: -2px;
   }
-  
+
   .jimena_surname {
     top: 37.5%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 0;
   }
-  
+
   .jimena_name {
-    top: 47.5%;
+    top: 48.5%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  
+
   //HERO
-  
+
   .hero {
     padding-bottom: 13dvh;
   }
-  
+
   //HERO TOP
   .hero_top > p {
     position: absolute;
-    top: 23dvh;
+    top: 21dvh;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 3.5vw;
+    font-size: 3.75vw;
     width: 50vw;
   }
-  
+
   .links {
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
-  
+
   .hero_top .contacto {
     background-size: 3000%;
     font-size: 1.75vw;
   }
-  
+
   //HERO BOTTOM
-  
+
   .hero_bottom {
     align-items: center;
     flex-direction: column-reverse;
   }
-  
+
   .scroll {
     letter-spacing: -1.5px;
     font-size: 4.5vw;
   }
-  
+
   .scroll div {
     height: 60px;
     overflow: hidden;
   }
-  
+
   .scroll div > p {
     font-size: 3vw;
   }
-  
+
   .hero_bottom .text {
     width: 70%;
     letter-spacing: -1px;
     font-size: 6vw;
-    line-height: 30dvh;
+    line-height: 20dvh;
     margin-bottom: 26px;
     text-align: center;
   }
-  
+
   .hero > img {
-    bottom: 45dvh;
-    width: 30vw !important;
+    bottom: 44dvh;
+    width: 35vw !important;
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 85%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+
+  //METODOLOGIA
+
+  .section_title {
+    padding-left: 1.5rem;
+  }
+
+  .metodologia {
+    margin-top: 120px;
+  }
+
+  .section_title > p:first-child,
+  .section_title > p:last-child {
+    font-size: 4.5vw;
+    letter-spacing: -0.75px;
+  }
+
+  .section_title > p:nth-child(2) {
+    font-size: 20vw;
+    margin: -2.25dvh 0 -2.75dvh 0;
+    letter-spacing: -2px;
+  }
+
+  .highlight {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+  }
+
+  .highlighter {
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    margin: 0 auto;
+    left: 0;
+    background-color: var(--main-yellow);
+    bottom: -0.1vh;
+    z-index: -1;
+  }
+
+  .cinta_transportadora {
+    padding: 0.5rem 3rem;
+    margin-left: -1.5rem;
+    margin-top: 90px;
+  }
+
+  .metodologia .cinta_transportadora > p {
+    font-size: 3.25vw;
+  }
+
+  .metodologia .cinta_transportadora > p > .emoji {
+    font-size: 2.25vw;
+    margin: 0 4px;
+  }
+
+  .metodologia_text {
+    padding: 0 2.5rem 0 1.5rem;
+    flex-direction: column;
+  }
+
+  .metodologia_text > p:not(:last-child) {
+    margin-right: 7vw;
+  }
+
+  .metodologia_text > p:first-child {
+    font-size: 4.5vw;
+    letter-spacing: -1px;
+    line-height: 1.1rem;
+    width: 80%;
+  }
+
+  .metodologia_text > p:not(:first-child) {
+    font-size: 4vw;
+    letter-spacing: -0.5px;
+    line-height: 1rem;
+  }
+
+  .metodologia_text > p {
+    margin-bottom: 48px;
+  }
+
+  //CLAIM
+  .claim {
+    height: 60dvh;
+    font-size: 8vw;
+    letter-spacing: -0.5px;
+    margin-left: -1.5rem;
+  }
+
+  .claim > h3 {
+    line-height: 3.25rem;
+  }
+
+  //EXPERIENCIA
+
+  .experiencia {
+    margin: 0 0 120px 0;
+  }
+
+  .experiencia .section_title > p:last-child {
+    margin-right: 0;
+  }
+
+  .experiencia .section_title {
+    margin-bottom: 32px;
+  }
+
+  .experiencia_text {
+    margin-top: 80px;
+    flex-direction: column;
+    padding: 0 3rem 0 1.5rem;
+  }
+
+  .experiencia_text > p:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .experiencia_text > p {
+    font-size: 4vw;
+    letter-spacing: -0.5px;
+    line-height: 1.1rem;
+    margin-bottom: 48px;
+  }
+
+  // COMPANIES LOGOS
+
+  .cinta_transportadora_logos {
+    width: 100vw;
+  }
+
+  .experiencia .cinta_transportadora_logos > p {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    animation: scrollText2 40s infinite linear;
+  }
+
+  .experiencia .cinta_transportadora_logos > p > div {
+    margin-right: 36px;
+  }
+
+  //SERVICIOS
+
+  .servicios {
+    padding-bottom: 40dvh;
+    height: 250dvh;
+  }
+
+  .experiencia .section_title > p:last-child {
+    margin-right: 0;
+  }
+
+  .servicios .section_title > p:nth-child(2) {
+    margin: -2.5dvh 0 -2.75dvh 0;
+  }
+
+  .servicios_main {
+    flex-direction: column;
+    margin-top: 36px;
+  }
+
+  .servicios_main > div:first-child {
+    border-top: 0.5px solid var(--main-black);
+    border-bottom: 0.5px solid var(--main-black);
+  }
+
+  //CONTACTO
+  .contact_form_backpaper {
+    background-size: 250vw;
+    background-position-y: calc(5dvh - 2750px);
+  }
+
+  .contact_form_backpaper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .contact_form_main {
+    width: 85%;
+    height: 87dvh;
+    margin-top: 0;
+    left: 1.85rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem;
+  }
+
+  .contact_form .section_title {
+    margin-top: -10px;
+    padding-left: 0;
+  }
+
+  .contact_form .section_title p:first-child {
+    font-size: 4vw;
+  }
+
+  .contact_form .section_title p:last-child {
+    margin-top: -2dvh;
+    font-size: 15vw;
+  }
+
+  .contact_form_data {
+    width: 40%;
+    height: 27%;
+    font-family: "Moderat-Reg";
+    padding-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .contact_form_data > div {
+    width: 70%;
+    height: 15%;
+    font-size: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0.7;
+    font-family: "Moderat-ext-reg";
+  }
+
+  .contact_form_data .top > p {
+    margin-bottom: 12px;
+  }
+
+  .footer_home {
+    position: relative;
+    width: 100vw;
+    height: 100dvh;
+    max-height: 0;
+    z-index: 1001;
   }
 }
 

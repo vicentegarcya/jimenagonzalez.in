@@ -99,7 +99,7 @@ export default function Home() {
       transform: "scale(1)",
       scrollTrigger: {
         trigger: claimRef.current,
-        start: "top 25%",
+        start: isDesktop ? "top 25%" : "top 75%",
         end: "+=20%",
         scrub: 1.5,
       },
@@ -139,18 +139,6 @@ export default function Home() {
         scrub: 2.25,
       },
     });
-
-    /* gsap.to(footerRef.current, {
-      display: 'block',
-      maxHeight: "100dvh",
-      scrollTrigger: {
-        trigger: document.body,
-        start: "bottom bottom",
-        end: "+40%",
-        scrub: 2.25,
-        markers: true,
-      },
-    }); */
   }, [isLoading, isDesktop]);
 
   if (isLoading) return <LoadingPage />;
@@ -273,9 +261,15 @@ export default function Home() {
             </div>
           </section>
           <section ref={claimRef} className={styles.claim}>
-            <h3>
-              SUCCESS IS THE RESULT OF A<br></br> GOOD STRATEGY.
-            </h3>
+            {isDesktop ? (
+              <h3>
+                SUCCESS IS THE RESULT OF A<br></br> GOOD STRATEGY.
+              </h3>
+            ) : (
+              <h3>
+                SUCCESS IS THE RESULT OF<br></br>A GOOD STRATEGY.
+              </h3>
+            )}
           </section>
           <section className={styles.experiencia} id="experiencia">
             <h5 ref={experienciaTitleRef} className={styles.section_title}>
@@ -285,7 +279,7 @@ export default function Home() {
             </h5>
             <div className={styles.cinta_transportadora_logos}>
               <p>
-                <div style={{ width: "80px" }}>
+                <div style={{ width: isDesktop ? "80px" : "60px" }}>
                   <Image
                     src="/big_companies/BBVA.png"
                     layout="fill"
@@ -638,15 +632,21 @@ export default function Home() {
                 bulletPoints={[
                   {
                     title: intl.formatMessage({ id: "1_FACILITATION" }),
-                    description: intl.formatMessage({ id: "DESIGNING_AN_ADHOC_METHODOLOGY_TO_FACILITATE" }),
+                    description: intl.formatMessage({
+                      id: "DESIGNING_AN_ADHOC_METHODOLOGY_TO_FACILITATE",
+                    }),
                   },
                   {
                     title: intl.formatMessage({ id: "DESIGN_RESEARCH" }),
-                    description: intl.formatMessage({ id: "UNDERSTANDING_USER_EXPERIENCE_NEEDS_AND_INFLUENCES" }),
+                    description: intl.formatMessage({
+                      id: "UNDERSTANDING_USER_EXPERIENCE_NEEDS_AND_INFLUENCES",
+                    }),
                   },
                   {
                     title: intl.formatMessage({ id: "3_SERVICE_DESIGN" }),
-                    description: intl.formatMessage({ id: "CREATING_A_COHERENT_AND_FLUID_USER_EXPERIENCE" }),
+                    description: intl.formatMessage({
+                      id: "CREATING_A_COHERENT_AND_FLUID_USER_EXPERIENCE",
+                    }),
                   },
                 ]}
                 onClick={() => handleClickService("diseño-de-servicios")}
@@ -654,7 +654,9 @@ export default function Home() {
               <Service
                 title={intl.formatMessage({ id: "BRAND_IDENTITY" })}
                 ctaText={intl.formatMessage({ id: "NEED_BRANDING" })}
-                explanation={intl.formatMessage({ id: "DISCOVERING_YOUR_PROJECTS_AUTHENTIC_IDENTITY_AMD_CRAFTING" })}
+                explanation={intl.formatMessage({
+                  id: "DISCOVERING_YOUR_PROJECTS_AUTHENTIC_IDENTITY_AMD_CRAFTING",
+                })}
                 onClick={() => handleClickService("branding")}
                 sprm={true}
               />

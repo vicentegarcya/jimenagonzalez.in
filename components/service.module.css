@@ -121,5 +121,52 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 489px) {
+  .servicio_div {
+    margin-left: -1.5rem;
+    flex-direction: column;
+    border-bottom: 0.5px solid grey;
+  }
+  
+  .servicio_intro {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+  
+  .servicio_intro button {
+    background-size: 1600%;
+    padding: 0.5rem 1rem;
+    font-size: 2vw;
+  }
+  
+  .servicio_title {
+    font-size: 3.65vw !important;
+  }
+  
+  .servicio_explanation {
+    letter-spacing: -0.75px;
+    line-height: 1.05rem;
+    font-size: 3.8vw !important;
+  }
+  
+  .servicio_explanation a {
+    text-decoration-thickness: 0.75px;
+  }
+  
+  .servicio_explanation > div {
+    font-size: 3.5vw !important;
+    letter-spacing: -0.7px;
+  }
+  
+  .servicio_description {
+    width: 100%;
+    font-size: 3.65vw;
+    line-height: 1.05rem;
+  }
+  
+  .servicio_bullet_point {
+    width: 100%;
+    font-size: 3.65vw;
+    line-height: 1.05rem;
+  }
 }
