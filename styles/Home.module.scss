@@ -519,6 +519,96 @@
 /* RESPONSIVE MOBILE */
 
 @media (max-width: 489px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    margin-bottom: 350px;
+  }
+  
+  .jimena {
+    position: fixed;
+    font-family: "Anton";
+    text-align: center;
+    font-size: 22.5vw;
+    font-weight: 100;
+    letter-spacing: -2px;
+  }
+  
+  .jimena_surname {
+    top: 37.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+  
+  .jimena_name {
+    top: 47.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  //HERO
+  
+  .hero {
+    padding-bottom: 13dvh;
+  }
+  
+  //HERO TOP
+  .hero_top > p {
+    position: absolute;
+    top: 23dvh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3.5vw;
+    width: 50vw;
+  }
+  
+  .links {
+    font-size: 4vw;
+  }
+  
+  .hero_top .contacto {
+    background-size: 3000%;
+    font-size: 1.75vw;
+  }
+  
+  //HERO BOTTOM
+  
+  .hero_bottom {
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  
+  .scroll {
+    letter-spacing: -1.5px;
+    font-size: 4.5vw;
+  }
+  
+  .scroll div {
+    height: 60px;
+    overflow: hidden;
+  }
+  
+  .scroll div > p {
+    font-size: 3vw;
+  }
+  
+  .hero_bottom .text {
+    width: 70%;
+    letter-spacing: -1px;
+    font-size: 6vw;
+    line-height: 30dvh;
+    margin-bottom: 26px;
+    text-align: center;
+  }
+  
+  .hero > img {
+    bottom: 45dvh;
+    width: 30vw !important;
+  }
 }
 
 /* RESPONSIVE TABLET */
