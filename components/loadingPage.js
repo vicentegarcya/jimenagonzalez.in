@@ -63,7 +63,7 @@ export default function LoadingPage() {
               display: "block",
               duration: 0.12,
               onComplete: function () {
-                animateYears(index + 1, duration * 0.5);
+                animateYears(index + 1, duration * 0.3);
               },
             });
           },
@@ -73,7 +73,7 @@ export default function LoadingPage() {
           display: "block",
           duration: 0.12,
           onComplete: function () {
-            animateYears(index + 1, duration * 0.5);
+            animateYears(index + 1, duration * 0.3);
           },
         });
       }

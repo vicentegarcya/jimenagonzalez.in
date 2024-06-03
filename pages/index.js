@@ -46,7 +46,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    setTimeout(() => setIsLoading(false), 4700);
+    setTimeout(() => setIsLoading(false), 4500);
 
     //ANIMATIONS
     //HERO
