@@ -180,19 +180,23 @@ export default function Home() {
               </div>
               <p>(divergent mind / sensitive heart)</p>
               <div>
-                <button
-                  onClick={() => window.scrollTo(0, document.body.scrollHeight)}
-                  className={styles.contacto}
-                >
-                  {intl.formatMessage({ id: "CONTACT_ME" })}
-                </button>
+                {isDesktop ? (
+                  <button
+                    onClick={() =>
+                      window.scrollTo(0, document.body.scrollHeight)
+                    }
+                    className={styles.contacto}
+                  >
+                    {intl.formatMessage({ id: "CONTACT_ME" })}
+                  </button>
+                ) : undefined}
               </div>
             </div>
             <div className={styles.hero_bottom}>
               <p className={styles.scroll}>
                 scroll<br></br>
                 <div>
-                  <p>🡒</p>
+                  <p>⟶</p>
                 </div>
               </p>
               <p className={styles.text}>Strategy is alignment.</p>
@@ -687,13 +691,15 @@ export default function Home() {
                     <p>Let&rsquo;s</p>
                     <p>CONNECT</p>
                   </h5>
-                  <div>
-                    <p>40°30`N 3°40`O / 40.500, -3.667</p>
-                    <a href="tel:+34626457400">(34) 626 457 400</a>
-                    <a href="mailto:hi@jimenagonzalez.in">
-                      hi@jimenagonzalez.in
-                    </a>
-                  </div>
+                  {isDesktop ? (
+                    <div>
+                      <p>40°30`N 3°40`O / 40.500, -3.667</p>
+                      <a href="tel:+34626457400">(34) 626 457 400</a>
+                      <a href="mailto:hi@jimenagonzalez.in">
+                        hi@jimenagonzalez.in
+                      </a>
+                    </div>
+                  ) : undefined}
                 </div>
                 <PropuestaForm
                   service={service}

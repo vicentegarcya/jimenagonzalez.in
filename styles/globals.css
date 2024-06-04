@@ -87,7 +87,7 @@ button:hover {
 }
 
 a {
-  color: inherit;
+  color: var(--main-black);
   text-decoration: none;
 }
 
