@@ -22,9 +22,9 @@ export default function Layout({ children }) {
       ease: "none",
       scrollTrigger: {
         trigger: headerRef.current,
-        start: isDesktop ? "bottom bottom" : "bottom 70%",
+        start: isDesktop ? "bottom bottom" : "bottom 80%",
         end: "bottom top",
-        scrub: 0.05,
+        scrub: isDesktop ? 0.05 : true,
       },
     });
 

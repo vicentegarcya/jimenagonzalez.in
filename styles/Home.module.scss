@@ -602,13 +602,13 @@
     width: 70%;
     letter-spacing: -1px;
     font-size: 6vw;
-    line-height: 20dvh;
+    line-height: 20vh;
     margin-bottom: 26px;
     text-align: center;
   }
 
   .hero > img {
-    bottom: calc(41%);
+    bottom: calc(39%);
     width: 35vw !important;
     mask-image: linear-gradient(
       to bottom,
@@ -635,7 +635,7 @@
 
   .section_title > p:nth-child(2) {
     font-size: 20vw;
-    margin: -2.25dvh 0 -2.75dvh 0;
+    margin: -2.25vh 0 -2.75vh 0;
     letter-spacing: -2px;
   }
 
@@ -699,7 +699,7 @@
 
   //CLAIM
   .claim {
-    height: 60dvh;
+    height: 60vh;
     font-size: 8vw;
     letter-spacing: -0.5px;
     margin-left: -1.5rem;
@@ -760,7 +760,7 @@
   //SERVICIOS
 
   .servicios {
-    padding-bottom: 40dvh;
+    padding-bottom: 40vh;
     height: 320vh;
   }
 
@@ -769,7 +769,7 @@
   }
 
   .servicios .section_title > p:nth-child(2) {
-    margin: -2.5dvh 0 -2.75dvh 0;
+    margin: -2.5vh 0 -2.75vh 0;
   }
 
   .servicios_main {
