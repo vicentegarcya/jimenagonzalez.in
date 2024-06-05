@@ -1,13 +1,15 @@
 import Head from "next/head";
 import Header from "./header";
 import styles from "./layout.module.css";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { isPlayingContext } from "@/context/context";
 
 export default function Layout({ children }) {
   const [isTelon, setIsTelon] = useState(true);
+  const {isDesktop} = useContext(isPlayingContext);
   gsap.registerPlugin(ScrollTrigger);
   const headerRef = useRef();
   const mainRef = useRef();
@@ -20,7 +22,7 @@ export default function Layout({ children }) {
       ease: "none",
       scrollTrigger: {
         trigger: headerRef.current,
-        start: "bottom bottom",
+        start: isDesktop ? "bottom bottom" : "bottom 70%",
         end: "bottom top",
         scrub: 0.05,
       },
@@ -28,8 +30,8 @@ export default function Layout({ children }) {
 
     const appearAnimation = gsap.fromTo(
       telonRef.current,
-      { y: "100%" },
-      { y: "0%", duration: 1, ease: "power2.inOut" }
+      { y: "100%", display: 'none' },
+      { y: "0%", display: 'block' , duration: 1, ease: "power2.inOut" }
     );
 
     const disappearAnimation = gsap.fromTo(

@@ -137,6 +137,7 @@
     background-size: 1600%;
     padding: 0.5rem 1rem;
     font-size: 2vw;
+    color: var(--main-black);
   }
   
   .servicio_title {

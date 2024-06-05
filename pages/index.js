@@ -46,7 +46,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    setTimeout(() => setIsLoading(false), isDesktop ? 4500 : 4300);
+    setTimeout(() => setIsLoading(false), isDesktop ? 4500 : 4200);
 
     //ANIMATIONS
     //HERO
@@ -99,7 +99,7 @@ export default function Home() {
       transform: "scale(1)",
       scrollTrigger: {
         trigger: claimRef.current,
-        start: isDesktop ? "top 25%" : "top 75%",
+        start: isDesktop ? "top 25%" : "top 60%",
         end: "+=20%",
         scrub: 1.5,
       },

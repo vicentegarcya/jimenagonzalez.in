@@ -26,7 +26,7 @@ export default function LoadingPage() {
 
   function animateKeywords(index) {
     const paragraphs = keywordsRef.current?.querySelectorAll("p");
-    if (index < paragraphs.length) {
+    if (index < paragraphs?.length) {
       if (index > 0) {
         gsap.to(paragraphs[index - 1], {
           duration: 0.3,
@@ -54,7 +54,7 @@ export default function LoadingPage() {
 
   function animateYears(index, duration = 0.6) {
     const paragraphs = yearsRef.current?.querySelectorAll("p");
-    if (index < paragraphs.length) {
+    if (index < paragraphs?.length) {
       if (index > 0) {
         gsap.to(paragraphs[index - 1], {
           duration: duration,

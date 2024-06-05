@@ -67,7 +67,7 @@
   }
 
   .loadingPage .keywords > p:not(:last-child) {
-   line-height: 8dvh;
+   line-height: 4rem;
    padding-top: 27dvh;
   }
 
