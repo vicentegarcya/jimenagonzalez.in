@@ -37,7 +37,7 @@
   font-family: "Moderat-Light";
   font-size: 1.4vw;
   margin-bottom: 16px;
-  line-height: 1.35rem;
+  line-height: 1.5vw;
 }
 
 .footer .top > div > p:not(:first-child) > span {
@@ -52,13 +52,14 @@
   font-size: 1.07vw;
   line-height: 1.5;
   width: 100%;
-  line-height: 1.3rem;
+  line-height: 1.5vw;
   margin-top: -36px;
 }
 
 .footer .middle a,
 .footer .middle span {
   text-decoration: underline;
+  color: var(--main-white);
 }
 
 .footer .bottom {
@@ -136,10 +137,5 @@
     margin-top: -16px;
     color: #7a7a7a;
     font-size: 3vw;
-  }
-
-  .footer .middle a,
-  .footer .middle span {
-    color: var(--main-white);
   }
 }

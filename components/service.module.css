@@ -60,7 +60,7 @@
   font-style: italic;
   font-weight: 400;
   letter-spacing: -1px;
-  line-height: 1.35rem;
+  line-height: 1.75vw;
   font-size: 1.8vw !important;
   margin-top: 0px;
   margin-bottom: 36px;
@@ -88,14 +88,14 @@
   font-family: 'Moderat-Light';
   font-size: 1.65vw;
   margin-bottom: 36px;
-  line-height: 1.45rem;
+  line-height: 1.75vw;
 }
 
 .servicio_bullet_point {
   width: 80%;
   font-family: 'Moderat-Med';
   font-size: 1.65vw;
-  line-height: 1.45rem;
+  line-height: 1.75vw;
 }
 
 .servicio_bullet_point span {

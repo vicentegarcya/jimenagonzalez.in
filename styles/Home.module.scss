@@ -33,7 +33,7 @@
 
 .hero {
   width: 100%;
-  height: 100dvh;
+  height: 100vh;
   padding-bottom: 19dvh;
   font-family: "Moderat-Reg";
   display: flex;
@@ -274,7 +274,7 @@
   font-size: 1.75vw;
   color: var(--main-purple);
   letter-spacing: -1px;
-  line-height: 1.4rem;
+  line-height: 1.75vw;
   width: 90%;
 }
 
@@ -282,7 +282,7 @@
   font-family: "Moderat-Light";
   font-size: 1.6vw;
   letter-spacing: -0.5px;
-  line-height: 1.4rem;
+  line-height: 1.75vw;
 }
 
 //CLAIM
@@ -302,7 +302,7 @@
 }
 
 .claim > h3 {
-  line-height: 5.25rem;
+  line-height: 6.5vw;
   transform: scale(0);
 }
 
@@ -333,7 +333,7 @@
   font-family: "Moderat-Light";
   font-size: 1.6vw;
   letter-spacing: -0.5px;
-  line-height: 1.4rem;
+  line-height: 1.65vw;
 }
 
 // COMPANIES LOGOS
@@ -455,7 +455,7 @@
   position: relative;
   margin-top: 5rem;
   width: 92.5%;
-  height: 3rem;
+  height: 6vw;
   background: transparent;
   left: 3rem;
 }
@@ -602,7 +602,7 @@
     width: 70%;
     letter-spacing: -1px;
     font-size: 6vw;
-    line-height: 20vh;
+    line-height: 12vh;
     margin-bottom: 26px;
     text-align: center;
   }

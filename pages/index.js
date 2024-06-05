@@ -130,7 +130,7 @@ export default function Home() {
     });
 
     gsap.to(contactFormMainRef.current, {
-      top: "4.5rem",
+      top: isDesktop ? "5.5vw" : "4.5rem",
       transform: "scale(1)",
       scrollTrigger: {
         trigger: serviciosSectionRef.current,
