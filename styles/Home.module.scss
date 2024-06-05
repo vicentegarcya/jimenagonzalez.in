@@ -586,6 +586,7 @@
   .scroll {
     letter-spacing: -1.5px;
     font-size: 4.5vw;
+    margin-bottom: 24px;
   }
 
   .scroll div {
@@ -602,13 +603,13 @@
     width: 70%;
     letter-spacing: -1px;
     font-size: 6vw;
-    line-height: 12vh;
+    line-height: 6vh;
     margin-bottom: 26px;
     text-align: center;
   }
 
   .hero > img {
-    bottom: calc(39%);
+    top: 30%;
     width: 35vw !important;
     mask-image: linear-gradient(
       to bottom,
