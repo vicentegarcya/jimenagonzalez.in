@@ -39,7 +39,7 @@ export default function Footer() {
             </p>
           </div>
           <div>
-            <p>Trascendence</p>
+            <p>Transcendence</p>
             <p>
               <span>03.</span>{" "}
               {intl.formatMessage({

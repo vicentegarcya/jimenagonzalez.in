@@ -24,7 +24,7 @@ export default function Service({
                 {sprm && (
                   <p>
                     {intl.formatMessage({ id: "AS_PART_OF" })}{" "}
-                    <a href="https://www.supremebeings.love/" target="_blank">
+                    <a href="https://www.supremebeings.love/" target="_blank" style={{pointerEvents: 'none', cursor: 'default', textDecoration: 'none'}}>
                       supreme studio
                     </a>{" "}
                   </p>

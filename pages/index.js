@@ -168,7 +168,7 @@ export default function Home() {
                 >
                   LINKEDIN →
                 </Link>
-                <Link href={"https://www.supremebeings.love/"} target="_blank">
+                <Link href={"/"} target="_blank" style={{pointerEvents: 'none', cursor: 'default'}}>
                   STUDIO →
                 </Link>
                 <Link
