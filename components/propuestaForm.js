@@ -114,16 +114,7 @@ export default function PropuestaForm({ service, setService }) {
             onClick={() => handleSetService("web")}
           >
             web
-          </span>{" "}
-          <span
-            style={{
-              background: service === "branding" ? "#282C32" : undefined,
-              color: service === "branding" ? "#F8F8F8" : undefined,
-            }}
-            onClick={() => handleSetService("branding")}
-          >
-            branding
-          </span>{" "}
+          </span>
           {intl.formatMessage({ id: "WHICH_IS" })}{" "}
           <input
             name="idea"

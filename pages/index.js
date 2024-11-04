@@ -168,9 +168,6 @@ export default function Home() {
                 >
                   LINKEDIN →
                 </Link>
-                <Link href={"/"} target="_blank" style={{pointerEvents: 'none', cursor: 'default'}}>
-                  STUDIO →
-                </Link>
                 <Link
                   href={"https://jimena-gonzalez.medium.com/"}
                   target="_blank"
@@ -654,15 +651,6 @@ export default function Home() {
                   },
                 ]}
                 onClick={() => handleClickService("diseño-de-servicios")}
-              />
-              <Service
-                title={intl.formatMessage({ id: "BRAND_IDENTITY" })}
-                ctaText={intl.formatMessage({ id: "NEED_BRANDING" })}
-                explanation={intl.formatMessage({
-                  id: "DISCOVERING_YOUR_PROJECTS_AUTHENTIC_IDENTITY_AMD_CRAFTING",
-                })}
-                onClick={() => handleClickService("branding")}
-                sprm={true}
               />
               <Service
                 title={intl.formatMessage({ id: "DESIGN_AND_WEB_DEVELOPMENT" })}
